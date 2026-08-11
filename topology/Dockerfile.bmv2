@@ -1,0 +1,16 @@
+# BMv2 test bed: the behavioral model plus the tooling needed to attach
+# virtual interfaces, replay captures through them and observe the
+# escalation path.
+FROM p4lang/behavioral-model:latest
+
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+    iproute2 \
+    iputils-ping \
+    tcpdump \
+    tcpreplay \
+    python3-scapy \
+    python3-numpy && \
+    rm -rf /var/lib/apt/lists/*
+
+WORKDIR /work

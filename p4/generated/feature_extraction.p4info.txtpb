@@ -1,0 +1,467 @@
+# proto-file: p4/config/v1/p4info.proto
+# proto-message: p4.config.v1.P4Info
+
+pkg_info {
+  arch: "v1model"
+}
+tables {
+  preamble {
+    id: 47207888
+    name: "SplitMambaIngress.ipv4_lpm"
+    alias: "ipv4_lpm"
+  }
+  match_fields {
+    id: 1
+    name: "hdr.ipv4.dstAddr"
+    bitwidth: 32
+    match_type: LPM
+  }
+  action_refs {
+    id: 33470521
+  }
+  action_refs {
+    id: 20818118
+  }
+  action_refs {
+    id: 21257015
+  }
+  initial_default_action {
+    action_id: 21257015
+  }
+  size: 1024
+}
+tables {
+  preamble {
+    id: 41788053
+    name: "SplitMambaIngress.mitigation"
+    alias: "mitigation"
+  }
+  match_fields {
+    id: 1
+    name: "hdr.ipv4.srcAddr"
+    bitwidth: 32
+    match_type: EXACT
+  }
+  match_fields {
+    id: 2
+    name: "hdr.ipv4.dstAddr"
+    bitwidth: 32
+    match_type: TERNARY
+  }
+  match_fields {
+    id: 3
+    name: "meta.dst_port"
+    bitwidth: 16
+    match_type: TERNARY
+  }
+  action_refs {
+    id: 20818118
+  }
+  action_refs {
+    id: 21257015
+  }
+  initial_default_action {
+    action_id: 21257015
+  }
+  direct_resource_ids: 327482738
+  size: 4096
+}
+tables {
+  preamble {
+    id: 39639938
+    name: "SplitMambaIngress.flow_classifier"
+    alias: "flow_classifier"
+  }
+  match_fields {
+    id: 1
+    name: "meta.byte_bucket"
+    bitwidth: 8
+    match_type: TERNARY
+  }
+  match_fields {
+    id: 2
+    name: "meta.len_bucket"
+    bitwidth: 8
+    match_type: TERNARY
+  }
+  match_fields {
+    id: 3
+    name: "meta.iat_bucket"
+    bitwidth: 8
+    match_type: TERNARY
+  }
+  match_fields {
+    id: 4
+    name: "meta.minlen_bucket"
+    bitwidth: 8
+    match_type: TERNARY
+  }
+  match_fields {
+    id: 5
+    name: "meta.maxlen_bucket"
+    bitwidth: 8
+    match_type: TERNARY
+  }
+  action_refs {
+    id: 18909300
+  }
+  action_refs {
+    id: 23934672
+  }
+  initial_default_action {
+    action_id: 23934672
+  }
+  size: 8192
+}
+actions {
+  preamble {
+    id: 21257015
+    name: "NoAction"
+    alias: "NoAction"
+    annotations: "@noWarn(\"unused\")"
+  }
+}
+actions {
+  preamble {
+    id: 18796637
+    name: "SplitMambaIngress.extract_l4_ports"
+    alias: "extract_l4_ports"
+  }
+}
+actions {
+  preamble {
+    id: 31267794
+    name: "SplitMambaIngress.compute_slots"
+    alias: "compute_slots"
+  }
+}
+actions {
+  preamble {
+    id: 23181566
+    name: "SplitMambaIngress.update_flow_state"
+    alias: "update_flow_state"
+  }
+}
+actions {
+  preamble {
+    id: 19503448
+    name: "SplitMambaIngress.update_source_diversity"
+    alias: "update_source_diversity"
+  }
+}
+actions {
+  preamble {
+    id: 25417383
+    name: "SplitMambaIngress.update_port_fanout"
+    alias: "update_port_fanout"
+  }
+}
+actions {
+  preamble {
+    id: 33131018
+    name: "SplitMambaIngress.bucketise"
+    alias: "bucketise"
+  }
+}
+actions {
+  preamble {
+    id: 33470521
+    name: "SplitMambaIngress.forward"
+    alias: "forward"
+  }
+  params {
+    id: 1
+    name: "port"
+    bitwidth: 9
+  }
+}
+actions {
+  preamble {
+    id: 20818118
+    name: "SplitMambaIngress.drop_packet"
+    alias: "drop_packet"
+  }
+}
+actions {
+  preamble {
+    id: 18909300
+    name: "SplitMambaIngress.set_verdict"
+    alias: "set_verdict"
+  }
+  params {
+    id: 1
+    name: "cls"
+    bitwidth: 8
+  }
+  params {
+    id: 2
+    name: "conf"
+    bitwidth: 8
+  }
+}
+actions {
+  preamble {
+    id: 23934672
+    name: "SplitMambaIngress.unknown_verdict"
+    alias: "unknown_verdict"
+  }
+}
+actions {
+  preamble {
+    id: 31512167
+    name: "SplitMambaIngress.escalate_to_controller"
+    alias: "escalate_to_controller"
+  }
+}
+actions {
+  preamble {
+    id: 28021335
+    name: "SplitMambaEgress.build_report"
+    alias: "build_report"
+  }
+}
+counters {
+  preamble {
+    id: 302262431
+    name: "class_verdicts"
+    alias: "class_verdicts"
+  }
+  spec {
+    unit: PACKETS
+  }
+  size: 8
+}
+counters {
+  preamble {
+    id: 317280824
+    name: "pipeline_events"
+    alias: "pipeline_events"
+  }
+  spec {
+    unit: PACKETS
+  }
+  size: 3
+}
+direct_counters {
+  preamble {
+    id: 327482738
+    name: "SplitMambaIngress.mitigation_hits"
+    alias: "mitigation_hits"
+  }
+  spec {
+    unit: PACKETS
+  }
+  direct_table_id: 41788053
+}
+registers {
+  preamble {
+    id: 384178307
+    name: "flow_pkts"
+    alias: "flow_pkts"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 32
+      }
+    }
+  }
+  size: 16384
+}
+registers {
+  preamble {
+    id: 371215457
+    name: "flow_bytes"
+    alias: "flow_bytes"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 32
+      }
+    }
+  }
+  size: 16384
+}
+registers {
+  preamble {
+    id: 375603649
+    name: "flow_last_ts"
+    alias: "flow_last_ts"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 48
+      }
+    }
+  }
+  size: 16384
+}
+registers {
+  preamble {
+    id: 383784863
+    name: "flow_iat_ewma"
+    alias: "flow_iat_ewma"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 32
+      }
+    }
+  }
+  size: 16384
+}
+registers {
+  preamble {
+    id: 376130107
+    name: "flow_len_ewma"
+    alias: "flow_len_ewma"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 32
+      }
+    }
+  }
+  size: 16384
+}
+registers {
+  preamble {
+    id: 374927854
+    name: "flow_min_len"
+    alias: "flow_min_len"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 16
+      }
+    }
+  }
+  size: 16384
+}
+registers {
+  preamble {
+    id: 377504512
+    name: "flow_max_len"
+    alias: "flow_max_len"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 16
+      }
+    }
+  }
+  size: 16384
+}
+registers {
+  preamble {
+    id: 372955187
+    name: "flow_tag"
+    alias: "flow_tag"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 32
+      }
+    }
+  }
+  size: 16384
+}
+registers {
+  preamble {
+    id: 376189118
+    name: "flow_decision"
+    alias: "flow_decision"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 2
+      }
+    }
+  }
+  size: 16384
+}
+registers {
+  preamble {
+    id: 375142691
+    name: "victim_src_bitmap"
+    alias: "victim_src_bitmap"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 32
+      }
+    }
+  }
+  size: 4096
+}
+registers {
+  preamble {
+    id: 369547437
+    name: "victim_src_count"
+    alias: "victim_src_count"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 16
+      }
+    }
+  }
+  size: 4096
+}
+registers {
+  preamble {
+    id: 373174036
+    name: "source_port_bitmap"
+    alias: "source_port_bitmap"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 32
+      }
+    }
+  }
+  size: 4096
+}
+registers {
+  preamble {
+    id: 374831679
+    name: "source_port_count"
+    alias: "source_port_count"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 16
+      }
+    }
+  }
+  size: 4096
+}
+registers {
+  preamble {
+    id: 373039250
+    name: "victim_reported"
+    alias: "victim_reported"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 8
+      }
+    }
+  }
+  size: 4096
+}
+type_info {
+}

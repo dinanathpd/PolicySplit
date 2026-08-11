@@ -1,0 +1,42 @@
+experiment:
+  name: "split_mamba_eval_v1"
+  output_dir: "results/experiments/"
+  seed: 42
+
+topology:
+  type: "mininet"
+  switch_type: "bmv2"
+  p4_program: "p4/feature_extraction.p4"
+
+traffic:
+  benign_pcap: "dataset_cic_iot_2023/PCAP/Benign_Final"
+  attack_pcaps:
+    - "dataset_cic_iot_2023/PCAP/DDoS-SYN_Flood"
+    - "dataset_cic_iot_2023/PCAP/DDoS-UDP_Flood"
+    - "dataset_cic_iot_2023/PCAP/DDoS-HTTP_Flood"
+    - "dataset_cic_iot_2023/PCAP/DDoS-TCP_Flood"
+    - "dataset_cic_iot_2023/PCAP/DDoS-ICMP_Flood"
+    - "dataset_cic_iot_2023/PCAP/DDoS-SlowLoris"
+  benign_rate: "100mbps"
+  attack_rate: "50mbps"
+  duration: 300  # seconds
+
+p4_switch:
+  confidence_threshold: 0.5
+  flow_timeout: 60
+  table_size: 65536
+  seq_len: 16
+
+controller:
+  listen_port: 9999
+  mamba_model: "models/mamba_best.pt"
+  attack_confidence_threshold: 0.7
+  num_classes: 8
+
+metrics:
+  - throughput
+  - latency
+  - cpu_utilization
+  - detection_accuracy
+  - false_positive_rate
+  - per_class_f1

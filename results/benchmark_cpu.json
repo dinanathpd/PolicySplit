@@ -1,0 +1,91 @@
+[
+  {
+    "name": "DataPlaneCNN",
+    "parameters": {
+      "total": 49512,
+      "trainable": 49512,
+      "size_mb": 0.198
+    },
+    "latency": {
+      "single_sample_ms": 0.0738,
+      "single_p99_ms": 0.1437,
+      "batch64_ms": 0.6519,
+      "per_sample_in_batch_ms": 0.0102,
+      "throughput_samples_sec": 98176.8
+    }
+  },
+  {
+    "name": "SequenceCNN",
+    "parameters": {
+      "total": 159112,
+      "trainable": 159112,
+      "size_mb": 0.636
+    },
+    "latency": {
+      "single_sample_ms": 0.4177,
+      "single_p99_ms": 0.6907,
+      "batch64_ms": 4.7247,
+      "per_sample_in_batch_ms": 0.0738,
+      "throughput_samples_sec": 13545.9
+    }
+  },
+  {
+    "name": "BiMamba+Entropy (proposed)",
+    "parameters": {
+      "total": 177608,
+      "trainable": 177608,
+      "size_mb": 0.71
+    },
+    "latency": {
+      "single_sample_ms": 14.8304,
+      "single_p99_ms": 19.1346,
+      "batch64_ms": 572.9729,
+      "per_sample_in_batch_ms": 8.9527,
+      "throughput_samples_sec": 111.7
+    }
+  },
+  {
+    "name": "BiMamba (no entropy)",
+    "parameters": {
+      "total": 174088,
+      "trainable": 174088,
+      "size_mb": 0.696
+    },
+    "latency": {
+      "single_sample_ms": 12.69,
+      "single_p99_ms": 16.6894,
+      "batch64_ms": 571.3151,
+      "per_sample_in_batch_ms": 8.9268,
+      "throughput_samples_sec": 112.0
+    }
+  },
+  {
+    "name": "Mamba-Uni (d=64, L=4)",
+    "parameters": {
+      "total": 64648,
+      "trainable": 64648,
+      "size_mb": 0.259
+    },
+    "latency": {
+      "single_sample_ms": 6.852,
+      "single_p99_ms": 7.8965,
+      "batch64_ms": 285.1027,
+      "per_sample_in_batch_ms": 4.4547,
+      "throughput_samples_sec": 224.5
+    }
+  },
+  {
+    "name": "ONNX BiMamba+Ent (CPU)",
+    "parameters": {
+      "total": 177608,
+      "size_mb": 0.835
+    },
+    "latency": {
+      "single_sample_ms": 6.6794,
+      "single_p99_ms": 7.1334,
+      "batch64_ms": 305.255,
+      "per_sample_in_batch_ms": 4.7696,
+      "throughput_samples_sec": 209.7
+    }
+  }
+]

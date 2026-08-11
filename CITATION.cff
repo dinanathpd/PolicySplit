@@ -1,0 +1,48 @@
+cff-version: 1.2.0
+message: If you use this software, please cite both the software and the paper.
+title: PolicySplit
+abstract: >-
+  Policy-aligned fast-path admission for P4-SDN IoT intrusion detection.
+  Reference implementation covering PCAP feature extraction, controlled
+  context audits, action-aware policy compilation, matched estimators, a P4
+  register pipeline, BMv2 replay, and an SDN controller.
+type: software
+license: MIT
+repository-code: https://github.com/whoisdinanath/PolicySplit
+keywords:
+  - intrusion detection
+  - Internet of Things
+  - programmable data planes
+  - state space models
+  - Mamba
+  - software-defined networking
+  - CICIoT2023
+authors:
+  - family-names: Padhya
+    given-names: Dinanath
+    affiliation: >-
+      Department of Electronics and Computer Engineering, Thapathali Campus,
+      Institute of Engineering, Kathmandu, Nepal
+  - family-names: Sapkota
+    given-names: Binod
+    affiliation: >-
+      Department of Electronics and Computer Engineering, Thapathali Campus,
+      Institute of Engineering, Kathmandu, Nepal
+  - family-names: Dawadi
+    given-names: Babu R.
+    affiliation: >-
+      Department of Electronics and Computer Engineering, Pulchowk Campus,
+      Institute of Engineering, Lalitpur, Nepal
+preferred-citation:
+  type: article
+  title: >-
+    PolicySplit: Policy-Aligned Fast-Path Admission for P4-SDN IoT Intrusion
+    Detection
+  year: 2026
+  authors:
+    - family-names: Padhya
+      given-names: Dinanath
+    - family-names: Sapkota
+      given-names: Binod
+    - family-names: Dawadi
+      given-names: Babu R.

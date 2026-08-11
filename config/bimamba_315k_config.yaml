@@ -1,0 +1,139 @@
+# bimamba_315k_config.yaml - Tuned hyperparameters for 315K full dataset
+#
+# Dataset: entropy_flows_v2.h5 (315,256 flows from 34 PCAP subtypes)
+# Class distribution (highly imbalanced):
+#   Benign:     30,000  (9.5%)
+#   DDoS:       75,446  (23.9%)
+#   DoS:        96,996  (30.8%)
+#   Mirai:       2,969  (0.9%)  <-- severe minority
+#   Recon:      79,867  (25.3%)
+#   Web:         5,589  (1.8%)  <-- minority
+#   Spoofing:   22,328  (7.1%)
+#   BruteForce:  2,061  (0.7%)  <-- severe minority
+#
+# Key differences from 175K config:
+#   - Wider model (d_model=96) to handle 34 subtypes intra-class variance
+#   - 6 layers instead of 4 for richer representations
+#   - Higher focal gamma (2.5) for harder minority separation
+#   - More epochs (150) with patience 25 for convergence on 2x data
+#   - Stronger augmentation and label smoothing
+#   - Gradient accumulation to simulate larger batch on 6GB GPU
+#
+# Expected training time: ~12 to 16 hours on RTX 3050 6GB
+# Recommended: RTX 3060+ or A100 for faster training
+
+# ── Grid Search Configurations ──────────────────────────────────────
+# Run these as separate experiments via CLI args to train_bimamba.py
+# Priority order: config_a (recommended), then config_b, then config_c
+
+experiments:
+  # Config A: Wider model, more layers (RECOMMENDED first try)
+  config_a:
+    description: "Wider + deeper BiMamba, stronger regularization"
+    command: >
+      PYTHONPATH=. python scripts/train_bimamba.py
+        --data data/sequences/entropy_flows_v2.h5
+        --split flow-isolated
+        --name bimamba_ent_315k_a
+        --d-model 96 --n-layers 6 --expand 1
+        --d-state 16 --d-conv 4
+        --dropout 0.25
+        --augment --no-amp
+        --epochs 150 --patience 25
+        --batch-size 64 --lr 2e-4
+        --weight-decay 0.02
+        --focal-gamma 2.5
+        --warmup-epochs 8
+    estimated_params: "~380K"
+    estimated_vram: "~4.5 GB"
+    notes: >
+      d_model=96 gives 2.25x capacity over d_model=64.
+      6 layers capture longer-range temporal dependencies.
+      Lower LR (2e-4 vs 3e-4) for more stable convergence on larger data.
+      Higher dropout (0.25) to prevent overfitting to dominant classes.
+      Focal gamma 2.5 pushes harder on misclassified minority samples.
+
+  # Config B: Same width as 175K but much deeper
+  config_b:
+    description: "Deep narrow BiMamba, maximum regularization"
+    command: >
+      PYTHONPATH=. python scripts/train_bimamba.py
+        --data data/sequences/entropy_flows_v2.h5
+        --split flow-isolated
+        --name bimamba_ent_315k_b
+        --d-model 64 --n-layers 8 --expand 1
+        --d-state 16 --d-conv 4
+        --dropout 0.3
+        --augment --no-amp
+        --epochs 150 --patience 25
+        --batch-size 64 --lr 2e-4
+        --weight-decay 0.03
+        --focal-gamma 3.0
+        --warmup-epochs 10
+    estimated_params: "~340K"
+    estimated_vram: "~4.0 GB"
+    notes: >
+      8 layers with d_model=64 trades width for depth.
+      Higher dropout (0.3) and weight decay (0.03) to combat overfitting.
+      Focal gamma 3.0 aggressively focuses on hard examples.
+      Good fallback if config_a overfits.
+
+  # Config C: Wide model with expand=2 (largest capacity)
+  config_c:
+    description: "Wide BiMamba with expansion, for high-VRAM GPUs"
+    command: >
+      PYTHONPATH=. python scripts/train_bimamba.py
+        --data data/sequences/entropy_flows_v2.h5
+        --split flow-isolated
+        --name bimamba_ent_315k_c
+        --d-model 96 --n-layers 4 --expand 2
+        --d-state 16 --d-conv 4
+        --dropout 0.2
+        --augment --no-amp
+        --epochs 120 --patience 20
+        --batch-size 128 --lr 3e-4
+        --weight-decay 0.01
+        --focal-gamma 2.0
+        --warmup-epochs 5
+    estimated_params: "~550K"
+    estimated_vram: "~5.5 GB"
+    notes: >
+      expand=2 doubles the inner dimension of Mamba SSM blocks.
+      Needs more VRAM; use batch-size 128 only if GPU has 8+ GB.
+      On 6GB GPU, reduce batch-size to 64.
+      Same focal/regularization as 175K baseline for fair comparison.
+
+# ── Quick-Run Script ────────────────────────────────────────────────
+# To run config_a (recommended):
+#
+#   PYTHONPATH=. python scripts/train_bimamba.py \
+#       --data data/sequences/entropy_flows_v2.h5 \
+#       --split flow-isolated \
+#       --name bimamba_ent_315k_a \
+#       --d-model 96 --n-layers 6 --expand 1 \
+#       --d-state 16 --d-conv 4 \
+#       --dropout 0.25 \
+#       --augment --no-amp \
+#       --epochs 150 --patience 25 \
+#       --batch-size 64 --lr 2e-4 \
+#       --weight-decay 0.02 \
+#       --focal-gamma 2.5 \
+#       --warmup-epochs 8 \
+#       2>&1 | tee results/log_bimamba_ent_315k_a.txt
+
+# ── Ablation (no entropy) on 315K ──────────────────────────────────
+# After config_a finishes, run the ablation:
+#
+#   PYTHONPATH=. python scripts/train_bimamba.py \
+#       --data data/sequences/entropy_flows_v2.h5 \
+#       --split flow-isolated \
+#       --name bimamba_noent_315k \
+#       --d-model 96 --n-layers 6 --expand 1 \
+#       --dropout 0.25 \
+#       --no-entropy --no-amp \
+#       --epochs 150 --patience 25 \
+#       --batch-size 64 --lr 2e-4 \
+#       --weight-decay 0.02 \
+#       --focal-gamma 2.5 \
+#       --warmup-epochs 8 \
+#       2>&1 | tee results/log_bimamba_noent_315k.txt

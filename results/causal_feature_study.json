@@ -1,0 +1,114 @@
+{
+  "source": "results/bmv2_causal_features.json",
+  "n_flows": 1900,
+  "packets_replayed": 27041,
+  "distinct_sources_per_capture": {
+    "ddos_syn": 142,
+    "dos_tcp": 83,
+    "mirai": 55,
+    "recon": 131,
+    "bruteforce": 137,
+    "benign": 132
+  },
+  "distinct_victims": 392,
+  "features": [
+    "pkt_count",
+    "byte_count",
+    "mean_iat_us",
+    "dstport_fanout",
+    "src_diversity"
+  ],
+  "class_counts": [
+    208,
+    905,
+    86,
+    108,
+    374,
+    0,
+    0,
+    219
+  ],
+  "estimator_vs_truth_pearson_r": 0.9215163973795762,
+  "src_diversity_by_class": {
+    "0": {
+      "n": 208,
+      "switch_estimate_mean": 8.01923076923077,
+      "switch_estimate_median": 4.0,
+      "true_sources_mean": 16.33653846153846
+    },
+    "1": {
+      "n": 905,
+      "switch_estimate_mean": 6.2342541436464085,
+      "switch_estimate_median": 6.0,
+      "true_sources_mean": 8.297237569060773
+    },
+    "2": {
+      "n": 86,
+      "switch_estimate_mean": 7.011627906976744,
+      "switch_estimate_median": 2.0,
+      "true_sources_mean": 14.395348837209303
+    },
+    "3": {
+      "n": 108,
+      "switch_estimate_mean": 5.388888888888889,
+      "switch_estimate_median": 7.0,
+      "true_sources_mean": 3.7037037037037037
+    },
+    "4": {
+      "n": 374,
+      "switch_estimate_mean": 8.371657754010695,
+      "switch_estimate_median": 5.0,
+      "true_sources_mean": 14.748663101604278
+    },
+    "7": {
+      "n": 219,
+      "switch_estimate_mean": 8.269406392694064,
+      "switch_estimate_median": 4.0,
+      "true_sources_mean": 15.849315068493151
+    }
+  },
+  "ddos_dos_separation": {
+    "switch_estimate": {
+      "mean_a": 6.2342541436464085,
+      "mean_b": 7.011627906976744,
+      "cohens_d": -0.09878442342652825,
+      "auc": 0.7105165103430554,
+      "auc_ci95": [
+        0.6205230952075036,
+        0.7895742323011693
+      ],
+      "p": 1.1999487639417328e-11,
+      "n_a": 905,
+      "n_b": 86
+    },
+    "ground_truth": {
+      "mean_a": 8.297237569060773,
+      "mean_b": 14.395348837209303,
+      "cohens_d": -0.2994608248589659,
+      "auc": 0.7035590389310035,
+      "auc_ci95": [
+        0.6141881343954774,
+        0.7818461711422329
+      ],
+      "p": 6.974872440109465e-11,
+      "n_a": 905,
+      "n_b": 86
+    }
+  },
+  "conditions": {
+    "measured": {
+      "accuracy": 0.7333333333333333,
+      "macro_f1": 0.6626072737507518
+    },
+    "none": {
+      "accuracy": 0.7175438596491228,
+      "macro_f1": 0.6293050676437528
+    },
+    "class-marginal": {
+      "accuracy": 0.7298245614035088,
+      "macro_f1": 0.6273385420861001
+    }
+  },
+  "diversity_gain_pp": 3.33,
+  "diversity_gain_beyond_class_marginal_pp": 3.53
+}

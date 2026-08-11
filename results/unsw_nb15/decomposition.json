@@ -1,0 +1,171 @@
+{
+  "corpus": "UNSW-NB15, pooled partitions",
+  "n_rows": 257673,
+  "classes": [
+    "Analysis",
+    "Backdoor",
+    "DoS",
+    "Exploits",
+    "Fuzzers",
+    "Generic",
+    "Normal",
+    "Reconnaissance",
+    "Shellcode",
+    "Worms"
+  ],
+  "context_features": [
+    "ct_srv_src",
+    "ct_dst_ltm",
+    "ct_src_dport_ltm",
+    "ct_dst_sport_ltm",
+    "ct_dst_src_ltm",
+    "ct_src_ltm",
+    "ct_srv_dst"
+  ],
+  "context_window": "previous 100 connections",
+  "protocol": {
+    "split": "stratified random, test_size=0.3",
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "conditions": [
+      "none",
+      "shuffle",
+      "class-marginal",
+      "real"
+    ],
+    "note": "controls drawn from the training partition only; all scaling and encoding fitted after partitioning"
+  },
+  "models": {
+    "LightGBM": {
+      "none": {
+        "macro_f1_mean": 0.3687057378584424,
+        "macro_f1_std": 0.010947309926107906,
+        "accuracy_mean": 0.6916078066112994,
+        "n_seeds": 3
+      },
+      "shuffle": {
+        "macro_f1_mean": 0.42265808487294804,
+        "macro_f1_std": 0.0518415409804094,
+        "accuracy_mean": 0.7499374746664597,
+        "n_seeds": 3
+      },
+      "class-marginal": {
+        "macro_f1_mean": 0.5733611023226247,
+        "macro_f1_std": 0.016706549834136268,
+        "accuracy_mean": 0.8406423292195976,
+        "n_seeds": 3
+      },
+      "real": {
+        "macro_f1_mean": 0.4775425030622698,
+        "macro_f1_std": 0.020180490133446832,
+        "accuracy_mean": 0.7892637534173329,
+        "n_seeds": 3
+      },
+      "decomposition": {
+        "total_context_gain_pp": 10.88,
+        "explained_by_extra_inputs_pp": 5.4,
+        "explained_by_class_marginal_pp": 20.47,
+        "beyond_class_marginal_pp": -9.58
+      }
+    },
+    "LogisticRegression": {
+      "none": {
+        "macro_f1_mean": 0.35633301898442377,
+        "macro_f1_std": 0.002758786123570813,
+        "accuracy_mean": 0.7526023475028675,
+        "n_seeds": 3
+      },
+      "shuffle": {
+        "macro_f1_mean": 0.3541602743239863,
+        "macro_f1_std": 0.002139053485722351,
+        "accuracy_mean": 0.7530680534354438,
+        "n_seeds": 3
+      },
+      "class-marginal": {
+        "macro_f1_mean": 0.43143572359882915,
+        "macro_f1_std": 0.003212988070757673,
+        "accuracy_mean": 0.7931446361888007,
+        "n_seeds": 3
+      },
+      "real": {
+        "macro_f1_mean": 0.3814336595121899,
+        "macro_f1_std": 0.0015461120535376594,
+        "accuracy_mean": 0.7776857864824541,
+        "n_seeds": 3
+      },
+      "decomposition": {
+        "total_context_gain_pp": 2.51,
+        "explained_by_extra_inputs_pp": -0.22,
+        "explained_by_class_marginal_pp": 7.51,
+        "beyond_class_marginal_pp": -5.0
+      }
+    },
+    "RandomForest": {
+      "none": {
+        "macro_f1_mean": 0.5234157645721292,
+        "macro_f1_std": 0.01054130048472635,
+        "accuracy_mean": 0.8204919234517435,
+        "n_seeds": 3
+      },
+      "shuffle": {
+        "macro_f1_mean": 0.5237429011861806,
+        "macro_f1_std": 0.008361674146500077,
+        "accuracy_mean": 0.8105051184531664,
+        "n_seeds": 3
+      },
+      "class-marginal": {
+        "macro_f1_mean": 0.5993494614905319,
+        "macro_f1_std": 0.0060533406496139485,
+        "accuracy_mean": 0.851940010176537,
+        "n_seeds": 3
+      },
+      "real": {
+        "macro_f1_mean": 0.5624536030495052,
+        "macro_f1_std": 0.007326984181707516,
+        "accuracy_mean": 0.8278052314299759,
+        "n_seeds": 3
+      },
+      "decomposition": {
+        "total_context_gain_pp": 3.9,
+        "explained_by_extra_inputs_pp": 0.03,
+        "explained_by_class_marginal_pp": 7.59,
+        "beyond_class_marginal_pp": -3.69
+      }
+    },
+    "XGBoost": {
+      "none": {
+        "macro_f1_mean": 0.5523592943500979,
+        "macro_f1_std": 0.003923105869403041,
+        "accuracy_mean": 0.8233465283347563,
+        "n_seeds": 3
+      },
+      "shuffle": {
+        "macro_f1_mean": 0.5498026039077518,
+        "macro_f1_std": 0.004322709197425217,
+        "accuracy_mean": 0.8200132812432623,
+        "n_seeds": 3
+      },
+      "class-marginal": {
+        "macro_f1_mean": 0.6787712385351604,
+        "macro_f1_std": 0.0023432361323511676,
+        "accuracy_mean": 0.8702577768578648,
+        "n_seeds": 3
+      },
+      "real": {
+        "macro_f1_mean": 0.5997364361646321,
+        "macro_f1_std": 0.0037866199191075737,
+        "accuracy_mean": 0.8368735608393055,
+        "n_seeds": 3
+      },
+      "decomposition": {
+        "total_context_gain_pp": 4.74,
+        "explained_by_extra_inputs_pp": -0.26,
+        "explained_by_class_marginal_pp": 12.64,
+        "beyond_class_marginal_pp": -7.9
+      }
+    }
+  }
+}
