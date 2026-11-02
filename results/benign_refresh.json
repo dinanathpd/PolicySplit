@@ -1,0 +1,5556 @@
+{
+ "config": {
+  "seeds": [
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46,
+   47,
+   48,
+   49,
+   50,
+   51,
+   52,
+   53,
+   54,
+   55,
+   56,
+   57,
+   58,
+   59
+  ],
+  "captures": {
+   "benign_unseen2": 472,
+   "benign_unseen3": 436
+  },
+  "target": 0.01,
+  "split": "flow-isolated",
+  "action_map": "2-action",
+  "gate": "action"
+ },
+ "summary": {
+  "corpus": {
+   "coverage": 0.40723791035874757,
+   "corpus_benign_dropped": 0.006630934067313284,
+   "unseen_benign_dropped": {
+    "benign_unseen2": 0.07535310734463277,
+    "benign_unseen3": 0.10848623853211009
+   },
+   "dropped_in_application_attack_cells": {
+    "benign_unseen2": 0.8741904012336948,
+    "benign_unseen3": 0.7520729623938123
+   },
+   "dropped_by_cell_majority": {
+    "benign_unseen2": [
+     0,
+     31,
+     74,
+     0,
+     40,
+     80,
+     829,
+     13
+    ],
+    "benign_unseen3": [
+     0,
+     2,
+     344,
+     0,
+     36,
+     89,
+     873,
+     75
+    ]
+   },
+   "tiered": {
+    "3-action": {
+     "benign_unseen2": {
+      "dropped": 0.006991525423728813,
+      "any_action": 0.006991525423728813
+     },
+     "benign_unseen3": {
+      "dropped": 0.0176605504587156,
+      "any_action": 0.0176605504587156
+     },
+     "corpus": {
+      "coverage": 0.29593670053726956,
+      "drop_coverage": 0.29593670053726956,
+      "selective_error": 0.004273960765565134,
+      "benign_dropped": 0.0016243553179754223
+     },
+     "vs_two_action": {
+      "coverage": {
+       "before": 0.40723791035874757,
+       "after": 0.29593670053726956,
+       "mean_points": -11.1301209821478,
+       "ci95": [
+        -14.035740895506116,
+        -7.322100610724042
+       ],
+       "lower_in": 28,
+       "n": 30
+      },
+      "dropped_benign_unseen2": {
+       "before": 0.07535310734463277,
+       "after": 0.006991525423728813,
+       "mean_points": -6.836158192090394,
+       "ci95": [
+        -7.8177966101694905,
+        -5.76271186440678
+       ],
+       "lower_in": 28,
+       "n": 30
+      },
+      "dropped_benign_unseen3": {
+       "before": 0.10848623853211009,
+       "after": 0.0176605504587156,
+       "mean_points": -9.082568807339449,
+       "ci95": [
+        -10.688264525993885,
+        -7.362385321100919
+       ],
+       "lower_in": 28,
+       "n": 30
+      }
+     }
+    },
+    "4-action": {
+     "benign_unseen2": {
+      "dropped": 0.00847457627118644,
+      "any_action": 0.00847457627118644
+     },
+     "benign_unseen3": {
+      "dropped": 0.01460244648318043,
+      "any_action": 0.01460244648318043
+     },
+     "corpus": {
+      "coverage": 0.2610115270166149,
+      "drop_coverage": 0.2610115270166149,
+      "selective_error": 0.0038350051193137566,
+      "benign_dropped": 0.001235737488061633
+     },
+     "vs_two_action": {
+      "coverage": {
+       "before": 0.40723791035874757,
+       "after": 0.2610115270166149,
+       "mean_points": -14.622638334213269,
+       "ci95": [
+        -17.396711173969482,
+        -10.944565860300118
+       ],
+       "lower_in": 29,
+       "n": 30
+      },
+      "dropped_benign_unseen2": {
+       "before": 0.07535310734463277,
+       "after": 0.00847457627118644,
+       "mean_points": -6.687853107344632,
+       "ci95": [
+        -7.6412429378531055,
+        -5.642655367231639
+       ],
+       "lower_in": 28,
+       "n": 30
+      },
+      "dropped_benign_unseen3": {
+       "before": 0.10848623853211009,
+       "after": 0.01460244648318043,
+       "mean_points": -9.388379204892967,
+       "ci95": [
+        -11.047591743119266,
+        -7.614678899082571
+       ],
+       "lower_in": 28,
+       "n": 30
+      }
+     }
+    },
+    "spoof-redirect": {
+     "benign_unseen2": {
+      "dropped": 0.010734463276836156,
+      "any_action": 0.010734463276836156
+     },
+     "benign_unseen3": {
+      "dropped": 0.02561162079510704,
+      "any_action": 0.02561162079510704
+     },
+     "corpus": {
+      "coverage": 0.338317271561101,
+      "drop_coverage": 0.338317271561101,
+      "selective_error": 0.003933101186263435,
+      "benign_dropped": 0.0022619599254428435
+     },
+     "vs_two_action": {
+      "coverage": {
+       "before": 0.40723791035874757,
+       "after": 0.338317271561101,
+       "mean_points": -6.892063879764659,
+       "ci95": [
+        -9.7424622037143,
+        -3.14604505407593
+       ],
+       "lower_in": 26,
+       "n": 30
+      },
+      "dropped_benign_unseen2": {
+       "before": 0.07535310734463277,
+       "after": 0.010734463276836156,
+       "mean_points": -6.461864406779659,
+       "ci95": [
+        -7.51412429378531,
+        -5.345515536723165
+       ],
+       "lower_in": 28,
+       "n": 30
+      },
+      "dropped_benign_unseen3": {
+       "before": 0.10848623853211009,
+       "after": 0.02561162079510704,
+       "mean_points": -8.287461773700306,
+       "ci95": [
+        -9.992354740061163,
+        -6.4982798165137625
+       ],
+       "lower_in": 28,
+       "n": 30
+      }
+     }
+    },
+    "flood-inspect": {
+     "benign_unseen2": {
+      "dropped": 0.00847457627118644,
+      "any_action": 0.06278248587570621
+     },
+     "benign_unseen3": {
+      "dropped": 0.01460244648318043,
+      "any_action": 0.12454128440366972
+     },
+     "corpus": {
+      "coverage": 0.3838282636347301,
+      "drop_coverage": 0.2610115270166149,
+      "selective_error": 0.019164549909439898,
+      "benign_dropped": 0.001235737488061633
+     },
+     "vs_two_action": {
+      "coverage": {
+       "before": 0.40723791035874757,
+       "after": 0.3838282636347301,
+       "mean_points": -2.340964672401754,
+       "ci95": [
+        -5.283198995468073,
+        1.2465719622724571
+       ],
+       "lower_in": 22,
+       "n": 30
+      },
+      "dropped_benign_unseen2": {
+       "before": 0.07535310734463277,
+       "after": 0.00847457627118644,
+       "mean_points": -6.687853107344632,
+       "ci95": [
+        -7.6412429378531055,
+        -5.642655367231639
+       ],
+       "lower_in": 28,
+       "n": 30
+      },
+      "dropped_benign_unseen3": {
+       "before": 0.10848623853211009,
+       "after": 0.01460244648318043,
+       "mean_points": -9.388379204892967,
+       "ci95": [
+        -11.047591743119266,
+        -7.614678899082571
+       ],
+       "lower_in": 28,
+       "n": 30
+      }
+     }
+    }
+   }
+  },
+  "with_benign_unseen2": {
+   "coverage": {
+    "before": 0.40723791035874757,
+    "after": 0.42585253786616006,
+    "mean_points": 1.8614627507412516,
+    "ci95": [
+     -0.8297735746212445,
+     5.523921080800618
+    ],
+    "lower_in": 15,
+    "n": 30
+   },
+   "dropped_benign_unseen3": {
+    "before": 0.10848623853211009,
+    "after": 0.10007645259938838,
+    "mean_points": -0.8409785932721712,
+    "ci95": [
+     -2.492737003058104,
+     0.9862385321100913
+    ],
+    "lower_in": 20,
+    "n": 30
+   }
+  },
+  "with_benign_unseen3": {
+   "coverage": {
+    "before": 0.40723791035874757,
+    "after": 0.43067150403289695,
+    "mean_points": 2.343359367414932,
+    "ci95": [
+     -0.15312592412673623,
+     5.859977809177379
+    ],
+    "lower_in": 14,
+    "n": 30
+   },
+   "dropped_benign_unseen2": {
+    "before": 0.07535310734463277,
+    "after": 0.07175141242937853,
+    "mean_points": -0.3601694915254239,
+    "ci95": [
+     -1.3068502824858756,
+     0.7063912429378523
+    ],
+    "lower_in": 16,
+    "n": 30
+   }
+  }
+ },
+ "per_seed": [
+  {
+   "seed": 30,
+   "corpus": {
+    "coverage": 0.4429766204143699,
+    "selective_error": 0.003003647285990131,
+    "corpus_benign_dropped": 0.008069164265129682,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.07838983050847458,
+     "benign_unseen3": 0.12614678899082568
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.918918918918919,
+     "benign_unseen3": 0.6727272727272727
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      2,
+      1,
+      0,
+      5,
+      0,
+      29,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      1,
+      17,
+      0,
+      4,
+      0,
+      30,
+      3
+     ]
+    },
+    "tiered": {
+     "3-action": {
+      "benign_unseen2": {
+       "dropped": 0.006355932203389831,
+       "any_action": 0.006355932203389831
+      },
+      "benign_unseen3": {
+       "dropped": 0.020642201834862386,
+       "any_action": 0.020642201834862386
+      },
+      "corpus": {
+       "coverage": 0.30678578217068997,
+       "drop_coverage": 0.30678578217068997,
+       "selective_error": 0.004646840148698885,
+       "benign_dropped": 0.002881844380403458
+      }
+     },
+     "4-action": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.01059322033898305
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.01834862385321101
+      },
+      "corpus": {
+       "coverage": 0.26487359817525186,
+       "drop_coverage": 0.26487359817525186,
+       "selective_error": 0.0046645138141370645,
+       "benign_dropped": 0.0011527377521613833
+      }
+     },
+     "spoof-redirect": {
+      "benign_unseen2": {
+       "dropped": 0.014830508474576272,
+       "any_action": 0.014830508474576272
+      },
+      "benign_unseen3": {
+       "dropped": 0.02522935779816514,
+       "any_action": 0.02522935779816514
+      },
+      "corpus": {
+       "coverage": 0.3365329785211937,
+       "drop_coverage": 0.3365329785211937,
+       "selective_error": 0.003953685399604632,
+       "benign_dropped": 0.002881844380403458
+      }
+     },
+     "flood-inspect": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.05084745762711865
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.0963302752293578
+      },
+      "corpus": {
+       "coverage": 0.35915225242349363,
+       "drop_coverage": 0.26487359817525186,
+       "selective_error": 0.015347975654935168,
+       "benign_dropped": 0.0011527377521613833
+      }
+     }
+    }
+   },
+   "with_benign_unseen2": {
+    "coverage": 0.4713932712412089,
+    "selective_error": 0.0038306451612903224,
+    "corpus_benign_dropped": 0.01095100864553314,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.07627118644067797,
+     "benign_unseen3": 0.13990825688073394
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.9166666666666666,
+     "benign_unseen3": 0.7049180327868853
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      2,
+      1,
+      0,
+      3,
+      0,
+      30,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      1,
+      17,
+      0,
+      4,
+      1,
+      35,
+      3
+     ]
+    }
+   },
+   "with_benign_unseen3": {
+    "coverage": 0.4519102832161186,
+    "selective_error": 0.002733964248159832,
+    "corpus_benign_dropped": 0.007492795389048991,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.08050847457627118,
+     "benign_unseen3": 0.11009174311926606
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.8421052631578947,
+     "benign_unseen3": 0.7708333333333334
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      5,
+      1,
+      0,
+      3,
+      0,
+      29,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      1,
+      10,
+      0,
+      4,
+      0,
+      30,
+      3
+     ]
+    }
+   }
+  },
+  {
+   "seed": 31,
+   "corpus": {
+    "coverage": 0.4348708487084871,
+    "selective_error": 0.00487908358082308,
+    "corpus_benign_dropped": 0.012472885032537961,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.07838983050847458,
+     "benign_unseen3": 0.13761467889908258
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.918918918918919,
+     "benign_unseen3": 0.7
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      3,
+      0,
+      31,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      18,
+      0,
+      4,
+      0,
+      34,
+      4
+     ]
+    },
+    "tiered": {
+     "3-action": {
+      "benign_unseen2": {
+       "dropped": 0.00423728813559322,
+       "any_action": 0.00423728813559322
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.01834862385321101
+      },
+      "corpus": {
+       "coverage": 0.30249077490774906,
+       "drop_coverage": 0.30249077490774906,
+       "selective_error": 0.003354681305275999,
+       "benign_dropped": 0.0027114967462039045
+      }
+     },
+     "4-action": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.01059322033898305
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.01834862385321101
+      },
+      "corpus": {
+       "coverage": 0.2663284132841328,
+       "drop_coverage": 0.2663284132841328,
+       "selective_error": 0.0034638032559750607,
+       "benign_dropped": 0.0021691973969631237
+      }
+     },
+     "spoof-redirect": {
+      "benign_unseen2": {
+       "dropped": 0.00423728813559322,
+       "any_action": 0.00423728813559322
+      },
+      "benign_unseen3": {
+       "dropped": 0.027522935779816515,
+       "any_action": 0.027522935779816515
+      },
+      "corpus": {
+       "coverage": 0.3253690036900369,
+       "drop_coverage": 0.3253690036900369,
+       "selective_error": 0.001701162461015027,
+       "benign_dropped": 0.0010845986984815619
+      }
+     },
+     "flood-inspect": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.1228813559322034
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.19724770642201836
+      },
+      "corpus": {
+       "coverage": 0.41595940959409594,
+       "drop_coverage": 0.2663284132841328,
+       "selective_error": 0.027944111776447105,
+       "benign_dropped": 0.0021691973969631237
+      }
+     }
+    }
+   },
+   "with_benign_unseen2": {
+    "coverage": 0.3600553505535055,
+    "selective_error": 0.0017934921854983346,
+    "corpus_benign_dropped": 0.003796095444685466,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.01059322033898305,
+     "benign_unseen3": 0.03669724770642202
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.4,
+     "benign_unseen3": 0.4375
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      2,
+      0,
+      0,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      9,
+      0,
+      0,
+      0,
+      3,
+      4
+     ]
+    }
+   },
+   "with_benign_unseen3": {
+    "coverage": 0.3908671586715867,
+    "selective_error": 0.002124144441822044,
+    "corpus_benign_dropped": 0.004880694143167028,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.05296610169491525,
+     "benign_unseen3": 0.05045871559633028
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.88,
+     "benign_unseen3": 0.9090909090909091
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      2,
+      0,
+      20,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      2,
+      0,
+      0,
+      0,
+      20,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "seed": 32,
+   "corpus": {
+    "coverage": 0.46681185493797933,
+    "selective_error": 0.005070993914807302,
+    "corpus_benign_dropped": 0.01429388221841052,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.09745762711864407,
+     "benign_unseen3": 0.15137614678899083
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.8043478260869565,
+     "benign_unseen3": 0.6666666666666666
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      8,
+      0,
+      3,
+      1,
+      33,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      22,
+      0,
+      4,
+      1,
+      36,
+      3
+     ]
+    },
+    "tiered": {
+     "3-action": {
+      "benign_unseen2": {
+       "dropped": 0.006355932203389831,
+       "any_action": 0.006355932203389831
+      },
+      "benign_unseen3": {
+       "dropped": 0.020642201834862386,
+       "any_action": 0.020642201834862386
+      },
+      "corpus": {
+       "coverage": 0.29694157750213046,
+       "drop_coverage": 0.29694157750213046,
+       "selective_error": 0.01211734693877551,
+       "benign_dropped": 0.0017152658662092624
+      }
+     },
+     "4-action": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.01059322033898305
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.01834862385321101
+      },
+      "corpus": {
+       "coverage": 0.26853517659312565,
+       "drop_coverage": 0.26853517659312565,
+       "selective_error": 0.0021156558533145277,
+       "benign_dropped": 0.0017152658662092624
+      }
+     },
+     "spoof-redirect": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.01059322033898305
+      },
+      "benign_unseen3": {
+       "dropped": 0.027522935779816515,
+       "any_action": 0.027522935779816515
+      },
+      "corpus": {
+       "coverage": 0.35261812328377995,
+       "drop_coverage": 0.35261812328377995,
+       "selective_error": 0.00510204081632653,
+       "benign_dropped": 0.004002287021154946
+      }
+     },
+     "flood-inspect": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.08050847457627118
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.1353211009174312
+      },
+      "corpus": {
+       "coverage": 0.4069690370230092,
+       "drop_coverage": 0.26853517659312565,
+       "selective_error": 0.02047463936714751,
+       "benign_dropped": 0.0017152658662092624
+      }
+     }
+    }
+   },
+   "with_benign_unseen2": {
+    "coverage": 0.4676640469652495,
+    "selective_error": 0.005264223527029763,
+    "corpus_benign_dropped": 0.014865637507146942,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.0847457627118644,
+     "benign_unseen3": 0.14220183486238533
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.925,
+     "benign_unseen3": 0.7096774193548387
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      3,
+      1,
+      33,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      18,
+      0,
+      4,
+      1,
+      36,
+      3
+     ]
+    }
+   },
+   "with_benign_unseen3": {
+    "coverage": 0.441151406116845,
+    "selective_error": 0.0051513200257566,
+    "corpus_benign_dropped": 0.0137221269296741,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.07203389830508475,
+     "benign_unseen3": 0.09403669724770643
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.9117647058823529,
+     "benign_unseen3": 0.7317073170731707
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      1,
+      0,
+      30,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      11,
+      0,
+      0,
+      0,
+      30,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "seed": 33,
+   "corpus": {
+    "coverage": 0.45458788387939886,
+    "selective_error": 0.004517453798767967,
+    "corpus_benign_dropped": 0.011789924973204717,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.1038135593220339,
+     "benign_unseen3": 0.16055045871559634
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.9387755102040817,
+     "benign_unseen3": 0.7428571428571429
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      8,
+      5,
+      33,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      18,
+      0,
+      4,
+      7,
+      37,
+      4
+     ]
+    },
+    "tiered": {
+     "3-action": {
+      "benign_unseen2": {
+       "dropped": 0.00423728813559322,
+       "any_action": 0.00423728813559322
+      },
+      "benign_unseen3": {
+       "dropped": 0.0022935779816513763,
+       "any_action": 0.0022935779816513763
+      },
+      "corpus": {
+       "coverage": 0.23196116867357416,
+       "drop_coverage": 0.23196116867357416,
+       "selective_error": 0.00040241448692152917,
+       "benign_dropped": 0.0005359056806002144
+      }
+     },
+     "4-action": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.01059322033898305
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.01834862385321101
+      },
+      "corpus": {
+       "coverage": 0.2647251003453748,
+       "drop_coverage": 0.2647251003453748,
+       "selective_error": 0.0021156558533145277,
+       "benign_dropped": 0.0026795284030010718
+      }
+     },
+     "spoof-redirect": {
+      "benign_unseen2": {
+       "dropped": 0.00423728813559322,
+       "any_action": 0.00423728813559322
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.01834862385321101
+      },
+      "corpus": {
+       "coverage": 0.30925044338653973,
+       "drop_coverage": 0.30925044338653973,
+       "selective_error": 0.0018110473890733474,
+       "benign_dropped": 0.001607717041800643
+      }
+     },
+     "flood-inspect": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.029661016949152543
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.10091743119266056
+      },
+      "corpus": {
+       "coverage": 0.3721646597591711,
+       "drop_coverage": 0.2647251003453748,
+       "selective_error": 0.014798093804865815,
+       "benign_dropped": 0.0026795284030010718
+      }
+     }
+    }
+   },
+   "with_benign_unseen2": {
+    "coverage": 0.4210771959301783,
+    "selective_error": 0.002881844380403458,
+    "corpus_benign_dropped": 0.006966773847802787,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.0614406779661017,
+     "benign_unseen3": 0.0963302752293578
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.896551724137931,
+     "benign_unseen3": 0.7857142857142857
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      2,
+      3,
+      21,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      9,
+      0,
+      0,
+      4,
+      25,
+      4
+     ]
+    }
+   },
+   "with_benign_unseen3": {
+    "coverage": 0.49127228600765427,
+    "selective_error": 0.005700171005130154,
+    "corpus_benign_dropped": 0.01607717041800643,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.11228813559322035,
+     "benign_unseen3": 0.1720183486238532
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.8867924528301887,
+     "benign_unseen3": 0.76
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      4,
+      2,
+      0,
+      2,
+      6,
+      35,
+      4
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      18,
+      0,
+      0,
+      7,
+      40,
+      10
+     ]
+    }
+   }
+  },
+  {
+   "seed": 34,
+   "corpus": {
+    "coverage": 0.41051149694978883,
+    "selective_error": 0.0006858710562414266,
+    "corpus_benign_dropped": 0.0017281105990783411,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.07627118644067797,
+     "benign_unseen3": 0.10321100917431193
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.9166666666666666,
+     "benign_unseen3": 0.8
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      1,
+      2,
+      30,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      9,
+      0,
+      0,
+      2,
+      30,
+      4
+     ]
+    },
+    "tiered": {
+     "3-action": {
+      "benign_unseen2": {
+       "dropped": 0.00423728813559322,
+       "any_action": 0.00423728813559322
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.01834862385321101
+      },
+      "corpus": {
+       "coverage": 0.24917878930079776,
+       "drop_coverage": 0.24917878930079776,
+       "selective_error": 0.0018832391713747645,
+       "benign_dropped": 0.0
+      }
+     },
+     "4-action": {
+      "benign_unseen2": {
+       "dropped": 0.00423728813559322,
+       "any_action": 0.00423728813559322
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.01834862385321101
+      },
+      "corpus": {
+       "coverage": 0.26128578132332236,
+       "drop_coverage": 0.26128578132332236,
+       "selective_error": 0.0028735632183908046,
+       "benign_dropped": 0.0
+      }
+     },
+     "spoof-redirect": {
+      "benign_unseen2": {
+       "dropped": 0.006355932203389831,
+       "any_action": 0.006355932203389831
+      },
+      "benign_unseen3": {
+       "dropped": 0.027522935779816515,
+       "any_action": 0.027522935779816515
+      },
+      "corpus": {
+       "coverage": 0.34368840919755983,
+       "drop_coverage": 0.34368840919755983,
+       "selective_error": 0.00354997269251775,
+       "benign_dropped": 0.0
+      }
+     },
+     "flood-inspect": {
+      "benign_unseen2": {
+       "dropped": 0.00423728813559322,
+       "any_action": 0.0423728813559322
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.10091743119266056
+      },
+      "corpus": {
+       "coverage": 0.3682778038479587,
+       "drop_coverage": 0.26128578132332236,
+       "selective_error": 0.016055045871559634,
+       "benign_dropped": 0.0
+      }
+     }
+    }
+   },
+   "with_benign_unseen2": {
+    "coverage": 0.3671515720319099,
+    "selective_error": 0.001278118609406953,
+    "corpus_benign_dropped": 0.002880184331797235,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.01059322033898305,
+     "benign_unseen3": 0.02981651376146789
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.6,
+     "benign_unseen3": 0.38461538461538464
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      1,
+      0,
+      2,
+      0,
+      1,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      8,
+      0,
+      0,
+      0,
+      1,
+      4
+     ]
+    }
+   },
+   "with_benign_unseen3": {
+    "coverage": 0.40760206475832944,
+    "selective_error": 0.0018420446695832373,
+    "corpus_benign_dropped": 0.004608294930875576,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.05508474576271186,
+     "benign_unseen3": 0.052752293577981654
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.8846153846153846,
+     "benign_unseen3": 0.9130434782608695
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      2,
+      0,
+      21,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      2,
+      0,
+      0,
+      0,
+      21,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "seed": 35,
+   "corpus": {
+    "coverage": 0.42995905151890296,
+    "selective_error": 0.0019933554817275745,
+    "corpus_benign_dropped": 0.0047872340425531915,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.09322033898305085,
+     "benign_unseen3": 0.11926605504587157
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.8181818181818182,
+     "benign_unseen3": 0.7692307692307693
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      7,
+      0,
+      3,
+      0,
+      33,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      12,
+      0,
+      4,
+      0,
+      33,
+      3
+     ]
+    },
+    "tiered": {
+     "3-action": {
+      "benign_unseen2": {
+       "dropped": 0.00423728813559322,
+       "any_action": 0.00423728813559322
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.01834862385321101
+      },
+      "corpus": {
+       "coverage": 0.2890200933244453,
+       "drop_coverage": 0.2890200933244453,
+       "selective_error": 0.0016474464579901153,
+       "benign_dropped": 0.0
+      }
+     },
+     "4-action": {
+      "benign_unseen2": {
+       "dropped": 0.00423728813559322,
+       "any_action": 0.00423728813559322
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.01834862385321101
+      },
+      "corpus": {
+       "coverage": 0.2520712313113037,
+       "drop_coverage": 0.2520712313113037,
+       "selective_error": 0.003022289384208538,
+       "benign_dropped": 0.0
+      }
+     },
+     "spoof-redirect": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.01059322033898305
+      },
+      "benign_unseen3": {
+       "dropped": 0.02522935779816514,
+       "any_action": 0.02522935779816514
+      },
+      "corpus": {
+       "coverage": 0.3423483477764023,
+       "drop_coverage": 0.3423483477764023,
+       "selective_error": 0.0036161335187760778,
+       "benign_dropped": 0.0010638297872340426
+      }
+     },
+     "flood-inspect": {
+      "benign_unseen2": {
+       "dropped": 0.00423728813559322,
+       "any_action": 0.0211864406779661
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.07339449541284404
+      },
+      "corpus": {
+       "coverage": 0.341967431673174,
+       "drop_coverage": 0.2520712313113037,
+       "selective_error": 0.007518796992481203,
+       "benign_dropped": 0.0
+      }
+     }
+    }
+   },
+   "with_benign_unseen2": {
+    "coverage": 0.4015808018283973,
+    "selective_error": 0.0009485416172634575,
+    "corpus_benign_dropped": 0.002127659574468085,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.05084745762711865,
+     "benign_unseen3": 0.0779816513761468
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.875,
+     "benign_unseen3": 0.7352941176470589
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      0,
+      0,
+      21,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      9,
+      0,
+      0,
+      0,
+      21,
+      4
+     ]
+    }
+   },
+   "with_benign_unseen3": {
+    "coverage": 0.3958670602799733,
+    "selective_error": 0.0012027904738994466,
+    "corpus_benign_dropped": 0.0026595744680851063,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.05084745762711865,
+     "benign_unseen3": 0.052752293577981654
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.9166666666666666,
+     "benign_unseen3": 0.9565217391304348
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      22,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      22,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "seed": 36,
+   "corpus": {
+    "coverage": 0.43624798253109276,
+    "selective_error": 0.0028291621327529923,
+    "corpus_benign_dropped": 0.007282913165266107,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.09533898305084745,
+     "benign_unseen3": 0.13302752293577982
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.9333333333333333,
+     "benign_unseen3": 0.8448275862068966
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      0,
+      3,
+      39,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      9,
+      0,
+      0,
+      4,
+      41,
+      4
+     ]
+    },
+    "tiered": {
+     "3-action": {
+      "benign_unseen2": {
+       "dropped": 0.00423728813559322,
+       "any_action": 0.00423728813559322
+      },
+      "benign_unseen3": {
+       "dropped": 0.0022935779816513763,
+       "any_action": 0.0022935779816513763
+      },
+      "corpus": {
+       "coverage": 0.2462736162536789,
+       "drop_coverage": 0.2462736162536789,
+       "selective_error": 0.0015420200462606013,
+       "benign_dropped": 0.0
+      }
+     },
+     "4-action": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.01059322033898305
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.01834862385321101
+      },
+      "corpus": {
+       "coverage": 0.2602297541061426,
+       "drop_coverage": 0.2602297541061426,
+       "selective_error": 0.005107624954396206,
+       "benign_dropped": 0.0
+      }
+     },
+     "spoof-redirect": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.01059322033898305
+      },
+      "benign_unseen3": {
+       "dropped": 0.027522935779816515,
+       "any_action": 0.027522935779816515
+      },
+      "corpus": {
+       "coverage": 0.3437767017943606,
+       "drop_coverage": 0.3437767017943606,
+       "selective_error": 0.005523336095001381,
+       "benign_dropped": 0.002240896358543417
+      }
+     },
+     "flood-inspect": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.02754237288135593
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.08944954128440367
+      },
+      "corpus": {
+       "coverage": 0.3576378999335422,
+       "drop_coverage": 0.2602297541061426,
+       "selective_error": 0.010883992567029467,
+       "benign_dropped": 0.0
+      }
+     }
+    }
+   },
+   "with_benign_unseen2": {
+    "coverage": 0.4502990600968385,
+    "selective_error": 0.004005903436643475,
+    "corpus_benign_dropped": 0.010644257703081233,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.08050847457627118,
+     "benign_unseen3": 0.1353211009174312
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.9210526315789473,
+     "benign_unseen3": 0.6949152542372882
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      2,
+      3,
+      30,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      18,
+      0,
+      0,
+      4,
+      33,
+      4
+     ]
+    }
+   },
+   "with_benign_unseen3": {
+    "coverage": 0.43302003227950253,
+    "selective_error": 0.0028502521376891033,
+    "corpus_benign_dropped": 0.007282913165266107,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.0826271186440678,
+     "benign_unseen3": 0.11467889908256881
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.9230769230769231,
+     "benign_unseen3": 0.82
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      2,
+      4,
+      30,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      9,
+      0,
+      0,
+      4,
+      33,
+      4
+     ]
+    }
+   }
+  },
+  {
+   "seed": 37,
+   "corpus": {
+    "coverage": 0.27529083294555606,
+    "selective_error": 0.001352265043948614,
+    "corpus_benign_dropped": 0.002058672156459084,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.00423728813559322,
+     "benign_unseen3": 0.0022935779816513763
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.0,
+     "benign_unseen3": 0.0
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "tiered": {
+     "3-action": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.01059322033898305
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.01834862385321101
+      },
+      "corpus": {
+       "coverage": 0.30321079571893905,
+       "drop_coverage": 0.30321079571893905,
+       "selective_error": 0.003069367710251688,
+       "benign_dropped": 0.0025733401955738548
+      }
+     },
+     "4-action": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.01059322033898305
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.01834862385321101
+      },
+      "corpus": {
+       "coverage": 0.25937645416472777,
+       "drop_coverage": 0.25937645416472777,
+       "selective_error": 0.003946896304269824,
+       "benign_dropped": 0.000514668039114771
+      }
+     },
+     "spoof-redirect": {
+      "benign_unseen2": {
+       "dropped": 0.023305084745762712,
+       "any_action": 0.023305084745762712
+      },
+      "benign_unseen3": {
+       "dropped": 0.03669724770642202,
+       "any_action": 0.03669724770642202
+      },
+      "corpus": {
+       "coverage": 0.33299208934388086,
+       "drop_coverage": 0.33299208934388086,
+       "selective_error": 0.002794857462269424,
+       "benign_dropped": 0.001029336078229542
+      }
+     },
+     "flood-inspect": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.046610169491525424
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.10550458715596331
+      },
+      "corpus": {
+       "coverage": 0.3727315030246626,
+       "drop_coverage": 0.25937645416472777,
+       "selective_error": 0.015730337078651686,
+       "benign_dropped": 0.000514668039114771
+      }
+     }
+    }
+   },
+   "with_benign_unseen2": {
+    "coverage": 0.4013029315960912,
+    "selective_error": 0.0013914656771799629,
+    "corpus_benign_dropped": 0.003088008234688626,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.048728813559322036,
+     "benign_unseen3": 0.07339449541284404
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.8695652173913043,
+     "benign_unseen3": 0.71875
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      0,
+      0,
+      20,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      9,
+      0,
+      0,
+      0,
+      20,
+      3
+     ]
+    }
+   },
+   "with_benign_unseen3": {
+    "coverage": 0.3977664029781294,
+    "selective_error": 0.0016378100140383716,
+    "corpus_benign_dropped": 0.003602676273803397,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.05508474576271186,
+     "benign_unseen3": 0.05733944954128441
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.8846153846153846,
+     "benign_unseen3": 0.92
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      0,
+      0,
+      23,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      2,
+      0,
+      0,
+      0,
+      23,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "seed": 38,
+   "corpus": {
+    "coverage": 0.3900313356835096,
+    "selective_error": 0.0022596033140848608,
+    "corpus_benign_dropped": 0.005184331797235023,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.06567796610169492,
+     "benign_unseen3": 0.07110091743119266
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.9032258064516129,
+     "benign_unseen3": 0.9354838709677419
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      0,
+      0,
+      28,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      2,
+      0,
+      0,
+      0,
+      29,
+      0
+     ]
+    },
+    "tiered": {
+     "3-action": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.01059322033898305
+      },
+      "benign_unseen3": {
+       "dropped": 0.016055045871559634,
+       "any_action": 0.016055045871559634
+      },
+      "corpus": {
+       "coverage": 0.31580493537015275,
+       "drop_coverage": 0.31580493537015275,
+       "selective_error": 0.00248062015503876,
+       "benign_dropped": 0.0034562211981566822
+      }
+     },
+     "4-action": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.01059322033898305
+      },
+      "benign_unseen3": {
+       "dropped": 0.0022935779816513763,
+       "any_action": 0.0022935779816513763
+      },
+      "corpus": {
+       "coverage": 0.26978065021543285,
+       "drop_coverage": 0.26978065021543285,
+       "selective_error": 0.0018148820326678765,
+       "benign_dropped": 0.0017281105990783411
+      }
+     },
+     "spoof-redirect": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.01059322033898305
+      },
+      "benign_unseen3": {
+       "dropped": 0.009174311926605505,
+       "any_action": 0.009174311926605505
+      },
+      "corpus": {
+       "coverage": 0.3401880141010576,
+       "drop_coverage": 0.3401880141010576,
+       "selective_error": 0.0025906735751295338,
+       "benign_dropped": 0.0017281105990783411
+      }
+     },
+     "flood-inspect": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.1271186440677966
+      },
+      "benign_unseen3": {
+       "dropped": 0.0022935779816513763,
+       "any_action": 0.1926605504587156
+      },
+      "corpus": {
+       "coverage": 0.4345867606737172,
+       "drop_coverage": 0.26978065021543285,
+       "selective_error": 0.03064443442992339,
+       "benign_dropped": 0.0017281105990783411
+      }
+     }
+    }
+   },
+   "with_benign_unseen2": {
+    "coverage": 0.3862122992557775,
+    "selective_error": 0.0017748478701825558,
+    "corpus_benign_dropped": 0.004032258064516129,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.048728813559322036,
+     "benign_unseen3": 0.052752293577981654
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.8695652173913043,
+     "benign_unseen3": 0.9130434782608695
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      0,
+      0,
+      20,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      2,
+      0,
+      0,
+      0,
+      21,
+      0
+     ]
+    }
+   },
+   "with_benign_unseen3": {
+    "coverage": 0.3966901684292989,
+    "selective_error": 0.001974821031843989,
+    "corpus_benign_dropped": 0.004608294930875576,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.048728813559322036,
+     "benign_unseen3": 0.052752293577981654
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.8695652173913043,
+     "benign_unseen3": 0.9130434782608695
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      0,
+      0,
+      20,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      2,
+      0,
+      0,
+      0,
+      21,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "seed": 39,
+   "corpus": {
+    "coverage": 0.44429795649307846,
+    "selective_error": 0.00317931326833404,
+    "corpus_benign_dropped": 0.007845188284518828,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.09745762711864407,
+     "benign_unseen3": 0.13990825688073394
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.9347826086956522,
+     "benign_unseen3": 0.8524590163934426
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      0,
+      4,
+      39,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      9,
+      0,
+      0,
+      7,
+      41,
+      4
+     ]
+    },
+    "tiered": {
+     "3-action": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.01059322033898305
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.01834862385321101
+      },
+      "corpus": {
+       "coverage": 0.3086919672285526,
+       "drop_coverage": 0.3086919672285526,
+       "selective_error": 0.004270896888346553,
+       "benign_dropped": 0.0031380753138075313
+      }
+     },
+     "4-action": {
+      "benign_unseen2": {
+       "dropped": 0.00423728813559322,
+       "any_action": 0.00423728813559322
+      },
+      "benign_unseen3": {
+       "dropped": 0.0022935779816513763,
+       "any_action": 0.0022935779816513763
+      },
+      "corpus": {
+       "coverage": 0.2411714850739241,
+       "drop_coverage": 0.2411714850739241,
+       "selective_error": 0.004685669660288949,
+       "benign_dropped": 0.0020920502092050207
+      }
+     },
+     "spoof-redirect": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.01059322033898305
+      },
+      "benign_unseen3": {
+       "dropped": 0.027522935779816515,
+       "any_action": 0.027522935779816515
+      },
+      "corpus": {
+       "coverage": 0.3424051228929278,
+       "drop_coverage": 0.3424051228929278,
+       "selective_error": 0.0038503850385038503,
+       "benign_dropped": 0.0041841004184100415
+      }
+     },
+     "flood-inspect": {
+      "benign_unseen2": {
+       "dropped": 0.00423728813559322,
+       "any_action": 0.036016949152542374
+      },
+      "benign_unseen3": {
+       "dropped": 0.0022935779816513763,
+       "any_action": 0.08027522935779817
+      },
+      "corpus": {
+       "coverage": 0.3525755720877672,
+       "drop_coverage": 0.2411714850739241,
+       "selective_error": 0.015491452991452992,
+       "benign_dropped": 0.0020920502092050207
+      }
+     }
+    }
+   },
+   "with_benign_unseen2": {
+    "coverage": 0.428853941049063,
+    "selective_error": 0.002854633289415898,
+    "corpus_benign_dropped": 0.006799163179916318,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.07838983050847458,
+     "benign_unseen3": 0.11467889908256881
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.918918918918919,
+     "benign_unseen3": 0.82
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      2,
+      3,
+      29,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      9,
+      0,
+      0,
+      5,
+      32,
+      4
+     ]
+    }
+   },
+   "with_benign_unseen3": {
+    "coverage": 0.42828891609379416,
+    "selective_error": 0.002638522427440633,
+    "corpus_benign_dropped": 0.006276150627615063,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.08050847457627118,
+     "benign_unseen3": 0.10091743119266056
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.9210526315789473,
+     "benign_unseen3": 0.7954545454545454
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      2,
+      4,
+      29,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      9,
+      0,
+      0,
+      6,
+      29,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "seed": 40,
+   "corpus": {
+    "coverage": 0.40455023420323105,
+    "selective_error": 0.0016540642722117202,
+    "corpus_benign_dropped": 0.003995433789954338,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.06567796610169492,
+     "benign_unseen3": 0.07110091743119266
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.9032258064516129,
+     "benign_unseen3": 0.9354838709677419
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      0,
+      0,
+      28,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      2,
+      0,
+      0,
+      0,
+      29,
+      0
+     ]
+    },
+    "tiered": {
+     "3-action": {
+      "benign_unseen2": {
+       "dropped": 0.00423728813559322,
+       "any_action": 0.00423728813559322
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.01834862385321101
+      },
+      "corpus": {
+       "coverage": 0.3054201319185546,
+       "drop_coverage": 0.3054201319185546,
+       "selective_error": 0.002190923317683881,
+       "benign_dropped": 0.001141552511415525
+      }
+     },
+     "4-action": {
+      "benign_unseen2": {
+       "dropped": 0.00423728813559322,
+       "any_action": 0.00423728813559322
+      },
+      "benign_unseen3": {
+       "dropped": 0.0022935779816513763,
+       "any_action": 0.0022935779816513763
+      },
+      "corpus": {
+       "coverage": 0.2502628811777077,
+       "drop_coverage": 0.2502628811777077,
+       "selective_error": 0.0019098548510313217,
+       "benign_dropped": 0.0005707762557077625
+      }
+     },
+     "spoof-redirect": {
+      "benign_unseen2": {
+       "dropped": 0.0211864406779661,
+       "any_action": 0.0211864406779661
+      },
+      "benign_unseen3": {
+       "dropped": 0.02522935779816514,
+       "any_action": 0.02522935779816514
+      },
+      "corpus": {
+       "coverage": 0.3456648503967116,
+       "drop_coverage": 0.3456648503967116,
+       "selective_error": 0.002488938053097345,
+       "benign_dropped": 0.0017123287671232876
+      }
+     },
+     "flood-inspect": {
+      "benign_unseen2": {
+       "dropped": 0.00423728813559322,
+       "any_action": 0.09322033898305085
+      },
+      "benign_unseen3": {
+       "dropped": 0.0022935779816513763,
+       "any_action": 0.15825688073394495
+      },
+      "corpus": {
+       "coverage": 0.4271102189083262,
+       "drop_coverage": 0.2502628811777077,
+       "selective_error": 0.02864816472694718,
+       "benign_dropped": 0.0005707762557077625
+      }
+     }
+    }
+   },
+   "with_benign_unseen2": {
+    "coverage": 0.4141095497562374,
+    "selective_error": 0.0018467220683287165,
+    "corpus_benign_dropped": 0.0045662100456621,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.05084745762711865,
+     "benign_unseen3": 0.08256880733944955
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.875,
+     "benign_unseen3": 0.75
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      1,
+      0,
+      20,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      9,
+      0,
+      0,
+      0,
+      24,
+      3
+     ]
+    }
+   },
+   "with_benign_unseen3": {
+    "coverage": 0.36258483892553295,
+    "selective_error": 0.0007909306617453203,
+    "corpus_benign_dropped": 0.0017123287671232876,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.01059322033898305,
+     "benign_unseen3": 0.0045871559633027525
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.6,
+     "benign_unseen3": 0.5
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      1,
+      0,
+      2,
+      0,
+      1,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      1,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "seed": 41,
+   "corpus": {
+    "coverage": 0.4369163156930965,
+    "selective_error": 0.003143336127409891,
+    "corpus_benign_dropped": 0.0078003120124804995,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.07415254237288135,
+     "benign_unseen3": 0.12385321100917432
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.9142857142857143,
+     "benign_unseen3": 0.6666666666666666
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      0,
+      1,
+      31,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      18,
+      0,
+      0,
+      1,
+      31,
+      4
+     ]
+    },
+    "tiered": {
+     "3-action": {
+      "benign_unseen2": {
+       "dropped": 0.00423728813559322,
+       "any_action": 0.00423728813559322
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.01834862385321101
+      },
+      "corpus": {
+       "coverage": 0.30049441494231827,
+       "drop_coverage": 0.30049441494231827,
+       "selective_error": 0.0030469226081657527,
+       "benign_dropped": 0.0015600624024961
+      }
+     },
+     "4-action": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.01059322033898305
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.01834862385321101
+      },
+      "corpus": {
+       "coverage": 0.268082768723677,
+       "drop_coverage": 0.268082768723677,
+       "selective_error": 0.004439890710382513,
+       "benign_dropped": 0.0020800832033281333
+      }
+     },
+     "spoof-redirect": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.01059322033898305
+      },
+      "benign_unseen3": {
+       "dropped": 0.027522935779816515,
+       "any_action": 0.027522935779816515
+      },
+      "corpus": {
+       "coverage": 0.3369346273576268,
+       "drop_coverage": 0.3369346273576268,
+       "selective_error": 0.0038043478260869567,
+       "benign_dropped": 0.0026001040041601664
+      }
+     },
+     "flood-inspect": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.05508474576271186
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.12155963302752294
+      },
+      "corpus": {
+       "coverage": 0.3789598974546786,
+       "drop_coverage": 0.268082768723677,
+       "selective_error": 0.016670693404203914,
+       "benign_dropped": 0.0020800832033281333
+      }
+     }
+    }
+   },
+   "with_benign_unseen2": {
+    "coverage": 0.4640175791979491,
+    "selective_error": 0.0029597474348855564,
+    "corpus_benign_dropped": 0.0078003120124804995,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.07838983050847458,
+     "benign_unseen3": 0.13990825688073394
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.918918918918919,
+     "benign_unseen3": 0.7049180327868853
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      3,
+      1,
+      30,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      18,
+      0,
+      4,
+      1,
+      34,
+      4
+     ]
+    }
+   },
+   "with_benign_unseen3": {
+    "coverage": 0.4729902948177989,
+    "selective_error": 0.003677893921796361,
+    "corpus_benign_dropped": 0.009880395215808632,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.0847457627118644,
+     "benign_unseen3": 0.1444954128440367
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.925,
+     "benign_unseen3": 0.7142857142857143
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      4,
+      1,
+      32,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      18,
+      0,
+      4,
+      1,
+      36,
+      4
+     ]
+    }
+   }
+  },
+  {
+   "seed": 42,
+   "corpus": {
+    "coverage": 0.42504996668887407,
+    "selective_error": 0.001567398119122257,
+    "corpus_benign_dropped": 0.0038953811908736783,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.08050847457627118,
+     "benign_unseen3": 0.11238532110091744
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.9210526315789473,
+     "benign_unseen3": 0.8163265306122449
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      2,
+      3,
+      30,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      9,
+      0,
+      0,
+      2,
+      34,
+      4
+     ]
+    },
+    "tiered": {
+     "3-action": {
+      "benign_unseen2": {
+       "dropped": 0.00423728813559322,
+       "any_action": 0.00423728813559322
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.01834862385321101
+      },
+      "corpus": {
+       "coverage": 0.2804796802131912,
+       "drop_coverage": 0.2804796802131912,
+       "selective_error": 0.0010179843909060061,
+       "benign_dropped": 0.0005564830272676684
+      }
+     },
+     "4-action": {
+      "benign_unseen2": {
+       "dropped": 0.00423728813559322,
+       "any_action": 0.00423728813559322
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.01834862385321101
+      },
+      "corpus": {
+       "coverage": 0.26572761016465213,
+       "drop_coverage": 0.26572761016465213,
+       "selective_error": 0.0017908309455587394,
+       "benign_dropped": 0.0005564830272676684
+      }
+     },
+     "spoof-redirect": {
+      "benign_unseen2": {
+       "dropped": 0.014830508474576272,
+       "any_action": 0.014830508474576272
+      },
+      "benign_unseen3": {
+       "dropped": 0.027522935779816515,
+       "any_action": 0.027522935779816515
+      },
+      "corpus": {
+       "coverage": 0.34691158275435424,
+       "drop_coverage": 0.34691158275435424,
+       "selective_error": 0.003017832647462277,
+       "benign_dropped": 0.0022259321090706734
+      }
+     },
+     "flood-inspect": {
+      "benign_unseen2": {
+       "dropped": 0.00423728813559322,
+       "any_action": 0.06779661016949153
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.14220183486238533
+      },
+      "corpus": {
+       "coverage": 0.39288093651851147,
+       "drop_coverage": 0.26572761016465213,
+       "selective_error": 0.01937984496124031,
+       "benign_dropped": 0.0005564830272676684
+      }
+     }
+    }
+   },
+   "with_benign_unseen2": {
+    "coverage": 0.4154373274959551,
+    "selective_error": 0.0013745704467353953,
+    "corpus_benign_dropped": 0.00333889816360601,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.05296610169491525,
+     "benign_unseen3": 0.08486238532110092
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.88,
+     "benign_unseen3": 0.7567567567567568
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      2,
+      0,
+      20,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      9,
+      0,
+      0,
+      0,
+      24,
+      4
+     ]
+    }
+   },
+   "with_benign_unseen3": {
+    "coverage": 0.4254306652707719,
+    "selective_error": 0.0017897091722595079,
+    "corpus_benign_dropped": 0.004451864218141347,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.07627118644067797,
+     "benign_unseen3": 0.09862385321100918
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.9166666666666666,
+     "benign_unseen3": 0.7906976744186046
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      2,
+      3,
+      28,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      9,
+      0,
+      0,
+      2,
+      32,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "seed": 43,
+   "corpus": {
+    "coverage": 0.47872642850374303,
+    "selective_error": 0.0059382422802850355,
+    "corpus_benign_dropped": 0.0169971671388102,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.11652542372881355,
+     "benign_unseen3": 0.16972477064220184
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.8363636363636363,
+     "benign_unseen3": 0.7027027027027027
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      8,
+      0,
+      3,
+      23,
+      16,
+      4
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      22,
+      0,
+      4,
+      23,
+      21,
+      4
+     ]
+    },
+    "tiered": {
+     "3-action": {
+      "benign_unseen2": {
+       "dropped": 0.00423728813559322,
+       "any_action": 0.00423728813559322
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.01834862385321101
+      },
+      "corpus": {
+       "coverage": 0.30787453804605325,
+       "drop_coverage": 0.30787453804605325,
+       "selective_error": 0.0043090181594336715,
+       "benign_dropped": 0.0022662889518413596
+      }
+     },
+     "4-action": {
+      "benign_unseen2": {
+       "dropped": 0.00423728813559322,
+       "any_action": 0.00423728813559322
+      },
+      "benign_unseen3": {
+       "dropped": 0.0022935779816513763,
+       "any_action": 0.0022935779816513763
+      },
+      "corpus": {
+       "coverage": 0.24476452193689,
+       "drop_coverage": 0.24476452193689,
+       "selective_error": 0.003484320557491289,
+       "benign_dropped": 0.0005665722379603399
+      }
+     },
+     "spoof-redirect": {
+      "benign_unseen2": {
+       "dropped": 0.00423728813559322,
+       "any_action": 0.00423728813559322
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.01834862385321101
+      },
+      "corpus": {
+       "coverage": 0.32332038282952713,
+       "drop_coverage": 0.32332038282952713,
+       "selective_error": 0.003223915592028136,
+       "benign_dropped": 0.0033994334277620396
+      }
+     },
+     "flood-inspect": {
+      "benign_unseen2": {
+       "dropped": 0.00423728813559322,
+       "any_action": 0.04025423728813559
+      },
+      "benign_unseen3": {
+       "dropped": 0.0022935779816513763,
+       "any_action": 0.0871559633027523
+      },
+      "corpus": {
+       "coverage": 0.349568842983038,
+       "drop_coverage": 0.24476452193689,
+       "selective_error": 0.01924640824071564,
+       "benign_dropped": 0.0005665722379603399
+      }
+     }
+    }
+   },
+   "with_benign_unseen2": {
+    "coverage": 0.4521936889983891,
+    "selective_error": 0.004610226320201173,
+    "corpus_benign_dropped": 0.012464589235127478,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.07627118644067797,
+     "benign_unseen3": 0.1353211009174312
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.9166666666666666,
+     "benign_unseen3": 0.6949152542372882
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      3,
+      20,
+      10,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      18,
+      0,
+      4,
+      20,
+      14,
+      3
+     ]
+    }
+   },
+   "with_benign_unseen3": {
+    "coverage": 0.4413910736283521,
+    "selective_error": 0.0047230571060541005,
+    "corpus_benign_dropped": 0.012464589235127478,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.07627118644067797,
+     "benign_unseen3": 0.12614678899082568
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.9166666666666666,
+     "benign_unseen3": 0.6727272727272727
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      3,
+      20,
+      10,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      18,
+      0,
+      4,
+      20,
+      10,
+      3
+     ]
+    }
+   }
+  },
+  {
+   "seed": 44,
+   "corpus": {
+    "coverage": 0.4040537980678159,
+    "selective_error": 0.0025785278949835913,
+    "corpus_benign_dropped": 0.006197183098591549,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.07203389830508475,
+     "benign_unseen3": 0.0963302752293578
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.9117647058823529,
+     "benign_unseen3": 0.7857142857142857
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      1,
+      0,
+      30,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      9,
+      0,
+      0,
+      0,
+      33,
+      0
+     ]
+    },
+    "tiered": {
+     "3-action": {
+      "benign_unseen2": {
+       "dropped": 0.006355932203389831,
+       "any_action": 0.006355932203389831
+      },
+      "benign_unseen3": {
+       "dropped": 0.020642201834862386,
+       "any_action": 0.020642201834862386
+      },
+      "corpus": {
+       "coverage": 0.2813979920439477,
+       "drop_coverage": 0.2813979920439477,
+       "selective_error": 0.01110737125546954,
+       "benign_dropped": 0.0016901408450704226
+      }
+     },
+     "4-action": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.01059322033898305
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.01834862385321101
+      },
+      "corpus": {
+       "coverage": 0.2634021594999053,
+       "drop_coverage": 0.2634021594999053,
+       "selective_error": 0.005034160373966199,
+       "benign_dropped": 0.0033802816901408453
+      }
+     },
+     "spoof-redirect": {
+      "benign_unseen2": {
+       "dropped": 0.012711864406779662,
+       "any_action": 0.012711864406779662
+      },
+      "benign_unseen3": {
+       "dropped": 0.027522935779816515,
+       "any_action": 0.027522935779816515
+      },
+      "corpus": {
+       "coverage": 0.3302708846372419,
+       "drop_coverage": 0.3302708846372419,
+       "selective_error": 0.0031545741324921135,
+       "benign_dropped": 0.0050704225352112674
+      }
+     },
+     "flood-inspect": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.07838983050847458
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.1444954128440367
+      },
+      "corpus": {
+       "coverage": 0.39941276756961547,
+       "drop_coverage": 0.2634021594999053,
+       "selective_error": 0.02561062366611335,
+       "benign_dropped": 0.0033802816901408453
+      }
+     }
+    }
+   },
+   "with_benign_unseen2": {
+    "coverage": 0.3582117825345709,
+    "selective_error": 0.0015864621893178213,
+    "corpus_benign_dropped": 0.0033802816901408453,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.01059322033898305,
+     "benign_unseen3": 0.027522935779816515
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.6,
+     "benign_unseen3": 0.3333333333333333
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      1,
+      0,
+      2,
+      0,
+      1,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      8,
+      0,
+      0,
+      0,
+      4,
+      0
+     ]
+    }
+   },
+   "with_benign_unseen3": {
+    "coverage": 0.39619246069331315,
+    "selective_error": 0.0016734401147501792,
+    "corpus_benign_dropped": 0.003943661971830986,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.05508474576271186,
+     "benign_unseen3": 0.052752293577981654
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.8846153846153846,
+     "benign_unseen3": 0.9130434782608695
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      2,
+      0,
+      21,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      2,
+      0,
+      0,
+      0,
+      21,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "seed": 45,
+   "corpus": {
+    "coverage": 0.34174247397542906,
+    "selective_error": 0.0005488474204171241,
+    "corpus_benign_dropped": 0.0010746910263299302,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.046610169491525424,
+     "benign_unseen3": 0.0481651376146789
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.9090909090909091,
+     "benign_unseen3": 0.9523809523809523
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      20,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      20,
+      0
+     ]
+    },
+    "tiered": {
+     "3-action": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.01059322033898305
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.01834862385321101
+      },
+      "corpus": {
+       "coverage": 0.31013785988933695,
+       "drop_coverage": 0.31013785988933695,
+       "selective_error": 0.0042334442092530995,
+       "benign_dropped": 0.0021493820526598604
+      }
+     },
+     "4-action": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.01059322033898305
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.01834862385321101
+      },
+      "corpus": {
+       "coverage": 0.27365656944574696,
+       "drop_coverage": 0.27365656944574696,
+       "selective_error": 0.0065113091158327625,
+       "benign_dropped": 0.0032240730789897904
+      }
+     },
+     "spoof-redirect": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.01059322033898305
+      },
+      "benign_unseen3": {
+       "dropped": 0.02522935779816514,
+       "any_action": 0.02522935779816514
+      },
+      "corpus": {
+       "coverage": 0.3583419300384507,
+       "drop_coverage": 0.3583419300384507,
+       "selective_error": 0.00654278984559016,
+       "benign_dropped": 0.0037614185921547557
+      }
+     },
+     "flood-inspect": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.08898305084745763
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.1444954128440367
+      },
+      "corpus": {
+       "coverage": 0.40767138703929473,
+       "drop_coverage": 0.27365656944574696,
+       "selective_error": 0.0239245456636761,
+       "benign_dropped": 0.0032240730789897904
+      }
+     }
+    }
+   },
+   "with_benign_unseen2": {
+    "coverage": 0.4205195535965488,
+    "selective_error": 0.0022301516503122213,
+    "corpus_benign_dropped": 0.0053734551316496505,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.05084745762711865,
+     "benign_unseen3": 0.09403669724770643
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.875,
+     "benign_unseen3": 0.5609756097560976
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      1,
+      0,
+      20,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      18,
+      0,
+      0,
+      0,
+      20,
+      3
+     ]
+    }
+   },
+   "with_benign_unseen3": {
+    "coverage": 0.41048485416862046,
+    "selective_error": 0.002284669865204478,
+    "corpus_benign_dropped": 0.0053734551316496505,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.05508474576271186,
+     "benign_unseen3": 0.07339449541284404
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.8846153846153846,
+     "benign_unseen3": 0.65625
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      2,
+      0,
+      21,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      11,
+      0,
+      0,
+      0,
+      21,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "seed": 46,
+   "corpus": {
+    "coverage": 0.4499258160237389,
+    "selective_error": 0.0026793075020610057,
+    "corpus_benign_dropped": 0.006711409395973154,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.0826271186440678,
+     "benign_unseen3": 0.14220183486238533
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.9230769230769231,
+     "benign_unseen3": 0.7096774193548387
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      3,
+      0,
+      33,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      18,
+      0,
+      4,
+      0,
+      36,
+      4
+     ]
+    },
+    "tiered": {
+     "3-action": {
+      "benign_unseen2": {
+       "dropped": 0.00423728813559322,
+       "any_action": 0.00423728813559322
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.01834862385321101
+      },
+      "corpus": {
+       "coverage": 0.2727188427299703,
+       "drop_coverage": 0.2727188427299703,
+       "selective_error": 0.0023801428085685142,
+       "benign_dropped": 0.0010325245224574084
+      }
+     },
+     "4-action": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.01059322033898305
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.01834862385321101
+      },
+      "corpus": {
+       "coverage": 0.26706231454005935,
+       "drop_coverage": 0.26706231454005935,
+       "selective_error": 0.002777777777777778,
+       "benign_dropped": 0.0010325245224574084
+      }
+     },
+     "spoof-redirect": {
+      "benign_unseen2": {
+       "dropped": 0.00423728813559322,
+       "any_action": 0.00423728813559322
+      },
+      "benign_unseen3": {
+       "dropped": 0.027522935779816515,
+       "any_action": 0.027522935779816515
+      },
+      "corpus": {
+       "coverage": 0.32965504451038574,
+       "drop_coverage": 0.32965504451038574,
+       "selective_error": 0.0030942334739803095,
+       "benign_dropped": 0.0005162622612287042
+      }
+     },
+     "flood-inspect": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.05296610169491525
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.11926605504587157
+      },
+      "corpus": {
+       "coverage": 0.37054896142433236,
+       "drop_coverage": 0.26706231454005935,
+       "selective_error": 0.015015015015015015,
+       "benign_dropped": 0.0010325245224574084
+      }
+     }
+    }
+   },
+   "with_benign_unseen2": {
+    "coverage": 0.4534495548961424,
+    "selective_error": 0.0028629856850715747,
+    "corpus_benign_dropped": 0.007227671657201859,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.0826271186440678,
+     "benign_unseen3": 0.13761467889908258
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.9230769230769231,
+     "benign_unseen3": 0.7
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      5,
+      0,
+      31,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      18,
+      0,
+      4,
+      0,
+      34,
+      4
+     ]
+    }
+   },
+   "with_benign_unseen3": {
+    "coverage": 0.453356824925816,
+    "selective_error": 0.0030681120883616284,
+    "corpus_benign_dropped": 0.007743933918430563,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.08686440677966102,
+     "benign_unseen3": 0.1353211009174312
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.926829268292683,
+     "benign_unseen3": 0.6949152542372882
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      5,
+      0,
+      33,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      18,
+      0,
+      4,
+      0,
+      33,
+      4
+     ]
+    }
+   }
+  },
+  {
+   "seed": 47,
+   "corpus": {
+    "coverage": 0.3426639113281984,
+    "selective_error": 0.0024671052631578946,
+    "corpus_benign_dropped": 0.005113636363636364,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.046610169491525424,
+     "benign_unseen3": 0.06422018348623854
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.9090909090909091,
+     "benign_unseen3": 0.7142857142857143
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      20,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      8,
+      0,
+      0,
+      0,
+      20,
+      0
+     ]
+    },
+    "tiered": {
+     "3-action": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.01059322033898305
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.01834862385321101
+      },
+      "corpus": {
+       "coverage": 0.30875446176967875,
+       "drop_coverage": 0.30875446176967875,
+       "selective_error": 0.004563431700638881,
+       "benign_dropped": 0.0017045454545454545
+      }
+     },
+     "4-action": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.01059322033898305
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.01834862385321101
+      },
+      "corpus": {
+       "coverage": 0.27099380048844635,
+       "drop_coverage": 0.27099380048844635,
+       "selective_error": 0.006239168110918544,
+       "benign_dropped": 0.0017045454545454545
+      }
+     },
+     "spoof-redirect": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.01059322033898305
+      },
+      "benign_unseen3": {
+       "dropped": 0.027522935779816515,
+       "any_action": 0.027522935779816515
+      },
+      "corpus": {
+       "coverage": 0.3482998309224122,
+       "drop_coverage": 0.3482998309224122,
+       "selective_error": 0.0048543689320388345,
+       "benign_dropped": 0.002840909090909091
+      }
+     },
+     "flood-inspect": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.059322033898305086
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.13302752293577982
+      },
+      "corpus": {
+       "coverage": 0.390193499906068,
+       "drop_coverage": 0.27099380048844635,
+       "selective_error": 0.020462205103514684,
+       "benign_dropped": 0.0017045454545454545
+      }
+     }
+    }
+   },
+   "with_benign_unseen2": {
+    "coverage": 0.4190306218297952,
+    "selective_error": 0.003586639766868415,
+    "corpus_benign_dropped": 0.00909090909090909,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.048728813559322036,
+     "benign_unseen3": 0.09403669724770643
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.8695652173913043,
+     "benign_unseen3": 0.5609756097560976
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      0,
+      0,
+      20,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      18,
+      0,
+      0,
+      0,
+      20,
+      3
+     ]
+    }
+   },
+   "with_benign_unseen3": {
+    "coverage": 0.38925417997369904,
+    "selective_error": 0.0026544401544401543,
+    "corpus_benign_dropped": 0.00625,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.048728813559322036,
+     "benign_unseen3": 0.05045871559633028
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.8695652173913043,
+     "benign_unseen3": 0.9090909090909091
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      0,
+      0,
+      20,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      2,
+      0,
+      0,
+      0,
+      20,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "seed": 48,
+   "corpus": {
+    "coverage": 0.471638353008926,
+    "selective_error": 0.0030525030525030525,
+    "corpus_benign_dropped": 0.008342602892102336,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.1059322033898305,
+     "benign_unseen3": 0.1559633027522936
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.94,
+     "benign_unseen3": 0.7352941176470589
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      0,
+      4,
+      38,
+      5
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      18,
+      0,
+      0,
+      5,
+      41,
+      4
+     ]
+    },
+    "tiered": {
+     "3-action": {
+      "benign_unseen2": {
+       "dropped": 0.00423728813559322,
+       "any_action": 0.00423728813559322
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.01834862385321101
+      },
+      "corpus": {
+       "coverage": 0.2837124484115558,
+       "drop_coverage": 0.2837124484115558,
+       "selective_error": 0.003044654939106901,
+       "benign_dropped": 0.0
+      }
+     },
+     "4-action": {
+      "benign_unseen2": {
+       "dropped": 0.00423728813559322,
+       "any_action": 0.00423728813559322
+      },
+      "benign_unseen3": {
+       "dropped": 0.0022935779816513763,
+       "any_action": 0.0022935779816513763
+      },
+      "corpus": {
+       "coverage": 0.2525194356464152,
+       "drop_coverage": 0.2525194356464152,
+       "selective_error": 0.0019004180919802356,
+       "benign_dropped": 0.0
+      }
+     },
+     "spoof-redirect": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.01059322033898305
+      },
+      "benign_unseen3": {
+       "dropped": 0.02522935779816514,
+       "any_action": 0.02522935779816514
+      },
+      "corpus": {
+       "coverage": 0.3426432479124676,
+       "drop_coverage": 0.3426432479124676,
+       "selective_error": 0.0011204481792717086,
+       "benign_dropped": 0.0005561735261401557
+      }
+     },
+     "flood-inspect": {
+      "benign_unseen2": {
+       "dropped": 0.00423728813559322,
+       "any_action": 0.019067796610169493
+      },
+      "benign_unseen3": {
+       "dropped": 0.0022935779816513763,
+       "any_action": 0.07110091743119266
+      },
+      "corpus": {
+       "coverage": 0.35406468950954983,
+       "drop_coverage": 0.2525194356464152,
+       "selective_error": 0.0124695039306045,
+       "benign_dropped": 0.0
+      }
+     }
+    }
+   },
+   "with_benign_unseen2": {
+    "coverage": 0.45455417986371055,
+    "selective_error": 0.0021114864864864866,
+    "corpus_benign_dropped": 0.0055617352614015575,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.08050847457627118,
+     "benign_unseen3": 0.13990825688073394
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.9210526315789473,
+     "benign_unseen3": 0.7049180327868853
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      1,
+      3,
+      31,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      18,
+      0,
+      0,
+      5,
+      35,
+      3
+     ]
+    }
+   },
+   "with_benign_unseen3": {
+    "coverage": 0.45090699683270946,
+    "selective_error": 0.0019157088122605363,
+    "corpus_benign_dropped": 0.005005561735261402,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.0826271186440678,
+     "benign_unseen3": 0.13302752293577982
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.9230769230769231,
+     "benign_unseen3": 0.6896551724137931
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      2,
+      3,
+      31,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      18,
+      0,
+      0,
+      5,
+      32,
+      3
+     ]
+    }
+   }
+  },
+  {
+   "seed": 49,
+   "corpus": {
+    "coverage": 0.3679412038329147,
+    "selective_error": 0.0005056890012642225,
+    "corpus_benign_dropped": 0.0011383039271485487,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.048728813559322036,
+     "benign_unseen3": 0.05045871559633028
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.9130434782608695,
+     "benign_unseen3": 0.9545454545454546
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      21,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      21,
+      0
+     ]
+    },
+    "tiered": {
+     "3-action": {
+      "benign_unseen2": {
+       "dropped": 0.012711864406779662,
+       "any_action": 0.012711864406779662
+      },
+      "benign_unseen3": {
+       "dropped": 0.020642201834862386,
+       "any_action": 0.020642201834862386
+      },
+      "corpus": {
+       "coverage": 0.3088659410177691,
+       "drop_coverage": 0.3088659410177691,
+       "selective_error": 0.015060240963855422,
+       "benign_dropped": 0.0005691519635742744
+      }
+     },
+     "4-action": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.01059322033898305
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.01834862385321101
+      },
+      "corpus": {
+       "coverage": 0.2581635500976835,
+       "drop_coverage": 0.2581635500976835,
+       "selective_error": 0.003963963963963964,
+       "benign_dropped": 0.0
+      }
+     },
+     "spoof-redirect": {
+      "benign_unseen2": {
+       "dropped": 0.019067796610169493,
+       "any_action": 0.019067796610169493
+      },
+      "benign_unseen3": {
+       "dropped": 0.03211009174311927,
+       "any_action": 0.03211009174311927
+      },
+      "corpus": {
+       "coverage": 0.34347381151735046,
+       "drop_coverage": 0.34347381151735046,
+       "selective_error": 0.005958829902491874,
+       "benign_dropped": 0.0022766078542970974
+      }
+     },
+     "flood-inspect": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.025423728813559324
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.09174311926605505
+      },
+      "corpus": {
+       "coverage": 0.37845380965671227,
+       "drop_coverage": 0.2581635500976835,
+       "selective_error": 0.019174041297935103,
+       "benign_dropped": 0.0
+      }
+     }
+    }
+   },
+   "with_benign_unseen2": {
+    "coverage": 0.41427109498558007,
+    "selective_error": 0.0006737031214911295,
+    "corpus_benign_dropped": 0.001707455890722823,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.05508474576271186,
+     "benign_unseen3": 0.0779816513761468
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.8846153846153846,
+     "benign_unseen3": 0.7352941176470589
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      2,
+      0,
+      21,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      9,
+      0,
+      0,
+      0,
+      21,
+      4
+     ]
+    }
+   },
+   "with_benign_unseen3": {
+    "coverage": 0.4045957763512885,
+    "selective_error": 0.0006898137502874224,
+    "corpus_benign_dropped": 0.001707455890722823,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.05508474576271186,
+     "benign_unseen3": 0.052752293577981654
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.8846153846153846,
+     "benign_unseen3": 0.9130434782608695
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      2,
+      0,
+      21,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      2,
+      0,
+      0,
+      0,
+      21,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "seed": 50,
+   "corpus": {
+    "coverage": 0.41761148904006046,
+    "selective_error": 0.0018099547511312218,
+    "corpus_benign_dropped": 0.004595060310166571,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.07415254237288135,
+     "benign_unseen3": 0.10091743119266056
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.9142857142857143,
+     "benign_unseen3": 0.7954545454545454
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      0,
+      0,
+      32,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      9,
+      0,
+      0,
+      0,
+      32,
+      3
+     ]
+    },
+    "tiered": {
+     "3-action": {
+      "benign_unseen2": {
+       "dropped": 0.012711864406779662,
+       "any_action": 0.012711864406779662
+      },
+      "benign_unseen3": {
+       "dropped": 0.020642201834862386,
+       "any_action": 0.020642201834862386
+      },
+      "corpus": {
+       "coverage": 0.309145880574452,
+       "drop_coverage": 0.309145880574452,
+       "selective_error": 0.004889975550122249,
+       "benign_dropped": 0.0022975301550832855
+      }
+     },
+     "4-action": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.01059322033898305
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.01834862385321101
+      },
+      "corpus": {
+       "coverage": 0.2700302343159486,
+       "drop_coverage": 0.2700302343159486,
+       "selective_error": 0.004548635409377187,
+       "benign_dropped": 0.0017231476163124641
+      }
+     },
+     "spoof-redirect": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.01059322033898305
+      },
+      "benign_unseen3": {
+       "dropped": 0.027522935779816515,
+       "any_action": 0.027522935779816515
+      },
+      "corpus": {
+       "coverage": 0.35648148148148145,
+       "drop_coverage": 0.35648148148148145,
+       "selective_error": 0.005300821627352239,
+       "benign_dropped": 0.0022975301550832855
+      }
+     },
+     "flood-inspect": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.0826271186440678
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.14220183486238533
+      },
+      "corpus": {
+       "coverage": 0.4135487528344671,
+       "drop_coverage": 0.2700302343159486,
+       "selective_error": 0.022389764679003884,
+       "benign_dropped": 0.0017231476163124641
+      }
+     }
+    }
+   },
+   "with_benign_unseen2": {
+    "coverage": 0.4017384731670446,
+    "selective_error": 0.0018814675446848542,
+    "corpus_benign_dropped": 0.004595060310166571,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.048728813559322036,
+     "benign_unseen3": 0.07339449541284404
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.8695652173913043,
+     "benign_unseen3": 0.71875
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      0,
+      0,
+      20,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      9,
+      0,
+      0,
+      0,
+      20,
+      3
+     ]
+    }
+   },
+   "with_benign_unseen3": {
+    "coverage": 0.40145502645502645,
+    "selective_error": 0.0016474464579901153,
+    "corpus_benign_dropped": 0.00402067777139575,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.05084745762711865,
+     "benign_unseen3": 0.05045871559633028
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.875,
+     "benign_unseen3": 0.9090909090909091
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      1,
+      0,
+      20,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      2,
+      0,
+      0,
+      0,
+      20,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "seed": 51,
+   "corpus": {
+    "coverage": 0.42677785065117585,
+    "selective_error": 0.001756311745334797,
+    "corpus_benign_dropped": 0.004561003420752566,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.07415254237288135,
+     "benign_unseen3": 0.10321100917431193
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.9428571428571428,
+     "benign_unseen3": 0.8222222222222222
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      33,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      8,
+      0,
+      0,
+      0,
+      33,
+      4
+     ]
+    },
+    "tiered": {
+     "3-action": {
+      "benign_unseen2": {
+       "dropped": 0.006355932203389831,
+       "any_action": 0.006355932203389831
+      },
+      "benign_unseen3": {
+       "dropped": 0.020642201834862386,
+       "any_action": 0.020642201834862386
+      },
+      "corpus": {
+       "coverage": 0.30759861332333926,
+       "drop_coverage": 0.30759861332333926,
+       "selective_error": 0.010356381358513555,
+       "benign_dropped": 0.0011402508551881414
+      }
+     },
+     "4-action": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.01059322033898305
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.01834862385321101
+      },
+      "corpus": {
+       "coverage": 0.2664667853462007,
+       "drop_coverage": 0.2664667853462007,
+       "selective_error": 0.004219409282700422,
+       "benign_dropped": 0.0005701254275940707
+      }
+     },
+     "spoof-redirect": {
+      "benign_unseen2": {
+       "dropped": 0.00423728813559322,
+       "any_action": 0.00423728813559322
+      },
+      "benign_unseen3": {
+       "dropped": 0.027522935779816515,
+       "any_action": 0.027522935779816515
+      },
+      "corpus": {
+       "coverage": 0.3313969830413192,
+       "drop_coverage": 0.3313969830413192,
+       "selective_error": 0.0031099802092168505,
+       "benign_dropped": 0.0005701254275940707
+      }
+     },
+     "flood-inspect": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.09110169491525423
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.16055045871559634
+      },
+      "corpus": {
+       "coverage": 0.41253630656797524,
+       "drop_coverage": 0.2664667853462007,
+       "selective_error": 0.02271178741766977,
+       "benign_dropped": 0.0005701254275940707
+      }
+     }
+    }
+   },
+   "with_benign_unseen2": {
+    "coverage": 0.40878853180923824,
+    "selective_error": 0.0018336007334402934,
+    "corpus_benign_dropped": 0.004561003420752566,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.048728813559322036,
+     "benign_unseen3": 0.07568807339449542
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.9565217391304348,
+     "benign_unseen3": 0.7575757575757576
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      21,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      8,
+      0,
+      0,
+      0,
+      21,
+      4
+     ]
+    }
+   },
+   "with_benign_unseen3": {
+    "coverage": 0.4888972172772416,
+    "selective_error": 0.005174396320429283,
+    "corpus_benign_dropped": 0.01539338654503991,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.11016949152542373,
+     "benign_unseen3": 0.15825688073394495
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.9423076923076923,
+     "benign_unseen3": 0.7536231884057971
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      2,
+      1,
+      0,
+      2,
+      4,
+      39,
+      4
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      17,
+      0,
+      0,
+      5,
+      41,
+      6
+     ]
+    }
+   }
+  },
+  {
+   "seed": 52,
+   "corpus": {
+    "coverage": 0.4724216093690971,
+    "selective_error": 0.004198320671731308,
+    "corpus_benign_dropped": 0.011087645195353749,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.1038135593220339,
+     "benign_unseen3": 0.15137614678899083
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.8163265306122449,
+     "benign_unseen3": 0.6666666666666666
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      8,
+      0,
+      0,
+      3,
+      33,
+      4
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      22,
+      0,
+      0,
+      4,
+      34,
+      6
+     ]
+    },
+    "tiered": {
+     "3-action": {
+      "benign_unseen2": {
+       "dropped": 0.00423728813559322,
+       "any_action": 0.00423728813559322
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.01834862385321101
+      },
+      "corpus": {
+       "coverage": 0.2999622213826974,
+       "drop_coverage": 0.2999622213826974,
+       "selective_error": 0.0028337531486146094,
+       "benign_dropped": 0.0026399155227032735
+      }
+     },
+     "4-action": {
+      "benign_unseen2": {
+       "dropped": 0.00423728813559322,
+       "any_action": 0.00423728813559322
+      },
+      "benign_unseen3": {
+       "dropped": 0.0022935779816513763,
+       "any_action": 0.0022935779816513763
+      },
+      "corpus": {
+       "coverage": 0.23857196826596147,
+       "drop_coverage": 0.23857196826596147,
+       "selective_error": 0.0023752969121140144,
+       "benign_dropped": 0.0
+      }
+     },
+     "spoof-redirect": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.01059322033898305
+      },
+      "benign_unseen3": {
+       "dropped": 0.027522935779816515,
+       "any_action": 0.027522935779816515
+      },
+      "corpus": {
+       "coverage": 0.3448243294295429,
+       "drop_coverage": 0.3448243294295429,
+       "selective_error": 0.0049301561216105174,
+       "benign_dropped": 0.0021119324181626186
+      }
+     },
+     "flood-inspect": {
+      "benign_unseen2": {
+       "dropped": 0.00423728813559322,
+       "any_action": 0.1292372881355932
+      },
+      "benign_unseen3": {
+       "dropped": 0.0022935779816513763,
+       "any_action": 0.22018348623853212
+      },
+      "corpus": {
+       "coverage": 0.4450321118247072,
+       "drop_coverage": 0.23857196826596147,
+       "selective_error": 0.03353140916808149,
+       "benign_dropped": 0.0
+      }
+     }
+    }
+   },
+   "with_benign_unseen2": {
+    "coverage": 0.44805440120891576,
+    "selective_error": 0.0031618887015177066,
+    "corpus_benign_dropped": 0.00791974656810982,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.06991525423728813,
+     "benign_unseen3": 0.12155963302752294
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.9090909090909091,
+     "benign_unseen3": 0.660377358490566
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      0,
+      0,
+      30,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      18,
+      0,
+      0,
+      0,
+      31,
+      4
+     ]
+    }
+   },
+   "with_benign_unseen3": {
+    "coverage": 0.48403853418964865,
+    "selective_error": 0.0046829268292682925,
+    "corpus_benign_dropped": 0.012671594508975714,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.1038135593220339,
+     "benign_unseen3": 0.1536697247706422
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.8775510204081632,
+     "benign_unseen3": 0.7313432835820896
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      4,
+      2,
+      0,
+      2,
+      3,
+      34,
+      4
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      18,
+      0,
+      0,
+      4,
+      35,
+      10
+     ]
+    }
+   }
+  },
+  {
+   "seed": 53,
+   "corpus": {
+    "coverage": 0.46411704787480323,
+    "selective_error": 0.003391859537110934,
+    "corpus_benign_dropped": 0.009714285714285713,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.0847457627118644,
+     "benign_unseen3": 0.1444954128440367
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.925,
+     "benign_unseen3": 0.7142857142857143
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      3,
+      2,
+      32,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      18,
+      0,
+      4,
+      2,
+      36,
+      3
+     ]
+    },
+    "tiered": {
+     "3-action": {
+      "benign_unseen2": {
+       "dropped": 0.00423728813559322,
+       "any_action": 0.00423728813559322
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.01834862385321101
+      },
+      "corpus": {
+       "coverage": 0.30141679785165293,
+       "drop_coverage": 0.30141679785165293,
+       "selective_error": 0.005837173579109063,
+       "benign_dropped": 0.0017142857142857142
+      }
+     },
+     "4-action": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.01059322033898305
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.01834862385321101
+      },
+      "corpus": {
+       "coverage": 0.2594684693027132,
+       "drop_coverage": 0.2594684693027132,
+       "selective_error": 0.0046395431834403995,
+       "benign_dropped": 0.002285714285714286
+      }
+     },
+     "spoof-redirect": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.01059322033898305
+      },
+      "benign_unseen3": {
+       "dropped": 0.02522935779816514,
+       "any_action": 0.02522935779816514
+      },
+      "corpus": {
+       "coverage": 0.3395684785628299,
+       "drop_coverage": 0.3395684785628299,
+       "selective_error": 0.00545404963185165,
+       "benign_dropped": 0.002857142857142857
+      }
+     },
+     "flood-inspect": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.08686440677966102
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.15137614678899083
+      },
+      "corpus": {
+       "coverage": 0.3955921844615242,
+       "drop_coverage": 0.2594684693027132,
+       "selective_error": 0.025046816479400748,
+       "benign_dropped": 0.002285714285714286
+      }
+     }
+    }
+   },
+   "with_benign_unseen2": {
+    "coverage": 0.4691175108806371,
+    "selective_error": 0.0035530990919857876,
+    "corpus_benign_dropped": 0.010285714285714285,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.08050847457627118,
+     "benign_unseen3": 0.13761467889908258
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.9210526315789473,
+     "benign_unseen3": 0.7
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      3,
+      1,
+      31,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      18,
+      0,
+      4,
+      1,
+      34,
+      3
+     ]
+    }
+   },
+   "with_benign_unseen3": {
+    "coverage": 0.44550421335308826,
+    "selective_error": 0.0031178549158179174,
+    "corpus_benign_dropped": 0.008571428571428572,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.059322033898305086,
+     "benign_unseen3": 0.08486238532110092
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.8928571428571429,
+     "benign_unseen3": 0.7027027027027027
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      3,
+      1,
+      21,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      11,
+      0,
+      4,
+      1,
+      21,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "seed": 54,
+   "corpus": {
+    "coverage": 0.45297006764896675,
+    "selective_error": 0.0032733224222585926,
+    "corpus_benign_dropped": 0.008968609865470852,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.09745762711864407,
+     "benign_unseen3": 0.1536697247706422
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.9347826086956522,
+     "benign_unseen3": 0.7313432835820896
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      0,
+      4,
+      39,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      18,
+      0,
+      0,
+      5,
+      40,
+      4
+     ]
+    },
+    "tiered": {
+     "3-action": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.01059322033898305
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.01834862385321101
+      },
+      "corpus": {
+       "coverage": 0.3056250579186359,
+       "drop_coverage": 0.3056250579186359,
+       "selective_error": 0.002425712553062462,
+       "benign_dropped": 0.002242152466367713
+      }
+     },
+     "4-action": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.01059322033898305
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.01834862385321101
+      },
+      "corpus": {
+       "coverage": 0.26735242331572606,
+       "drop_coverage": 0.26735242331572606,
+       "selective_error": 0.005545927209705373,
+       "benign_dropped": 0.0016816143497757848
+      }
+     },
+     "spoof-redirect": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.01059322033898305
+      },
+      "benign_unseen3": {
+       "dropped": 0.027522935779816515,
+       "any_action": 0.027522935779816515
+      },
+      "corpus": {
+       "coverage": 0.3311092577147623,
+       "drop_coverage": 0.3311092577147623,
+       "selective_error": 0.0041981528127623844,
+       "benign_dropped": 0.0016816143497757848
+      }
+     },
+     "flood-inspect": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.0826271186440678
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.1444954128440367
+      },
+      "corpus": {
+       "coverage": 0.3848577518302289,
+       "drop_coverage": 0.26735242331572606,
+       "selective_error": 0.018540813869491933,
+       "benign_dropped": 0.0016816143497757848
+      }
+     }
+    }
+   },
+   "with_benign_unseen2": {
+    "coverage": 0.4560281716245019,
+    "selective_error": 0.003657793131477342,
+    "corpus_benign_dropped": 0.010089686098654708,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.0847457627118644,
+     "benign_unseen3": 0.14220183486238533
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.925,
+     "benign_unseen3": 0.7096774193548387
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      2,
+      3,
+      32,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      18,
+      0,
+      0,
+      4,
+      36,
+      4
+     ]
+    }
+   },
+   "with_benign_unseen3": {
+    "coverage": 0.4195162635529608,
+    "selective_error": 0.0015462778882261983,
+    "corpus_benign_dropped": 0.003923766816143498,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.08050847457627118,
+     "benign_unseen3": 0.08256880733944955
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.9210526315789473,
+     "benign_unseen3": 0.9444444444444444
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      2,
+      3,
+      30,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      2,
+      0,
+      0,
+      4,
+      30,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "seed": 55,
+   "corpus": {
+    "coverage": 0.4029808239984811,
+    "selective_error": 0.0014134275618374558,
+    "corpus_benign_dropped": 0.003401360544217687,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.06779661016949153,
+     "benign_unseen3": 0.0871559633027523
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.90625,
+     "benign_unseen3": 0.7631578947368421
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      0,
+      0,
+      29,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      9,
+      0,
+      0,
+      0,
+      29,
+      0
+     ]
+    },
+    "tiered": {
+     "3-action": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.01059322033898305
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.01834862385321101
+      },
+      "corpus": {
+       "coverage": 0.31061325232580217,
+       "drop_coverage": 0.31061325232580217,
+       "selective_error": 0.004278728606356968,
+       "benign_dropped": 0.0022675736961451248
+      }
+     },
+     "4-action": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.01059322033898305
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.01834862385321101
+      },
+      "corpus": {
+       "coverage": 0.25954053540915134,
+       "drop_coverage": 0.25954053540915134,
+       "selective_error": 0.0043891733723482075,
+       "benign_dropped": 0.0017006802721088435
+      }
+     },
+     "spoof-redirect": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.01059322033898305
+      },
+      "benign_unseen3": {
+       "dropped": 0.027522935779816515,
+       "any_action": 0.027522935779816515
+      },
+      "corpus": {
+       "coverage": 0.33852287829884187,
+       "drop_coverage": 0.33852287829884187,
+       "selective_error": 0.0030846887268648347,
+       "benign_dropped": 0.0022675736961451248
+      }
+     },
+     "flood-inspect": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.07627118644067797
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.14678899082568808
+      },
+      "corpus": {
+       "coverage": 0.3776343269413328,
+       "drop_coverage": 0.25954053540915134,
+       "selective_error": 0.017345399698340876,
+       "benign_dropped": 0.0017006802721088435
+      }
+     }
+    }
+   },
+   "with_benign_unseen2": {
+    "coverage": 0.3600721473324473,
+    "selective_error": 0.0002636435539151068,
+    "corpus_benign_dropped": 0.0005668934240362812,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.00847457627118644,
+     "benign_unseen3": 0.022935779816513763
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.25,
+     "benign_unseen3": 0.1
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      0,
+      0,
+      1,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      9,
+      0,
+      0,
+      0,
+      1,
+      0
+     ]
+    }
+   },
+   "with_benign_unseen3": {
+    "coverage": 0.3936776153408012,
+    "selective_error": 0.0009645526886906198,
+    "corpus_benign_dropped": 0.0022675736961451248,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.05084745762711865,
+     "benign_unseen3": 0.052752293577981654
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.875,
+     "benign_unseen3": 0.9130434782608695
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      0,
+      0,
+      21,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      2,
+      0,
+      0,
+      0,
+      21,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "seed": 56,
+   "corpus": {
+    "coverage": 0.0,
+    "selective_error": null,
+    "corpus_benign_dropped": 0.0,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.0,
+     "benign_unseen3": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": null,
+     "benign_unseen3": null
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "tiered": {
+     "3-action": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.01059322033898305
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.01834862385321101
+      },
+      "corpus": {
+       "coverage": 0.3057426112981669,
+       "drop_coverage": 0.3057426112981669,
+       "selective_error": 0.0039767513000917715,
+       "benign_dropped": 0.0011325028312570782
+      }
+     },
+     "4-action": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.01059322033898305
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.01834862385321101
+      },
+      "corpus": {
+       "coverage": 0.26384212495323606,
+       "drop_coverage": 0.26384212495323606,
+       "selective_error": 0.004962779156327543,
+       "benign_dropped": 0.0005662514156285391
+      }
+     },
+     "spoof-redirect": {
+      "benign_unseen2": {
+       "dropped": 0.0211864406779661,
+       "any_action": 0.0211864406779661
+      },
+      "benign_unseen3": {
+       "dropped": 0.03211009174311927,
+       "any_action": 0.03211009174311927
+      },
+      "corpus": {
+       "coverage": 0.3448372615039282,
+       "drop_coverage": 0.3448372615039282,
+       "selective_error": 0.0067805804176837535,
+       "benign_dropped": 0.003963759909399773
+      }
+     },
+     "flood-inspect": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.04025423728813559
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.09174311926605505
+      },
+      "corpus": {
+       "coverage": 0.3543771043771044,
+       "drop_coverage": 0.26384212495323606,
+       "selective_error": 0.013723937714436528,
+       "benign_dropped": 0.0005662514156285391
+      }
+     }
+    }
+   },
+   "with_benign_unseen2": {
+    "coverage": 0.4540778151889263,
+    "selective_error": 0.004119464469618949,
+    "corpus_benign_dropped": 0.011325028312570781,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.07838983050847458,
+     "benign_unseen3": 0.13990825688073394
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.918918918918919,
+     "benign_unseen3": 0.7049180327868853
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      3,
+      0,
+      31,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      18,
+      0,
+      4,
+      0,
+      35,
+      4
+     ]
+    }
+   },
+   "with_benign_unseen3": {
+    "coverage": 0.42461653572764685,
+    "selective_error": 0.003303964757709251,
+    "corpus_benign_dropped": 0.008493771234428085,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.07627118644067797,
+     "benign_unseen3": 0.08256880733944955
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.9166666666666666,
+     "benign_unseen3": 0.9444444444444444
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      3,
+      0,
+      30,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      2,
+      0,
+      4,
+      0,
+      30,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "seed": 57,
+   "corpus": {
+    "coverage": 0.46014089729328883,
+    "selective_error": 0.0032232070910556,
+    "corpus_benign_dropped": 0.009116809116809116,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.09745762711864407,
+     "benign_unseen3": 0.14678899082568808
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.9347826086956522,
+     "benign_unseen3": 0.71875
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      3,
+      1,
+      39,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      18,
+      0,
+      4,
+      1,
+      38,
+      3
+     ]
+    },
+    "tiered": {
+     "3-action": {
+      "benign_unseen2": {
+       "dropped": 0.00423728813559322,
+       "any_action": 0.00423728813559322
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.01834862385321101
+      },
+      "corpus": {
+       "coverage": 0.30700778642936594,
+       "drop_coverage": 0.30700778642936594,
+       "selective_error": 0.0024154589371980675,
+       "benign_dropped": 0.0017094017094017094
+      }
+     },
+     "4-action": {
+      "benign_unseen2": {
+       "dropped": 0.00423728813559322,
+       "any_action": 0.00423728813559322
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.01834862385321101
+      },
+      "corpus": {
+       "coverage": 0.2672413793103448,
+       "drop_coverage": 0.2672413793103448,
+       "selective_error": 0.0065903572667360385,
+       "benign_dropped": 0.0017094017094017094
+      }
+     },
+     "spoof-redirect": {
+      "benign_unseen2": {
+       "dropped": 0.00423728813559322,
+       "any_action": 0.00423728813559322
+      },
+      "benign_unseen3": {
+       "dropped": 0.02522935779816514,
+       "any_action": 0.02522935779816514
+      },
+      "corpus": {
+       "coverage": 0.35159436410826844,
+       "drop_coverage": 0.35159436410826844,
+       "selective_error": 0.00817295017136831,
+       "benign_dropped": 0.004558404558404558
+      }
+     },
+     "flood-inspect": {
+      "benign_unseen2": {
+       "dropped": 0.00423728813559322,
+       "any_action": 0.03389830508474576
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.09862385321100918
+      },
+      "corpus": {
+       "coverage": 0.3656840934371524,
+       "drop_coverage": 0.2672413793103448,
+       "selective_error": 0.013434727503168568,
+       "benign_dropped": 0.0017094017094017094
+      }
+     }
+    }
+   },
+   "with_benign_unseen2": {
+    "coverage": 0.4625509825732295,
+    "selective_error": 0.003406813627254509,
+    "corpus_benign_dropped": 0.009686609686609686,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.07838983050847458,
+     "benign_unseen3": 0.13761467889908258
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.918918918918919,
+     "benign_unseen3": 0.7
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      3,
+      1,
+      30,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      18,
+      0,
+      4,
+      1,
+      34,
+      3
+     ]
+    }
+   },
+   "with_benign_unseen3": {
+    "coverage": 0.4660734149054505,
+    "selective_error": 0.003977724741447892,
+    "corpus_benign_dropped": 0.011396011396011397,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.1016949152542373,
+     "benign_unseen3": 0.14678899082568808
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.9375,
+     "benign_unseen3": 0.71875
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      5,
+      1,
+      39,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      18,
+      0,
+      4,
+      1,
+      38,
+      3
+     ]
+    }
+   }
+  },
+  {
+   "seed": 58,
+   "corpus": {
+    "coverage": 0.46102598267821454,
+    "selective_error": 0.002890173410404624,
+    "corpus_benign_dropped": 0.007954545454545454,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.0847457627118644,
+     "benign_unseen3": 0.13990825688073394
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.9,
+     "benign_unseen3": 0.6885245901639344
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      2,
+      2,
+      0,
+      2,
+      24,
+      10,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      1,
+      18,
+      0,
+      0,
+      25,
+      14,
+      3
+     ]
+    },
+    "tiered": {
+     "3-action": {
+      "benign_unseen2": {
+       "dropped": 0.00423728813559322,
+       "any_action": 0.00423728813559322
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.01834862385321101
+      },
+      "corpus": {
+       "coverage": 0.3083658513372038,
+       "drop_coverage": 0.3083658513372038,
+       "selective_error": 0.0021604938271604936,
+       "benign_dropped": 0.0017045454545454545
+      }
+     },
+     "4-action": {
+      "benign_unseen2": {
+       "dropped": 0.00423728813559322,
+       "any_action": 0.00423728813559322
+      },
+      "benign_unseen3": {
+       "dropped": 0.0022935779816513763,
+       "any_action": 0.0022935779816513763
+      },
+      "corpus": {
+       "coverage": 0.2435519177691063,
+       "drop_coverage": 0.2435519177691063,
+       "selective_error": 0.0007815552950371239,
+       "benign_dropped": 0.0005681818181818182
+      }
+     },
+     "spoof-redirect": {
+      "benign_unseen2": {
+       "dropped": 0.00423728813559322,
+       "any_action": 0.00423728813559322
+      },
+      "benign_unseen3": {
+       "dropped": 0.0022935779816513763,
+       "any_action": 0.0022935779816513763
+      },
+      "corpus": {
+       "coverage": 0.2942800038069858,
+       "drop_coverage": 0.2942800038069858,
+       "selective_error": 0.0003234152652005175,
+       "benign_dropped": 0.0005681818181818182
+      }
+     },
+     "flood-inspect": {
+      "benign_unseen2": {
+       "dropped": 0.00423728813559322,
+       "any_action": 0.05508474576271186
+      },
+      "benign_unseen3": {
+       "dropped": 0.0022935779816513763,
+       "any_action": 0.09174311926605505
+      },
+      "corpus": {
+       "coverage": 0.34186732654420865,
+       "drop_coverage": 0.2435519177691063,
+       "selective_error": 0.01475501113585746,
+       "benign_dropped": 0.0005681818181818182
+      }
+     }
+    }
+   },
+   "with_benign_unseen2": {
+    "coverage": 0.44075378319215763,
+    "selective_error": 0.0021593608291945584,
+    "corpus_benign_dropped": 0.005681818181818182,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.048728813559322036,
+     "benign_unseen3": 0.10321100917431193
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.8695652173913043,
+     "benign_unseen3": 0.6
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      0,
+      20,
+      0,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      18,
+      0,
+      0,
+      20,
+      4,
+      3
+     ]
+    }
+   },
+   "with_benign_unseen3": {
+    "coverage": 0.49681164937660605,
+    "selective_error": 0.0036398467432950193,
+    "corpus_benign_dropped": 0.010795454545454546,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.11016949152542373,
+     "benign_unseen3": 0.15825688073394495
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.9423076923076923,
+     "benign_unseen3": 0.7391304347826086
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      0,
+      25,
+      20,
+      4
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      18,
+      0,
+      0,
+      25,
+      22,
+      4
+     ]
+    }
+   }
+  },
+  {
+   "seed": 59,
+   "corpus": {
+    "coverage": 0.350297176820208,
+    "selective_error": 0.001325556733828208,
+    "corpus_benign_dropped": 0.0027502750275027505,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.046610169491525424,
+     "benign_unseen3": 0.0481651376146789
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.9090909090909091,
+     "benign_unseen3": 0.9523809523809523
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      20,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      20,
+      0
+     ]
+    },
+    "tiered": {
+     "3-action": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.01059322033898305
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.01834862385321101
+      },
+      "corpus": {
+       "coverage": 0.312407132243685,
+       "drop_coverage": 0.312407132243685,
+       "selective_error": 0.00267538644470868,
+       "benign_dropped": 0.0022002200220022
+      }
+     },
+     "4-action": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.01059322033898305
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.01834862385321101
+      },
+      "corpus": {
+       "coverage": 0.2712667161961367,
+       "drop_coverage": 0.2712667161961367,
+       "selective_error": 0.005135227661759671,
+       "benign_dropped": 0.0011001100110011
+      }
+     },
+     "spoof-redirect": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.01059322033898305
+      },
+      "benign_unseen3": {
+       "dropped": 0.02981651376146789,
+       "any_action": 0.02981651376146789
+      },
+      "corpus": {
+       "coverage": 0.3422176820208024,
+       "drop_coverage": 0.3422176820208024,
+       "selective_error": 0.004884667571234735,
+       "benign_dropped": 0.0022002200220022
+      }
+     },
+     "flood-inspect": {
+      "benign_unseen2": {
+       "dropped": 0.01059322033898305,
+       "any_action": 0.04025423728813559
+      },
+      "benign_unseen3": {
+       "dropped": 0.01834862385321101,
+       "any_action": 0.10321100917431193
+      },
+      "corpus": {
+       "coverage": 0.3928306092124814,
+       "drop_coverage": 0.2712667161961367,
+       "selective_error": 0.017966903073286054,
+       "benign_dropped": 0.0011001100110011
+      }
+     }
+    }
+   },
+   "with_benign_unseen2": {
+    "coverage": 0.45300891530460624,
+    "selective_error": 0.003075030750307503,
+    "corpus_benign_dropped": 0.00825082508250825,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.08050847457627118,
+     "benign_unseen3": 0.1353211009174312
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.9210526315789473,
+     "benign_unseen3": 0.6949152542372882
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      1,
+      2,
+      0,
+      2,
+      3,
+      30,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      18,
+      0,
+      0,
+      4,
+      33,
+      4
+     ]
+    }
+   },
+   "with_benign_unseen3": {
+    "coverage": 0.4579309063893016,
+    "selective_error": 0.0026363820726019063,
+    "corpus_benign_dropped": 0.007150715071507151,
+    "unseen_benign_dropped": {
+     "benign_unseen2": 0.08686440677966102,
+     "benign_unseen3": 0.12844036697247707
+    },
+    "dropped_in_application_attack_cells": {
+     "benign_unseen2": 0.8536585365853658,
+     "benign_unseen3": 0.6785714285714286
+    },
+    "dropped_by_cell_majority": {
+     "benign_unseen2": [
+      0,
+      4,
+      2,
+      0,
+      2,
+      3,
+      30,
+      0
+     ],
+     "benign_unseen3": [
+      0,
+      0,
+      18,
+      0,
+      0,
+      4,
+      30,
+      4
+     ]
+    }
+   }
+  }
+ ]
+}

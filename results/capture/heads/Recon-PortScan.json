@@ -1,0 +1,786 @@
+{
+ "trace": {
+  "captures": {
+   "Recon-PortScan": 317282
+  },
+  "skipped_duplicates": [],
+  "packets": 317282,
+  "duration_s": 8033.566756
+ },
+ "min_gap_us": 0,
+ "oversized_packets": 5471,
+ "ambiguous_flows": 0,
+ "key_levels": 10,
+ "per_capture": {
+  "Recon-PortScan": {
+   "flows": 89436,
+   "flows_reaching_decision": 6451,
+   "packets": 317282,
+   "packets_in_decidable_flows": 162529,
+   "emulator_fast": 3279,
+   "emulator_deferred": 3075,
+   "emulator_fast_packets": 15512,
+   "emulator_controller_blocks": 552,
+   "bytes": 48715125,
+   "length_bins": {
+    "1": {
+     "flows": 15603,
+     "packets": 15603,
+     "bytes": 712193
+    },
+    "2-9": {
+     "flows": 67382,
+     "packets": 139150,
+     "bytes": 6770163
+    },
+    "10-31": {
+     "flows": 6053,
+     "packets": 71821,
+     "bytes": 14060785
+    },
+    "32+": {
+     "flows": 398,
+     "packets": 90708,
+     "bytes": 27171984
+    }
+   },
+   "benign_flows": 0,
+   "benign_packets": 0,
+   "benign_bytes": 0,
+   "emulator_fast_benign_flows": 0,
+   "emulator_fast_benign_packets": 0,
+   "emulator_fast_benign_bytes": 0,
+   "attack_flows": 89436,
+   "attack_packets": 317282,
+   "attack_bytes": 48715125,
+   "emulator_fast_attack_flows": 3279,
+   "emulator_fast_attack_packets": 14257,
+   "emulator_fast_attack_bytes": 2928694,
+   "span_s": 8033.566756,
+   "emulator_reports": 6354,
+   "emulator_reports_per_s": 0.7909313749405781,
+   "entries": {
+    "p50": {
+     "latency_ms": 1.886,
+     "flood_alerts": 18,
+     "flood_alert_levels": [
+      8
+     ],
+     "first_alert_s": 42.993262,
+     "alert_victims": 18,
+     "alert_sources": 1,
+     "dropped_packets": {
+      "switch": 13835,
+      "flow_entries": 22260,
+      "flood_entries": 95649,
+      "total": 131744
+     },
+     "dropped_bytes": {
+      "switch": 3021252,
+      "flow_entries": 1463739,
+      "flood_entries": 4032732,
+      "total": 8517723
+     },
+     "dropped_share": 0.4152268329120467,
+     "attack_dropped_packets": 131744,
+     "attack_dropped_share": 0.4152268329120467,
+     "benign_dropped_packets": 0,
+     "benign_flood_entry_packets": 0,
+     "passed_after_first_entry": 182697
+    },
+    "p95": {
+     "latency_ms": 8.527,
+     "flood_alerts": 18,
+     "flood_alert_levels": [
+      8
+     ],
+     "first_alert_s": 42.993262,
+     "alert_victims": 18,
+     "alert_sources": 1,
+     "dropped_packets": {
+      "switch": 13835,
+      "flow_entries": 22257,
+      "flood_entries": 95361,
+      "total": 131453
+     },
+     "dropped_bytes": {
+      "switch": 3021252,
+      "flow_entries": 1463583,
+      "flood_entries": 4020468,
+      "total": 8505303
+     },
+     "dropped_share": 0.41430966774036976,
+     "attack_dropped_packets": 131453,
+     "attack_dropped_share": 0.41430966774036976,
+     "benign_dropped_packets": 0,
+     "benign_flood_entry_packets": 0,
+     "passed_after_first_entry": 182988
+    }
+   }
+  }
+ },
+ "all": {
+  "all": {
+   "flows": 89436,
+   "flows_reaching_decision": 6451,
+   "packets": 317282,
+   "packets_in_decidable_flows": 162529,
+   "emulator_fast": 3279,
+   "emulator_deferred": 3075,
+   "emulator_fast_packets": 15512,
+   "emulator_controller_blocks": 552,
+   "bytes": 48715125,
+   "length_bins": {
+    "1": {
+     "flows": 15603,
+     "packets": 15603,
+     "bytes": 712193
+    },
+    "2-9": {
+     "flows": 67382,
+     "packets": 139150,
+     "bytes": 6770163
+    },
+    "10-31": {
+     "flows": 6053,
+     "packets": 71821,
+     "bytes": 14060785
+    },
+    "32+": {
+     "flows": 398,
+     "packets": 90708,
+     "bytes": 27171984
+    }
+   },
+   "benign_flows": 0,
+   "benign_packets": 0,
+   "benign_bytes": 0,
+   "emulator_fast_benign_flows": 0,
+   "emulator_fast_benign_packets": 0,
+   "emulator_fast_benign_bytes": 0,
+   "attack_flows": 89436,
+   "attack_packets": 317282,
+   "attack_bytes": 48715125,
+   "emulator_fast_attack_flows": 3279,
+   "emulator_fast_attack_packets": 14257,
+   "emulator_fast_attack_bytes": 2928694,
+   "span_s": 8033.566756,
+   "emulator_reports": 6354,
+   "emulator_reports_per_s": 0.7909313749405781,
+   "entries": {
+    "p50": {
+     "latency_ms": 1.886,
+     "flood_alerts": 18,
+     "flood_alert_levels": [
+      8
+     ],
+     "first_alert_s": 42.993262,
+     "alert_victims": 18,
+     "alert_sources": 1,
+     "dropped_packets": {
+      "switch": 13835,
+      "flow_entries": 22260,
+      "flood_entries": 95649,
+      "total": 131744
+     },
+     "dropped_bytes": {
+      "switch": 3021252,
+      "flow_entries": 1463739,
+      "flood_entries": 4032732,
+      "total": 8517723
+     },
+     "dropped_share": 0.4152268329120467,
+     "attack_dropped_packets": 131744,
+     "attack_dropped_share": 0.4152268329120467,
+     "benign_dropped_packets": 0,
+     "benign_flood_entry_packets": 0,
+     "passed_after_first_entry": 182697
+    },
+    "p95": {
+     "latency_ms": 8.527,
+     "flood_alerts": 18,
+     "flood_alert_levels": [
+      8
+     ],
+     "first_alert_s": 42.993262,
+     "alert_victims": 18,
+     "alert_sources": 1,
+     "dropped_packets": {
+      "switch": 13835,
+      "flow_entries": 22257,
+      "flood_entries": 95361,
+      "total": 131453
+     },
+     "dropped_bytes": {
+      "switch": 3021252,
+      "flow_entries": 1463583,
+      "flood_entries": 4020468,
+      "total": 8505303
+     },
+     "dropped_share": 0.41430966774036976,
+     "attack_dropped_packets": 131453,
+     "attack_dropped_share": 0.41430966774036976,
+     "benign_dropped_packets": 0,
+     "benign_flood_entry_packets": 0,
+     "passed_after_first_entry": 182988
+    }
+   },
+   "emulator_fast_benign": 0,
+   "emulator_fast_benign_remote": [],
+   "emulator_decided_benign_flows": 0,
+   "emulator_decided_benign_stopped": null,
+   "emulator_decided_attack_flows": 6354,
+   "emulator_decided_attack_stopped": 0.6029272898961284
+  },
+  "not_seen_by_compiler": {
+   "flows": 87927,
+   "flows_reaching_decision": 4959,
+   "packets": 242725,
+   "packets_in_decidable_flows": 88031,
+   "emulator_fast": 2467,
+   "emulator_deferred": 2408,
+   "emulator_fast_packets": 5356,
+   "emulator_controller_blocks": 471,
+   "bytes": 35549640,
+   "length_bins": {
+    "1": {
+     "flows": 15600,
+     "packets": 15600,
+     "bytes": 711883
+    },
+    "2-9": {
+     "flows": 67368,
+     "packets": 139094,
+     "bytes": 6765241
+    },
+    "10-31": {
+     "flows": 4683,
+     "packets": 56690,
+     "bytes": 11615774
+    },
+    "32+": {
+     "flows": 276,
+     "packets": 31341,
+     "bytes": 16456742
+    }
+   },
+   "benign_flows": 0,
+   "benign_packets": 0,
+   "benign_bytes": 0,
+   "emulator_fast_benign_flows": 0,
+   "emulator_fast_benign_packets": 0,
+   "emulator_fast_benign_bytes": 0,
+   "attack_flows": 87927,
+   "attack_packets": 242725,
+   "attack_bytes": 35549640,
+   "emulator_fast_attack_flows": 2467,
+   "emulator_fast_attack_packets": 5238,
+   "emulator_fast_attack_bytes": 751192,
+   "span_s": 8033.502016,
+   "emulator_reports": 4875,
+   "emulator_reports_per_s": 0.606833730830049,
+   "entries": {
+    "p50": {
+     "latency_ms": 1.886,
+     "flood_alerts": 18,
+     "flood_alert_levels": [
+      8
+     ],
+     "first_alert_s": 42.928522,
+     "alert_victims": 18,
+     "alert_sources": 1,
+     "dropped_packets": {
+      "switch": 3972,
+      "flow_entries": 10180,
+      "flood_entries": 95649,
+      "total": 109801
+     },
+     "dropped_bytes": {
+      "switch": 1445779,
+      "flow_entries": 889514,
+      "flood_entries": 4032732,
+      "total": 6368025
+     },
+     "dropped_share": 0.4523679060665362,
+     "attack_dropped_packets": 109801,
+     "attack_dropped_share": 0.4523679060665362,
+     "benign_dropped_packets": 0,
+     "benign_flood_entry_packets": 0,
+     "passed_after_first_entry": 130865
+    },
+    "p95": {
+     "latency_ms": 8.527,
+     "flood_alerts": 18,
+     "flood_alert_levels": [
+      8
+     ],
+     "first_alert_s": 42.928522,
+     "alert_victims": 18,
+     "alert_sources": 1,
+     "dropped_packets": {
+      "switch": 3972,
+      "flow_entries": 10177,
+      "flood_entries": 95361,
+      "total": 109510
+     },
+     "dropped_bytes": {
+      "switch": 1445779,
+      "flow_entries": 889358,
+      "flood_entries": 4020468,
+      "total": 6355605
+     },
+     "dropped_share": 0.4511690184365022,
+     "attack_dropped_packets": 109510,
+     "attack_dropped_share": 0.4511690184365022,
+     "benign_dropped_packets": 0,
+     "benign_flood_entry_packets": 0,
+     "passed_after_first_entry": 131156
+    }
+   },
+   "emulator_fast_benign": 0,
+   "emulator_fast_benign_remote": [],
+   "emulator_decided_benign_flows": 0,
+   "emulator_decided_benign_stopped": null,
+   "emulator_decided_attack_flows": 4875,
+   "emulator_decided_attack_stopped": 0.6026666666666667
+  },
+  "not_in_corpus": {
+   "flows": 82997,
+   "flows_reaching_decision": 68,
+   "packets": 157994,
+   "packets_in_decidable_flows": 3467,
+   "emulator_fast": 0,
+   "emulator_deferred": 0,
+   "emulator_fast_packets": 0,
+   "emulator_controller_blocks": 0,
+   "bytes": 7767302,
+   "length_bins": {
+    "1": {
+     "flows": 15595,
+     "packets": 15595,
+     "bytes": 711585
+    },
+    "2-9": {
+     "flows": 67334,
+     "packets": 138932,
+     "bytes": 6751497
+    },
+    "10-31": {
+     "flows": 47,
+     "packets": 606,
+     "bytes": 85479
+    },
+    "32+": {
+     "flows": 21,
+     "packets": 2861,
+     "bytes": 218741
+    }
+   },
+   "benign_flows": 0,
+   "benign_packets": 0,
+   "benign_bytes": 0,
+   "emulator_fast_benign_flows": 0,
+   "emulator_fast_benign_packets": 0,
+   "emulator_fast_benign_bytes": 0,
+   "attack_flows": 82997,
+   "attack_packets": 157994,
+   "attack_bytes": 7767302,
+   "emulator_fast_attack_flows": 0,
+   "emulator_fast_attack_packets": 0,
+   "emulator_fast_attack_bytes": 0,
+   "span_s": 8033.49105,
+   "emulator_reports": 0,
+   "emulator_reports_per_s": 0.0,
+   "entries": {
+    "p50": {
+     "latency_ms": 1.886,
+     "flood_alerts": 18,
+     "flood_alert_levels": [
+      8
+     ],
+     "first_alert_s": 42.928522,
+     "alert_victims": 18,
+     "alert_sources": 1,
+     "dropped_packets": {
+      "switch": 0,
+      "flow_entries": 32,
+      "flood_entries": 95649,
+      "total": 95681
+     },
+     "dropped_bytes": {
+      "switch": 0,
+      "flow_entries": 2754,
+      "flood_entries": 4032732,
+      "total": 4035486
+     },
+     "dropped_share": 0.6055989467954479,
+     "attack_dropped_packets": 95681,
+     "attack_dropped_share": 0.6055989467954479,
+     "benign_dropped_packets": 0,
+     "benign_flood_entry_packets": 0,
+     "passed_after_first_entry": 61490
+    },
+    "p95": {
+     "latency_ms": 8.527,
+     "flood_alerts": 18,
+     "flood_alert_levels": [
+      8
+     ],
+     "first_alert_s": 42.928522,
+     "alert_victims": 18,
+     "alert_sources": 1,
+     "dropped_packets": {
+      "switch": 0,
+      "flow_entries": 32,
+      "flood_entries": 95361,
+      "total": 95393
+     },
+     "dropped_bytes": {
+      "switch": 0,
+      "flow_entries": 2754,
+      "flood_entries": 4020468,
+      "total": 4023222
+     },
+     "dropped_share": 0.6037760927630164,
+     "attack_dropped_packets": 95393,
+     "attack_dropped_share": 0.6037760927630164,
+     "benign_dropped_packets": 0,
+     "benign_flood_entry_packets": 0,
+     "passed_after_first_entry": 61778
+    }
+   },
+   "emulator_fast_benign": 0,
+   "emulator_fast_benign_remote": [],
+   "emulator_decided_benign_flows": 0,
+   "emulator_decided_benign_stopped": null,
+   "emulator_decided_attack_flows": 0,
+   "emulator_decided_attack_stopped": null
+  }
+ },
+ "flood_alert": {
+  "window_us": 1000000,
+  "level_min": 256,
+  "sources_max": 16,
+  "alerts_emitted_by_switch_alone": 119
+ },
+ "entries_model": {
+  "p50": {
+   "latency_ms": 1.886,
+   "flood_alerts": 18,
+   "first_alert_s": 42.993262,
+   "alert_victims": [
+    "192.168.137.100",
+    "192.168.137.109",
+    "192.168.137.116",
+    "192.168.137.128",
+    "192.168.137.133",
+    "192.168.137.148",
+    "192.168.137.163",
+    "192.168.137.169",
+    "192.168.137.174",
+    "192.168.137.175",
+    "192.168.137.180",
+    "192.168.137.181",
+    "192.168.137.196",
+    "192.168.137.206",
+    "192.168.137.224",
+    "192.168.137.234",
+    "192.168.137.52",
+    "192.168.137.59"
+   ],
+   "alert_sources": [
+    "192.168.137.178"
+   ],
+   "alerts": [
+    {
+     "t_s": 42.993262,
+     "level": 8,
+     "src": "192.168.137.178",
+     "dst": "192.168.137.100",
+     "dst_port": 42
+    },
+    {
+     "t_s": 665.544092,
+     "level": 8,
+     "src": "192.168.137.178",
+     "dst": "192.168.137.206",
+     "dst_port": 6101
+    },
+    {
+     "t_s": 1094.21731,
+     "level": 8,
+     "src": "192.168.137.178",
+     "dst": "192.168.137.234",
+     "dst_port": 3871
+    },
+    {
+     "t_s": 1387.234805,
+     "level": 8,
+     "src": "192.168.137.178",
+     "dst": "192.168.137.59",
+     "dst_port": 18101
+    },
+    {
+     "t_s": 1876.668724,
+     "level": 8,
+     "src": "192.168.137.178",
+     "dst": "192.168.137.148",
+     "dst_port": 646
+    },
+    {
+     "t_s": 2053.248741,
+     "level": 8,
+     "src": "192.168.137.178",
+     "dst": "192.168.137.116",
+     "dst_port": 10180
+    },
+    {
+     "t_s": 2243.78254,
+     "level": 8,
+     "src": "192.168.137.178",
+     "dst": "192.168.137.180",
+     "dst_port": 481
+    },
+    {
+     "t_s": 2411.142931,
+     "level": 8,
+     "src": "192.168.137.178",
+     "dst": "192.168.137.175",
+     "dst_port": 7920
+    },
+    {
+     "t_s": 2621.093331,
+     "level": 8,
+     "src": "192.168.137.178",
+     "dst": "192.168.137.163",
+     "dst_port": 2288
+    },
+    {
+     "t_s": 2772.880329,
+     "level": 8,
+     "src": "192.168.137.178",
+     "dst": "192.168.137.174",
+     "dst_port": 2809
+    },
+    {
+     "t_s": 2965.504841,
+     "level": 8,
+     "src": "192.168.137.178",
+     "dst": "192.168.137.133",
+     "dst_port": 5999
+    },
+    {
+     "t_s": 3150.975531,
+     "level": 8,
+     "src": "192.168.137.178",
+     "dst": "192.168.137.196",
+     "dst_port": 50003
+    },
+    {
+     "t_s": 3353.832983,
+     "level": 8,
+     "src": "192.168.137.178",
+     "dst": "192.168.137.52",
+     "dst_port": 1079
+    },
+    {
+     "t_s": 3495.681003,
+     "level": 8,
+     "src": "192.168.137.178",
+     "dst": "192.168.137.169",
+     "dst_port": 19101
+    },
+    {
+     "t_s": 6073.453759,
+     "level": 8,
+     "src": "192.168.137.178",
+     "dst": "192.168.137.109",
+     "dst_port": 8083
+    },
+    {
+     "t_s": 6267.467681,
+     "level": 8,
+     "src": "192.168.137.178",
+     "dst": "192.168.137.224",
+     "dst_port": 1935
+    },
+    {
+     "t_s": 6445.751477,
+     "level": 8,
+     "src": "192.168.137.178",
+     "dst": "192.168.137.181",
+     "dst_port": 7443
+    },
+    {
+     "t_s": 6983.311176,
+     "level": 8,
+     "src": "192.168.137.178",
+     "dst": "192.168.137.128",
+     "dst_port": 3168
+    }
+   ],
+   "pair_entries": 36,
+   "victim_entries": 0,
+   "flow_entries": 22
+  },
+  "p95": {
+   "latency_ms": 8.527,
+   "flood_alerts": 18,
+   "first_alert_s": 42.993262,
+   "alert_victims": [
+    "192.168.137.100",
+    "192.168.137.109",
+    "192.168.137.116",
+    "192.168.137.128",
+    "192.168.137.133",
+    "192.168.137.148",
+    "192.168.137.163",
+    "192.168.137.169",
+    "192.168.137.174",
+    "192.168.137.175",
+    "192.168.137.180",
+    "192.168.137.181",
+    "192.168.137.196",
+    "192.168.137.206",
+    "192.168.137.224",
+    "192.168.137.234",
+    "192.168.137.52",
+    "192.168.137.59"
+   ],
+   "alert_sources": [
+    "192.168.137.178"
+   ],
+   "alerts": [
+    {
+     "t_s": 42.993262,
+     "level": 8,
+     "src": "192.168.137.178",
+     "dst": "192.168.137.100",
+     "dst_port": 42
+    },
+    {
+     "t_s": 665.544092,
+     "level": 8,
+     "src": "192.168.137.178",
+     "dst": "192.168.137.206",
+     "dst_port": 6101
+    },
+    {
+     "t_s": 1094.21731,
+     "level": 8,
+     "src": "192.168.137.178",
+     "dst": "192.168.137.234",
+     "dst_port": 3871
+    },
+    {
+     "t_s": 1387.234805,
+     "level": 8,
+     "src": "192.168.137.178",
+     "dst": "192.168.137.59",
+     "dst_port": 18101
+    },
+    {
+     "t_s": 1876.668724,
+     "level": 8,
+     "src": "192.168.137.178",
+     "dst": "192.168.137.148",
+     "dst_port": 646
+    },
+    {
+     "t_s": 2053.248741,
+     "level": 8,
+     "src": "192.168.137.178",
+     "dst": "192.168.137.116",
+     "dst_port": 10180
+    },
+    {
+     "t_s": 2243.78254,
+     "level": 8,
+     "src": "192.168.137.178",
+     "dst": "192.168.137.180",
+     "dst_port": 481
+    },
+    {
+     "t_s": 2411.142931,
+     "level": 8,
+     "src": "192.168.137.178",
+     "dst": "192.168.137.175",
+     "dst_port": 7920
+    },
+    {
+     "t_s": 2621.093331,
+     "level": 8,
+     "src": "192.168.137.178",
+     "dst": "192.168.137.163",
+     "dst_port": 2288
+    },
+    {
+     "t_s": 2772.880329,
+     "level": 8,
+     "src": "192.168.137.178",
+     "dst": "192.168.137.174",
+     "dst_port": 2809
+    },
+    {
+     "t_s": 2965.504841,
+     "level": 8,
+     "src": "192.168.137.178",
+     "dst": "192.168.137.133",
+     "dst_port": 5999
+    },
+    {
+     "t_s": 3150.975531,
+     "level": 8,
+     "src": "192.168.137.178",
+     "dst": "192.168.137.196",
+     "dst_port": 50003
+    },
+    {
+     "t_s": 3353.832983,
+     "level": 8,
+     "src": "192.168.137.178",
+     "dst": "192.168.137.52",
+     "dst_port": 1079
+    },
+    {
+     "t_s": 3495.681003,
+     "level": 8,
+     "src": "192.168.137.178",
+     "dst": "192.168.137.169",
+     "dst_port": 19101
+    },
+    {
+     "t_s": 6073.453759,
+     "level": 8,
+     "src": "192.168.137.178",
+     "dst": "192.168.137.109",
+     "dst_port": 8083
+    },
+    {
+     "t_s": 6267.467681,
+     "level": 8,
+     "src": "192.168.137.178",
+     "dst": "192.168.137.224",
+     "dst_port": 1935
+    },
+    {
+     "t_s": 6445.751477,
+     "level": 8,
+     "src": "192.168.137.178",
+     "dst": "192.168.137.181",
+     "dst_port": 7443
+    },
+    {
+     "t_s": 6983.311176,
+     "level": 8,
+     "src": "192.168.137.178",
+     "dst": "192.168.137.128",
+     "dst_port": 3168
+    }
+   ],
+   "pair_entries": 36,
+   "victim_entries": 0,
+   "flow_entries": 22
+  }
+ }
+}

@@ -1,0 +1,30 @@
+policysplit.p4(453): [--Wwarn=unused] warning: 'init_orient_read' is unused
+...n<bit<8>, idx_t, bit<8> >(init_orient) init_orient_read = { void apply(inout bit<8> v, out bit...
+                                          ^^^^^^^^^^^^^^^^
+policysplit.p4(256): [--Wwarn=uninitialized-out-param] warning: out parameter 'meta' may be uninitialized when 'IgParser' terminates
+parser IgParser(packet_in pkt, out headers_t hdr, out ig_metadata_t meta,
+                                                                    ^^^^
+policysplit.p4(256)
+parser IgParser(packet_in pkt, out headers_t hdr, out ig_metadata_t meta,
+       ^^^^^^^^
+policysplit.p4(1021): [--Wwarn=uninitialized-out-param] warning: out parameter 'meta' may be uninitialized when 'EgParser' terminates
+parser EgParser(packet_in pkt, out headers_t hdr, out eg_metadata_t meta,
+                                                                    ^^^^
+policysplit.p4(1021)
+parser EgParser(packet_in pkt, out headers_t hdr, out eg_metadata_t meta,
+       ^^^^^^^^
+policysplit.p4(1066): warning: Expected single call to get for hash instance 'Egress.hash_tag_f'.Control plane API is not generated for this hash call
+    Hash<bit<32>>(HashAlgorithm_t.CRC32) hash_tag_f;
+                                         ^^^^^^^^^^
+policysplit.p4(1067): warning: Expected single call to get for hash instance 'Egress.hash_tag_r'.Control plane API is not generated for this hash call
+    Hash<bit<32>>(HashAlgorithm_t.CRC32) hash_tag_r;
+                                         ^^^^^^^^^^
+policysplit.p4(1066): warning: Expected single call to get for hash instance 'Egress.hash_tag_f'.Control plane API is not generated for this hash call
+    Hash<bit<32>>(HashAlgorithm_t.CRC32) hash_tag_f;
+                                         ^^^^^^^^^^
+policysplit.p4(1067): warning: Expected single call to get for hash instance 'Egress.hash_tag_r'.Control plane API is not generated for this hash call
+    Hash<bit<32>>(HashAlgorithm_t.CRC32) hash_tag_r;
+                                         ^^^^^^^^^^
+
+0 errors, 7 warnings generated.
+

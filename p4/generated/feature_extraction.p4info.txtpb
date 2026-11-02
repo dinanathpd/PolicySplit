@@ -6,6 +6,31 @@ pkg_info {
 }
 tables {
   preamble {
+    id: 39779644
+    name: "SplitMambaIngress.flood_levels"
+    alias: "flood_levels"
+  }
+  match_fields {
+    id: 1
+    name: "meta.victim_new_flows"
+    bitwidth: 32
+    match_type: EXACT
+  }
+  action_refs {
+    id: 32364152
+  }
+  action_refs {
+    id: 21257015
+  }
+  initial_default_action {
+    action_id: 21257015
+  }
+  size: 16
+  is_const_table: true
+  has_initial_entries: true
+}
+tables {
+  preamble {
     id: 47207888
     name: "SplitMambaIngress.ipv4_lpm"
     alias: "ipv4_lpm"
@@ -40,7 +65,7 @@ tables {
     id: 1
     name: "hdr.ipv4.srcAddr"
     bitwidth: 32
-    match_type: EXACT
+    match_type: TERNARY
   }
   match_fields {
     id: 2
@@ -137,6 +162,13 @@ actions {
 }
 actions {
   preamble {
+    id: 30366799
+    name: "SplitMambaIngress.select_slot"
+    alias: "select_slot"
+  }
+}
+actions {
+  preamble {
     id: 23181566
     name: "SplitMambaIngress.update_flow_state"
     alias: "update_flow_state"
@@ -154,6 +186,25 @@ actions {
     id: 25417383
     name: "SplitMambaIngress.update_port_fanout"
     alias: "update_port_fanout"
+  }
+}
+actions {
+  preamble {
+    id: 29973481
+    name: "SplitMambaIngress.update_new_flow_rate"
+    alias: "update_new_flow_rate"
+  }
+}
+actions {
+  preamble {
+    id: 32364152
+    name: "SplitMambaIngress.flood_alert"
+    alias: "flood_alert"
+  }
+  params {
+    id: 1
+    name: "level"
+    bitwidth: 8
   }
 }
 actions {
@@ -198,6 +249,11 @@ actions {
     name: "conf"
     bitwidth: 8
   }
+  params {
+    id: 3
+    name: "act"
+    bitwidth: 8
+  }
 }
 actions {
   preamble {
@@ -240,7 +296,7 @@ counters {
   spec {
     unit: PACKETS
   }
-  size: 3
+  size: 6
 }
 direct_counters {
   preamble {
@@ -252,6 +308,17 @@ direct_counters {
     unit: PACKETS
   }
   direct_table_id: 41788053
+}
+meters {
+  preamble {
+    id: 349481855
+    name: "flow_meter"
+    alias: "flow_meter"
+  }
+  spec {
+    unit: PACKETS
+  }
+  size: 16384
 }
 registers {
   preamble {
@@ -382,7 +449,127 @@ registers {
   type_spec {
     bitstring {
       bit {
-        bitwidth: 2
+        bitwidth: 3
+      }
+    }
+  }
+  size: 16384
+}
+registers {
+  preamble {
+    id: 379086580
+    name: "flow_init_orient"
+    alias: "flow_init_orient"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 8
+      }
+    }
+  }
+  size: 16384
+}
+registers {
+  preamble {
+    id: 370523554
+    name: "flow_first_ts"
+    alias: "flow_first_ts"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 48
+      }
+    }
+  }
+  size: 16384
+}
+registers {
+  preamble {
+    id: 378734313
+    name: "flow_first_len"
+    alias: "flow_first_len"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 16
+      }
+    }
+  }
+  size: 16384
+}
+registers {
+  preamble {
+    id: 385409383
+    name: "flow_fwd_pkts"
+    alias: "flow_fwd_pkts"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 16
+      }
+    }
+  }
+  size: 16384
+}
+registers {
+  preamble {
+    id: 369405919
+    name: "flow_fwd_bytes"
+    alias: "flow_fwd_bytes"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 32
+      }
+    }
+  }
+  size: 16384
+}
+registers {
+  preamble {
+    id: 385247480
+    name: "flow_iat_min"
+    alias: "flow_iat_min"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 32
+      }
+    }
+  }
+  size: 16384
+}
+registers {
+  preamble {
+    id: 375281020
+    name: "flow_iat_max"
+    alias: "flow_iat_max"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 32
+      }
+    }
+  }
+  size: 16384
+}
+registers {
+  preamble {
+    id: 369473472
+    name: "flow_len_dev"
+    alias: "flow_len_dev"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 32
       }
     }
   }
@@ -458,6 +645,36 @@ registers {
     bitstring {
       bit {
         bitwidth: 8
+      }
+    }
+  }
+  size: 4096
+}
+registers {
+  preamble {
+    id: 382437800
+    name: "victim_new_flows"
+    alias: "victim_new_flows"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 32
+      }
+    }
+  }
+  size: 4096
+}
+registers {
+  preamble {
+    id: 377041195
+    name: "victim_window_ts"
+    alias: "victim_window_ts"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 48
       }
     }
   }

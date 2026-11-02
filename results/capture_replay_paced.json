@@ -1,0 +1,461 @@
+{
+ "trace": {
+  "captures": {
+   "benign": 4845,
+   "bruteforce": 4784,
+   "ddos_syn": 4879,
+   "dos_tcp": 4929,
+   "mirai": 4982,
+   "recon": 4815,
+   "spoofing_arp": 4948,
+   "spoofing_dns": 4594
+  },
+  "skipped_duplicates": [
+   "spoofing"
+  ],
+  "packets": 38776,
+  "duration_s": 458.345623
+ },
+ "min_gap_us": 2000,
+ "oversized_packets": 4023,
+ "ambiguous_flows": 20,
+ "key_levels": 10,
+ "per_capture": {
+  "benign": {
+   "flows": 204,
+   "flows_reaching_decision": 45,
+   "packets": 4819,
+   "packets_in_decidable_flows": 4275,
+   "emulator_fast": 4,
+   "emulator_deferred": 41,
+   "emulator_fast_packets": 23,
+   "emulator_controller_blocks": 2,
+   "open_loop": {
+    "fast": 4,
+    "deferred": 41,
+    "decidable_flows_decided": 45,
+    "decidable_flows_same_ten_packets": 45,
+    "agreement_same_ten_packets": 1.0,
+    "agreement_with_emulator": 1.0,
+    "agreement_on_decidable_flows": 1.0,
+    "controller_blocked": 0
+   },
+   "closed_loop": {
+    "fast": 4,
+    "deferred": 41,
+    "decidable_flows_decided": 45,
+    "decidable_flows_same_ten_packets": 45,
+    "agreement_same_ten_packets": 1.0,
+    "agreement_with_emulator": 1.0,
+    "agreement_on_decidable_flows": 1.0,
+    "controller_blocked": 2
+   }
+  },
+  "bruteforce": {
+   "flows": 205,
+   "flows_reaching_decision": 50,
+   "packets": 4735,
+   "packets_in_decidable_flows": 4210,
+   "emulator_fast": 4,
+   "emulator_deferred": 45,
+   "emulator_fast_packets": 10,
+   "emulator_controller_blocks": 2,
+   "open_loop": {
+    "fast": 4,
+    "deferred": 45,
+    "decidable_flows_decided": 49,
+    "decidable_flows_same_ten_packets": 49,
+    "agreement_same_ten_packets": 1.0,
+    "agreement_with_emulator": 1.0,
+    "agreement_on_decidable_flows": 1.0,
+    "controller_blocked": 0
+   },
+   "closed_loop": {
+    "fast": 4,
+    "deferred": 45,
+    "decidable_flows_decided": 49,
+    "decidable_flows_same_ten_packets": 49,
+    "agreement_same_ten_packets": 1.0,
+    "agreement_with_emulator": 1.0,
+    "agreement_on_decidable_flows": 1.0,
+    "controller_blocked": 2
+   }
+  },
+  "ddos_syn": {
+   "flows": 912,
+   "flows_reaching_decision": 58,
+   "packets": 4849,
+   "packets_in_decidable_flows": 2865,
+   "emulator_fast": 27,
+   "emulator_deferred": 31,
+   "emulator_fast_packets": 71,
+   "emulator_controller_blocks": 2,
+   "open_loop": {
+    "fast": 27,
+    "deferred": 31,
+    "decidable_flows_decided": 58,
+    "decidable_flows_same_ten_packets": 58,
+    "agreement_same_ten_packets": 1.0,
+    "agreement_with_emulator": 1.0,
+    "agreement_on_decidable_flows": 1.0,
+    "controller_blocked": 0
+   },
+   "closed_loop": {
+    "fast": 27,
+    "deferred": 31,
+    "decidable_flows_decided": 58,
+    "decidable_flows_same_ten_packets": 58,
+    "agreement_same_ten_packets": 1.0,
+    "agreement_with_emulator": 1.0,
+    "agreement_on_decidable_flows": 1.0,
+    "controller_blocked": 2
+   }
+  },
+  "dos_tcp": {
+   "flows": 4217,
+   "flows_reaching_decision": 19,
+   "packets": 4919,
+   "packets_in_decidable_flows": 555,
+   "emulator_fast": 1,
+   "emulator_deferred": 17,
+   "emulator_fast_packets": 64,
+   "emulator_controller_blocks": 1,
+   "open_loop": {
+    "fast": 1,
+    "deferred": 17,
+    "decidable_flows_decided": 18,
+    "decidable_flows_same_ten_packets": 18,
+    "agreement_same_ten_packets": 1.0,
+    "agreement_with_emulator": 1.0,
+    "agreement_on_decidable_flows": 1.0,
+    "controller_blocked": 0
+   },
+   "closed_loop": {
+    "fast": 1,
+    "deferred": 17,
+    "decidable_flows_decided": 18,
+    "decidable_flows_same_ten_packets": 18,
+    "agreement_same_ten_packets": 1.0,
+    "agreement_with_emulator": 1.0,
+    "agreement_on_decidable_flows": 1.0,
+    "controller_blocked": 1
+   }
+  },
+  "mirai": {
+   "flows": 147,
+   "flows_reaching_decision": 3,
+   "packets": 4977,
+   "packets_in_decidable_flows": 4716,
+   "emulator_fast": 2,
+   "emulator_deferred": 1,
+   "emulator_fast_packets": 4684,
+   "emulator_controller_blocks": 0,
+   "open_loop": {
+    "fast": 2,
+    "deferred": 1,
+    "decidable_flows_decided": 3,
+    "decidable_flows_same_ten_packets": 3,
+    "agreement_same_ten_packets": 1.0,
+    "agreement_with_emulator": 1.0,
+    "agreement_on_decidable_flows": 1.0,
+    "controller_blocked": 0
+   },
+   "closed_loop": {
+    "fast": 2,
+    "deferred": 1,
+    "decidable_flows_decided": 3,
+    "decidable_flows_same_ten_packets": 3,
+    "agreement_same_ten_packets": 1.0,
+    "agreement_with_emulator": 1.0,
+    "agreement_on_decidable_flows": 1.0,
+    "controller_blocked": 0
+   }
+  },
+  "recon": {
+   "flows": 2294,
+   "flows_reaching_decision": 117,
+   "packets": 4754,
+   "packets_in_decidable_flows": 2082,
+   "emulator_fast": 47,
+   "emulator_deferred": 70,
+   "emulator_fast_packets": 343,
+   "emulator_controller_blocks": 1,
+   "open_loop": {
+    "fast": 47,
+    "deferred": 70,
+    "decidable_flows_decided": 117,
+    "decidable_flows_same_ten_packets": 117,
+    "agreement_same_ten_packets": 1.0,
+    "agreement_with_emulator": 1.0,
+    "agreement_on_decidable_flows": 1.0,
+    "controller_blocked": 0
+   },
+   "closed_loop": {
+    "fast": 47,
+    "deferred": 70,
+    "decidable_flows_decided": 117,
+    "decidable_flows_same_ten_packets": 117,
+    "agreement_same_ten_packets": 1.0,
+    "agreement_with_emulator": 1.0,
+    "agreement_on_decidable_flows": 1.0,
+    "controller_blocked": 1
+   }
+  },
+  "spoofing_arp": {
+   "flows": 74,
+   "flows_reaching_decision": 8,
+   "packets": 4938,
+   "packets_in_decidable_flows": 4800,
+   "emulator_fast": 0,
+   "emulator_deferred": 8,
+   "emulator_fast_packets": 0,
+   "emulator_controller_blocks": 2,
+   "open_loop": {
+    "fast": 0,
+    "deferred": 8,
+    "decidable_flows_decided": 8,
+    "decidable_flows_same_ten_packets": 8,
+    "agreement_same_ten_packets": 1.0,
+    "agreement_with_emulator": 1.0,
+    "agreement_on_decidable_flows": 1.0,
+    "controller_blocked": 0
+   },
+   "closed_loop": {
+    "fast": 0,
+    "deferred": 8,
+    "decidable_flows_decided": 8,
+    "decidable_flows_same_ten_packets": 8,
+    "agreement_same_ten_packets": 1.0,
+    "agreement_with_emulator": 1.0,
+    "agreement_on_decidable_flows": 1.0,
+    "controller_blocked": 2
+   }
+  },
+  "spoofing_dns": {
+   "flows": 307,
+   "flows_reaching_decision": 82,
+   "packets": 4460,
+   "packets_in_decidable_flows": 3761,
+   "emulator_fast": 9,
+   "emulator_deferred": 73,
+   "emulator_fast_packets": 146,
+   "emulator_controller_blocks": 2,
+   "open_loop": {
+    "fast": 9,
+    "deferred": 73,
+    "decidable_flows_decided": 82,
+    "decidable_flows_same_ten_packets": 82,
+    "agreement_same_ten_packets": 1.0,
+    "agreement_with_emulator": 1.0,
+    "agreement_on_decidable_flows": 1.0,
+    "controller_blocked": 0
+   },
+   "closed_loop": {
+    "fast": 9,
+    "deferred": 73,
+    "decidable_flows_decided": 82,
+    "decidable_flows_same_ten_packets": 82,
+    "agreement_same_ten_packets": 1.0,
+    "agreement_with_emulator": 1.0,
+    "agreement_on_decidable_flows": 1.0,
+    "controller_blocked": 2
+   }
+  }
+ },
+ "all": {
+  "all": {
+   "flows": 8360,
+   "flows_reaching_decision": 382,
+   "packets": 38451,
+   "packets_in_decidable_flows": 27264,
+   "emulator_fast": 94,
+   "emulator_deferred": 286,
+   "emulator_fast_packets": 5341,
+   "emulator_controller_blocks": 12,
+   "open_loop": {
+    "fast": 94,
+    "deferred": 286,
+    "decidable_flows_decided": 380,
+    "decidable_flows_same_ten_packets": 380,
+    "agreement_same_ten_packets": 1.0,
+    "agreement_with_emulator": 1.0,
+    "agreement_on_decidable_flows": 1.0,
+    "controller_blocked": 0,
+    "fast_benign": 4,
+    "decided_attack_flows": 335,
+    "decided_benign_flows": 45,
+    "decided_attack_stopped": 0.26865671641791045,
+    "decided_benign_stopped": 0.08888888888888889
+   },
+   "closed_loop": {
+    "fast": 94,
+    "deferred": 286,
+    "decidable_flows_decided": 380,
+    "decidable_flows_same_ten_packets": 380,
+    "agreement_same_ten_packets": 1.0,
+    "agreement_with_emulator": 1.0,
+    "agreement_on_decidable_flows": 1.0,
+    "controller_blocked": 12,
+    "fast_benign": 4,
+    "decided_attack_flows": 335,
+    "decided_benign_flows": 45,
+    "decided_attack_stopped": 0.29850746268656714,
+    "decided_benign_stopped": 0.13333333333333333
+   },
+   "emulator_fast_benign": 4,
+   "emulator_fast_benign_remote": [
+    "34.158.253.218"
+   ],
+   "emulator_decided_benign_flows": 45,
+   "emulator_decided_benign_stopped": 0.13333333333333333,
+   "emulator_decided_attack_flows": 335,
+   "emulator_decided_attack_stopped": 0.29850746268656714
+  },
+  "not_seen_by_compiler": {
+   "flows": 7812,
+   "flows_reaching_decision": 211,
+   "packets": 20897,
+   "packets_in_decidable_flows": 10784,
+   "emulator_fast": 64,
+   "emulator_deferred": 147,
+   "emulator_fast_packets": 487,
+   "emulator_controller_blocks": 6,
+   "open_loop": {
+    "fast": 64,
+    "deferred": 147,
+    "decidable_flows_decided": 211,
+    "decidable_flows_same_ten_packets": 211,
+    "agreement_same_ten_packets": 1.0,
+    "agreement_with_emulator": 1.0,
+    "agreement_on_decidable_flows": 1.0,
+    "controller_blocked": 0,
+    "fast_benign": 3,
+    "decided_attack_flows": 180,
+    "decided_benign_flows": 31,
+    "decided_attack_stopped": 0.3388888888888889,
+    "decided_benign_stopped": 0.0967741935483871
+   },
+   "closed_loop": {
+    "fast": 64,
+    "deferred": 147,
+    "decidable_flows_decided": 211,
+    "decidable_flows_same_ten_packets": 211,
+    "agreement_same_ten_packets": 1.0,
+    "agreement_with_emulator": 1.0,
+    "agreement_on_decidable_flows": 1.0,
+    "controller_blocked": 6,
+    "fast_benign": 3,
+    "decided_attack_flows": 180,
+    "decided_benign_flows": 31,
+    "decided_attack_stopped": 0.3611111111111111,
+    "decided_benign_stopped": 0.16129032258064516
+   },
+   "emulator_fast_benign": 3,
+   "emulator_fast_benign_remote": [
+    "34.158.253.218"
+   ],
+   "emulator_decided_benign_flows": 31,
+   "emulator_decided_benign_stopped": 0.16129032258064516,
+   "emulator_decided_attack_flows": 180,
+   "emulator_decided_attack_stopped": 0.3611111111111111
+  },
+  "not_in_corpus": {
+   "flows": 5741,
+   "flows_reaching_decision": 16,
+   "packets": 8229,
+   "packets_in_decidable_flows": 547,
+   "emulator_fast": 1,
+   "emulator_deferred": 15,
+   "emulator_fast_packets": 64,
+   "emulator_controller_blocks": 1,
+   "open_loop": {
+    "fast": 1,
+    "deferred": 15,
+    "decidable_flows_decided": 16,
+    "decidable_flows_same_ten_packets": 16,
+    "agreement_same_ten_packets": 1.0,
+    "agreement_with_emulator": 1.0,
+    "agreement_on_decidable_flows": 1.0,
+    "controller_blocked": 0,
+    "fast_benign": 0,
+    "decided_attack_flows": 13,
+    "decided_benign_flows": 3,
+    "decided_attack_stopped": 0.07692307692307693,
+    "decided_benign_stopped": 0.0
+   },
+   "closed_loop": {
+    "fast": 1,
+    "deferred": 15,
+    "decidable_flows_decided": 16,
+    "decidable_flows_same_ten_packets": 16,
+    "agreement_same_ten_packets": 1.0,
+    "agreement_with_emulator": 1.0,
+    "agreement_on_decidable_flows": 1.0,
+    "controller_blocked": 1,
+    "fast_benign": 0,
+    "decided_attack_flows": 13,
+    "decided_benign_flows": 3,
+    "decided_attack_stopped": 0.15384615384615385,
+    "decided_benign_stopped": 0.0
+   },
+   "emulator_fast_benign": 0,
+   "emulator_fast_benign_remote": [],
+   "emulator_decided_benign_flows": 3,
+   "emulator_decided_benign_stopped": 0.0,
+   "emulator_decided_attack_flows": 13,
+   "emulator_decided_attack_stopped": 0.15384615384615385
+  }
+ },
+ "open_loop": {
+  "pipeline_events": {
+   "fwd": 33110,
+   "drop": 5361,
+   "esc": 305,
+   "rate_limit_pass": 0,
+   "rate_limit_drop": 0,
+   "redirect": 0
+  },
+  "pipeline_packets": 38776,
+  "replay": {
+   "packets_sent": 38776,
+   "send_lateness_ms": {
+    "p50": 0.0,
+    "p99": 0.0,
+    "max": 23.017
+   }
+  },
+  "reports": 400,
+  "diversity_alerts": 3,
+  "diversity_alert_victims": [
+   "255.255.255.255",
+   "192.168.137.1",
+   "224.0.0.251"
+  ]
+ },
+ "closed_loop": {
+  "pipeline_events": {
+   "fwd": 30691,
+   "drop": 7781,
+   "esc": 304,
+   "rate_limit_pass": 0,
+   "rate_limit_drop": 0,
+   "redirect": 0
+  },
+  "pipeline_packets": 38776,
+  "replay": {
+   "packets_sent": 38776,
+   "send_lateness_ms": {
+    "p50": 0.0,
+    "p99": 0.001,
+    "max": 6.422
+   }
+  },
+  "reports": 399,
+  "diversity_alerts": 3,
+  "diversity_alert_victims": [
+   "255.255.255.255",
+   "192.168.137.1",
+   "224.0.0.251"
+  ]
+ }
+}

@@ -17,6 +17,7 @@ import itertools
 import json
 import logging
 import os
+import random
 import subprocess
 import sys
 import time
@@ -54,7 +55,9 @@ BASE = [
     "--checkpoint-every", "0",
 ]
 
-SEEDS = (0, 1, 2)
+SEEDS = tuple(range(10))
+# The tuned configuration is retrained with the first three seeds only.
+TUNE_SEEDS = (0, 1, 2)
 
 # stage -> list of (entropy_mode, augment, split)
 GRID = {
@@ -86,6 +89,76 @@ def run_name(ent: str, aug: bool, split: str, seed: int) -> str:
     return f"bimamba_{ent}_{'aug' if aug else 'noaug'}_{split}_s{seed}"
 
 
+# Tuning keeps the corpus, subsample and 32-packet input of the matched
+# comparison fixed, and searches capacity and optimiser settings only.
+SEARCH = {
+    "--d-model": ("64", "128"),
+    "--n-layers": ("2", "4", "6"),
+    "--d-state": ("8", "16"),
+    "--expand": ("1", "2"),
+    "--dropout": ("0.1", "0.15", "0.3"),
+    "--lr": ("3e-4", "6e-4", "1e-3"),
+    "--epochs": ("30", "60"),
+}
+TUNE_DIR = "results/controlled/tune"
+
+
+def _with(cfg):
+    args = list(BASE)
+    for k, v in cfg.items():
+        if k in args:
+            args[args.index(k) + 1] = v
+        else:
+            args += [k, v]
+    return args
+
+
+def _train(args, name, env):
+    out = Path(TUNE_DIR) / f"{name}_results.json"
+    if not out.exists():
+        cmd = [sys.executable, "scripts/train_bimamba.py", *args, "--augment",
+               "--name", name, "--results-dir", TUNE_DIR,
+               "--output-dir", f"{MODELS_DIR}/tune"]
+        with open(Path(TUNE_DIR) / f"{name}.log", "w") as lf:
+            subprocess.run(cmd, env=env, stdout=lf, stderr=subprocess.STDOUT)
+    return json.loads(out.read_text()) if out.exists() else None
+
+
+def tune(n_configs, env):
+    """Random search selected on validation macro F1, then three seeds."""
+    Path(TUNE_DIR).mkdir(parents=True, exist_ok=True)
+    rng = random.Random(0)
+    configs, seen = [], set()
+    while len(configs) < n_configs:
+        cfg = {k: rng.choice(v) for k, v in SEARCH.items()}
+        if tuple(cfg.items()) not in seen:
+            seen.add(tuple(cfg.items()))
+            configs.append(cfg)
+    trials = []
+    for i, cfg in enumerate(configs):
+        res = _train(_with(cfg) + ["--entropy-mode", "real", "--split",
+                                   "flow-isolated", "--seed", "0"],
+                     f"tune_{i:02d}", env)
+        if res:
+            trials.append({"config": cfg, "best_val_f1": res["best_val_f1"],
+                           "test_macro_f1": res["test"]["macro_f1"]})
+            logger.info("tune %02d %s val=%.4f", i, cfg, res["best_val_f1"])
+    best = max(trials, key=lambda t: t["best_val_f1"])
+    final = {}
+    for ent in ("none", "real"):
+        for seed in TUNE_SEEDS:
+            res = _train(_with(best["config"]) + [
+                "--entropy-mode", ent, "--split", "flow-isolated",
+                "--seed", str(seed)], f"tuned_{ent}_s{seed}", env)
+            if res:
+                final[f"{ent}|{seed}"] = res["test"]
+    Path(TUNE_DIR, "summary.json").write_text(json.dumps(
+        {"search_space": SEARCH, "selection": "best validation macro F1, "
+         "seed 0, measured context, augmentation on", "trials": trials,
+         "selected": best, "final": final}, indent=1))
+    logger.info("selected %s; final runs %d", best["config"], len(final))
+
+
 def build_command(ent: str, aug: bool, split: str, seed: int) -> list:
     cmd = [sys.executable, "scripts/train_bimamba.py", *BASE,
            "--entropy-mode", ent,
@@ -107,7 +180,15 @@ def main():
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--force", action="store_true",
                         help="Re-run configurations that already have results")
+    parser.add_argument("--tune", type=int, default=0,
+                        help="Random-search this many BiMamba configurations")
     args = parser.parse_args()
+
+    env = dict(os.environ, PYTHONPATH=".",
+               PYTORCH_ALLOC_CONF="expandable_segments:True")
+    if args.tune:
+        tune(args.tune, env)
+        return
 
     stages = list(GRID) if args.stage == "all" else [args.stage]
     Path(RESULTS_DIR).mkdir(parents=True, exist_ok=True)
@@ -120,9 +201,6 @@ def main():
 
     logger.info("%d run(s) queued across stage(s): %s",
                 len(jobs), ", ".join(stages))
-
-    env = dict(os.environ, PYTHONPATH=".",
-               PYTORCH_ALLOC_CONF="expandable_segments:True")
 
     for i, job in enumerate(jobs, 1):
         name = run_name(*job)

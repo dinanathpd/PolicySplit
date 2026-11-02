@@ -1,0 +1,144 @@
+{
+  "source": "results/causal/bmv2_causal_features_2.json",
+  "n_flows": 1901,
+  "packets_replayed": 27041,
+  "distinct_sources_per_capture": {
+    "ddos_syn": 142,
+    "mirai": 55,
+    "dos_tcp": 83,
+    "benign": 132,
+    "bruteforce": 137,
+    "recon": 131
+  },
+  "distinct_victims": 392,
+  "features": [
+    "pkt_count",
+    "byte_count",
+    "mean_iat_us",
+    "dstport_fanout",
+    "src_diversity"
+  ],
+  "class_counts": [
+    207,
+    907,
+    86,
+    108,
+    374,
+    0,
+    0,
+    219
+  ],
+  "estimator_vs_truth_pearson_r": 0.9214880109227019,
+  "src_diversity_by_class": {
+    "0": {
+      "n": 207,
+      "switch_estimate_mean": 8.06280193236715,
+      "switch_estimate_median": 4.0,
+      "true_sources_mean": 16.44927536231884,
+      "true_sources_quartiles": [
+        3.0,
+        4.0,
+        7.5
+      ]
+    },
+    "1": {
+      "n": 907,
+      "switch_estimate_mean": 6.250275633958104,
+      "switch_estimate_median": 6.0,
+      "true_sources_mean": 8.300992282249172,
+      "true_sources_quartiles": [
+        5.0,
+        7.0,
+        7.0
+      ]
+    },
+    "2": {
+      "n": 86,
+      "switch_estimate_mean": 7.023255813953488,
+      "switch_estimate_median": 2.0,
+      "true_sources_mean": 14.430232558139535,
+      "true_sources_quartiles": [
+        1.0,
+        2.0,
+        6.75
+      ]
+    },
+    "3": {
+      "n": 108,
+      "switch_estimate_mean": 5.388888888888889,
+      "switch_estimate_median": 7.0,
+      "true_sources_mean": 3.7037037037037037,
+      "true_sources_quartiles": [
+        4.0,
+        4.0,
+        4.0
+      ]
+    },
+    "4": {
+      "n": 374,
+      "switch_estimate_mean": 8.401069518716577,
+      "switch_estimate_median": 5.0,
+      "true_sources_mean": 14.724598930481283,
+      "true_sources_quartiles": [
+        2.0,
+        5.0,
+        24.0
+      ]
+    },
+    "7": {
+      "n": 219,
+      "switch_estimate_mean": 8.32876712328767,
+      "switch_estimate_median": 4.0,
+      "true_sources_mean": 15.95890410958904,
+      "true_sources_quartiles": [
+        2.0,
+        4.0,
+        8.0
+      ]
+    }
+  },
+  "ddos_dos_separation": {
+    "switch_estimate": {
+      "mean_a": 6.250275633958104,
+      "mean_b": 7.023255813953488,
+      "cohens_d": -0.09826620486391836,
+      "auc": 0.7105458834388861,
+      "auc_ci95": [
+        0.6225066344452707,
+        0.7929811094587318
+      ],
+      "p": 1.1535527678328357e-11,
+      "n_a": 907,
+      "n_b": 86
+    },
+    "ground_truth": {
+      "mean_a": 8.300992282249172,
+      "mean_b": 14.430232558139535,
+      "cohens_d": -0.30048569030567884,
+      "auc": 0.7031101766621368,
+      "auc_ci95": [
+        0.6168268121330222,
+        0.7811858990795106
+      ],
+      "p": 7.623420610065974e-11,
+      "n_a": 907,
+      "n_b": 86
+    }
+  },
+  "conditions": {
+    "measured": {
+      "accuracy": 0.7267950963222417,
+      "macro_f1": 0.6728447725068638
+    },
+    "none": {
+      "accuracy": 0.6742556917688266,
+      "macro_f1": 0.6011309634521876
+    },
+    "class-marginal": {
+      "accuracy": 0.7302977232924693,
+      "macro_f1": 0.6470587025424709
+    }
+  },
+  "diversity_gain_pp": 7.17,
+  "diversity_gain_beyond_class_marginal_pp": 2.58
+}

@@ -1,0 +1,305 @@
+{
+ "trace": {
+  "seed": 30,
+  "rate_flows_per_s": 100.0,
+  "packets": 61189,
+  "duration_s": 598.593409
+ },
+ "flows": 3000,
+ "scorer_us": {
+  "reports": 2998,
+  "p50": 139.357,
+  "p95": 253.873,
+  "max": 557.888
+ },
+ "install_us": {
+  "p50": 1886,
+  "p95": 8527
+ },
+ "runs": {
+  "uncapped": {
+   "flows": 3000,
+   "benign_block_budget": 0.02,
+   "switch_drop_flows": 1395,
+   "deferred_flows": 1407,
+   "controller_blocked_flows": 74,
+   "attack_stopped": 0.5909822866344605,
+   "attack_stopped_at_switch": 0.5611916264090178,
+   "benign_stopped": 0.001937984496124031,
+   "agreement_with_expected": 0.9553333333333334,
+   "disagreements_on_flows_deferred_in_both": 18,
+   "disagreements": 134,
+   "expected_attack_stopped": 0.6336553945249598,
+   "expected_benign_stopped": 0.001937984496124031,
+   "rule_install_ms": {
+    "p50": 1.9989013671875,
+    "p95": 5.473613739013672,
+    "max": 22.307157516479492
+   },
+   "post_decision_packets_of_blocked_flows": 2401,
+   "of_which_dropped_by_installed_rules": 2277,
+   "of_which_sent_before_install": 105,
+   "rule_matches_on_other_flows": {
+    "benign_packets": 0,
+    "benign_flows": 0,
+    "attack_packets": 0,
+    "attack_flows": 0
+   },
+   "mitigation_entries": 148,
+   "pipeline_events": {
+    "fwd": 37826,
+    "drop": 20443,
+    "esc": 1407,
+    "rate_limit_pass": 0,
+    "rate_limit_drop": 0,
+    "redirect": 0
+   },
+   "replay": {
+    "packets_sent": 61189,
+    "send_lateness_ms": {
+     "p50": 0.0,
+     "p99": 0.078,
+     "max": 3.028
+    }
+   },
+   "controller_queue": {
+    "maxsize": 0,
+    "rate_cap": null,
+    "offered": 1407,
+    "accepted": 1407,
+    "lost": 0
+   },
+   "deferred_unblocked_flows": 1333,
+   "deferred_unblocked_packets_after_decision": 11377,
+   "queue_wait_ms": {
+    "p50": 0.0667572021484375,
+    "p95": 1.1124610900878906,
+    "max": 13.962984085083008
+   },
+   "emulator_under_cap": {
+    "attack_stopped": 0.6336553945249598,
+    "benign_stopped": 0.001937984496124031,
+    "controller_blocked_flows": 83,
+    "reports_lost_share": 0.0,
+    "wait_ms": {
+     "p50": 0.0,
+     "p95": 0.0,
+     "max": 2.958
+    }
+   }
+  },
+  "cap30": {
+   "flows": 3000,
+   "benign_block_budget": 0.02,
+   "switch_drop_flows": 1443,
+   "deferred_flows": 1448,
+   "controller_blocked_flows": 74,
+   "attack_stopped": 0.6103059581320451,
+   "attack_stopped_at_switch": 0.5805152979066023,
+   "benign_stopped": 0.001937984496124031,
+   "agreement_with_expected": 0.9713333333333334,
+   "disagreements_on_flows_deferred_in_both": 27,
+   "disagreements": 86,
+   "expected_attack_stopped": 0.6336553945249598,
+   "expected_benign_stopped": 0.001937984496124031,
+   "rule_install_ms": {
+    "p50": 13.070344924926758,
+    "p95": 509.613037109375,
+    "max": 551.5964031219482
+   },
+   "post_decision_packets_of_blocked_flows": 2392,
+   "of_which_dropped_by_installed_rules": 2017,
+   "of_which_sent_before_install": 458,
+   "rule_matches_on_other_flows": {
+    "benign_packets": 0,
+    "benign_flows": 0,
+    "attack_packets": 0,
+    "attack_flows": 0
+   },
+   "mitigation_entries": 148,
+   "pipeline_events": {
+    "fwd": 38530,
+    "drop": 20349,
+    "esc": 1448,
+    "rate_limit_pass": 0,
+    "rate_limit_drop": 0,
+    "redirect": 0
+   },
+   "replay": {
+    "packets_sent": 61189,
+    "send_lateness_ms": {
+     "p50": 0.0,
+     "p99": 0.049,
+     "max": 5.502
+    }
+   },
+   "controller_queue": {
+    "maxsize": 16,
+    "rate_cap": 30.0,
+    "offered": 1448,
+    "accepted": 1095,
+    "lost": 353
+   },
+   "deferred_unblocked_flows": 1374,
+   "deferred_unblocked_packets_after_decision": 11399,
+   "queue_wait_ms": {
+    "p50": 53.084373474121094,
+    "p95": 557.5160980224609,
+    "max": 615.1800155639648
+   },
+   "emulator_under_cap": {
+    "attack_stopped": 0.6304347826086957,
+    "benign_stopped": 0.001937984496124031,
+    "controller_blocked_flows": 75,
+    "reports_lost_share": 0.2556440903054449,
+    "wait_ms": {
+     "p50": 54.52433333333954,
+     "p95": 529.3749999999255,
+     "max": 533.3173333333377
+    }
+   }
+  },
+  "cap10": {
+   "flows": 3000,
+   "benign_block_budget": 0.02,
+   "switch_drop_flows": 1383,
+   "deferred_flows": 1404,
+   "controller_blocked_flows": 62,
+   "attack_stopped": 0.5813204508856683,
+   "attack_stopped_at_switch": 0.5563607085346216,
+   "benign_stopped": 0.001937984496124031,
+   "agreement_with_expected": 0.9466666666666667,
+   "disagreements_on_flows_deferred_in_both": 34,
+   "disagreements": 160,
+   "expected_attack_stopped": 0.6336553945249598,
+   "expected_benign_stopped": 0.001937984496124031,
+   "rule_install_ms": {
+    "p50": 897.8796005249023,
+    "p95": 1588.7258052825928,
+    "max": 1621.9096183776855
+   },
+   "post_decision_packets_of_blocked_flows": 2121,
+   "of_which_dropped_by_installed_rules": 1333,
+   "of_which_sent_before_install": 690,
+   "rule_matches_on_other_flows": {
+    "benign_packets": 0,
+    "benign_flows": 0,
+    "attack_packets": 0,
+    "attack_flows": 0
+   },
+   "mitigation_entries": 124,
+   "pipeline_events": {
+    "fwd": 38601,
+    "drop": 19487,
+    "esc": 1404,
+    "rate_limit_pass": 0,
+    "rate_limit_drop": 0,
+    "redirect": 0
+   },
+   "replay": {
+    "packets_sent": 61189,
+    "send_lateness_ms": {
+     "p50": 0.0,
+     "p99": 0.067,
+     "max": 5.592
+    }
+   },
+   "controller_queue": {
+    "maxsize": 16,
+    "rate_cap": 10.0,
+    "offered": 1404,
+    "accepted": 755,
+    "lost": 649
+   },
+   "deferred_unblocked_flows": 1342,
+   "deferred_unblocked_packets_after_decision": 11774,
+   "queue_wait_ms": {
+    "p50": 729.2282581329346,
+    "p95": 1609.680414199829,
+    "max": 1641.0515308380127
+   },
+   "emulator_under_cap": {
+    "attack_stopped": 0.6215780998389694,
+    "benign_stopped": 0.001937984496124031,
+    "controller_blocked_flows": 53,
+    "reports_lost_share": 0.48871181938911024,
+    "wait_ms": {
+     "p50": 739.916,
+     "p95": 1594.395,
+     "max": 1599.907
+    }
+   }
+  },
+  "cap2": {
+   "flows": 3000,
+   "benign_block_budget": 0.02,
+   "switch_drop_flows": 1361,
+   "deferred_flows": 1365,
+   "controller_blocked_flows": 19,
+   "attack_stopped": 0.5551529790660226,
+   "attack_stopped_at_switch": 0.5475040257648953,
+   "benign_stopped": 0.001937984496124031,
+   "agreement_with_expected": 0.931,
+   "disagreements_on_flows_deferred_in_both": 55,
+   "disagreements": 207,
+   "expected_attack_stopped": 0.6336553945249598,
+   "expected_benign_stopped": 0.001937984496124031,
+   "rule_install_ms": {
+    "p50": 7870.449781417847,
+    "p95": 8011.479139328003,
+    "max": 8014.7106647491455
+   },
+   "post_decision_packets_of_blocked_flows": 504,
+   "of_which_dropped_by_installed_rules": 319,
+   "of_which_sent_before_install": 182,
+   "rule_matches_on_other_flows": {
+    "benign_packets": 0,
+    "benign_flows": 0,
+    "attack_packets": 0,
+    "attack_flows": 0
+   },
+   "mitigation_entries": 38,
+   "pipeline_events": {
+    "fwd": 39635,
+    "drop": 18433,
+    "esc": 1365,
+    "rate_limit_pass": 0,
+    "rate_limit_drop": 0,
+    "redirect": 0
+   },
+   "replay": {
+    "packets_sent": 61189,
+    "send_lateness_ms": {
+     "p50": 0.0,
+     "p99": 0.052,
+     "max": 4.08
+    }
+   },
+   "controller_queue": {
+    "maxsize": 16,
+    "rate_cap": 2.0,
+    "offered": 1365,
+    "accepted": 299,
+    "lost": 1066
+   },
+   "deferred_unblocked_flows": 1346,
+   "deferred_unblocked_packets_after_decision": 13390,
+   "queue_wait_ms": {
+    "p50": 7353.165149688721,
+    "p95": 8001.5809535980225,
+    "max": 8021.931171417236
+   },
+   "emulator_under_cap": {
+    "attack_stopped": 0.6082930756843801,
+    "benign_stopped": 0.001937984496124031,
+    "controller_blocked_flows": 20,
+    "reports_lost_share": 0.8014608233731739,
+    "wait_ms": {
+     "p50": 7527.552,
+     "p95": 7991.455,
+     "max": 7999.846
+    }
+   }
+  }
+ }
+}

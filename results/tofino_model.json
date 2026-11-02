@@ -1,0 +1,291 @@
+{
+ "environment": {
+  "program": "p4/tna/policysplit.p4",
+  "target": "tofino2",
+  "model": "tofino-model (Open P4 Studio SDE), chip type Tofino 2",
+  "control_plane": "BF-RT gRPC",
+  "time_unit_ns": 256,
+  "clock_granularity_ms": 1,
+  "note": "functional model: packets are stamped with the host clock at 1 ms granularity, no line-rate claim",
+  "model_packets_per_s": 149
+ },
+ "flow12": {
+  "1ms": {
+   "expected": {
+    "pkt_count": 10,
+    "byte_count": 1644,
+    "mean_len": 156,
+    "mean_iat_us": 1000,
+    "min_len": 64,
+    "max_len": 400,
+    "fwd_pkts": 6,
+    "fwd_bytes": 1144,
+    "iat_min_us": 1000,
+    "iat_max_us": 1000,
+    "duration_us": 9000,
+    "len_dev": 73,
+    "first_len": 120,
+    "reason": 1,
+    "dp_class": 255,
+    "flow_id": 395414123,
+    "src_diversity": 1,
+    "dstport_fanout": 1
+   },
+   "report": {
+    "flow_id": 395414123,
+    "src": 167772162,
+    "dst": 167772161,
+    "src_port": 443,
+    "dst_port": 1234,
+    "protocol": 17,
+    "dp_class": 255,
+    "dp_confidence": 0,
+    "reason": 1,
+    "pkt_count": 10,
+    "byte_count": 1644,
+    "src_diversity": 1,
+    "dstport_fanout": 1,
+    "mean_iat_us": 11288.832,
+    "mean_len": 156,
+    "min_len": 64,
+    "max_len": 400,
+    "fwd_pkts": 6,
+    "fwd_bytes": 1144,
+    "iat_min_us": 5999.872,
+    "iat_max_us": 19000.064,
+    "duration_us": 83000.064,
+    "len_dev": 73,
+    "first_len": 120,
+    "dp_action": 0,
+    "alert_level": 0,
+    "raw_time_units": {
+     "mean_iat_us": 44097,
+     "iat_min_us": 23437,
+     "iat_max_us": 74219,
+     "duration_us": 324219
+    },
+    "t": 1793474498.497941
+   },
+   "forwarded": 12,
+   "inspected": 0,
+   "reports": 1,
+   "check": {
+    "verdict": "MATCH",
+    "mismatch": {},
+    "compared": [
+     "byte_count",
+     "dp_class",
+     "dstport_fanout",
+     "first_len",
+     "flow_id",
+     "fwd_bytes",
+     "fwd_pkts",
+     "len_dev",
+     "max_len",
+     "mean_len",
+     "min_len",
+     "pkt_count",
+     "reason",
+     "src_diversity"
+    ]
+   },
+   "time_rel_error": {
+    "mean_iat_us": 10.2888,
+    "iat_min_us": 4.9999,
+    "iat_max_us": 18.0001,
+    "duration_us": 8.2222
+   }
+  },
+  "50ms": {
+   "expected": {
+    "pkt_count": 10,
+    "byte_count": 1644,
+    "mean_len": 156,
+    "mean_iat_us": 50000,
+    "min_len": 64,
+    "max_len": 400,
+    "fwd_pkts": 6,
+    "fwd_bytes": 1144,
+    "iat_min_us": 50000,
+    "iat_max_us": 50000,
+    "duration_us": 450000,
+    "len_dev": 73,
+    "first_len": 120,
+    "reason": 1,
+    "dp_class": 255,
+    "flow_id": 2939022606,
+    "src_diversity": 1,
+    "dstport_fanout": 1
+   },
+   "report": {
+    "flow_id": 2939022606,
+    "src": 167772162,
+    "dst": 167772161,
+    "src_port": 443,
+    "dst_port": 1235,
+    "protocol": 17,
+    "dp_class": 255,
+    "dp_confidence": 0,
+    "reason": 1,
+    "pkt_count": 10,
+    "byte_count": 1644,
+    "src_diversity": 1,
+    "dstport_fanout": 1,
+    "mean_iat_us": 50000.128,
+    "mean_len": 156,
+    "min_len": 64,
+    "max_len": 400,
+    "fwd_pkts": 6,
+    "fwd_bytes": 1144,
+    "iat_min_us": 49999.872,
+    "iat_max_us": 50000.128,
+    "duration_us": 455000.064,
+    "len_dev": 73,
+    "first_len": 120,
+    "dp_action": 0,
+    "alert_level": 0,
+    "raw_time_units": {
+     "mean_iat_us": 195313,
+     "iat_min_us": 195312,
+     "iat_max_us": 195313,
+     "duration_us": 1777344
+    },
+    "t": 1793474505.992778
+   },
+   "forwarded": 12,
+   "inspected": 0,
+   "reports": 1,
+   "check": {
+    "verdict": "MATCH",
+    "mismatch": {},
+    "compared": [
+     "byte_count",
+     "dp_class",
+     "dstport_fanout",
+     "duration_us",
+     "first_len",
+     "flow_id",
+     "fwd_bytes",
+     "fwd_pkts",
+     "iat_max_us",
+     "iat_min_us",
+     "len_dev",
+     "max_len",
+     "mean_iat_us",
+     "mean_len",
+     "min_len",
+     "pkt_count",
+     "reason",
+     "src_diversity"
+    ]
+   },
+   "time_rel_error": {
+    "mean_iat_us": 0.0,
+    "iat_min_us": 0.0,
+    "iat_max_us": 0.0,
+    "duration_us": 0.0111
+   }
+  }
+ },
+ "verdicts": {
+  "bucket_key": [
+   6,
+   7,
+   0,
+   3,
+   6
+  ],
+  "drop": {
+   "entry": {
+    "cls": 1,
+    "conf": 255,
+    "act": 1,
+    "dec": 2,
+    "rsn": 2
+   },
+   "meter_pps_burst": null,
+   "forwarded": 9,
+   "inspected": 0,
+   "reports": 1,
+   "report": {
+    "reason": 2,
+    "dp_class": 1,
+    "dp_confidence": 255,
+    "dp_action": 1,
+    "pkt_count": 10
+   }
+  },
+  "redirect": {
+   "entry": {
+    "cls": 3,
+    "conf": 255,
+    "act": 3,
+    "dec": 4,
+    "rsn": 2
+   },
+   "meter_pps_burst": null,
+   "forwarded": 9,
+   "inspected": 3,
+   "reports": 1,
+   "report": {
+    "reason": 2,
+    "dp_class": 3,
+    "dp_confidence": 255,
+    "dp_action": 3,
+    "pkt_count": 10
+   }
+  },
+  "rate_limit": {
+   "entry": {
+    "cls": 2,
+    "conf": 255,
+    "act": 2,
+    "dec": 3,
+    "rsn": 2
+   },
+   "meter_pps_burst": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "forwarded": 11,
+   "inspected": 0,
+   "reports": 1,
+   "report": {
+    "reason": 2,
+    "dp_class": 2,
+    "dp_confidence": 255,
+    "dp_action": 2,
+    "pkt_count": 10
+   }
+  }
+ },
+ "mitigation": {
+  "entry": "10.0.0.1 -> 10.0.0.2 port 443",
+  "forward_packets": 8,
+  "reverse_packets": 4,
+  "entry_hits": 8,
+  "forwarded": 4,
+  "inspected": 0,
+  "reports": 0
+ },
+ "burst": {
+  "flows": 300,
+  "sources": 64,
+  "forwarded": 300,
+  "inspected": 0,
+  "reports": 1,
+  "alerts": [
+   {
+    "reason": 3,
+    "alert_level": 0,
+    "src": 167837721,
+    "dst_port": 80,
+    "src_diversity": 16
+   }
+  ],
+  "forwarded_span_s": 2.017,
+  "model_packets_per_s": 149
+ }
+}

@@ -58,7 +58,8 @@ header report_t {
     bit<8>  protocol;
     bit<8>  dp_class;          // data-plane verdict
     bit<8>  dp_confidence;     // confidence in 1/255 units
-    bit<8>  reason;            // 1 = defer, 2 = policy verdict, 3 = diversity
+    bit<8>  reason;            // 1 = defer, 2 = policy verdict, 3 = diversity,
+                               // 4 = new-flow flood
     bit<32> pkt_count;
     bit<32> byte_count;
     bit<16> src_diversity;     // distinct sources seen towards this victim
@@ -67,6 +68,17 @@ header report_t {
     bit<32> mean_len;
     bit<16> min_len;
     bit<16> max_len;
+    // Registers the controller adjudicator reads in addition to the five
+    // policy registers. Direction is relative to the flow's first packet.
+    bit<16> fwd_pkts;
+    bit<32> fwd_bytes;
+    bit<32> iat_min_us;
+    bit<32> iat_max_us;
+    bit<32> duration_us;
+    bit<32> len_dev;           // EWMA of |length - running mean length|
+    bit<16> first_len;
+    bit<8>  dp_action;         // 1 drop, 2 rate-limit, 3 redirect
+    bit<8>  alert_level;       // flood alert: log2 of the new-flow count
 }
 
 /* Every field the escalated clone must carry out of ingress has to be
@@ -88,9 +100,24 @@ struct metadata_t {
     @field_list(1) bit<8>  dp_class;
     @field_list(1) bit<8>  dp_confidence;
     @field_list(1) bit<8>  escalation_reason;
+    @field_list(1) bit<16> fwd_pkts;
+    @field_list(1) bit<32> fwd_bytes;
+    @field_list(1) bit<32> iat_min_us;
+    @field_list(1) bit<32> iat_max_us;
+    @field_list(1) bit<32> duration_us;
+    @field_list(1) bit<32> len_dev;
+    @field_list(1) bit<16> first_len;
+    @field_list(1) bit<8>  dp_action;
+    @field_list(1) bit<8>  alert_level;
 
+    bit<32> slot_a;
+    bit<32> slot_b;
+    bit<8>  orient;            // 1 when the packet runs in canonical key order
     bit<32> victim_slot;
     bit<32> source_slot;
+    bit<1>  new_flow;          // this packet claimed a flow slot
+    bit<32> victim_new_flows;  // slot claims towards this destination, window
+    bool    flood_alert;
     bit<8>  len_bucket;
     bit<8>  iat_bucket;
     bit<8>  byte_bucket;

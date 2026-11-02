@@ -1,0 +1,3897 @@
+{
+ "seed": 30,
+ "flows": 10522,
+ "base_rate_flows_per_s": 100.0,
+ "scorer_us": {
+  "reports": 10459,
+  "p50": 134.424,
+  "p95": 203.891,
+  "max": 496.044
+ },
+ "install_us": {
+  "p50": 1886,
+  "p95": 8527
+ },
+ "service_model": "score_us per report; install_us (BMv2 median report-to-install) per report that installs entries; rate cap as a minimum service time",
+ "queue_depth": 16,
+ "rate_caps": {
+  "0": {
+   "flows": 10522,
+   "span_s": 2410.602324,
+   "decided": 0.9942026230754609,
+   "deferred": 5823,
+   "controller_blocked": 370,
+   "attack_stopped": 0.5683395925799476,
+   "attack_stopped_at_switch": 0.5262319335381814,
+   "attack_deferred_unmitigated": 0.4256287697735291,
+   "benign_blocked": 0.008069164265129682,
+   "packets": {
+    "attack_forwarded": 150442,
+    "benign_dropped": 632,
+    "deferred_forwarded_after_decision": 75405,
+    "flood": 0,
+    "flood_pair": 0,
+    "flood_victim": 0,
+    "flood_forwarded": 0
+   },
+   "queue": {
+    "depth": 16,
+    "rate_cap": null,
+    "score_us": 134.424,
+    "install_us": 1886,
+    "offered": 5823,
+    "lost": 0,
+    "lost_share": 0.0,
+    "report_window_s": 544.653378,
+    "offered_per_s": 10.691203314266419,
+    "peak_per_s": 128,
+    "p95_per_s": 86,
+    "busy_share": 0.002627054434609905,
+    "peak_queue": 1,
+    "wait_ms": {
+     "p50": 0.0,
+     "p95": 0.0,
+     "max": 3.117
+    }
+   },
+   "controller": {
+    "latency_ms": 1.886,
+    "flood_alerts": 0,
+    "first_alert_s": null,
+    "alert_victims": [],
+    "alert_sources": [],
+    "alerts": [],
+    "pair_entries": 0,
+    "victim_entries": 0,
+    "flow_entries": 740,
+    "deferred_reports": 5823,
+    "lost_deferred_reports": 0,
+    "lost_alerts": 0
+   }
+  },
+  "1000": {
+   "flows": 10522,
+   "span_s": 2410.602324,
+   "decided": 0.9942026230754609,
+   "deferred": 5823,
+   "controller_blocked": 370,
+   "attack_stopped": 0.5683395925799476,
+   "attack_stopped_at_switch": 0.5262319335381814,
+   "attack_deferred_unmitigated": 0.4256287697735291,
+   "benign_blocked": 0.008069164265129682,
+   "packets": {
+    "attack_forwarded": 150442,
+    "benign_dropped": 632,
+    "deferred_forwarded_after_decision": 75405,
+    "flood": 0,
+    "flood_pair": 0,
+    "flood_victim": 0,
+    "flood_forwarded": 0
+   },
+   "queue": {
+    "depth": 16,
+    "rate_cap": 1000,
+    "score_us": 134.424,
+    "install_us": 1886,
+    "offered": 5823,
+    "lost": 0,
+    "lost_share": 0.0,
+    "report_window_s": 544.653378,
+    "offered_per_s": 10.691203314266419,
+    "peak_per_s": 128,
+    "p95_per_s": 86,
+    "busy_share": 0.01129309070401102,
+    "peak_queue": 2,
+    "wait_ms": {
+     "p50": 0.0,
+     "p95": 0.357,
+     "max": 3.117
+    }
+   },
+   "controller": {
+    "latency_ms": 1.886,
+    "flood_alerts": 0,
+    "first_alert_s": null,
+    "alert_victims": [],
+    "alert_sources": [],
+    "alerts": [],
+    "pair_entries": 0,
+    "victim_entries": 0,
+    "flow_entries": 740,
+    "deferred_reports": 5823,
+    "lost_deferred_reports": 0,
+    "lost_alerts": 0
+   }
+  },
+  "300": {
+   "flows": 10522,
+   "span_s": 2410.602324,
+   "decided": 0.9942026230754609,
+   "deferred": 5823,
+   "controller_blocked": 370,
+   "attack_stopped": 0.5683395925799476,
+   "attack_stopped_at_switch": 0.5262319335381814,
+   "attack_deferred_unmitigated": 0.4256287697735291,
+   "benign_blocked": 0.008069164265129682,
+   "packets": {
+    "attack_forwarded": 150685,
+    "benign_dropped": 632,
+    "deferred_forwarded_after_decision": 75648,
+    "flood": 0,
+    "flood_pair": 0,
+    "flood_victim": 0,
+    "flood_forwarded": 0
+   },
+   "queue": {
+    "depth": 16,
+    "rate_cap": 300,
+    "score_us": 134.424,
+    "install_us": 1886,
+    "offered": 5823,
+    "lost": 0,
+    "lost_share": 0.0,
+    "report_window_s": 544.653378,
+    "offered_per_s": 10.691203314266419,
+    "peak_per_s": 128,
+    "p95_per_s": 86,
+    "busy_share": 0.03563734438088855,
+    "peak_queue": 3,
+    "wait_ms": {
+     "p50": 0.0,
+     "p95": 3.1423333333320915,
+     "max": 12.279000000014902
+    }
+   },
+   "controller": {
+    "latency_ms": 1.886,
+    "flood_alerts": 0,
+    "first_alert_s": null,
+    "alert_victims": [],
+    "alert_sources": [],
+    "alerts": [],
+    "pair_entries": 0,
+    "victim_entries": 0,
+    "flow_entries": 740,
+    "deferred_reports": 5823,
+    "lost_deferred_reports": 0,
+    "lost_alerts": 0
+   }
+  },
+  "100": {
+   "flows": 10522,
+   "span_s": 2410.602324,
+   "decided": 0.9942026230754609,
+   "deferred": 5823,
+   "controller_blocked": 359,
+   "attack_stopped": 0.5670877432570843,
+   "attack_stopped_at_switch": 0.5262319335381814,
+   "attack_deferred_unmitigated": 0.4268806190963924,
+   "benign_blocked": 0.008069164265129682,
+   "packets": {
+    "attack_forwarded": 151374,
+    "benign_dropped": 632,
+    "deferred_forwarded_after_decision": 76337,
+    "flood": 0,
+    "flood_pair": 0,
+    "flood_victim": 0,
+    "flood_forwarded": 0
+   },
+   "queue": {
+    "depth": 16,
+    "rate_cap": 100,
+    "score_us": 134.424,
+    "install_us": 1886,
+    "offered": 5823,
+    "lost": 63,
+    "lost_share": 0.010819165378670788,
+    "report_window_s": 544.653378,
+    "offered_per_s": 10.691203314266419,
+    "peak_per_s": 128,
+    "p95_per_s": 86,
+    "busy_share": 0.10575533417512376,
+    "peak_queue": 16,
+    "wait_ms": {
+     "p50": 6.886,
+     "p95": 124.394,
+     "max": 159.996
+    }
+   },
+   "controller": {
+    "latency_ms": 1.886,
+    "flood_alerts": 0,
+    "first_alert_s": null,
+    "alert_victims": [],
+    "alert_sources": [],
+    "alerts": [],
+    "pair_entries": 0,
+    "victim_entries": 0,
+    "flow_entries": 718,
+    "deferred_reports": 5823,
+    "lost_deferred_reports": 63,
+    "lost_alerts": 0
+   }
+  },
+  "50": {
+   "flows": 10522,
+   "span_s": 2410.602324,
+   "decided": 0.9941075841094849,
+   "deferred": 5822,
+   "controller_blocked": 288,
+   "attack_stopped": 0.5590076249004211,
+   "attack_stopped_at_switch": 0.5262319335381814,
+   "attack_deferred_unmitigated": 0.434846932969159,
+   "benign_blocked": 0.008069164265129682,
+   "packets": {
+    "attack_forwarded": 152312,
+    "benign_dropped": 632,
+    "deferred_forwarded_after_decision": 77275,
+    "flood": 0,
+    "flood_pair": 0,
+    "flood_victim": 0,
+    "flood_forwarded": 0
+   },
+   "queue": {
+    "depth": 16,
+    "rate_cap": 50,
+    "score_us": 134.424,
+    "install_us": 1886,
+    "offered": 5822,
+    "lost": 1354,
+    "lost_share": 0.2325661284781862,
+    "report_window_s": 544.653378,
+    "offered_per_s": 10.68936728415921,
+    "peak_per_s": 128,
+    "p95_per_s": 86,
+    "busy_share": 0.1640676503800184,
+    "peak_queue": 16,
+    "wait_ms": {
+     "p50": 230.359,
+     "p95": 317.857,
+     "max": 319.963
+    }
+   },
+   "controller": {
+    "latency_ms": 1.886,
+    "flood_alerts": 0,
+    "first_alert_s": null,
+    "alert_victims": [],
+    "alert_sources": [],
+    "alerts": [],
+    "pair_entries": 0,
+    "victim_entries": 0,
+    "flow_entries": 576,
+    "deferred_reports": 5822,
+    "lost_deferred_reports": 1354,
+    "lost_alerts": 0
+   }
+  },
+  "30": {
+   "flows": 10522,
+   "span_s": 2410.602324,
+   "decided": 0.9941075841094849,
+   "deferred": 5822,
+   "controller_blocked": 230,
+   "attack_stopped": 0.5524069648344144,
+   "attack_stopped_at_switch": 0.5262319335381814,
+   "attack_deferred_unmitigated": 0.44144759303516556,
+   "benign_blocked": 0.008069164265129682,
+   "packets": {
+    "attack_forwarded": 152878,
+    "benign_dropped": 632,
+    "deferred_forwarded_after_decision": 77841,
+    "flood": 0,
+    "flood_pair": 0,
+    "flood_victim": 0,
+    "flood_forwarded": 0
+   },
+   "queue": {
+    "depth": 16,
+    "rate_cap": 30,
+    "score_us": 134.424,
+    "install_us": 1886,
+    "offered": 5822,
+    "lost": 2428,
+    "lost_share": 0.4170388182755067,
+    "report_window_s": 544.653378,
+    "offered_per_s": 10.68936728415921,
+    "peak_per_s": 128,
+    "p95_per_s": 86,
+    "busy_share": 0.20771620612867744,
+    "peak_queue": 16,
+    "wait_ms": {
+     "p50": 395.7999999982417,
+     "p95": 531.3893333333991,
+     "max": 533.3196666669473
+    }
+   },
+   "controller": {
+    "latency_ms": 1.886,
+    "flood_alerts": 0,
+    "first_alert_s": null,
+    "alert_victims": [],
+    "alert_sources": [],
+    "alerts": [],
+    "pair_entries": 0,
+    "victim_entries": 0,
+    "flow_entries": 460,
+    "deferred_reports": 5822,
+    "lost_deferred_reports": 2428,
+    "lost_alerts": 0
+   }
+  },
+  "20": {
+   "flows": 10522,
+   "span_s": 2410.602324,
+   "decided": 0.9941075841094849,
+   "deferred": 5822,
+   "controller_blocked": 183,
+   "attack_stopped": 0.5470581540912712,
+   "attack_stopped_at_switch": 0.5262319335381814,
+   "attack_deferred_unmitigated": 0.44679640377830887,
+   "benign_blocked": 0.008069164265129682,
+   "packets": {
+    "attack_forwarded": 154098,
+    "benign_dropped": 632,
+    "deferred_forwarded_after_decision": 79061,
+    "flood": 0,
+    "flood_pair": 0,
+    "flood_victim": 0,
+    "flood_forwarded": 0
+   },
+   "queue": {
+    "depth": 16,
+    "rate_cap": 20,
+    "score_us": 134.424,
+    "install_us": 1886,
+    "offered": 5822,
+    "lost": 3157,
+    "lost_share": 0.5422535211267606,
+    "report_window_s": 544.653378,
+    "offered_per_s": 10.68936728415921,
+    "peak_per_s": 128,
+    "p95_per_s": 86,
+    "busy_share": 0.24465101178533405,
+    "peak_queue": 16,
+    "wait_ms": {
+     "p50": 719.104,
+     "p95": 798.613,
+     "max": 799.999
+    }
+   },
+   "controller": {
+    "latency_ms": 1.886,
+    "flood_alerts": 0,
+    "first_alert_s": null,
+    "alert_victims": [],
+    "alert_sources": [],
+    "alerts": [],
+    "pair_entries": 0,
+    "victim_entries": 0,
+    "flow_entries": 366,
+    "deferred_reports": 5822,
+    "lost_deferred_reports": 3157,
+    "lost_alerts": 0
+   }
+  },
+  "10": {
+   "flows": 10522,
+   "span_s": 2410.602324,
+   "decided": 0.9941075841094849,
+   "deferred": 5822,
+   "controller_blocked": 129,
+   "attack_stopped": 0.5409127119608512,
+   "attack_stopped_at_switch": 0.5262319335381814,
+   "attack_deferred_unmitigated": 0.4529418459087288,
+   "benign_blocked": 0.008069164265129682,
+   "packets": {
+    "attack_forwarded": 155510,
+    "benign_dropped": 632,
+    "deferred_forwarded_after_decision": 80473,
+    "flood": 0,
+    "flood_pair": 0,
+    "flood_victim": 0,
+    "flood_forwarded": 0
+   },
+   "queue": {
+    "depth": 16,
+    "rate_cap": 10,
+    "score_us": 134.424,
+    "install_us": 1886,
+    "offered": 5822,
+    "lost": 4107,
+    "lost_share": 0.7054276880796977,
+    "report_window_s": 544.653378,
+    "offered_per_s": 10.68936728415921,
+    "peak_per_s": 128,
+    "p95_per_s": 86,
+    "busy_share": 0.3148791633860022,
+    "peak_queue": 16,
+    "wait_ms": {
+     "p50": 1515.744,
+     "p95": 1598.326,
+     "max": 1599.999
+    }
+   },
+   "controller": {
+    "latency_ms": 1.886,
+    "flood_alerts": 0,
+    "first_alert_s": null,
+    "alert_victims": [],
+    "alert_sources": [],
+    "alerts": [],
+    "pair_entries": 0,
+    "victim_entries": 0,
+    "flow_entries": 258,
+    "deferred_reports": 5822,
+    "lost_deferred_reports": 4107,
+    "lost_alerts": 0
+   }
+  },
+  "5": {
+   "flows": 10522,
+   "span_s": 2410.602324,
+   "decided": 0.9941075841094849,
+   "deferred": 5822,
+   "controller_blocked": 76,
+   "attack_stopped": 0.534881074314328,
+   "attack_stopped_at_switch": 0.5262319335381814,
+   "attack_deferred_unmitigated": 0.4589734835552521,
+   "benign_blocked": 0.008069164265129682,
+   "packets": {
+    "attack_forwarded": 156872,
+    "benign_dropped": 632,
+    "deferred_forwarded_after_decision": 81833,
+    "flood": 0,
+    "flood_pair": 0,
+    "flood_victim": 0,
+    "flood_forwarded": 0
+   },
+   "queue": {
+    "depth": 16,
+    "rate_cap": 5,
+    "score_us": 134.424,
+    "install_us": 1886,
+    "offered": 5822,
+    "lost": 4795,
+    "lost_share": 0.8236001374098249,
+    "report_window_s": 544.653378,
+    "offered_per_s": 10.68936728415921,
+    "peak_per_s": 128,
+    "p95_per_s": 86,
+    "busy_share": 0.3771205840203198,
+    "peak_queue": 16,
+    "wait_ms": {
+     "p50": 3123.578,
+     "p95": 3198.025,
+     "max": 3199.999
+    }
+   },
+   "controller": {
+    "latency_ms": 1.886,
+    "flood_alerts": 0,
+    "first_alert_s": null,
+    "alert_victims": [],
+    "alert_sources": [],
+    "alerts": [],
+    "pair_entries": 0,
+    "victim_entries": 0,
+    "flow_entries": 152,
+    "deferred_reports": 5822,
+    "lost_deferred_reports": 4795,
+    "lost_alerts": 0
+   }
+  },
+  "2": {
+   "flows": 10522,
+   "span_s": 2410.602324,
+   "decided": 0.9940125451435088,
+   "deferred": 5821,
+   "controller_blocked": 32,
+   "attack_stopped": 0.5298736770228747,
+   "attack_stopped_at_switch": 0.5262319335381814,
+   "attack_deferred_unmitigated": 0.4638670763628087,
+   "benign_blocked": 0.008069164265129682,
+   "packets": {
+    "attack_forwarded": 157911,
+    "benign_dropped": 632,
+    "deferred_forwarded_after_decision": 82872,
+    "flood": 0,
+    "flood_pair": 0,
+    "flood_victim": 0,
+    "flood_forwarded": 0
+   },
+   "queue": {
+    "depth": 16,
+    "rate_cap": 2,
+    "score_us": 134.424,
+    "install_us": 1886,
+    "offered": 5821,
+    "lost": 5306,
+    "lost_share": 0.9115272289984538,
+    "report_window_s": 544.653378,
+    "offered_per_s": 10.687531254052004,
+    "peak_per_s": 128,
+    "p95_per_s": 86,
+    "busy_share": 0.472777752605805,
+    "peak_queue": 16,
+    "wait_ms": {
+     "p50": 7888.65,
+     "p95": 7997.322,
+     "max": 7999.978
+    }
+   },
+   "controller": {
+    "latency_ms": 1.886,
+    "flood_alerts": 0,
+    "first_alert_s": null,
+    "alert_victims": [],
+    "alert_sources": [],
+    "alerts": [],
+    "pair_entries": 0,
+    "victim_entries": 0,
+    "flow_entries": 64,
+    "deferred_reports": 5821,
+    "lost_deferred_reports": 5306,
+    "lost_alerts": 0
+   }
+  }
+ },
+ "flow_rates": {
+  "20": {
+   "flows": 10522,
+   "span_s": 2416.74644,
+   "decided": 0.9991446493062155,
+   "deferred": 5857,
+   "controller_blocked": 374,
+   "attack_stopped": 0.5708432912256743,
+   "attack_stopped_at_switch": 0.5282804142483214,
+   "attack_deferred_unmitigated": 0.42813246841925573,
+   "benign_blocked": 0.008069164265129682,
+   "packets": {
+    "attack_forwarded": 149190,
+    "benign_dropped": 632,
+    "deferred_forwarded_after_decision": 75717,
+    "flood": 0,
+    "flood_pair": 0,
+    "flood_victim": 0,
+    "flood_forwarded": 0
+   },
+   "queue": {
+    "depth": 16,
+    "rate_cap": null,
+    "score_us": 134.424,
+    "install_us": 1886,
+    "offered": 5857,
+    "lost": 0,
+    "lost_share": 0.0,
+    "report_window_s": 667.601271,
+    "offered_per_s": 8.773200792782793,
+    "peak_per_s": 49,
+    "p95_per_s": 24,
+    "busy_share": 0.0021605872466952587,
+    "peak_queue": 0,
+    "wait_ms": {
+     "p50": 0.0,
+     "p95": 0.0,
+     "max": 1.747
+    }
+   },
+   "controller": {
+    "latency_ms": 1.886,
+    "flood_alerts": 0,
+    "first_alert_s": null,
+    "alert_victims": [],
+    "alert_sources": [],
+    "alerts": [],
+    "pair_entries": 0,
+    "victim_entries": 0,
+    "flow_entries": 748,
+    "deferred_reports": 5857,
+    "lost_deferred_reports": 0,
+    "lost_alerts": 0
+   }
+  },
+  "50": {
+   "flows": 10522,
+   "span_s": 2412.138353,
+   "decided": 0.9964835582588861,
+   "deferred": 5841,
+   "controller_blocked": 374,
+   "attack_stopped": 0.5694776374189143,
+   "attack_stopped_at_switch": 0.5269147604415614,
+   "attack_deferred_unmitigated": 0.4266530101285991,
+   "benign_blocked": 0.008069164265129682,
+   "packets": {
+    "attack_forwarded": 149790,
+    "benign_dropped": 632,
+    "deferred_forwarded_after_decision": 75690,
+    "flood": 0,
+    "flood_pair": 0,
+    "flood_victim": 0,
+    "flood_forwarded": 0
+   },
+   "queue": {
+    "depth": 16,
+    "rate_cap": null,
+    "score_us": 134.424,
+    "install_us": 1886,
+    "offered": 5841,
+    "lost": 0,
+    "lost_share": 0.0,
+    "report_window_s": 549.474529,
+    "offered_per_s": 10.630156070437254,
+    "peak_per_s": 63,
+    "p95_per_s": 48,
+    "busy_share": 0.0026211588199025653,
+    "peak_queue": 1,
+    "wait_ms": {
+     "p50": 0.0,
+     "p95": 0.0,
+     "max": 1.87
+    }
+   },
+   "controller": {
+    "latency_ms": 1.886,
+    "flood_alerts": 0,
+    "first_alert_s": null,
+    "alert_victims": [],
+    "alert_sources": [],
+    "alerts": [],
+    "pair_entries": 0,
+    "victim_entries": 0,
+    "flow_entries": 748,
+    "deferred_reports": 5841,
+    "lost_deferred_reports": 0,
+    "lost_alerts": 0
+   }
+  },
+  "100": {
+   "flows": 10522,
+   "span_s": 2410.602324,
+   "decided": 0.9942026230754609,
+   "deferred": 5823,
+   "controller_blocked": 370,
+   "attack_stopped": 0.5683395925799476,
+   "attack_stopped_at_switch": 0.5262319335381814,
+   "attack_deferred_unmitigated": 0.4256287697735291,
+   "benign_blocked": 0.008069164265129682,
+   "packets": {
+    "attack_forwarded": 150442,
+    "benign_dropped": 632,
+    "deferred_forwarded_after_decision": 75405,
+    "flood": 0,
+    "flood_pair": 0,
+    "flood_victim": 0,
+    "flood_forwarded": 0
+   },
+   "queue": {
+    "depth": 16,
+    "rate_cap": null,
+    "score_us": 134.424,
+    "install_us": 1886,
+    "offered": 5823,
+    "lost": 0,
+    "lost_share": 0.0,
+    "report_window_s": 544.653378,
+    "offered_per_s": 10.691203314266419,
+    "peak_per_s": 128,
+    "p95_per_s": 86,
+    "busy_share": 0.002627054434609905,
+    "peak_queue": 1,
+    "wait_ms": {
+     "p50": 0.0,
+     "p95": 0.0,
+     "max": 3.117
+    }
+   },
+   "controller": {
+    "latency_ms": 1.886,
+    "flood_alerts": 0,
+    "first_alert_s": null,
+    "alert_victims": [],
+    "alert_sources": [],
+    "alerts": [],
+    "pair_entries": 0,
+    "victim_entries": 0,
+    "flow_entries": 740,
+    "deferred_reports": 5823,
+    "lost_deferred_reports": 0,
+    "lost_alerts": 0
+   }
+  },
+  "200": {
+   "flows": 10522,
+   "span_s": 2409.834309,
+   "decided": 0.988595324082874,
+   "deferred": 5787,
+   "controller_blocked": 371,
+   "attack_stopped": 0.5656082849664277,
+   "attack_stopped_at_switch": 0.5233868214407648,
+   "attack_deferred_unmitigated": 0.4232388756116991,
+   "benign_blocked": 0.009221902017291067,
+   "packets": {
+    "attack_forwarded": 150738,
+    "benign_dropped": 800,
+    "deferred_forwarded_after_decision": 74959,
+    "flood": 0,
+    "flood_pair": 0,
+    "flood_victim": 0,
+    "flood_forwarded": 0
+   },
+   "queue": {
+    "depth": 16,
+    "rate_cap": null,
+    "score_us": 134.424,
+    "install_us": 1886,
+    "offered": 5787,
+    "lost": 0,
+    "lost_share": 0.0,
+    "report_window_s": 542.275366,
+    "offered_per_s": 10.67169995695508,
+    "peak_per_s": 203,
+    "p95_per_s": 147,
+    "busy_share": 0.002632880771501193,
+    "peak_queue": 1,
+    "wait_ms": {
+     "p50": 0.0,
+     "p95": 0.0,
+     "max": 2.737
+    }
+   },
+   "controller": {
+    "latency_ms": 1.886,
+    "flood_alerts": 0,
+    "first_alert_s": null,
+    "alert_victims": [],
+    "alert_sources": [],
+    "alerts": [],
+    "pair_entries": 0,
+    "victim_entries": 0,
+    "flow_entries": 742,
+    "deferred_reports": 5787,
+    "lost_deferred_reports": 0,
+    "lost_alerts": 0
+   }
+  },
+  "500": {
+   "flows": 10522,
+   "span_s": 2409.373501,
+   "decided": 0.9861243109674966,
+   "deferred": 5787,
+   "controller_blocked": 368,
+   "attack_stopped": 0.5623079549334243,
+   "attack_stopped_at_switch": 0.5204279048594515,
+   "attack_deferred_unmitigated": 0.42483213838625244,
+   "benign_blocked": 0.009221902017291067,
+   "packets": {
+    "attack_forwarded": 151009,
+    "benign_dropped": 801,
+    "deferred_forwarded_after_decision": 75070,
+    "flood": 0,
+    "flood_pair": 0,
+    "flood_victim": 0,
+    "flood_forwarded": 0
+   },
+   "queue": {
+    "depth": 16,
+    "rate_cap": null,
+    "score_us": 134.424,
+    "install_us": 1886,
+    "offered": 5787,
+    "lost": 0,
+    "lost_share": 0.0,
+    "report_window_s": 540.850827,
+    "offered_per_s": 10.699807989754632,
+    "peak_per_s": 423,
+    "p95_per_s": 174,
+    "busy_share": 0.002630099807539253,
+    "peak_queue": 3,
+    "wait_ms": {
+     "p50": 0.0,
+     "p95": 0.008423999999649823,
+     "max": 3.877
+    }
+   },
+   "controller": {
+    "latency_ms": 1.886,
+    "flood_alerts": 0,
+    "first_alert_s": null,
+    "alert_victims": [],
+    "alert_sources": [],
+    "alerts": [],
+    "pair_entries": 0,
+    "victim_entries": 0,
+    "flow_entries": 736,
+    "deferred_reports": 5787,
+    "lost_deferred_reports": 0,
+    "lost_alerts": 0
+   }
+  },
+  "1000": {
+   "flows": 10522,
+   "span_s": 2409.219898,
+   "decided": 0.9820376354305265,
+   "deferred": 5773,
+   "controller_blocked": 366,
+   "attack_stopped": 0.5588938204165244,
+   "attack_stopped_at_switch": 0.5172413793103449,
+   "attack_deferred_unmitigated": 0.42540116080573576,
+   "benign_blocked": 0.008645533141210375,
+   "packets": {
+    "attack_forwarded": 151456,
+    "benign_dropped": 715,
+    "deferred_forwarded_after_decision": 75284,
+    "flood": 0,
+    "flood_pair": 0,
+    "flood_victim": 0,
+    "flood_forwarded": 0
+   },
+   "queue": {
+    "depth": 16,
+    "rate_cap": null,
+    "score_us": 134.424,
+    "install_us": 1886,
+    "offered": 5773,
+    "lost": 0,
+    "lost_share": 0.0,
+    "report_window_s": 540.379786,
+    "offered_per_s": 10.68322714795257,
+    "peak_per_s": 764,
+    "p95_per_s": 127,
+    "busy_share": 0.002622427049852942,
+    "peak_queue": 6,
+    "wait_ms": {
+     "p50": 0.0,
+     "p95": 0.10342399999964982,
+     "max": 2.7764240000005813
+    }
+   },
+   "controller": {
+    "latency_ms": 1.886,
+    "flood_alerts": 0,
+    "first_alert_s": null,
+    "alert_victims": [],
+    "alert_sources": [],
+    "alerts": [],
+    "pair_entries": 0,
+    "victim_entries": 0,
+    "flow_entries": 732,
+    "deferred_reports": 5773,
+    "lost_deferred_reports": 0,
+    "lost_alerts": 0
+   }
+  },
+  "2000": {
+   "flows": 10522,
+   "span_s": 2409.143097,
+   "decided": 0.9795666223151492,
+   "deferred": 5762,
+   "controller_blocked": 368,
+   "attack_stopped": 0.5575281666097645,
+   "attack_stopped_at_switch": 0.5156481165357915,
+   "attack_deferred_unmitigated": 0.42540116080573576,
+   "benign_blocked": 0.008069164265129682,
+   "packets": {
+    "attack_forwarded": 151529,
+    "benign_dropped": 630,
+    "deferred_forwarded_after_decision": 75500,
+    "flood": 0,
+    "flood_pair": 0,
+    "flood_victim": 0,
+    "flood_forwarded": 0
+   },
+   "queue": {
+    "depth": 16,
+    "rate_cap": null,
+    "score_us": 134.424,
+    "install_us": 1886,
+    "offered": 5762,
+    "lost": 0,
+    "lost_share": 0.0,
+    "report_window_s": 540.144543,
+    "offered_per_s": 10.667514972931977,
+    "peak_per_s": 787,
+    "p95_per_s": 71,
+    "busy_share": 0.0026273172142371247,
+    "peak_queue": 8,
+    "wait_ms": {
+     "p50": 0.0,
+     "p95": 0.7982720000003465,
+     "max": 7.886271999998949
+    }
+   },
+   "controller": {
+    "latency_ms": 1.886,
+    "flood_alerts": 0,
+    "first_alert_s": null,
+    "alert_victims": [],
+    "alert_sources": [],
+    "alerts": [],
+    "pair_entries": 0,
+    "victim_entries": 0,
+    "flow_entries": 736,
+    "deferred_reports": 5762,
+    "lost_deferred_reports": 0,
+    "lost_alerts": 0
+   }
+  },
+  "5000": {
+   "flows": 10522,
+   "span_s": 2409.097016,
+   "decided": 0.9748146740163467,
+   "deferred": 5719,
+   "controller_blocked": 365,
+   "attack_stopped": 0.5563901217707977,
+   "attack_stopped_at_switch": 0.5148514851485149,
+   "attack_deferred_unmitigated": 0.42483213838625244,
+   "benign_blocked": 0.008069164265129682,
+   "packets": {
+    "attack_forwarded": 152067,
+    "benign_dropped": 668,
+    "deferred_forwarded_after_decision": 75900,
+    "flood": 0,
+    "flood_pair": 0,
+    "flood_victim": 0,
+    "flood_forwarded": 0
+   },
+   "queue": {
+    "depth": 16,
+    "rate_cap": null,
+    "score_us": 134.424,
+    "install_us": 1886,
+    "offered": 5719,
+    "lost": 18,
+    "lost_share": 0.0031474033922014337,
+    "report_window_s": 540.003398,
+    "offered_per_s": 10.590674097943362,
+    "peak_per_s": 1524,
+    "p95_per_s": 76,
+    "busy_share": 0.0026030881827898045,
+    "peak_queue": 16,
+    "wait_ms": {
+     "p50": 0.0,
+     "p95": 2.66214400000358,
+     "max": 15.109392000000923
+    }
+   },
+   "controller": {
+    "latency_ms": 1.886,
+    "flood_alerts": 0,
+    "first_alert_s": null,
+    "alert_victims": [],
+    "alert_sources": [],
+    "alerts": [],
+    "pair_entries": 0,
+    "victim_entries": 0,
+    "flow_entries": 730,
+    "deferred_reports": 5719,
+    "lost_deferred_reports": 18,
+    "lost_alerts": 0
+   }
+  },
+  "10000": {
+   "flows": 10522,
+   "span_s": 2409.081655,
+   "decided": 0.9703478426154724,
+   "deferred": 5677,
+   "controller_blocked": 326,
+   "attack_stopped": 0.5514965289632412,
+   "attack_stopped_at_switch": 0.5143962672129282,
+   "attack_deferred_unmitigated": 0.42710822806418575,
+   "benign_blocked": 0.007492795389048991,
+   "packets": {
+    "attack_forwarded": 153174,
+    "benign_dropped": 661,
+    "deferred_forwarded_after_decision": 76709,
+    "flood": 0,
+    "flood_pair": 0,
+    "flood_victim": 0,
+    "flood_forwarded": 0
+   },
+   "queue": {
+    "depth": 16,
+    "rate_cap": null,
+    "score_us": 134.424,
+    "install_us": 1886,
+    "offered": 5677,
+    "lost": 370,
+    "lost_share": 0.06517526862779636,
+    "report_window_s": 539.956349,
+    "offered_per_s": 10.513812848971611,
+    "peak_per_s": 2281,
+    "p95_per_s": 65,
+    "busy_share": 0.0023787144023379313,
+    "peak_queue": 16,
+    "wait_ms": {
+     "p50": 0.0,
+     "p95": 5.144568000018131,
+     "max": 17.64992000000924
+    }
+   },
+   "controller": {
+    "latency_ms": 1.886,
+    "flood_alerts": 0,
+    "first_alert_s": null,
+    "alert_victims": [],
+    "alert_sources": [],
+    "alerts": [],
+    "pair_entries": 0,
+    "victim_entries": 0,
+    "flow_entries": 652,
+    "deferred_reports": 5677,
+    "lost_deferred_reports": 370,
+    "lost_alerts": 0
+   }
+  },
+  "20000": {
+   "flows": 10522,
+   "span_s": 2409.073975,
+   "decided": 0.9534309066717354,
+   "deferred": 5518,
+   "controller_blocked": 287,
+   "attack_stopped": 0.5446682599294412,
+   "attack_stopped_at_switch": 0.5122339820188916,
+   "attack_deferred_unmitigated": 0.42938431774211905,
+   "benign_blocked": 0.008645533141210375,
+   "packets": {
+    "attack_forwarded": 154227,
+    "benign_dropped": 691,
+    "deferred_forwarded_after_decision": 77374,
+    "flood": 0,
+    "flood_pair": 0,
+    "flood_victim": 0,
+    "flood_forwarded": 0
+   },
+   "queue": {
+    "depth": 16,
+    "rate_cap": null,
+    "score_us": 134.424,
+    "install_us": 1886,
+    "offered": 5518,
+    "lost": 806,
+    "lost_share": 0.14606741573033707,
+    "report_window_s": 539.932825,
+    "offered_per_s": 10.21978984144926,
+    "peak_per_s": 3190,
+    "p95_per_s": 84,
+    "busy_share": 0.0021041658284065815,
+    "peak_queue": 16,
+    "wait_ms": {
+     "p50": 0.0,
+     "p95": 5.383928000034299,
+     "max": 16.343992000003812
+    }
+   },
+   "controller": {
+    "latency_ms": 1.886,
+    "flood_alerts": 0,
+    "first_alert_s": null,
+    "alert_victims": [],
+    "alert_sources": [],
+    "alerts": [],
+    "pair_entries": 0,
+    "victim_entries": 0,
+    "flow_entries": 574,
+    "deferred_reports": 5518,
+    "lost_deferred_reports": 806,
+    "lost_alerts": 0
+   }
+  }
+ },
+ "flow_rates_unbounded": {
+  "20": {
+   "flows": 10522,
+   "span_s": 2416.74644,
+   "decided": 0.9991446493062155,
+   "deferred": 5857,
+   "controller_blocked": 374,
+   "attack_stopped": 0.5708432912256743,
+   "attack_stopped_at_switch": 0.5282804142483214,
+   "attack_deferred_unmitigated": 0.42813246841925573,
+   "benign_blocked": 0.008069164265129682,
+   "packets": {
+    "attack_forwarded": 149190,
+    "benign_dropped": 632,
+    "deferred_forwarded_after_decision": 75717,
+    "flood": 0,
+    "flood_pair": 0,
+    "flood_victim": 0,
+    "flood_forwarded": 0
+   },
+   "queue": {
+    "depth": null,
+    "rate_cap": null,
+    "score_us": 134.424,
+    "install_us": 1886,
+    "offered": 5857,
+    "lost": 0,
+    "lost_share": 0.0,
+    "report_window_s": 667.601271,
+    "offered_per_s": 8.773200792782793,
+    "peak_per_s": 49,
+    "p95_per_s": 24,
+    "busy_share": 0.0021605872466952587,
+    "peak_queue": 0,
+    "wait_ms": {
+     "p50": 0.0,
+     "p95": 0.0,
+     "max": 1.747
+    }
+   },
+   "controller": {
+    "latency_ms": 1.886,
+    "flood_alerts": 0,
+    "first_alert_s": null,
+    "alert_victims": [],
+    "alert_sources": [],
+    "alerts": [],
+    "pair_entries": 0,
+    "victim_entries": 0,
+    "flow_entries": 748,
+    "deferred_reports": 5857,
+    "lost_deferred_reports": 0,
+    "lost_alerts": 0
+   }
+  },
+  "50": {
+   "flows": 10522,
+   "span_s": 2412.138353,
+   "decided": 0.9964835582588861,
+   "deferred": 5841,
+   "controller_blocked": 374,
+   "attack_stopped": 0.5694776374189143,
+   "attack_stopped_at_switch": 0.5269147604415614,
+   "attack_deferred_unmitigated": 0.4266530101285991,
+   "benign_blocked": 0.008069164265129682,
+   "packets": {
+    "attack_forwarded": 149790,
+    "benign_dropped": 632,
+    "deferred_forwarded_after_decision": 75690,
+    "flood": 0,
+    "flood_pair": 0,
+    "flood_victim": 0,
+    "flood_forwarded": 0
+   },
+   "queue": {
+    "depth": null,
+    "rate_cap": null,
+    "score_us": 134.424,
+    "install_us": 1886,
+    "offered": 5841,
+    "lost": 0,
+    "lost_share": 0.0,
+    "report_window_s": 549.474529,
+    "offered_per_s": 10.630156070437254,
+    "peak_per_s": 63,
+    "p95_per_s": 48,
+    "busy_share": 0.0026211588199025653,
+    "peak_queue": 1,
+    "wait_ms": {
+     "p50": 0.0,
+     "p95": 0.0,
+     "max": 1.87
+    }
+   },
+   "controller": {
+    "latency_ms": 1.886,
+    "flood_alerts": 0,
+    "first_alert_s": null,
+    "alert_victims": [],
+    "alert_sources": [],
+    "alerts": [],
+    "pair_entries": 0,
+    "victim_entries": 0,
+    "flow_entries": 748,
+    "deferred_reports": 5841,
+    "lost_deferred_reports": 0,
+    "lost_alerts": 0
+   }
+  },
+  "100": {
+   "flows": 10522,
+   "span_s": 2410.602324,
+   "decided": 0.9942026230754609,
+   "deferred": 5823,
+   "controller_blocked": 370,
+   "attack_stopped": 0.5683395925799476,
+   "attack_stopped_at_switch": 0.5262319335381814,
+   "attack_deferred_unmitigated": 0.4256287697735291,
+   "benign_blocked": 0.008069164265129682,
+   "packets": {
+    "attack_forwarded": 150442,
+    "benign_dropped": 632,
+    "deferred_forwarded_after_decision": 75405,
+    "flood": 0,
+    "flood_pair": 0,
+    "flood_victim": 0,
+    "flood_forwarded": 0
+   },
+   "queue": {
+    "depth": null,
+    "rate_cap": null,
+    "score_us": 134.424,
+    "install_us": 1886,
+    "offered": 5823,
+    "lost": 0,
+    "lost_share": 0.0,
+    "report_window_s": 544.653378,
+    "offered_per_s": 10.691203314266419,
+    "peak_per_s": 128,
+    "p95_per_s": 86,
+    "busy_share": 0.002627054434609905,
+    "peak_queue": 1,
+    "wait_ms": {
+     "p50": 0.0,
+     "p95": 0.0,
+     "max": 3.117
+    }
+   },
+   "controller": {
+    "latency_ms": 1.886,
+    "flood_alerts": 0,
+    "first_alert_s": null,
+    "alert_victims": [],
+    "alert_sources": [],
+    "alerts": [],
+    "pair_entries": 0,
+    "victim_entries": 0,
+    "flow_entries": 740,
+    "deferred_reports": 5823,
+    "lost_deferred_reports": 0,
+    "lost_alerts": 0
+   }
+  },
+  "200": {
+   "flows": 10522,
+   "span_s": 2409.834309,
+   "decided": 0.988595324082874,
+   "deferred": 5787,
+   "controller_blocked": 371,
+   "attack_stopped": 0.5656082849664277,
+   "attack_stopped_at_switch": 0.5233868214407648,
+   "attack_deferred_unmitigated": 0.4232388756116991,
+   "benign_blocked": 0.009221902017291067,
+   "packets": {
+    "attack_forwarded": 150738,
+    "benign_dropped": 800,
+    "deferred_forwarded_after_decision": 74959,
+    "flood": 0,
+    "flood_pair": 0,
+    "flood_victim": 0,
+    "flood_forwarded": 0
+   },
+   "queue": {
+    "depth": null,
+    "rate_cap": null,
+    "score_us": 134.424,
+    "install_us": 1886,
+    "offered": 5787,
+    "lost": 0,
+    "lost_share": 0.0,
+    "report_window_s": 542.275366,
+    "offered_per_s": 10.67169995695508,
+    "peak_per_s": 203,
+    "p95_per_s": 147,
+    "busy_share": 0.002632880771501193,
+    "peak_queue": 1,
+    "wait_ms": {
+     "p50": 0.0,
+     "p95": 0.0,
+     "max": 2.737
+    }
+   },
+   "controller": {
+    "latency_ms": 1.886,
+    "flood_alerts": 0,
+    "first_alert_s": null,
+    "alert_victims": [],
+    "alert_sources": [],
+    "alerts": [],
+    "pair_entries": 0,
+    "victim_entries": 0,
+    "flow_entries": 742,
+    "deferred_reports": 5787,
+    "lost_deferred_reports": 0,
+    "lost_alerts": 0
+   }
+  },
+  "500": {
+   "flows": 10522,
+   "span_s": 2409.373501,
+   "decided": 0.9861243109674966,
+   "deferred": 5787,
+   "controller_blocked": 368,
+   "attack_stopped": 0.5623079549334243,
+   "attack_stopped_at_switch": 0.5204279048594515,
+   "attack_deferred_unmitigated": 0.42483213838625244,
+   "benign_blocked": 0.009221902017291067,
+   "packets": {
+    "attack_forwarded": 151009,
+    "benign_dropped": 801,
+    "deferred_forwarded_after_decision": 75070,
+    "flood": 0,
+    "flood_pair": 0,
+    "flood_victim": 0,
+    "flood_forwarded": 0
+   },
+   "queue": {
+    "depth": null,
+    "rate_cap": null,
+    "score_us": 134.424,
+    "install_us": 1886,
+    "offered": 5787,
+    "lost": 0,
+    "lost_share": 0.0,
+    "report_window_s": 540.850827,
+    "offered_per_s": 10.699807989754632,
+    "peak_per_s": 423,
+    "p95_per_s": 174,
+    "busy_share": 0.002630099807539253,
+    "peak_queue": 3,
+    "wait_ms": {
+     "p50": 0.0,
+     "p95": 0.008423999999649823,
+     "max": 3.877
+    }
+   },
+   "controller": {
+    "latency_ms": 1.886,
+    "flood_alerts": 0,
+    "first_alert_s": null,
+    "alert_victims": [],
+    "alert_sources": [],
+    "alerts": [],
+    "pair_entries": 0,
+    "victim_entries": 0,
+    "flow_entries": 736,
+    "deferred_reports": 5787,
+    "lost_deferred_reports": 0,
+    "lost_alerts": 0
+   }
+  },
+  "1000": {
+   "flows": 10522,
+   "span_s": 2409.219898,
+   "decided": 0.9820376354305265,
+   "deferred": 5773,
+   "controller_blocked": 366,
+   "attack_stopped": 0.5588938204165244,
+   "attack_stopped_at_switch": 0.5172413793103449,
+   "attack_deferred_unmitigated": 0.42540116080573576,
+   "benign_blocked": 0.008645533141210375,
+   "packets": {
+    "attack_forwarded": 151456,
+    "benign_dropped": 715,
+    "deferred_forwarded_after_decision": 75284,
+    "flood": 0,
+    "flood_pair": 0,
+    "flood_victim": 0,
+    "flood_forwarded": 0
+   },
+   "queue": {
+    "depth": null,
+    "rate_cap": null,
+    "score_us": 134.424,
+    "install_us": 1886,
+    "offered": 5773,
+    "lost": 0,
+    "lost_share": 0.0,
+    "report_window_s": 540.379786,
+    "offered_per_s": 10.68322714795257,
+    "peak_per_s": 764,
+    "p95_per_s": 127,
+    "busy_share": 0.002622427049852942,
+    "peak_queue": 6,
+    "wait_ms": {
+     "p50": 0.0,
+     "p95": 0.10342399999964982,
+     "max": 2.7764240000005813
+    }
+   },
+   "controller": {
+    "latency_ms": 1.886,
+    "flood_alerts": 0,
+    "first_alert_s": null,
+    "alert_victims": [],
+    "alert_sources": [],
+    "alerts": [],
+    "pair_entries": 0,
+    "victim_entries": 0,
+    "flow_entries": 732,
+    "deferred_reports": 5773,
+    "lost_deferred_reports": 0,
+    "lost_alerts": 0
+   }
+  },
+  "2000": {
+   "flows": 10522,
+   "span_s": 2409.143097,
+   "decided": 0.9795666223151492,
+   "deferred": 5762,
+   "controller_blocked": 368,
+   "attack_stopped": 0.5575281666097645,
+   "attack_stopped_at_switch": 0.5156481165357915,
+   "attack_deferred_unmitigated": 0.42540116080573576,
+   "benign_blocked": 0.008069164265129682,
+   "packets": {
+    "attack_forwarded": 151529,
+    "benign_dropped": 630,
+    "deferred_forwarded_after_decision": 75500,
+    "flood": 0,
+    "flood_pair": 0,
+    "flood_victim": 0,
+    "flood_forwarded": 0
+   },
+   "queue": {
+    "depth": null,
+    "rate_cap": null,
+    "score_us": 134.424,
+    "install_us": 1886,
+    "offered": 5762,
+    "lost": 0,
+    "lost_share": 0.0,
+    "report_window_s": 540.144543,
+    "offered_per_s": 10.667514972931977,
+    "peak_per_s": 787,
+    "p95_per_s": 71,
+    "busy_share": 0.0026273172142371247,
+    "peak_queue": 8,
+    "wait_ms": {
+     "p50": 0.0,
+     "p95": 0.7982720000003465,
+     "max": 7.886271999998949
+    }
+   },
+   "controller": {
+    "latency_ms": 1.886,
+    "flood_alerts": 0,
+    "first_alert_s": null,
+    "alert_victims": [],
+    "alert_sources": [],
+    "alerts": [],
+    "pair_entries": 0,
+    "victim_entries": 0,
+    "flow_entries": 736,
+    "deferred_reports": 5762,
+    "lost_deferred_reports": 0,
+    "lost_alerts": 0
+   }
+  },
+  "5000": {
+   "flows": 10522,
+   "span_s": 2409.097016,
+   "decided": 0.9748146740163467,
+   "deferred": 5719,
+   "controller_blocked": 367,
+   "attack_stopped": 0.5566177307385911,
+   "attack_stopped_at_switch": 0.5148514851485149,
+   "attack_deferred_unmitigated": 0.4246045294184591,
+   "benign_blocked": 0.008069164265129682,
+   "packets": {
+    "attack_forwarded": 152071,
+    "benign_dropped": 668,
+    "deferred_forwarded_after_decision": 75904,
+    "flood": 0,
+    "flood_pair": 0,
+    "flood_victim": 0,
+    "flood_forwarded": 0
+   },
+   "queue": {
+    "depth": null,
+    "rate_cap": null,
+    "score_us": 134.424,
+    "install_us": 1886,
+    "offered": 5719,
+    "lost": 0,
+    "lost_share": 0.0,
+    "report_window_s": 540.003398,
+    "offered_per_s": 10.590674097943362,
+    "peak_per_s": 1524,
+    "p95_per_s": 76,
+    "busy_share": 0.002614056232290862,
+    "peak_queue": 26,
+    "wait_ms": {
+     "p50": 0.0,
+     "p95": 4.062696000000462,
+     "max": 15.657384000004734
+    }
+   },
+   "controller": {
+    "latency_ms": 1.886,
+    "flood_alerts": 0,
+    "first_alert_s": null,
+    "alert_victims": [],
+    "alert_sources": [],
+    "alerts": [],
+    "pair_entries": 0,
+    "victim_entries": 0,
+    "flow_entries": 734,
+    "deferred_reports": 5719,
+    "lost_deferred_reports": 0,
+    "lost_alerts": 0
+   }
+  },
+  "10000": {
+   "flows": 10522,
+   "span_s": 2409.081655,
+   "decided": 0.9704428815814484,
+   "deferred": 5678,
+   "controller_blocked": 368,
+   "attack_stopped": 0.5562763172869011,
+   "attack_stopped_at_switch": 0.5143962672129282,
+   "attack_deferred_unmitigated": 0.42244224422442245,
+   "benign_blocked": 0.007492795389048991,
+   "packets": {
+    "attack_forwarded": 152393,
+    "benign_dropped": 661,
+    "deferred_forwarded_after_decision": 75935,
+    "flood": 0,
+    "flood_pair": 0,
+    "flood_victim": 0,
+    "flood_forwarded": 0
+   },
+   "queue": {
+    "depth": null,
+    "rate_cap": null,
+    "score_us": 134.424,
+    "install_us": 1886,
+    "offered": 5678,
+    "lost": 0,
+    "lost_share": 0.0,
+    "report_window_s": 539.956349,
+    "offered_per_s": 10.515664850530351,
+    "peak_per_s": 2281,
+    "p95_per_s": 65,
+    "busy_share": 0.002607320837337062,
+    "peak_queue": 284,
+    "wait_ms": {
+     "p50": 0.0,
+     "p95": 51.81524800004065,
+     "max": 77.07424800002622
+    }
+   },
+   "controller": {
+    "latency_ms": 1.886,
+    "flood_alerts": 0,
+    "first_alert_s": null,
+    "alert_victims": [],
+    "alert_sources": [],
+    "alerts": [],
+    "pair_entries": 0,
+    "victim_entries": 0,
+    "flow_entries": 736,
+    "deferred_reports": 5678,
+    "lost_deferred_reports": 0,
+    "lost_alerts": 0
+   }
+  },
+  "20000": {
+   "flows": 10522,
+   "span_s": 2409.073975,
+   "decided": 0.9534309066717354,
+   "deferred": 5518,
+   "controller_blocked": 368,
+   "attack_stopped": 0.5538864231250711,
+   "attack_stopped_at_switch": 0.5122339820188916,
+   "attack_deferred_unmitigated": 0.42016615454648915,
+   "benign_blocked": 0.008645533141210375,
+   "packets": {
+    "attack_forwarded": 152841,
+    "benign_dropped": 691,
+    "deferred_forwarded_after_decision": 75992,
+    "flood": 0,
+    "flood_pair": 0,
+    "flood_victim": 0,
+    "flood_forwarded": 0
+   },
+   "queue": {
+    "depth": null,
+    "rate_cap": null,
+    "score_us": 134.424,
+    "install_us": 1886,
+    "offered": 5518,
+    "lost": 0,
+    "lost_share": 0.0,
+    "report_window_s": 539.932825,
+    "offered_per_s": 10.21978984144926,
+    "peak_per_s": 3190,
+    "p95_per_s": 84,
+    "busy_share": 0.0025676001454442644,
+    "peak_queue": 1033,
+    "wait_ms": {
+     "p50": 16.123520000012125,
+     "p95": 238.4012000001357,
+     "max": 241.80201600015116
+    }
+   },
+   "controller": {
+    "latency_ms": 1.886,
+    "flood_alerts": 0,
+    "first_alert_s": null,
+    "alert_victims": [],
+    "alert_sources": [],
+    "alerts": [],
+    "pair_entries": 0,
+    "victim_entries": 0,
+    "flow_entries": 736,
+    "deferred_reports": 5518,
+    "lost_deferred_reports": 0,
+    "lost_alerts": 0
+   }
+  }
+ },
+ "depths": {
+  "1": {
+   "flows": 10522,
+   "span_s": 2410.602324,
+   "decided": 0.9942026230754609,
+   "deferred": 5823,
+   "controller_blocked": 368,
+   "attack_stopped": 0.5681119836121543,
+   "attack_stopped_at_switch": 0.5262319335381814,
+   "attack_deferred_unmitigated": 0.4258563787413224,
+   "benign_blocked": 0.008069164265129682,
+   "packets": {
+    "attack_forwarded": 150476,
+    "benign_dropped": 632,
+    "deferred_forwarded_after_decision": 75439,
+    "flood": 0,
+    "flood_pair": 0,
+    "flood_victim": 0,
+    "flood_forwarded": 0
+   },
+   "queue": {
+    "depth": 1,
+    "rate_cap": null,
+    "score_us": 134.424,
+    "install_us": 1886,
+    "offered": 5823,
+    "lost": 6,
+    "lost_share": 0.0010303967027305513,
+    "report_window_s": 544.653378,
+    "offered_per_s": 10.691203314266419,
+    "peak_per_s": 128,
+    "p95_per_s": 86,
+    "busy_share": 0.0026191417030009957,
+    "peak_queue": 1,
+    "wait_ms": {
+     "p50": 0.0,
+     "p95": 0.0,
+     "max": 1.824
+    }
+   },
+   "controller": {
+    "latency_ms": 1.886,
+    "flood_alerts": 0,
+    "first_alert_s": null,
+    "alert_victims": [],
+    "alert_sources": [],
+    "alerts": [],
+    "pair_entries": 0,
+    "victim_entries": 0,
+    "flow_entries": 736,
+    "deferred_reports": 5823,
+    "lost_deferred_reports": 6,
+    "lost_alerts": 0
+   }
+  },
+  "4": {
+   "flows": 10522,
+   "span_s": 2410.602324,
+   "decided": 0.9942026230754609,
+   "deferred": 5823,
+   "controller_blocked": 370,
+   "attack_stopped": 0.5683395925799476,
+   "attack_stopped_at_switch": 0.5262319335381814,
+   "attack_deferred_unmitigated": 0.4256287697735291,
+   "benign_blocked": 0.008069164265129682,
+   "packets": {
+    "attack_forwarded": 150442,
+    "benign_dropped": 632,
+    "deferred_forwarded_after_decision": 75405,
+    "flood": 0,
+    "flood_pair": 0,
+    "flood_victim": 0,
+    "flood_forwarded": 0
+   },
+   "queue": {
+    "depth": 4,
+    "rate_cap": null,
+    "score_us": 134.424,
+    "install_us": 1886,
+    "offered": 5823,
+    "lost": 0,
+    "lost_share": 0.0,
+    "report_window_s": 544.653378,
+    "offered_per_s": 10.691203314266419,
+    "peak_per_s": 128,
+    "p95_per_s": 86,
+    "busy_share": 0.002627054434609905,
+    "peak_queue": 1,
+    "wait_ms": {
+     "p50": 0.0,
+     "p95": 0.0,
+     "max": 3.117
+    }
+   },
+   "controller": {
+    "latency_ms": 1.886,
+    "flood_alerts": 0,
+    "first_alert_s": null,
+    "alert_victims": [],
+    "alert_sources": [],
+    "alerts": [],
+    "pair_entries": 0,
+    "victim_entries": 0,
+    "flow_entries": 740,
+    "deferred_reports": 5823,
+    "lost_deferred_reports": 0,
+    "lost_alerts": 0
+   }
+  },
+  "16": {
+   "flows": 10522,
+   "span_s": 2410.602324,
+   "decided": 0.9942026230754609,
+   "deferred": 5823,
+   "controller_blocked": 370,
+   "attack_stopped": 0.5683395925799476,
+   "attack_stopped_at_switch": 0.5262319335381814,
+   "attack_deferred_unmitigated": 0.4256287697735291,
+   "benign_blocked": 0.008069164265129682,
+   "packets": {
+    "attack_forwarded": 150442,
+    "benign_dropped": 632,
+    "deferred_forwarded_after_decision": 75405,
+    "flood": 0,
+    "flood_pair": 0,
+    "flood_victim": 0,
+    "flood_forwarded": 0
+   },
+   "queue": {
+    "depth": 16,
+    "rate_cap": null,
+    "score_us": 134.424,
+    "install_us": 1886,
+    "offered": 5823,
+    "lost": 0,
+    "lost_share": 0.0,
+    "report_window_s": 544.653378,
+    "offered_per_s": 10.691203314266419,
+    "peak_per_s": 128,
+    "p95_per_s": 86,
+    "busy_share": 0.002627054434609905,
+    "peak_queue": 1,
+    "wait_ms": {
+     "p50": 0.0,
+     "p95": 0.0,
+     "max": 3.117
+    }
+   },
+   "controller": {
+    "latency_ms": 1.886,
+    "flood_alerts": 0,
+    "first_alert_s": null,
+    "alert_victims": [],
+    "alert_sources": [],
+    "alerts": [],
+    "pair_entries": 0,
+    "victim_entries": 0,
+    "flow_entries": 740,
+    "deferred_reports": 5823,
+    "lost_deferred_reports": 0,
+    "lost_alerts": 0
+   }
+  },
+  "64": {
+   "flows": 10522,
+   "span_s": 2410.602324,
+   "decided": 0.9942026230754609,
+   "deferred": 5823,
+   "controller_blocked": 370,
+   "attack_stopped": 0.5683395925799476,
+   "attack_stopped_at_switch": 0.5262319335381814,
+   "attack_deferred_unmitigated": 0.4256287697735291,
+   "benign_blocked": 0.008069164265129682,
+   "packets": {
+    "attack_forwarded": 150442,
+    "benign_dropped": 632,
+    "deferred_forwarded_after_decision": 75405,
+    "flood": 0,
+    "flood_pair": 0,
+    "flood_victim": 0,
+    "flood_forwarded": 0
+   },
+   "queue": {
+    "depth": 64,
+    "rate_cap": null,
+    "score_us": 134.424,
+    "install_us": 1886,
+    "offered": 5823,
+    "lost": 0,
+    "lost_share": 0.0,
+    "report_window_s": 544.653378,
+    "offered_per_s": 10.691203314266419,
+    "peak_per_s": 128,
+    "p95_per_s": 86,
+    "busy_share": 0.002627054434609905,
+    "peak_queue": 1,
+    "wait_ms": {
+     "p50": 0.0,
+     "p95": 0.0,
+     "max": 3.117
+    }
+   },
+   "controller": {
+    "latency_ms": 1.886,
+    "flood_alerts": 0,
+    "first_alert_s": null,
+    "alert_victims": [],
+    "alert_sources": [],
+    "alerts": [],
+    "pair_entries": 0,
+    "victim_entries": 0,
+    "flow_entries": 740,
+    "deferred_reports": 5823,
+    "lost_deferred_reports": 0,
+    "lost_alerts": 0
+   }
+  },
+  "256": {
+   "flows": 10522,
+   "span_s": 2410.602324,
+   "decided": 0.9942026230754609,
+   "deferred": 5823,
+   "controller_blocked": 370,
+   "attack_stopped": 0.5683395925799476,
+   "attack_stopped_at_switch": 0.5262319335381814,
+   "attack_deferred_unmitigated": 0.4256287697735291,
+   "benign_blocked": 0.008069164265129682,
+   "packets": {
+    "attack_forwarded": 150442,
+    "benign_dropped": 632,
+    "deferred_forwarded_after_decision": 75405,
+    "flood": 0,
+    "flood_pair": 0,
+    "flood_victim": 0,
+    "flood_forwarded": 0
+   },
+   "queue": {
+    "depth": 256,
+    "rate_cap": null,
+    "score_us": 134.424,
+    "install_us": 1886,
+    "offered": 5823,
+    "lost": 0,
+    "lost_share": 0.0,
+    "report_window_s": 544.653378,
+    "offered_per_s": 10.691203314266419,
+    "peak_per_s": 128,
+    "p95_per_s": 86,
+    "busy_share": 0.002627054434609905,
+    "peak_queue": 1,
+    "wait_ms": {
+     "p50": 0.0,
+     "p95": 0.0,
+     "max": 3.117
+    }
+   },
+   "controller": {
+    "latency_ms": 1.886,
+    "flood_alerts": 0,
+    "first_alert_s": null,
+    "alert_victims": [],
+    "alert_sources": [],
+    "alerts": [],
+    "pair_entries": 0,
+    "victim_entries": 0,
+    "flow_entries": 740,
+    "deferred_reports": 5823,
+    "lost_deferred_reports": 0,
+    "lost_alerts": 0
+   }
+  },
+  "0": {
+   "flows": 10522,
+   "span_s": 2410.602324,
+   "decided": 0.9942026230754609,
+   "deferred": 5823,
+   "controller_blocked": 370,
+   "attack_stopped": 0.5683395925799476,
+   "attack_stopped_at_switch": 0.5262319335381814,
+   "attack_deferred_unmitigated": 0.4256287697735291,
+   "benign_blocked": 0.008069164265129682,
+   "packets": {
+    "attack_forwarded": 150442,
+    "benign_dropped": 632,
+    "deferred_forwarded_after_decision": 75405,
+    "flood": 0,
+    "flood_pair": 0,
+    "flood_victim": 0,
+    "flood_forwarded": 0
+   },
+   "queue": {
+    "depth": null,
+    "rate_cap": null,
+    "score_us": 134.424,
+    "install_us": 1886,
+    "offered": 5823,
+    "lost": 0,
+    "lost_share": 0.0,
+    "report_window_s": 544.653378,
+    "offered_per_s": 10.691203314266419,
+    "peak_per_s": 128,
+    "p95_per_s": 86,
+    "busy_share": 0.002627054434609905,
+    "peak_queue": 1,
+    "wait_ms": {
+     "p50": 0.0,
+     "p95": 0.0,
+     "max": 3.117
+    }
+   },
+   "controller": {
+    "latency_ms": 1.886,
+    "flood_alerts": 0,
+    "first_alert_s": null,
+    "alert_victims": [],
+    "alert_sources": [],
+    "alerts": [],
+    "pair_entries": 0,
+    "victim_entries": 0,
+    "flow_entries": 740,
+    "deferred_reports": 5823,
+    "lost_deferred_reports": 0,
+    "lost_alerts": 0
+   }
+  }
+ },
+ "flood": {
+  "2000_alert": {
+   "flows": 10522,
+   "span_s": 2410.602324,
+   "decided": 0.9874548564911614,
+   "deferred": 5762,
+   "controller_blocked": 370,
+   "attack_stopped": 0.566860134289291,
+   "attack_stopped_at_switch": 0.5247524752475248,
+   "attack_deferred_unmitigated": 0.4242631159667691,
+   "benign_blocked": 0.009798270893371758,
+   "packets": {
+    "attack_forwarded": 150678,
+    "benign_dropped": 882,
+    "deferred_forwarded_after_decision": 75126,
+    "flood": 20000,
+    "flood_pair": 0,
+    "flood_victim": 9572,
+    "flood_forwarded": 10428
+   },
+   "queue": {
+    "depth": 16,
+    "rate_cap": null,
+    "score_us": 134.424,
+    "install_us": 1886,
+    "offered": 5779,
+    "lost": 0,
+    "lost_share": 0.0,
+    "report_window_s": 411.22645,
+    "offered_per_s": 14.05308437723303,
+    "peak_per_s": 128,
+    "p95_per_s": 84,
+    "busy_share": 0.003537457787552743,
+    "peak_queue": 1,
+    "wait_ms": {
+     "p50": 0.0,
+     "p95": 0.0,
+     "max": 3.117
+    }
+   },
+   "controller": {
+    "latency_ms": 1.886,
+    "flood_alerts": 17,
+    "first_alert_s": 20.131148,
+    "alert_victims": [
+     "192.168.10.10"
+    ],
+    "alert_sources": [
+     "107.111.237.15",
+     "117.31.162.143",
+     "121.234.10.66",
+     "127.118.48.63",
+     "128.184.225.131",
+     "132.71.58.76",
+     "142.197.110.9",
+     "169.10.180.43",
+     "169.98.43.197",
+     "196.186.119.32",
+     "201.235.250.86",
+     "215.171.33.190",
+     "218.24.167.0",
+     "24.187.222.244",
+     "68.201.231.188",
+     "83.227.247.210",
+     "94.137.127.199"
+    ],
+    "alerts": [
+     {
+      "t_s": 20.131148,
+      "level": 8,
+      "src": "68.201.231.188",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 20.255674,
+      "level": 9,
+      "src": "132.71.58.76",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 20.524347,
+      "level": 10,
+      "src": "201.235.250.86",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 21.140795,
+      "level": 8,
+      "src": "127.118.48.63",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 21.271235,
+      "level": 9,
+      "src": "142.197.110.9",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 21.531327,
+      "level": 10,
+      "src": "121.234.10.66",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 22.128497,
+      "level": 8,
+      "src": "215.171.33.190",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 22.259789,
+      "level": 9,
+      "src": "107.111.237.15",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 22.528029,
+      "level": 10,
+      "src": "169.10.180.43",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 23.152726,
+      "level": 8,
+      "src": "94.137.127.199",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 23.286118,
+      "level": 9,
+      "src": "24.187.222.244",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 23.553897,
+      "level": 10,
+      "src": "117.31.162.143",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 24.128769,
+      "level": 8,
+      "src": "218.24.167.0",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 24.265005,
+      "level": 9,
+      "src": "83.227.247.210",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 24.533073,
+      "level": 10,
+      "src": "196.186.119.32",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 25.127838,
+      "level": 8,
+      "src": "169.98.43.197",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 25.257126,
+      "level": 9,
+      "src": "128.184.225.131",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     }
+    ],
+    "pair_entries": 34,
+    "victim_entries": 1,
+    "flow_entries": 740,
+    "deferred_reports": 5762,
+    "lost_deferred_reports": 0,
+    "lost_alerts": 0
+   },
+   "flood": {
+    "flows": 20000,
+    "packets": 20000,
+    "stopped_share": 0.4786,
+    "stopped_by_pair_entries": 0,
+    "stopped_by_victim_entry": 9572,
+    "forwarded": 10428,
+    "alerts": 17,
+    "first_alert_s": 0.129703,
+    "victim_entry_s": 5.257567,
+    "pair_entries": 34
+   },
+   "sources_max": 16
+  },
+  "2000_no_alert": {
+   "flows": 10522,
+   "span_s": 2410.602324,
+   "decided": 0.9798517392130773,
+   "deferred": 5722,
+   "controller_blocked": 371,
+   "attack_stopped": 0.5623079549334243,
+   "attack_stopped_at_switch": 0.5200864914077614,
+   "attack_deferred_unmitigated": 0.42369409354728577,
+   "benign_blocked": 0.01037463976945245,
+   "packets": {
+    "attack_forwarded": 151625,
+    "benign_dropped": 968,
+    "deferred_forwarded_after_decision": 74941,
+    "flood": 20000,
+    "flood_pair": 0,
+    "flood_victim": 0,
+    "flood_forwarded": 20000
+   },
+   "queue": {
+    "depth": 16,
+    "rate_cap": null,
+    "score_us": 134.424,
+    "install_us": 1886,
+    "offered": 5722,
+    "lost": 0,
+    "lost_share": 0.0,
+    "report_window_s": 411.22645,
+    "offered_per_s": 13.914474616114795,
+    "peak_per_s": 127,
+    "p95_per_s": 84,
+    "busy_share": 0.00345067498454967,
+    "peak_queue": 1,
+    "wait_ms": {
+     "p50": 0.0,
+     "p95": 0.0,
+     "max": 3.117
+    }
+   },
+   "controller": {
+    "latency_ms": 1.886,
+    "flood_alerts": 0,
+    "first_alert_s": null,
+    "alert_victims": [],
+    "alert_sources": [],
+    "alerts": [],
+    "pair_entries": 0,
+    "victim_entries": 0,
+    "flow_entries": 742,
+    "deferred_reports": 5722,
+    "lost_deferred_reports": 0,
+    "lost_alerts": 0
+   },
+   "flood": {
+    "flows": 20000,
+    "packets": 20000,
+    "stopped_share": 0.0,
+    "stopped_by_pair_entries": 0,
+    "stopped_by_victim_entry": 0,
+    "forwarded": 20000,
+    "alerts": 0,
+    "first_alert_s": null,
+    "victim_entry_s": null,
+    "pair_entries": 0
+   },
+   "sources_max": 16
+  },
+  "2000_alert_capped": {
+   "flows": 10522,
+   "span_s": 2410.602324,
+   "decided": 0.9807070899068618,
+   "deferred": 5721,
+   "controller_blocked": 32,
+   "attack_stopped": 0.5248662797314214,
+   "attack_stopped_at_switch": 0.5212245362467282,
+   "attack_deferred_unmitigated": 0.4618185956526687,
+   "benign_blocked": 0.01037463976945245,
+   "packets": {
+    "attack_forwarded": 158795,
+    "benign_dropped": 962,
+    "deferred_forwarded_after_decision": 82364,
+    "flood": 20000,
+    "flood_pair": 0,
+    "flood_victim": 2075,
+    "flood_forwarded": 17925
+   },
+   "queue": {
+    "depth": 16,
+    "rate_cap": 2.0,
+    "score_us": 134.424,
+    "install_us": 1886,
+    "offered": 5749,
+    "lost": 5219,
+    "lost_share": 0.9078100539224213,
+    "report_window_s": 411.22645,
+    "offered_per_s": 13.980131871381328,
+    "peak_per_s": 127,
+    "p95_per_s": 84,
+    "busy_share": 0.644413801690042,
+    "peak_queue": 27,
+    "wait_ms": {
+     "p50": 7821.85,
+     "p95": 7998.943,
+     "max": 13275.084
+    }
+   },
+   "controller": {
+    "latency_ms": 1.886,
+    "flood_alerts": 28,
+    "first_alert_s": 20.131148,
+    "alert_victims": [
+     "192.168.10.10"
+    ],
+    "alert_sources": [
+     "107.111.237.15",
+     "115.242.57.63",
+     "117.31.162.143",
+     "121.234.10.66",
+     "122.245.183.250",
+     "127.118.48.63",
+     "128.184.225.131",
+     "132.71.58.76",
+     "135.119.23.239",
+     "14.186.154.155",
+     "142.197.110.9",
+     "142.197.242.189",
+     "161.91.224.87",
+     "169.10.180.43",
+     "169.98.43.197",
+     "181.104.95.102",
+     "188.117.221.50",
+     "196.186.119.32",
+     "198.34.208.210",
+     "201.235.250.86",
+     "208.247.185.223",
+     "215.171.33.190",
+     "218.24.167.0",
+     "24.187.222.244",
+     "68.201.231.188",
+     "80.169.163.100",
+     "83.227.247.210",
+     "94.137.127.199"
+    ],
+    "alerts": [
+     {
+      "t_s": 20.131148,
+      "level": 8,
+      "src": "68.201.231.188",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 20.255674,
+      "level": 9,
+      "src": "132.71.58.76",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 20.524347,
+      "level": 10,
+      "src": "201.235.250.86",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 21.140795,
+      "level": 8,
+      "src": "127.118.48.63",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 21.271235,
+      "level": 9,
+      "src": "142.197.110.9",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 21.531327,
+      "level": 10,
+      "src": "121.234.10.66",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 22.128497,
+      "level": 8,
+      "src": "215.171.33.190",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 22.259789,
+      "level": 9,
+      "src": "107.111.237.15",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 22.528029,
+      "level": 10,
+      "src": "169.10.180.43",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 23.152726,
+      "level": 8,
+      "src": "94.137.127.199",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 23.286118,
+      "level": 9,
+      "src": "24.187.222.244",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 23.553897,
+      "level": 10,
+      "src": "117.31.162.143",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 24.128769,
+      "level": 8,
+      "src": "218.24.167.0",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 24.265005,
+      "level": 9,
+      "src": "83.227.247.210",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 24.533073,
+      "level": 10,
+      "src": "196.186.119.32",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 25.127838,
+      "level": 8,
+      "src": "169.98.43.197",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 25.257126,
+      "level": 9,
+      "src": "128.184.225.131",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 25.527638,
+      "level": 10,
+      "src": "198.34.208.210",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 26.131378,
+      "level": 8,
+      "src": "142.197.242.189",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 26.244344,
+      "level": 9,
+      "src": "161.91.224.87",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 26.486472,
+      "level": 10,
+      "src": "135.119.23.239",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 26.955393,
+      "level": 11,
+      "src": "181.104.95.102",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 27.133245,
+      "level": 8,
+      "src": "208.247.185.223",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 27.250477,
+      "level": 9,
+      "src": "188.117.221.50",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 27.499529,
+      "level": 10,
+      "src": "115.242.57.63",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 28.12956,
+      "level": 8,
+      "src": "80.169.163.100",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 28.262832,
+      "level": 9,
+      "src": "14.186.154.155",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 28.517527,
+      "level": 10,
+      "src": "122.245.183.250",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     }
+    ],
+    "pair_entries": 56,
+    "victim_entries": 1,
+    "flow_entries": 64,
+    "deferred_reports": 5721,
+    "lost_deferred_reports": 5219,
+    "lost_alerts": 0
+   },
+   "flood": {
+    "flows": 20000,
+    "packets": 20000,
+    "stopped_share": 0.10375,
+    "stopped_by_pair_entries": 0,
+    "stopped_by_victim_entry": 2075,
+    "forwarded": 17925,
+    "alerts": 28,
+    "first_alert_s": 0.129703,
+    "victim_entry_s": 8.953296,
+    "pair_entries": 56
+   },
+   "sources_max": 16
+  },
+  "2000_alert_sources8": {
+   "flows": 10522,
+   "span_s": 2410.602324,
+   "decided": 0.9925869606538681,
+   "deferred": 5804,
+   "controller_blocked": 370,
+   "attack_stopped": 0.568225788096051,
+   "attack_stopped_at_switch": 0.5261181290542848,
+   "attack_deferred_unmitigated": 0.4256287697735291,
+   "benign_blocked": 0.009798270893371758,
+   "packets": {
+    "attack_forwarded": 150587,
+    "benign_dropped": 884,
+    "deferred_forwarded_after_decision": 75104,
+    "flood": 20000,
+    "flood_pair": 0,
+    "flood_victim": 14981,
+    "flood_forwarded": 5019
+   },
+   "queue": {
+    "depth": 16,
+    "rate_cap": null,
+    "score_us": 134.424,
+    "install_us": 1886,
+    "offered": 5813,
+    "lost": 0,
+    "lost_share": 0.0,
+    "report_window_s": 411.22645,
+    "offered_per_s": 14.13576388386496,
+    "peak_per_s": 128,
+    "p95_per_s": 84,
+    "busy_share": 0.0035144967353149766,
+    "peak_queue": 1,
+    "wait_ms": {
+     "p50": 0.0,
+     "p95": 0.0,
+     "max": 3.117
+    }
+   },
+   "controller": {
+    "latency_ms": 1.886,
+    "flood_alerts": 9,
+    "first_alert_s": 20.131148,
+    "alert_victims": [
+     "192.168.10.10"
+    ],
+    "alert_sources": [
+     "107.111.237.15",
+     "121.234.10.66",
+     "127.118.48.63",
+     "132.71.58.76",
+     "142.197.110.9",
+     "169.10.180.43",
+     "201.235.250.86",
+     "215.171.33.190",
+     "68.201.231.188"
+    ],
+    "alerts": [
+     {
+      "t_s": 20.131148,
+      "level": 8,
+      "src": "68.201.231.188",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 20.255674,
+      "level": 9,
+      "src": "132.71.58.76",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 20.524347,
+      "level": 10,
+      "src": "201.235.250.86",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 21.140795,
+      "level": 8,
+      "src": "127.118.48.63",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 21.271235,
+      "level": 9,
+      "src": "142.197.110.9",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 21.531327,
+      "level": 10,
+      "src": "121.234.10.66",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 22.128497,
+      "level": 8,
+      "src": "215.171.33.190",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 22.259789,
+      "level": 9,
+      "src": "107.111.237.15",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 22.528029,
+      "level": 10,
+      "src": "169.10.180.43",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     }
+    ],
+    "pair_entries": 18,
+    "victim_entries": 1,
+    "flow_entries": 740,
+    "deferred_reports": 5804,
+    "lost_deferred_reports": 0,
+    "lost_alerts": 0
+   },
+   "flood": {
+    "flows": 20000,
+    "packets": 20000,
+    "stopped_share": 0.74905,
+    "stopped_by_pair_entries": 0,
+    "stopped_by_victim_entry": 14981,
+    "forwarded": 5019,
+    "alerts": 9,
+    "first_alert_s": 0.129703,
+    "victim_entry_s": 2.52847,
+    "pair_entries": 18
+   },
+   "sources_max": 8
+  },
+  "2000_alert_sources4": {
+   "flows": 10522,
+   "span_s": 2410.602324,
+   "decided": 0.9936323892796046,
+   "deferred": 5815,
+   "controller_blocked": 371,
+   "attack_stopped": 0.5684533970638443,
+   "attack_stopped_at_switch": 0.5262319335381814,
+   "attack_deferred_unmitigated": 0.4256287697735291,
+   "benign_blocked": 0.009221902017291067,
+   "packets": {
+    "attack_forwarded": 150557,
+    "benign_dropped": 798,
+    "deferred_forwarded_after_decision": 75209,
+    "flood": 20000,
+    "flood_pair": 0,
+    "flood_victim": 17482,
+    "flood_forwarded": 2518
+   },
+   "queue": {
+    "depth": 16,
+    "rate_cap": null,
+    "score_us": 134.424,
+    "install_us": 1886,
+    "offered": 5820,
+    "lost": 0,
+    "lost_share": 0.0,
+    "report_window_s": 411.22645,
+    "offered_per_s": 14.152786135230357,
+    "peak_per_s": 128,
+    "p95_per_s": 86,
+    "busy_share": 0.0035040067485935453,
+    "peak_queue": 1,
+    "wait_ms": {
+     "p50": 0.0,
+     "p95": 0.0,
+     "max": 3.117
+    }
+   },
+   "controller": {
+    "latency_ms": 1.886,
+    "flood_alerts": 5,
+    "first_alert_s": 20.131148,
+    "alert_victims": [
+     "192.168.10.10"
+    ],
+    "alert_sources": [
+     "127.118.48.63",
+     "132.71.58.76",
+     "142.197.110.9",
+     "201.235.250.86",
+     "68.201.231.188"
+    ],
+    "alerts": [
+     {
+      "t_s": 20.131148,
+      "level": 8,
+      "src": "68.201.231.188",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 20.255674,
+      "level": 9,
+      "src": "132.71.58.76",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 20.524347,
+      "level": 10,
+      "src": "201.235.250.86",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 21.140795,
+      "level": 8,
+      "src": "127.118.48.63",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 21.271235,
+      "level": 9,
+      "src": "142.197.110.9",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     }
+    ],
+    "pair_entries": 10,
+    "victim_entries": 1,
+    "flow_entries": 742,
+    "deferred_reports": 5815,
+    "lost_deferred_reports": 0,
+    "lost_alerts": 0
+   },
+   "flood": {
+    "flows": 20000,
+    "packets": 20000,
+    "stopped_share": 0.8741,
+    "stopped_by_pair_entries": 0,
+    "stopped_by_victim_entry": 17482,
+    "forwarded": 2518,
+    "alerts": 5,
+    "first_alert_s": 0.129703,
+    "victim_entry_s": 1.271676,
+    "pair_entries": 10
+   },
+   "sources_max": 4
+  },
+  "20000_alert": {
+   "flows": 10522,
+   "span_s": 2410.602324,
+   "decided": 0.9757650636761072,
+   "deferred": 5642,
+   "controller_blocked": 378,
+   "attack_stopped": 0.5673153522248776,
+   "attack_stopped_at_switch": 0.5242972573119381,
+   "attack_deferred_unmitigated": 0.42175941732104244,
+   "benign_blocked": 0.01037463976945245,
+   "packets": {
+    "attack_forwarded": 150451,
+    "benign_dropped": 950,
+    "deferred_forwarded_after_decision": 74385,
+    "flood": 200000,
+    "flood_pair": 0,
+    "flood_victim": 158881,
+    "flood_forwarded": 41119
+   },
+   "queue": {
+    "depth": 16,
+    "rate_cap": null,
+    "score_us": 134.424,
+    "install_us": 1886,
+    "offered": 5659,
+    "lost": 0,
+    "lost_share": 0.0,
+    "report_window_s": 411.22645,
+    "offered_per_s": 13.761274353826218,
+    "peak_per_s": 128,
+    "p95_per_s": 84,
+    "busy_share": 0.00353230667920356,
+    "peak_queue": 1,
+    "wait_ms": {
+     "p50": 0.0,
+     "p95": 0.0,
+     "max": 3.117
+    }
+   },
+   "controller": {
+    "latency_ms": 1.886,
+    "flood_alerts": 17,
+    "first_alert_s": 20.011316,
+    "alert_victims": [
+     "192.168.10.10"
+    ],
+    "alert_sources": [
+     "129.138.167.32",
+     "14.213.37.4",
+     "14.249.142.39",
+     "145.130.205.106",
+     "155.16.172.159",
+     "179.25.168.25",
+     "189.229.255.233",
+     "197.203.166.119",
+     "211.203.75.112",
+     "219.12.79.109",
+     "222.163.33.48",
+     "33.75.205.36",
+     "5.98.223.251",
+     "58.180.168.46",
+     "68.67.140.85",
+     "81.123.140.136",
+     "94.114.118.65"
+    ],
+    "alerts": [
+     {
+      "t_s": 20.011316,
+      "level": 8,
+      "src": "155.16.172.159",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 20.024164,
+      "level": 9,
+      "src": "58.180.168.46",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 20.051923,
+      "level": 10,
+      "src": "14.249.142.39",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 20.103479,
+      "level": 11,
+      "src": "145.130.205.106",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 20.205565,
+      "level": 12,
+      "src": "219.12.79.109",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 20.408671,
+      "level": 13,
+      "src": "129.138.167.32",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 20.823271,
+      "level": 14,
+      "src": "68.67.140.85",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 21.012668,
+      "level": 8,
+      "src": "14.213.37.4",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 21.025163,
+      "level": 9,
+      "src": "179.25.168.25",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 21.050595,
+      "level": 10,
+      "src": "222.163.33.48",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 21.102691,
+      "level": 11,
+      "src": "33.75.205.36",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 21.208329,
+      "level": 12,
+      "src": "94.114.118.65",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 21.406903,
+      "level": 13,
+      "src": "211.203.75.112",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 21.811489,
+      "level": 14,
+      "src": "189.229.255.233",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 22.012656,
+      "level": 8,
+      "src": "5.98.223.251",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 22.024634,
+      "level": 9,
+      "src": "197.203.166.119",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 22.047649,
+      "level": 10,
+      "src": "81.123.140.136",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     }
+    ],
+    "pair_entries": 34,
+    "victim_entries": 1,
+    "flow_entries": 756,
+    "deferred_reports": 5642,
+    "lost_deferred_reports": 0,
+    "lost_alerts": 0
+   },
+   "flood": {
+    "flows": 200000,
+    "packets": 200000,
+    "stopped_share": 0.794405,
+    "stopped_by_pair_entries": 0,
+    "stopped_by_victim_entry": 158881,
+    "forwarded": 41119,
+    "alerts": 17,
+    "first_alert_s": 0.011282,
+    "victim_entry_s": 2.049501,
+    "pair_entries": 34
+   },
+   "sources_max": 16
+  },
+  "20000_no_alert": {
+   "flows": 10522,
+   "span_s": 2410.602324,
+   "decided": 0.9574225432427296,
+   "deferred": 5652,
+   "controller_blocked": 374,
+   "attack_stopped": 0.5436440195743713,
+   "attack_stopped_at_switch": 0.5010811425970183,
+   "attack_deferred_unmitigated": 0.4251735518379424,
+   "benign_blocked": 0.01095100864553314,
+   "packets": {
+    "attack_forwarded": 154089,
+    "benign_dropped": 961,
+    "deferred_forwarded_after_decision": 74973,
+    "flood": 200000,
+    "flood_pair": 0,
+    "flood_victim": 0,
+    "flood_forwarded": 200000
+   },
+   "queue": {
+    "depth": 16,
+    "rate_cap": null,
+    "score_us": 134.424,
+    "install_us": 1886,
+    "offered": 5652,
+    "lost": 0,
+    "lost_share": 0.0,
+    "report_window_s": 411.22645,
+    "offered_per_s": 13.744252102460822,
+    "peak_per_s": 130,
+    "p95_per_s": 84,
+    "busy_share": 0.0034405711792132184,
+    "peak_queue": 1,
+    "wait_ms": {
+     "p50": 0.0,
+     "p95": 0.0,
+     "max": 3.117
+    }
+   },
+   "controller": {
+    "latency_ms": 1.886,
+    "flood_alerts": 0,
+    "first_alert_s": null,
+    "alert_victims": [],
+    "alert_sources": [],
+    "alerts": [],
+    "pair_entries": 0,
+    "victim_entries": 0,
+    "flow_entries": 748,
+    "deferred_reports": 5652,
+    "lost_deferred_reports": 0,
+    "lost_alerts": 0
+   },
+   "flood": {
+    "flows": 200000,
+    "packets": 200000,
+    "stopped_share": 0.0,
+    "stopped_by_pair_entries": 0,
+    "stopped_by_victim_entry": 0,
+    "forwarded": 200000,
+    "alerts": 0,
+    "first_alert_s": null,
+    "victim_entry_s": null,
+    "pair_entries": 0
+   },
+   "sources_max": 16
+  },
+  "20000_alert_capped": {
+   "flows": 10522,
+   "span_s": 2410.602324,
+   "decided": 0.9600836342900589,
+   "deferred": 5667,
+   "controller_blocked": 27,
+   "attack_stopped": 0.5056333219528849,
+   "attack_stopped_at_switch": 0.502560600887675,
+   "attack_deferred_unmitigated": 0.46625697052463866,
+   "benign_blocked": 0.01095100864553314,
+   "packets": {
+    "attack_forwarded": 161463,
+    "benign_dropped": 963,
+    "deferred_forwarded_after_decision": 82683,
+    "flood": 200000,
+    "flood_pair": 0,
+    "flood_victim": 21095,
+    "flood_forwarded": 178905
+   },
+   "queue": {
+    "depth": 16,
+    "rate_cap": 2.0,
+    "score_us": 134.424,
+    "install_us": 1886,
+    "offered": 5730,
+    "lost": 5203,
+    "lost_share": 0.9080279232111693,
+    "report_window_s": 411.22645,
+    "offered_per_s": 13.93392861767525,
+    "peak_per_s": 130,
+    "p95_per_s": 84,
+    "busy_share": 0.6407661763974569,
+    "peak_queue": 62,
+    "wait_ms": {
+     "p50": 7872.303,
+     "p95": 14246.381,
+     "max": 22624.359
+    }
+   },
+   "controller": {
+    "latency_ms": 1.886,
+    "flood_alerts": 63,
+    "first_alert_s": 20.011316,
+    "alert_victims": [
+     "192.168.10.10"
+    ],
+    "alert_sources": [
+     "100.245.153.25",
+     "100.45.81.28",
+     "102.5.251.251",
+     "107.76.92.23",
+     "113.23.129.232",
+     "117.91.57.206",
+     "119.27.179.163",
+     "122.181.144.132",
+     "124.58.238.66",
+     "125.238.13.175",
+     "128.138.180.145",
+     "129.138.167.32",
+     "130.182.17.0",
+     "130.97.197.168",
+     "137.125.167.228",
+     "14.213.37.4",
+     "14.249.142.39",
+     "145.130.205.106",
+     "153.181.138.241",
+     "155.16.172.159",
+     "175.154.103.205",
+     "178.96.141.239",
+     "179.25.168.25",
+     "180.171.29.68",
+     "186.33.147.127",
+     "189.229.255.233",
+     "189.69.34.29",
+     "190.186.87.26",
+     "191.243.55.43",
+     "191.95.57.223",
+     "194.163.23.21",
+     "196.139.42.247",
+     "197.203.166.119",
+     "204.44.101.87",
+     "205.233.103.80",
+     "208.50.115.21",
+     "210.132.199.19",
+     "211.203.75.112",
+     "217.118.197.6",
+     "219.12.79.109",
+     "222.163.33.48",
+     "24.84.107.251",
+     "28.17.177.72",
+     "33.75.205.36",
+     "34.2.129.217",
+     "36.176.78.117",
+     "39.123.72.40",
+     "4.207.151.77",
+     "5.98.223.251",
+     "58.180.168.46",
+     "66.249.153.135",
+     "68.67.140.85",
+     "7.51.197.222",
+     "79.107.247.171",
+     "81.123.140.136",
+     "83.179.90.26",
+     "84.112.209.94",
+     "84.120.51.5",
+     "87.165.104.87",
+     "89.154.229.31",
+     "9.109.179.223",
+     "94.114.118.65",
+     "98.32.161.50"
+    ],
+    "alerts": [
+     {
+      "t_s": 20.011316,
+      "level": 8,
+      "src": "155.16.172.159",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 20.024164,
+      "level": 9,
+      "src": "58.180.168.46",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 20.051923,
+      "level": 10,
+      "src": "14.249.142.39",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 20.103479,
+      "level": 11,
+      "src": "145.130.205.106",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 20.205565,
+      "level": 12,
+      "src": "219.12.79.109",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 20.408671,
+      "level": 13,
+      "src": "129.138.167.32",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 20.823271,
+      "level": 14,
+      "src": "68.67.140.85",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 21.012668,
+      "level": 8,
+      "src": "14.213.37.4",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 21.025163,
+      "level": 9,
+      "src": "179.25.168.25",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 21.050595,
+      "level": 10,
+      "src": "222.163.33.48",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 21.102691,
+      "level": 11,
+      "src": "33.75.205.36",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 21.208329,
+      "level": 12,
+      "src": "94.114.118.65",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 21.406903,
+      "level": 13,
+      "src": "211.203.75.112",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 21.811489,
+      "level": 14,
+      "src": "189.229.255.233",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 22.012656,
+      "level": 8,
+      "src": "5.98.223.251",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 22.024634,
+      "level": 9,
+      "src": "197.203.166.119",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 22.047649,
+      "level": 10,
+      "src": "81.123.140.136",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 22.100261,
+      "level": 11,
+      "src": "84.120.51.5",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 22.202608,
+      "level": 12,
+      "src": "34.2.129.217",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 22.410024,
+      "level": 13,
+      "src": "180.171.29.68",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 22.817002,
+      "level": 14,
+      "src": "100.245.153.25",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 23.013108,
+      "level": 8,
+      "src": "130.182.17.0",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 23.025136,
+      "level": 9,
+      "src": "36.176.78.117",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 23.050491,
+      "level": 10,
+      "src": "102.5.251.251",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 23.101222,
+      "level": 11,
+      "src": "98.32.161.50",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 23.20613,
+      "level": 12,
+      "src": "194.163.23.21",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 23.408733,
+      "level": 13,
+      "src": "210.132.199.19",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 23.821872,
+      "level": 14,
+      "src": "124.58.238.66",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 24.013067,
+      "level": 8,
+      "src": "89.154.229.31",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 24.026441,
+      "level": 9,
+      "src": "24.84.107.251",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 24.052052,
+      "level": 10,
+      "src": "178.96.141.239",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 24.105319,
+      "level": 11,
+      "src": "83.179.90.26",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 24.211251,
+      "level": 12,
+      "src": "153.181.138.241",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 24.416497,
+      "level": 13,
+      "src": "4.207.151.77",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 24.832828,
+      "level": 14,
+      "src": "217.118.197.6",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 25.012797,
+      "level": 8,
+      "src": "7.51.197.222",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 25.026982,
+      "level": 9,
+      "src": "196.139.42.247",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 25.054298,
+      "level": 10,
+      "src": "107.76.92.23",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 25.103642,
+      "level": 11,
+      "src": "119.27.179.163",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 25.205675,
+      "level": 12,
+      "src": "87.165.104.87",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 25.411809,
+      "level": 13,
+      "src": "122.181.144.132",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 25.814892,
+      "level": 14,
+      "src": "189.69.34.29",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 26.012866,
+      "level": 8,
+      "src": "205.233.103.80",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 26.025255,
+      "level": 9,
+      "src": "39.123.72.40",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 26.052497,
+      "level": 10,
+      "src": "208.50.115.21",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 26.103394,
+      "level": 11,
+      "src": "9.109.179.223",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 26.20518,
+      "level": 12,
+      "src": "204.44.101.87",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 26.411594,
+      "level": 13,
+      "src": "79.107.247.171",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 26.816937,
+      "level": 14,
+      "src": "186.33.147.127",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 27.012116,
+      "level": 8,
+      "src": "191.243.55.43",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 27.024838,
+      "level": 9,
+      "src": "117.91.57.206",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 27.052058,
+      "level": 10,
+      "src": "66.249.153.135",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 27.10093,
+      "level": 11,
+      "src": "84.112.209.94",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 27.202468,
+      "level": 12,
+      "src": "125.238.13.175",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 27.405753,
+      "level": 13,
+      "src": "113.23.129.232",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 27.816989,
+      "level": 14,
+      "src": "190.186.87.26",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 28.01247,
+      "level": 8,
+      "src": "191.95.57.223",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 28.02606,
+      "level": 9,
+      "src": "100.45.81.28",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 28.051922,
+      "level": 10,
+      "src": "137.125.167.228",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 28.107276,
+      "level": 11,
+      "src": "130.97.197.168",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 28.212081,
+      "level": 12,
+      "src": "128.138.180.145",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 28.418773,
+      "level": 13,
+      "src": "28.17.177.72",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 28.830382,
+      "level": 14,
+      "src": "175.154.103.205",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     }
+    ],
+    "pair_entries": 126,
+    "victim_entries": 1,
+    "flow_entries": 54,
+    "deferred_reports": 5667,
+    "lost_deferred_reports": 5203,
+    "lost_alerts": 0
+   },
+   "flood": {
+    "flows": 200000,
+    "packets": 200000,
+    "stopped_share": 0.105475,
+    "stopped_by_pair_entries": 0,
+    "stopped_by_victim_entry": 21095,
+    "forwarded": 178905,
+    "alerts": 63,
+    "first_alert_s": 0.011282,
+    "victim_entry_s": 8.954707,
+    "pair_entries": 126
+   },
+   "sources_max": 16
+  },
+  "20000_alert_sources8": {
+   "flows": 10522,
+   "span_s": 2410.602324,
+   "decided": 0.9813723626686942,
+   "deferred": 5681,
+   "controller_blocked": 372,
+   "attack_stopped": 0.5690224194833277,
+   "attack_stopped_at_switch": 0.5266871514737681,
+   "attack_deferred_unmitigated": 0.4225560487083191,
+   "benign_blocked": 0.009798270893371758,
+   "packets": {
+    "attack_forwarded": 150735,
+    "benign_dropped": 869,
+    "deferred_forwarded_after_decision": 74852,
+    "flood": 200000,
+    "flood_pair": 0,
+    "flood_victim": 179529,
+    "flood_forwarded": 20471
+   },
+   "queue": {
+    "depth": 16,
+    "rate_cap": null,
+    "score_us": 134.424,
+    "install_us": 1886,
+    "offered": 5690,
+    "lost": 0,
+    "lost_share": 0.0,
+    "report_window_s": 411.22645,
+    "offered_per_s": 13.836658609872979,
+    "peak_per_s": 128,
+    "p95_per_s": 84,
+    "busy_share": 0.003482808598523188,
+    "peak_queue": 1,
+    "wait_ms": {
+     "p50": 0.0,
+     "p95": 0.0,
+     "max": 3.117
+    }
+   },
+   "controller": {
+    "latency_ms": 1.886,
+    "flood_alerts": 9,
+    "first_alert_s": 20.011316,
+    "alert_victims": [
+     "192.168.10.10"
+    ],
+    "alert_sources": [
+     "129.138.167.32",
+     "14.213.37.4",
+     "14.249.142.39",
+     "145.130.205.106",
+     "155.16.172.159",
+     "179.25.168.25",
+     "219.12.79.109",
+     "58.180.168.46",
+     "68.67.140.85"
+    ],
+    "alerts": [
+     {
+      "t_s": 20.011316,
+      "level": 8,
+      "src": "155.16.172.159",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 20.024164,
+      "level": 9,
+      "src": "58.180.168.46",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 20.051923,
+      "level": 10,
+      "src": "14.249.142.39",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 20.103479,
+      "level": 11,
+      "src": "145.130.205.106",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 20.205565,
+      "level": 12,
+      "src": "219.12.79.109",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 20.408671,
+      "level": 13,
+      "src": "129.138.167.32",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 20.823271,
+      "level": 14,
+      "src": "68.67.140.85",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 21.012668,
+      "level": 8,
+      "src": "14.213.37.4",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 21.025163,
+      "level": 9,
+      "src": "179.25.168.25",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     }
+    ],
+    "pair_entries": 18,
+    "victim_entries": 1,
+    "flow_entries": 744,
+    "deferred_reports": 5681,
+    "lost_deferred_reports": 0,
+    "lost_alerts": 0
+   },
+   "flood": {
+    "flows": 200000,
+    "packets": 200000,
+    "stopped_share": 0.897645,
+    "stopped_by_pair_entries": 0,
+    "stopped_by_victim_entry": 179529,
+    "forwarded": 20471,
+    "alerts": 9,
+    "first_alert_s": 0.011282,
+    "victim_entry_s": 1.027015,
+    "pair_entries": 18
+   },
+   "sources_max": 8
+  },
+  "20000_alert_sources4": {
+   "flows": 10522,
+   "span_s": 2410.602324,
+   "decided": 0.992491921687892,
+   "deferred": 5803,
+   "controller_blocked": 373,
+   "attack_stopped": 0.5687948105155343,
+   "attack_stopped_at_switch": 0.5263457380220781,
+   "attack_deferred_unmitigated": 0.4244907249345624,
+   "benign_blocked": 0.008645533141210375,
+   "packets": {
+    "attack_forwarded": 150603,
+    "benign_dropped": 798,
+    "deferred_forwarded_after_decision": 75260,
+    "flood": 200000,
+    "flood_pair": 0,
+    "flood_victim": 195867,
+    "flood_forwarded": 4133
+   },
+   "queue": {
+    "depth": 16,
+    "rate_cap": null,
+    "score_us": 134.424,
+    "install_us": 1886,
+    "offered": 5808,
+    "lost": 0,
+    "lost_share": 0.0,
+    "report_window_s": 411.22645,
+    "offered_per_s": 14.123605132889677,
+    "peak_per_s": 128,
+    "p95_per_s": 86,
+    "busy_share": 0.00350860291209421,
+    "peak_queue": 1,
+    "wait_ms": {
+     "p50": 0.0,
+     "p95": 0.0,
+     "max": 3.117
+    }
+   },
+   "controller": {
+    "latency_ms": 1.886,
+    "flood_alerts": 5,
+    "first_alert_s": 20.011316,
+    "alert_victims": [
+     "192.168.10.10"
+    ],
+    "alert_sources": [
+     "14.249.142.39",
+     "145.130.205.106",
+     "155.16.172.159",
+     "219.12.79.109",
+     "58.180.168.46"
+    ],
+    "alerts": [
+     {
+      "t_s": 20.011316,
+      "level": 8,
+      "src": "155.16.172.159",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 20.024164,
+      "level": 9,
+      "src": "58.180.168.46",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 20.051923,
+      "level": 10,
+      "src": "14.249.142.39",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 20.103479,
+      "level": 11,
+      "src": "145.130.205.106",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     },
+     {
+      "t_s": 20.205565,
+      "level": 12,
+      "src": "219.12.79.109",
+      "dst": "192.168.10.10",
+      "dst_port": 80
+     }
+    ],
+    "pair_entries": 10,
+    "victim_entries": 1,
+    "flow_entries": 746,
+    "deferred_reports": 5803,
+    "lost_deferred_reports": 0,
+    "lost_alerts": 0
+   },
+   "flood": {
+    "flows": 200000,
+    "packets": 200000,
+    "stopped_share": 0.979335,
+    "stopped_by_pair_entries": 0,
+    "stopped_by_victim_entry": 195867,
+    "forwarded": 4133,
+    "alerts": 5,
+    "first_alert_s": 0.011282,
+    "victim_entry_s": 0.207417,
+    "pair_entries": 10
+   },
+   "sources_max": 4
+  }
+ }
+}

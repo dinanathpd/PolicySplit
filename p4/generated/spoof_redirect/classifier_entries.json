@@ -1,0 +1,19 @@
+{
+  "key_space": 100000,
+  "entries_installed": 33,
+  "entries_defaulted_to_escalation": 99967,
+  "confidence_floor": 1e-09,
+  "class_distribution": [
+    0,
+    14,
+    8,
+    2,
+    8,
+    0,
+    0,
+    1
+  ],
+  "action_distribution": {
+    "1": 33
+  }
+}

@@ -143,7 +143,7 @@ def main():
                     help="Context presentations to sweep")
     ap.add_argument("--seq-len", type=int, default=32)
     ap.add_argument("--subsample-per-class", type=int, default=2500)
-    ap.add_argument("--seeds", type=int, nargs="+", default=[0, 1, 2])
+    ap.add_argument("--seeds", type=int, nargs="+", default=list(range(10)))
     ap.add_argument("--num-classes", type=int, default=8)
     ap.add_argument("--n-jobs", type=int, default=4)
     ap.add_argument("--out", default="results/controlled/baselines.json")
@@ -210,8 +210,9 @@ def main():
 
     runs = {}
     for key, res in cache.items():
-        name, context, split, _ = key.split("|")
-        runs.setdefault(f"{name}|{context}|{split}", []).append(res)
+        name, context, split, seed = key.split("|")
+        runs.setdefault(f"{name}|{context}|{split}", []).append(
+            dict(res, seed=int(seed)))
 
     aggregate = {}
     for key, reps in runs.items():
@@ -224,7 +225,7 @@ def main():
             "macro_f1_std": float(np.std([r["macro_f1"] for r in reps])),
             "inference_ms_per_flow": float(
                 np.median([r["inference_ms_per_flow"] for r in reps])),
-            "seeds": args.seeds,
+            "seeds": sorted(r["seed"] for r in reps),
             "runs": reps,
         }
 

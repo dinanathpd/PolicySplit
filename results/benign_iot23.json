@@ -1,0 +1,8656 @@
+{
+ "config": {
+  "seeds": [
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46,
+   47,
+   48,
+   49,
+   50,
+   51,
+   52,
+   53,
+   54,
+   55,
+   56,
+   57,
+   58,
+   59
+  ],
+  "captures": {
+   "iot23_echo": 392,
+   "iot23_hue": 68,
+   "iot23_somfy": 25
+  },
+  "target": 0.01,
+  "split": "flow-isolated",
+  "action_map": "2-action",
+  "gate": "action"
+ },
+ "summary": {
+  "corpus": {
+   "coverage": 0.40723791035874757,
+   "corpus_benign_dropped": 0.006630934067313284,
+   "unseen_benign_dropped": {
+    "iot23_echo": 0.0385204081632653,
+    "iot23_hue": 0.00392156862745098,
+    "iot23_somfy": 0.0
+   },
+   "dropped_in_application_attack_cells": {
+    "iot23_echo": 0.13308966861598442,
+    "iot23_hue": 1.0,
+    "iot23_somfy": NaN
+   },
+   "dropped_by_cell_majority": {
+    "iot23_echo": [
+     0,
+     17,
+     357,
+     19,
+     0,
+     0,
+     60,
+     0
+    ],
+    "iot23_hue": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     8,
+     0
+    ],
+    "iot23_somfy": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "tiered": {
+    "3-action": {
+     "iot23_echo": {
+      "dropped": 0.0022108843537414972,
+      "any_action": 0.0022108843537414972
+     },
+     "iot23_hue": {
+      "dropped": 0.0,
+      "any_action": 0.0
+     },
+     "iot23_somfy": {
+      "dropped": 0.0,
+      "any_action": 0.0
+     },
+     "corpus": {
+      "coverage": 0.29593670053726956,
+      "drop_coverage": 0.29593670053726956,
+      "selective_error": 0.004273960765565134,
+      "benign_dropped": 0.0016243553179754223
+     },
+     "vs_two_action": {
+      "coverage": {
+       "before": 0.40723791035874757,
+       "after": 0.29593670053726956,
+       "mean_points": -11.1301209821478,
+       "ci95": [
+        -14.035740895506116,
+        -7.322100610724042
+       ],
+       "lower_in": 28,
+       "n": 30
+      },
+      "dropped_iot23_echo": {
+       "before": 0.0385204081632653,
+       "after": 0.0022108843537414972,
+       "mean_points": -3.6309523809523814,
+       "ci95": [
+        -4.2942176870748305,
+        -2.899659863945579
+       ],
+       "lower_in": 24,
+       "n": 30
+      },
+      "dropped_iot23_hue": {
+       "before": 0.00392156862745098,
+       "after": 0.0,
+       "mean_points": -0.39215686274509803,
+       "ci95": [
+        -0.637254901960784,
+        -0.19485294117647728
+       ],
+       "lower_in": 8,
+       "n": 30
+      },
+      "dropped_iot23_somfy": {
+       "before": 0.0,
+       "after": 0.0,
+       "mean_points": 0.0,
+       "ci95": [
+        0.0,
+        0.0
+       ],
+       "lower_in": 0,
+       "n": 30
+      }
+     }
+    },
+    "4-action": {
+     "iot23_echo": {
+      "dropped": 0.0,
+      "any_action": 0.0
+     },
+     "iot23_hue": {
+      "dropped": 0.0,
+      "any_action": 0.0
+     },
+     "iot23_somfy": {
+      "dropped": 0.0,
+      "any_action": 0.0
+     },
+     "corpus": {
+      "coverage": 0.2610115270166149,
+      "drop_coverage": 0.2610115270166149,
+      "selective_error": 0.0038350051193137566,
+      "benign_dropped": 0.001235737488061633
+     },
+     "vs_two_action": {
+      "coverage": {
+       "before": 0.40723791035874757,
+       "after": 0.2610115270166149,
+       "mean_points": -14.622638334213269,
+       "ci95": [
+        -17.396711173969482,
+        -10.944565860300118
+       ],
+       "lower_in": 29,
+       "n": 30
+      },
+      "dropped_iot23_echo": {
+       "before": 0.0385204081632653,
+       "after": 0.0,
+       "mean_points": -3.852040816326531,
+       "ci95": [
+        -4.506802721088436,
+        -3.1292517006802725
+       ],
+       "lower_in": 24,
+       "n": 30
+      },
+      "dropped_iot23_hue": {
+       "before": 0.00392156862745098,
+       "after": 0.0,
+       "mean_points": -0.39215686274509803,
+       "ci95": [
+        -0.637254901960784,
+        -0.19485294117647728
+       ],
+       "lower_in": 8,
+       "n": 30
+      },
+      "dropped_iot23_somfy": {
+       "before": 0.0,
+       "after": 0.0,
+       "mean_points": 0.0,
+       "ci95": [
+        0.0,
+        0.0
+       ],
+       "lower_in": 0,
+       "n": 30
+      }
+     }
+    },
+    "spoof-redirect": {
+     "iot23_echo": {
+      "dropped": 0.0009353741496598638,
+      "any_action": 0.0009353741496598638
+     },
+     "iot23_hue": {
+      "dropped": 0.0,
+      "any_action": 0.0
+     },
+     "iot23_somfy": {
+      "dropped": 0.0,
+      "any_action": 0.0
+     },
+     "corpus": {
+      "coverage": 0.338317271561101,
+      "drop_coverage": 0.338317271561101,
+      "selective_error": 0.003933101186263435,
+      "benign_dropped": 0.0022619599254428435
+     },
+     "vs_two_action": {
+      "coverage": {
+       "before": 0.40723791035874757,
+       "after": 0.338317271561101,
+       "mean_points": -6.892063879764659,
+       "ci95": [
+        -9.7424622037143,
+        -3.14604505407593
+       ],
+       "lower_in": 26,
+       "n": 30
+      },
+      "dropped_iot23_echo": {
+       "before": 0.0385204081632653,
+       "after": 0.0009353741496598638,
+       "mean_points": -3.758503401360544,
+       "ci95": [
+        -4.447491496598641,
+        -2.9931972789115653
+       ],
+       "lower_in": 24,
+       "n": 30
+      },
+      "dropped_iot23_hue": {
+       "before": 0.00392156862745098,
+       "after": 0.0,
+       "mean_points": -0.39215686274509803,
+       "ci95": [
+        -0.637254901960784,
+        -0.19485294117647728
+       ],
+       "lower_in": 8,
+       "n": 30
+      },
+      "dropped_iot23_somfy": {
+       "before": 0.0,
+       "after": 0.0,
+       "mean_points": 0.0,
+       "ci95": [
+        0.0,
+        0.0
+       ],
+       "lower_in": 0,
+       "n": 30
+      }
+     }
+    },
+    "flood-inspect": {
+     "iot23_echo": {
+      "dropped": 0.0,
+      "any_action": 0.006292517006802721
+     },
+     "iot23_hue": {
+      "dropped": 0.0,
+      "any_action": 0.02696078431372549
+     },
+     "iot23_somfy": {
+      "dropped": 0.0,
+      "any_action": 0.013333333333333334
+     },
+     "corpus": {
+      "coverage": 0.3838282636347301,
+      "drop_coverage": 0.2610115270166149,
+      "selective_error": 0.019164549909439898,
+      "benign_dropped": 0.001235737488061633
+     },
+     "vs_two_action": {
+      "coverage": {
+       "before": 0.40723791035874757,
+       "after": 0.3838282636347301,
+       "mean_points": -2.340964672401754,
+       "ci95": [
+        -5.283198995468073,
+        1.2465719622724571
+       ],
+       "lower_in": 22,
+       "n": 30
+      },
+      "dropped_iot23_echo": {
+       "before": 0.0385204081632653,
+       "after": 0.0,
+       "mean_points": -3.852040816326531,
+       "ci95": [
+        -4.506802721088436,
+        -3.1292517006802725
+       ],
+       "lower_in": 24,
+       "n": 30
+      },
+      "dropped_iot23_hue": {
+       "before": 0.00392156862745098,
+       "after": 0.0,
+       "mean_points": -0.39215686274509803,
+       "ci95": [
+        -0.637254901960784,
+        -0.19485294117647728
+       ],
+       "lower_in": 8,
+       "n": 30
+      },
+      "dropped_iot23_somfy": {
+       "before": 0.0,
+       "after": 0.0,
+       "mean_points": 0.0,
+       "ci95": [
+        0.0,
+        0.0
+       ],
+       "lower_in": 0,
+       "n": 30
+      }
+     }
+    }
+   }
+  },
+  "with_iot23_echo": {
+   "coverage": {
+    "before": 0.40723791035874757,
+    "after": 0.3958957913553066,
+    "mean_points": -1.1342119003440962,
+    "ci95": [
+     -2.1617534239032326,
+     -0.2596335082543545
+    ],
+    "lower_in": 22,
+    "n": 30
+   },
+   "dropped_iot23_hue": {
+    "before": 0.00392156862745098,
+    "after": 0.002941176470588235,
+    "mean_points": -0.09803921568627451,
+    "ci95": [
+     -0.24509803921568626,
+     0.0
+    ],
+    "lower_in": 2,
+    "n": 30
+   },
+   "dropped_iot23_somfy": {
+    "before": 0.0,
+    "after": 0.0,
+    "mean_points": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "lower_in": 0,
+    "n": 30
+   }
+  },
+  "with_iot23_hue": {
+   "coverage": {
+    "before": 0.40723791035874757,
+    "after": 0.40712433397847975,
+    "mean_points": -0.011357638026777339,
+    "ci95": [
+     -0.34363596010484787,
+     0.3194167735892805
+    ],
+    "lower_in": 17,
+    "n": 30
+   },
+   "dropped_iot23_echo": {
+    "before": 0.0385204081632653,
+    "after": 0.03886054421768707,
+    "mean_points": 0.03401360544217687,
+    "ci95": [
+     0.0,
+     0.08503401360544216
+    ],
+    "lower_in": 0,
+    "n": 30
+   },
+   "dropped_iot23_somfy": {
+    "before": 0.0,
+    "after": 0.0,
+    "mean_points": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "lower_in": 0,
+    "n": 30
+   }
+  },
+  "with_iot23_somfy": {
+   "coverage": {
+    "before": 0.40723791035874757,
+    "after": 0.4092031048490615,
+    "mean_points": 0.19651944903139595,
+    "ci95": [
+     0.02255903057624556,
+     0.4185811215460753
+    ],
+    "lower_in": 11,
+    "n": 30
+   },
+   "dropped_iot23_echo": {
+    "before": 0.0385204081632653,
+    "after": 0.03886054421768707,
+    "mean_points": 0.03401360544217687,
+    "ci95": [
+     0.0,
+     0.08503401360544216
+    ],
+    "lower_in": 0,
+    "n": 30
+   },
+   "dropped_iot23_hue": {
+    "before": 0.00392156862745098,
+    "after": 0.00392156862745098,
+    "mean_points": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "lower_in": 0,
+    "n": 30
+   }
+  }
+ },
+ "per_seed": [
+  {
+   "seed": 30,
+   "corpus": {
+    "coverage": 0.4429766204143699,
+    "selective_error": 0.003003647285990131,
+    "corpus_benign_dropped": 0.008069164265129682,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.04591836734693878,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.0,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      17,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "tiered": {
+     "3-action": {
+      "iot23_echo": {
+       "dropped": 0.002551020408163265,
+       "any_action": 0.002551020408163265
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.30678578217068997,
+       "drop_coverage": 0.30678578217068997,
+       "selective_error": 0.004646840148698885,
+       "benign_dropped": 0.002881844380403458
+      }
+     },
+     "4-action": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.26487359817525186,
+       "drop_coverage": 0.26487359817525186,
+       "selective_error": 0.0046645138141370645,
+       "benign_dropped": 0.0011527377521613833
+      }
+     },
+     "spoof-redirect": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.3365329785211937,
+       "drop_coverage": 0.3365329785211937,
+       "selective_error": 0.003953685399604632,
+       "benign_dropped": 0.002881844380403458
+      }
+     },
+     "flood-inspect": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.35915225242349363,
+       "drop_coverage": 0.26487359817525186,
+       "selective_error": 0.015347975654935168,
+       "benign_dropped": 0.0011527377521613833
+      }
+     }
+    }
+   },
+   "with_iot23_echo": {
+    "coverage": 0.4489640752708611,
+    "selective_error": 0.0029635901778154107,
+    "corpus_benign_dropped": 0.008069164265129682,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.002551020408163265,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.0,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "with_iot23_hue": {
+    "coverage": 0.46635620604447825,
+    "selective_error": 0.0032606480538006927,
+    "corpus_benign_dropped": 0.009221902017291067,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.05102040816326531,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.1,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      17,
+      0,
+      1,
+      0,
+      0,
+      2,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "with_iot23_somfy": {
+    "coverage": 0.4667363619083824,
+    "selective_error": 0.003257992262268377,
+    "corpus_benign_dropped": 0.009221902017291067,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.05102040816326531,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.1,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      17,
+      0,
+      1,
+      0,
+      0,
+      2,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "seed": 31,
+   "corpus": {
+    "coverage": 0.4348708487084871,
+    "selective_error": 0.00487908358082308,
+    "corpus_benign_dropped": 0.012472885032537961,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.05102040816326531,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.1,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      1,
+      0,
+      0,
+      2,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "tiered": {
+     "3-action": {
+      "iot23_echo": {
+       "dropped": 0.002551020408163265,
+       "any_action": 0.002551020408163265
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.30249077490774906,
+       "drop_coverage": 0.30249077490774906,
+       "selective_error": 0.003354681305275999,
+       "benign_dropped": 0.0027114967462039045
+      }
+     },
+     "4-action": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.2663284132841328,
+       "drop_coverage": 0.2663284132841328,
+       "selective_error": 0.0034638032559750607,
+       "benign_dropped": 0.0021691973969631237
+      }
+     },
+     "spoof-redirect": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.3253690036900369,
+       "drop_coverage": 0.3253690036900369,
+       "selective_error": 0.001701162461015027,
+       "benign_dropped": 0.0010845986984815619
+      }
+     },
+     "flood-inspect": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.00510204081632653
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.41595940959409594,
+       "drop_coverage": 0.2663284132841328,
+       "selective_error": 0.027944111776447105,
+       "benign_dropped": 0.0021691973969631237
+      }
+     }
+    }
+   },
+   "with_iot23_echo": {
+    "coverage": 0.39215867158671586,
+    "selective_error": 0.003293342742884027,
+    "corpus_benign_dropped": 0.007592190889370932,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.0,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": null,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "with_iot23_hue": {
+    "coverage": 0.4371771217712177,
+    "selective_error": 0.00485334458746571,
+    "corpus_benign_dropped": 0.012472885032537961,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.05102040816326531,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.1,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      1,
+      0,
+      0,
+      2,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "with_iot23_somfy": {
+    "coverage": 0.4351476014760148,
+    "selective_error": 0.004875980496078016,
+    "corpus_benign_dropped": 0.012472885032537961,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.05102040816326531,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.1,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      1,
+      0,
+      0,
+      2,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "seed": 32,
+   "corpus": {
+    "coverage": 0.46681185493797933,
+    "selective_error": 0.005070993914807302,
+    "corpus_benign_dropped": 0.01429388221841052,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.05102040816326531,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.1,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      1,
+      0,
+      0,
+      2,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "tiered": {
+     "3-action": {
+      "iot23_echo": {
+       "dropped": 0.002551020408163265,
+       "any_action": 0.002551020408163265
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.29694157750213046,
+       "drop_coverage": 0.29694157750213046,
+       "selective_error": 0.01211734693877551,
+       "benign_dropped": 0.0017152658662092624
+      }
+     },
+     "4-action": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.26853517659312565,
+       "drop_coverage": 0.26853517659312565,
+       "selective_error": 0.0021156558533145277,
+       "benign_dropped": 0.0017152658662092624
+      }
+     },
+     "spoof-redirect": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.35261812328377995,
+       "drop_coverage": 0.35261812328377995,
+       "selective_error": 0.00510204081632653,
+       "benign_dropped": 0.004002287021154946
+      }
+     },
+     "flood-inspect": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.00510204081632653
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.4069690370230092,
+       "drop_coverage": 0.26853517659312565,
+       "selective_error": 0.02047463936714751,
+       "benign_dropped": 0.0017152658662092624
+      }
+     }
+    }
+   },
+   "with_iot23_echo": {
+    "coverage": 0.44692737430167595,
+    "selective_error": 0.005508474576271186,
+    "corpus_benign_dropped": 0.014865637507146942,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.0,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": null,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "with_iot23_hue": {
+    "coverage": 0.46624372691979926,
+    "selective_error": 0.005077173030056864,
+    "corpus_benign_dropped": 0.01429388221841052,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.05102040816326531,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.1,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      1,
+      0,
+      0,
+      2,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "with_iot23_somfy": {
+    "coverage": 0.46690654294100936,
+    "selective_error": 0.0050699655242344354,
+    "corpus_benign_dropped": 0.01429388221841052,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.05102040816326531,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.1,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      1,
+      0,
+      0,
+      2,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "seed": 33,
+   "corpus": {
+    "coverage": 0.45458788387939886,
+    "selective_error": 0.004517453798767967,
+    "corpus_benign_dropped": 0.011789924973204717,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.05102040816326531,
+     "iot23_hue": 0.014705882352941176,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.1,
+     "iot23_hue": 1.0,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      1,
+      0,
+      0,
+      2,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "tiered": {
+     "3-action": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.23196116867357416,
+       "drop_coverage": 0.23196116867357416,
+       "selective_error": 0.00040241448692152917,
+       "benign_dropped": 0.0005359056806002144
+      }
+     },
+     "4-action": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.2647251003453748,
+       "drop_coverage": 0.2647251003453748,
+       "selective_error": 0.0021156558533145277,
+       "benign_dropped": 0.0026795284030010718
+      }
+     },
+     "spoof-redirect": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.30925044338653973,
+       "drop_coverage": 0.30925044338653973,
+       "selective_error": 0.0018110473890733474,
+       "benign_dropped": 0.001607717041800643
+      }
+     },
+     "flood-inspect": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.00510204081632653
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.014705882352941176
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.3721646597591711,
+       "drop_coverage": 0.2647251003453748,
+       "selective_error": 0.014798093804865815,
+       "benign_dropped": 0.0026795284030010718
+      }
+     }
+    }
+   },
+   "with_iot23_echo": {
+    "coverage": 0.443666573322132,
+    "selective_error": 0.004207868714496108,
+    "corpus_benign_dropped": 0.010718113612004287,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.0,
+     "iot23_hue": 0.014705882352941176,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": null,
+     "iot23_hue": 1.0,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "with_iot23_hue": {
+    "coverage": 0.4544945393447214,
+    "selective_error": 0.004518381597864038,
+    "corpus_benign_dropped": 0.011789924973204717,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.05102040816326531,
+     "iot23_hue": 0.014705882352941176,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.1,
+     "iot23_hue": 1.0,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      1,
+      0,
+      0,
+      2,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "with_iot23_somfy": {
+    "coverage": 0.4546812284140764,
+    "selective_error": 0.0045165263806199955,
+    "corpus_benign_dropped": 0.011789924973204717,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.05102040816326531,
+     "iot23_hue": 0.014705882352941176,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.1,
+     "iot23_hue": 1.0,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      1,
+      0,
+      0,
+      2,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "seed": 34,
+   "corpus": {
+    "coverage": 0.41051149694978883,
+    "selective_error": 0.0006858710562414266,
+    "corpus_benign_dropped": 0.0017281105990783411,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.04336734693877551,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.0,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "tiered": {
+     "3-action": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.24917878930079776,
+       "drop_coverage": 0.24917878930079776,
+       "selective_error": 0.0018832391713747645,
+       "benign_dropped": 0.0
+      }
+     },
+     "4-action": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.26128578132332236,
+       "drop_coverage": 0.26128578132332236,
+       "selective_error": 0.0028735632183908046,
+       "benign_dropped": 0.0
+      }
+     },
+     "spoof-redirect": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.34368840919755983,
+       "drop_coverage": 0.34368840919755983,
+       "selective_error": 0.00354997269251775,
+       "benign_dropped": 0.0
+      }
+     },
+     "flood-inspect": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.3682778038479587,
+       "drop_coverage": 0.26128578132332236,
+       "selective_error": 0.016055045871559634,
+       "benign_dropped": 0.0
+      }
+     }
+    }
+   },
+   "with_iot23_echo": {
+    "coverage": 0.40994838104176445,
+    "selective_error": 0.0018315018315018315,
+    "corpus_benign_dropped": 0.004608294930875576,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.0,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": null,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "with_iot23_hue": {
+    "coverage": 0.41116846550915065,
+    "selective_error": 0.0018260671079662178,
+    "corpus_benign_dropped": 0.004608294930875576,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.04336734693877551,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.0,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "with_iot23_somfy": {
+    "coverage": 0.41022993899577664,
+    "selective_error": 0.0006863417982155113,
+    "corpus_benign_dropped": 0.0017281105990783411,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.04336734693877551,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.0,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "seed": 35,
+   "corpus": {
+    "coverage": 0.42995905151890296,
+    "selective_error": 0.0019933554817275745,
+    "corpus_benign_dropped": 0.0047872340425531915,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.04591836734693878,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.9444444444444444,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      17,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "tiered": {
+     "3-action": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.2890200933244453,
+       "drop_coverage": 0.2890200933244453,
+       "selective_error": 0.0016474464579901153,
+       "benign_dropped": 0.0
+      }
+     },
+     "4-action": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.2520712313113037,
+       "drop_coverage": 0.2520712313113037,
+       "selective_error": 0.003022289384208538,
+       "benign_dropped": 0.0
+      }
+     },
+     "spoof-redirect": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.3423483477764023,
+       "drop_coverage": 0.3423483477764023,
+       "selective_error": 0.0036161335187760778,
+       "benign_dropped": 0.0010638297872340426
+      }
+     },
+     "flood-inspect": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.014705882352941176
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.341967431673174,
+       "drop_coverage": 0.2520712313113037,
+       "selective_error": 0.007518796992481203,
+       "benign_dropped": 0.0
+      }
+     }
+    }
+   },
+   "with_iot23_echo": {
+    "coverage": 0.42348347776402245,
+    "selective_error": 0.002023836294130875,
+    "corpus_benign_dropped": 0.0047872340425531915,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.0,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": null,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "with_iot23_hue": {
+    "coverage": 0.4311970288543948,
+    "selective_error": 0.001987632508833922,
+    "corpus_benign_dropped": 0.0047872340425531915,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.04591836734693878,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.0,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      1,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "with_iot23_somfy": {
+    "coverage": 0.4298638224930959,
+    "selective_error": 0.001993797075764289,
+    "corpus_benign_dropped": 0.0047872340425531915,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.04591836734693878,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.9444444444444444,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      17,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "seed": 36,
+   "corpus": {
+    "coverage": 0.43624798253109276,
+    "selective_error": 0.0028291621327529923,
+    "corpus_benign_dropped": 0.007282913165266107,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.05102040816326531,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.1,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      1,
+      0,
+      0,
+      2,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "tiered": {
+     "3-action": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.2462736162536789,
+       "drop_coverage": 0.2462736162536789,
+       "selective_error": 0.0015420200462606013,
+       "benign_dropped": 0.0
+      }
+     },
+     "4-action": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.2602297541061426,
+       "drop_coverage": 0.2602297541061426,
+       "selective_error": 0.005107624954396206,
+       "benign_dropped": 0.0
+      }
+     },
+     "spoof-redirect": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.3437767017943606,
+       "drop_coverage": 0.3437767017943606,
+       "selective_error": 0.005523336095001381,
+       "benign_dropped": 0.002240896358543417
+      }
+     },
+     "flood-inspect": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.00510204081632653
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.3576378999335422,
+       "drop_coverage": 0.2602297541061426,
+       "selective_error": 0.010883992567029467,
+       "benign_dropped": 0.0
+      }
+     }
+    }
+   },
+   "with_iot23_echo": {
+    "coverage": 0.4172600398746796,
+    "selective_error": 0.0031854379977246873,
+    "corpus_benign_dropped": 0.00784313725490196,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.00510204081632653,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 1.0,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "with_iot23_hue": {
+    "coverage": 0.4342542485521694,
+    "selective_error": 0.003060778312199388,
+    "corpus_benign_dropped": 0.00784313725490196,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.05102040816326531,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.1,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      1,
+      0,
+      0,
+      2,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "with_iot23_somfy": {
+    "coverage": 0.4364378619576569,
+    "selective_error": 0.0028279312595170763,
+    "corpus_benign_dropped": 0.007282913165266107,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.05102040816326531,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.1,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      1,
+      0,
+      0,
+      2,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "seed": 37,
+   "corpus": {
+    "coverage": 0.27529083294555606,
+    "selective_error": 0.001352265043948614,
+    "corpus_benign_dropped": 0.002058672156459084,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.0,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": null,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "tiered": {
+     "3-action": {
+      "iot23_echo": {
+       "dropped": 0.002551020408163265,
+       "any_action": 0.002551020408163265
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.30321079571893905,
+       "drop_coverage": 0.30321079571893905,
+       "selective_error": 0.003069367710251688,
+       "benign_dropped": 0.0025733401955738548
+      }
+     },
+     "4-action": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.25937645416472777,
+       "drop_coverage": 0.25937645416472777,
+       "selective_error": 0.003946896304269824,
+       "benign_dropped": 0.000514668039114771
+      }
+     },
+     "spoof-redirect": {
+      "iot23_echo": {
+       "dropped": 0.00510204081632653,
+       "any_action": 0.00510204081632653
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.33299208934388086,
+       "drop_coverage": 0.33299208934388086,
+       "selective_error": 0.002794857462269424,
+       "benign_dropped": 0.001029336078229542
+      }
+     },
+     "flood-inspect": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.00510204081632653
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.3727315030246626,
+       "drop_coverage": 0.25937645416472777,
+       "selective_error": 0.015730337078651686,
+       "benign_dropped": 0.000514668039114771
+      }
+     }
+    }
+   },
+   "with_iot23_echo": {
+    "coverage": 0.2878548161935784,
+    "selective_error": 0.0012932428063368898,
+    "corpus_benign_dropped": 0.002058672156459084,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.0,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": null,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "with_iot23_hue": {
+    "coverage": 0.2856212191717078,
+    "selective_error": 0.0013033561420658195,
+    "corpus_benign_dropped": 0.002058672156459084,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.0,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": null,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "with_iot23_somfy": {
+    "coverage": 0.2859004187994416,
+    "selective_error": 0.0013020833333333333,
+    "corpus_benign_dropped": 0.002058672156459084,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.0,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": null,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "seed": 38,
+   "corpus": {
+    "coverage": 0.3900313356835096,
+    "selective_error": 0.0022596033140848608,
+    "corpus_benign_dropped": 0.005184331797235023,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.04336734693877551,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.0,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "tiered": {
+     "3-action": {
+      "iot23_echo": {
+       "dropped": 0.002551020408163265,
+       "any_action": 0.002551020408163265
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.31580493537015275,
+       "drop_coverage": 0.31580493537015275,
+       "selective_error": 0.00248062015503876,
+       "benign_dropped": 0.0034562211981566822
+      }
+     },
+     "4-action": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.26978065021543285,
+       "drop_coverage": 0.26978065021543285,
+       "selective_error": 0.0018148820326678765,
+       "benign_dropped": 0.0017281105990783411
+      }
+     },
+     "spoof-redirect": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.3401880141010576,
+       "drop_coverage": 0.3401880141010576,
+       "selective_error": 0.0025906735751295338,
+       "benign_dropped": 0.0017281105990783411
+      }
+     },
+     "flood-inspect": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.00510204081632653
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.014705882352941176
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.2
+      },
+      "corpus": {
+       "coverage": 0.4345867606737172,
+       "drop_coverage": 0.26978065021543285,
+       "selective_error": 0.03064443442992339,
+       "benign_dropped": 0.0017281105990783411
+      }
+     }
+    }
+   },
+   "with_iot23_echo": {
+    "coverage": 0.42880924402663534,
+    "selective_error": 0.004338890157570221,
+    "corpus_benign_dropped": 0.010944700460829493,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.0,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": null,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "with_iot23_hue": {
+    "coverage": 0.39257735996866433,
+    "selective_error": 0.0022449488650536295,
+    "corpus_benign_dropped": 0.005184331797235023,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.04336734693877551,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.0,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "with_iot23_somfy": {
+    "coverage": 0.3927732079905993,
+    "selective_error": 0.002243829468960359,
+    "corpus_benign_dropped": 0.005184331797235023,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.04336734693877551,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.0,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "seed": 39,
+   "corpus": {
+    "coverage": 0.44429795649307846,
+    "selective_error": 0.00317931326833404,
+    "corpus_benign_dropped": 0.007845188284518828,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.05102040816326531,
+     "iot23_hue": 0.014705882352941176,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.1,
+     "iot23_hue": 1.0,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      1,
+      0,
+      0,
+      2,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "tiered": {
+     "3-action": {
+      "iot23_echo": {
+       "dropped": 0.002551020408163265,
+       "any_action": 0.002551020408163265
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.3086919672285526,
+       "drop_coverage": 0.3086919672285526,
+       "selective_error": 0.004270896888346553,
+       "benign_dropped": 0.0031380753138075313
+      }
+     },
+     "4-action": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.2411714850739241,
+       "drop_coverage": 0.2411714850739241,
+       "selective_error": 0.004685669660288949,
+       "benign_dropped": 0.0020920502092050207
+      }
+     },
+     "spoof-redirect": {
+      "iot23_echo": {
+       "dropped": 0.00510204081632653,
+       "any_action": 0.00510204081632653
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.3424051228929278,
+       "drop_coverage": 0.3424051228929278,
+       "selective_error": 0.0038503850385038503,
+       "benign_dropped": 0.0041841004184100415
+      }
+     },
+     "flood-inspect": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.3525755720877672,
+       "drop_coverage": 0.2411714850739241,
+       "selective_error": 0.015491452991452992,
+       "benign_dropped": 0.0020920502092050207
+      }
+     }
+    }
+   },
+   "with_iot23_echo": {
+    "coverage": 0.4247104247104247,
+    "selective_error": 0.0028824833702882483,
+    "corpus_benign_dropped": 0.006799163179916318,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.002551020408163265,
+     "iot23_hue": 0.014705882352941176,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.0,
+     "iot23_hue": 1.0,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "with_iot23_hue": {
+    "coverage": 0.4402486109803183,
+    "selective_error": 0.002352941176470588,
+    "corpus_benign_dropped": 0.005753138075313808,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.05102040816326531,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.1,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      1,
+      0,
+      0,
+      2,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "with_iot23_somfy": {
+    "coverage": 0.44410961484132216,
+    "selective_error": 0.0031806615776081423,
+    "corpus_benign_dropped": 0.007845188284518828,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.05102040816326531,
+     "iot23_hue": 0.014705882352941176,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.1,
+     "iot23_hue": 1.0,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      1,
+      0,
+      0,
+      2,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "seed": 40,
+   "corpus": {
+    "coverage": 0.40455023420323105,
+    "selective_error": 0.0016540642722117202,
+    "corpus_benign_dropped": 0.003995433789954338,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.04336734693877551,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.0,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "tiered": {
+     "3-action": {
+      "iot23_echo": {
+       "dropped": 0.002551020408163265,
+       "any_action": 0.002551020408163265
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.3054201319185546,
+       "drop_coverage": 0.3054201319185546,
+       "selective_error": 0.002190923317683881,
+       "benign_dropped": 0.001141552511415525
+      }
+     },
+     "4-action": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.2502628811777077,
+       "drop_coverage": 0.2502628811777077,
+       "selective_error": 0.0019098548510313217,
+       "benign_dropped": 0.0005707762557077625
+      }
+     },
+     "spoof-redirect": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.3456648503967116,
+       "drop_coverage": 0.3456648503967116,
+       "selective_error": 0.002488938053097345,
+       "benign_dropped": 0.0017123287671232876
+      }
+     },
+     "flood-inspect": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.01020408163265306
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.4271102189083262,
+       "drop_coverage": 0.2502628811777077,
+       "selective_error": 0.02864816472694718,
+       "benign_dropped": 0.0005707762557077625
+      }
+     }
+    }
+   },
+   "with_iot23_echo": {
+    "coverage": 0.2707198164611414,
+    "selective_error": 0.0,
+    "corpus_benign_dropped": 0.0,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.0,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": null,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "with_iot23_hue": {
+    "coverage": 0.399961762737788,
+    "selective_error": 0.0016730401529636712,
+    "corpus_benign_dropped": 0.003995433789954338,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.04336734693877551,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.0,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "with_iot23_somfy": {
+    "coverage": 0.4069400630914827,
+    "selective_error": 0.001644350481559784,
+    "corpus_benign_dropped": 0.003995433789954338,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.04336734693877551,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.0,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "seed": 41,
+   "corpus": {
+    "coverage": 0.4369163156930965,
+    "selective_error": 0.003143336127409891,
+    "corpus_benign_dropped": 0.0078003120124804995,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.04591836734693878,
+     "iot23_hue": 0.014705882352941176,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.0,
+     "iot23_hue": 1.0,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      1,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "tiered": {
+     "3-action": {
+      "iot23_echo": {
+       "dropped": 0.002551020408163265,
+       "any_action": 0.002551020408163265
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.30049441494231827,
+       "drop_coverage": 0.30049441494231827,
+       "selective_error": 0.0030469226081657527,
+       "benign_dropped": 0.0015600624024961
+      }
+     },
+     "4-action": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.268082768723677,
+       "drop_coverage": 0.268082768723677,
+       "selective_error": 0.004439890710382513,
+       "benign_dropped": 0.0020800832033281333
+      }
+     },
+     "spoof-redirect": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.3369346273576268,
+       "drop_coverage": 0.3369346273576268,
+       "selective_error": 0.0038043478260869567,
+       "benign_dropped": 0.0026001040041601664
+      }
+     },
+     "flood-inspect": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.014705882352941176
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.3789598974546786,
+       "drop_coverage": 0.268082768723677,
+       "selective_error": 0.016670693404203914,
+       "benign_dropped": 0.0020800832033281333
+      }
+     }
+    }
+   },
+   "with_iot23_echo": {
+    "coverage": 0.44469877311847644,
+    "selective_error": 0.0032942145357216387,
+    "corpus_benign_dropped": 0.008320332813312533,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.0,
+     "iot23_hue": 0.014705882352941176,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": null,
+     "iot23_hue": 1.0,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "with_iot23_hue": {
+    "coverage": 0.4533968137703717,
+    "selective_error": 0.0030290791599353797,
+    "corpus_benign_dropped": 0.0078003120124804995,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.05102040816326531,
+     "iot23_hue": 0.014705882352941176,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.1,
+     "iot23_hue": 1.0,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      1,
+      0,
+      0,
+      2,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "with_iot23_somfy": {
+    "coverage": 0.4536714887383263,
+    "selective_error": 0.0034308779011099897,
+    "corpus_benign_dropped": 0.008840353614144566,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.05102040816326531,
+     "iot23_hue": 0.014705882352941176,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.1,
+     "iot23_hue": 1.0,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      1,
+      0,
+      0,
+      2,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "seed": 42,
+   "corpus": {
+    "coverage": 0.42504996668887407,
+    "selective_error": 0.001567398119122257,
+    "corpus_benign_dropped": 0.0038953811908736783,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.05102040816326531,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.1,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      1,
+      0,
+      0,
+      2,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "tiered": {
+     "3-action": {
+      "iot23_echo": {
+       "dropped": 0.002551020408163265,
+       "any_action": 0.002551020408163265
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.2804796802131912,
+       "drop_coverage": 0.2804796802131912,
+       "selective_error": 0.0010179843909060061,
+       "benign_dropped": 0.0005564830272676684
+      }
+     },
+     "4-action": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.26572761016465213,
+       "drop_coverage": 0.26572761016465213,
+       "selective_error": 0.0017908309455587394,
+       "benign_dropped": 0.0005564830272676684
+      }
+     },
+     "spoof-redirect": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.34691158275435424,
+       "drop_coverage": 0.34691158275435424,
+       "selective_error": 0.003017832647462277,
+       "benign_dropped": 0.0022259321090706734
+      }
+     },
+     "flood-inspect": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.00510204081632653
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.39288093651851147,
+       "drop_coverage": 0.26572761016465213,
+       "selective_error": 0.01937984496124031,
+       "benign_dropped": 0.0005564830272676684
+      }
+     }
+    }
+   },
+   "with_iot23_echo": {
+    "coverage": 0.4110592938041306,
+    "selective_error": 0.0018522806205140078,
+    "corpus_benign_dropped": 0.004451864218141347,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.0,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": null,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "with_iot23_hue": {
+    "coverage": 0.42476444275245073,
+    "selective_error": 0.001568451714093659,
+    "corpus_benign_dropped": 0.0038953811908736783,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.05102040816326531,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.1,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      1,
+      0,
+      0,
+      2,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "with_iot23_somfy": {
+    "coverage": 0.42514514133434855,
+    "selective_error": 0.0015670472352809493,
+    "corpus_benign_dropped": 0.0038953811908736783,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.05102040816326531,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.1,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      1,
+      0,
+      0,
+      2,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "seed": 43,
+   "corpus": {
+    "coverage": 0.47872642850374303,
+    "selective_error": 0.0059382422802850355,
+    "corpus_benign_dropped": 0.0169971671388102,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.05102040816326531,
+     "iot23_hue": 0.014705882352941176,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.1,
+     "iot23_hue": 1.0,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      1,
+      0,
+      0,
+      2,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "tiered": {
+     "3-action": {
+      "iot23_echo": {
+       "dropped": 0.002551020408163265,
+       "any_action": 0.002551020408163265
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.30787453804605325,
+       "drop_coverage": 0.30787453804605325,
+       "selective_error": 0.0043090181594336715,
+       "benign_dropped": 0.0022662889518413596
+      }
+     },
+     "4-action": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.24476452193689,
+       "drop_coverage": 0.24476452193689,
+       "selective_error": 0.003484320557491289,
+       "benign_dropped": 0.0005665722379603399
+      }
+     },
+     "spoof-redirect": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.32332038282952713,
+       "drop_coverage": 0.32332038282952713,
+       "selective_error": 0.003223915592028136,
+       "benign_dropped": 0.0033994334277620396
+      }
+     },
+     "flood-inspect": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.03316326530612245
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.349568842983038,
+       "drop_coverage": 0.24476452193689,
+       "selective_error": 0.01924640824071564,
+       "benign_dropped": 0.0005665722379603399
+      }
+     }
+    }
+   },
+   "with_iot23_echo": {
+    "coverage": 0.44243343125177675,
+    "selective_error": 0.0049261083743842365,
+    "corpus_benign_dropped": 0.013031161473087818,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.002551020408163265,
+     "iot23_hue": 0.014705882352941176,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.0,
+     "iot23_hue": 1.0,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "with_iot23_hue": {
+    "coverage": 0.46508101961527526,
+    "selective_error": 0.0057049714751426246,
+    "corpus_benign_dropped": 0.01586402266288952,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.05102040816326531,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.1,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      1,
+      0,
+      0,
+      2,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "with_iot23_somfy": {
+    "coverage": 0.4788211882876907,
+    "selective_error": 0.005937067088858104,
+    "corpus_benign_dropped": 0.0169971671388102,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.05102040816326531,
+     "iot23_hue": 0.014705882352941176,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.1,
+     "iot23_hue": 1.0,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      1,
+      0,
+      0,
+      2,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "seed": 44,
+   "corpus": {
+    "coverage": 0.4040537980678159,
+    "selective_error": 0.0025785278949835913,
+    "corpus_benign_dropped": 0.006197183098591549,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.04846938775510204,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.10526315789473684,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      0,
+      0,
+      0,
+      2,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "tiered": {
+     "3-action": {
+      "iot23_echo": {
+       "dropped": 0.002551020408163265,
+       "any_action": 0.002551020408163265
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.2813979920439477,
+       "drop_coverage": 0.2813979920439477,
+       "selective_error": 0.01110737125546954,
+       "benign_dropped": 0.0016901408450704226
+      }
+     },
+     "4-action": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.2634021594999053,
+       "drop_coverage": 0.2634021594999053,
+       "selective_error": 0.005034160373966199,
+       "benign_dropped": 0.0033802816901408453
+      }
+     },
+     "spoof-redirect": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.3302708846372419,
+       "drop_coverage": 0.3302708846372419,
+       "selective_error": 0.0031545741324921135,
+       "benign_dropped": 0.0050704225352112674
+      }
+     },
+     "flood-inspect": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.03316326530612245
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.39941276756961547,
+       "drop_coverage": 0.2634021594999053,
+       "selective_error": 0.02561062366611335,
+       "benign_dropped": 0.0033802816901408453
+      }
+     }
+    }
+   },
+   "with_iot23_echo": {
+    "coverage": 0.39486645197954157,
+    "selective_error": 0.0023986567522187576,
+    "corpus_benign_dropped": 0.005633802816901409,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.0,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": null,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "with_iot23_hue": {
+    "coverage": 0.410399696912294,
+    "selective_error": 0.002538656819755366,
+    "corpus_benign_dropped": 0.006197183098591549,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.04846938775510204,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.10526315789473684,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      0,
+      0,
+      0,
+      2,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "with_iot23_somfy": {
+    "coverage": 0.4085053987497632,
+    "selective_error": 0.002550428935775562,
+    "corpus_benign_dropped": 0.006197183098591549,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.04846938775510204,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.10526315789473684,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      0,
+      0,
+      0,
+      2,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "seed": 45,
+   "corpus": {
+    "coverage": 0.34174247397542906,
+    "selective_error": 0.0005488474204171241,
+    "corpus_benign_dropped": 0.0010746910263299302,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.0,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": null,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "tiered": {
+     "3-action": {
+      "iot23_echo": {
+       "dropped": 0.002551020408163265,
+       "any_action": 0.002551020408163265
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.31013785988933695,
+       "drop_coverage": 0.31013785988933695,
+       "selective_error": 0.0042334442092530995,
+       "benign_dropped": 0.0021493820526598604
+      }
+     },
+     "4-action": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.27365656944574696,
+       "drop_coverage": 0.27365656944574696,
+       "selective_error": 0.0065113091158327625,
+       "benign_dropped": 0.0032240730789897904
+      }
+     },
+     "spoof-redirect": {
+      "iot23_echo": {
+       "dropped": 0.00510204081632653,
+       "any_action": 0.00510204081632653
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.3583419300384507,
+       "drop_coverage": 0.3583419300384507,
+       "selective_error": 0.00654278984559016,
+       "benign_dropped": 0.0037614185921547557
+      }
+     },
+     "flood-inspect": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.40767138703929473,
+       "drop_coverage": 0.27365656944574696,
+       "selective_error": 0.0239245456636761,
+       "benign_dropped": 0.0032240730789897904
+      }
+     }
+    }
+   },
+   "with_iot23_echo": {
+    "coverage": 0.32955078308168434,
+    "selective_error": 0.0008537279453614115,
+    "corpus_benign_dropped": 0.0016120365394948952,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.0,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": null,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "with_iot23_hue": {
+    "coverage": 0.34117978054956394,
+    "selective_error": 0.0005497526113249038,
+    "corpus_benign_dropped": 0.0010746910263299302,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.0,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": null,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "with_iot23_somfy": {
+    "coverage": 0.34174247397542906,
+    "selective_error": 0.0005488474204171241,
+    "corpus_benign_dropped": 0.0010746910263299302,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.0,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": null,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "seed": 46,
+   "corpus": {
+    "coverage": 0.4499258160237389,
+    "selective_error": 0.0026793075020610057,
+    "corpus_benign_dropped": 0.006711409395973154,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.05102040816326531,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.1,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      1,
+      0,
+      0,
+      2,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "tiered": {
+     "3-action": {
+      "iot23_echo": {
+       "dropped": 0.002551020408163265,
+       "any_action": 0.002551020408163265
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.2727188427299703,
+       "drop_coverage": 0.2727188427299703,
+       "selective_error": 0.0023801428085685142,
+       "benign_dropped": 0.0010325245224574084
+      }
+     },
+     "4-action": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.26706231454005935,
+       "drop_coverage": 0.26706231454005935,
+       "selective_error": 0.002777777777777778,
+       "benign_dropped": 0.0010325245224574084
+      }
+     },
+     "spoof-redirect": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.32965504451038574,
+       "drop_coverage": 0.32965504451038574,
+       "selective_error": 0.0030942334739803095,
+       "benign_dropped": 0.0005162622612287042
+      }
+     },
+     "flood-inspect": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.37054896142433236,
+       "drop_coverage": 0.26706231454005935,
+       "selective_error": 0.015015015015015015,
+       "benign_dropped": 0.0010325245224574084
+      }
+     }
+    }
+   },
+   "with_iot23_echo": {
+    "coverage": 0.4444547477744807,
+    "selective_error": 0.002712288754433549,
+    "corpus_benign_dropped": 0.006711409395973154,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.002551020408163265,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.0,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "with_iot23_hue": {
+    "coverage": 0.4522440652818991,
+    "selective_error": 0.002870617182694279,
+    "corpus_benign_dropped": 0.007227671657201859,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.05102040816326531,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.1,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      1,
+      0,
+      0,
+      2,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "with_iot23_somfy": {
+    "coverage": 0.4518731454005935,
+    "selective_error": 0.0026677611327724196,
+    "corpus_benign_dropped": 0.006711409395973154,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.05102040816326531,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.1,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      1,
+      0,
+      0,
+      2,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "seed": 47,
+   "corpus": {
+    "coverage": 0.3426639113281984,
+    "selective_error": 0.0024671052631578946,
+    "corpus_benign_dropped": 0.005113636363636364,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.0,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": null,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "tiered": {
+     "3-action": {
+      "iot23_echo": {
+       "dropped": 0.002551020408163265,
+       "any_action": 0.002551020408163265
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.30875446176967875,
+       "drop_coverage": 0.30875446176967875,
+       "selective_error": 0.004563431700638881,
+       "benign_dropped": 0.0017045454545454545
+      }
+     },
+     "4-action": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.27099380048844635,
+       "drop_coverage": 0.27099380048844635,
+       "selective_error": 0.006239168110918544,
+       "benign_dropped": 0.0017045454545454545
+      }
+     },
+     "spoof-redirect": {
+      "iot23_echo": {
+       "dropped": 0.007653061224489796,
+       "any_action": 0.007653061224489796
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.3482998309224122,
+       "drop_coverage": 0.3482998309224122,
+       "selective_error": 0.0048543689320388345,
+       "benign_dropped": 0.002840909090909091
+      }
+     },
+     "flood-inspect": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.014705882352941176
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.390193499906068,
+       "drop_coverage": 0.27099380048844635,
+       "selective_error": 0.020462205103514684,
+       "benign_dropped": 0.0017045454545454545
+      }
+     }
+    }
+   },
+   "with_iot23_echo": {
+    "coverage": 0.3477362389629908,
+    "selective_error": 0.002701242571582928,
+    "corpus_benign_dropped": 0.005681818181818182,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.0,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": null,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "with_iot23_hue": {
+    "coverage": 0.34256997933496147,
+    "selective_error": 0.0024677817384151355,
+    "corpus_benign_dropped": 0.005113636363636364,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.0,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": null,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "with_iot23_somfy": {
+    "coverage": 0.3426639113281984,
+    "selective_error": 0.0024671052631578946,
+    "corpus_benign_dropped": 0.005113636363636364,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.0,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": null,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "seed": 48,
+   "corpus": {
+    "coverage": 0.471638353008926,
+    "selective_error": 0.0030525030525030525,
+    "corpus_benign_dropped": 0.008342602892102336,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.05102040816326531,
+     "iot23_hue": 0.014705882352941176,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.1,
+     "iot23_hue": 1.0,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      1,
+      0,
+      0,
+      2,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "tiered": {
+     "3-action": {
+      "iot23_echo": {
+       "dropped": 0.002551020408163265,
+       "any_action": 0.002551020408163265
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.2837124484115558,
+       "drop_coverage": 0.2837124484115558,
+       "selective_error": 0.003044654939106901,
+       "benign_dropped": 0.0
+      }
+     },
+     "4-action": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.2525194356464152,
+       "drop_coverage": 0.2525194356464152,
+       "selective_error": 0.0019004180919802356,
+       "benign_dropped": 0.0
+      }
+     },
+     "spoof-redirect": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.3426432479124676,
+       "drop_coverage": 0.3426432479124676,
+       "selective_error": 0.0011204481792717086,
+       "benign_dropped": 0.0005561735261401557
+      }
+     },
+     "flood-inspect": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.00510204081632653
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.35406468950954983,
+       "drop_coverage": 0.2525194356464152,
+       "selective_error": 0.0124695039306045,
+       "benign_dropped": 0.0
+      }
+     }
+    }
+   },
+   "with_iot23_echo": {
+    "coverage": 0.435934350705442,
+    "selective_error": 0.0017613386173491853,
+    "corpus_benign_dropped": 0.004449388209121246,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.0,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": null,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "with_iot23_hue": {
+    "coverage": 0.46693540646895093,
+    "selective_error": 0.0028776978417266188,
+    "corpus_benign_dropped": 0.00778642936596218,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.05102040816326531,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.1,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      1,
+      0,
+      0,
+      2,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "with_iot23_somfy": {
+    "coverage": 0.4715423745081102,
+    "selective_error": 0.003053124363932424,
+    "corpus_benign_dropped": 0.008342602892102336,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.05102040816326531,
+     "iot23_hue": 0.014705882352941176,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.1,
+     "iot23_hue": 1.0,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      1,
+      0,
+      0,
+      2,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "seed": 49,
+   "corpus": {
+    "coverage": 0.3679412038329147,
+    "selective_error": 0.0005056890012642225,
+    "corpus_benign_dropped": 0.0011383039271485487,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.0,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": null,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "tiered": {
+     "3-action": {
+      "iot23_echo": {
+       "dropped": 0.002551020408163265,
+       "any_action": 0.002551020408163265
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.3088659410177691,
+       "drop_coverage": 0.3088659410177691,
+       "selective_error": 0.015060240963855422,
+       "benign_dropped": 0.0005691519635742744
+      }
+     },
+     "4-action": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.2581635500976835,
+       "drop_coverage": 0.2581635500976835,
+       "selective_error": 0.003963963963963964,
+       "benign_dropped": 0.0
+      }
+     },
+     "spoof-redirect": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.34347381151735046,
+       "drop_coverage": 0.34347381151735046,
+       "selective_error": 0.005958829902491874,
+       "benign_dropped": 0.0022766078542970974
+      }
+     },
+     "flood-inspect": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.37845380965671227,
+       "drop_coverage": 0.2581635500976835,
+       "selective_error": 0.019174041297935103,
+       "benign_dropped": 0.0
+      }
+     }
+    }
+   },
+   "with_iot23_echo": {
+    "coverage": 0.3672899804632989,
+    "selective_error": 0.0007598784194528875,
+    "corpus_benign_dropped": 0.001707455890722823,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.0,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": null,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "with_iot23_hue": {
+    "coverage": 0.36766210810307937,
+    "selective_error": 0.0007591093117408907,
+    "corpus_benign_dropped": 0.001707455890722823,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.0,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": null,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "with_iot23_somfy": {
+    "coverage": 0.3678481719229696,
+    "selective_error": 0.0005058168942842691,
+    "corpus_benign_dropped": 0.0011383039271485487,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.0,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": null,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "seed": 50,
+   "corpus": {
+    "coverage": 0.41761148904006046,
+    "selective_error": 0.0018099547511312218,
+    "corpus_benign_dropped": 0.004595060310166571,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.04591836734693878,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.0,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      1,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "tiered": {
+     "3-action": {
+      "iot23_echo": {
+       "dropped": 0.002551020408163265,
+       "any_action": 0.002551020408163265
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.309145880574452,
+       "drop_coverage": 0.309145880574452,
+       "selective_error": 0.004889975550122249,
+       "benign_dropped": 0.0022975301550832855
+      }
+     },
+     "4-action": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.2700302343159486,
+       "drop_coverage": 0.2700302343159486,
+       "selective_error": 0.004548635409377187,
+       "benign_dropped": 0.0017231476163124641
+      }
+     },
+     "spoof-redirect": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.35648148148148145,
+       "drop_coverage": 0.35648148148148145,
+       "selective_error": 0.005300821627352239,
+       "benign_dropped": 0.0022975301550832855
+      }
+     },
+     "flood-inspect": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.00510204081632653
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.014705882352941176
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.4135487528344671,
+       "drop_coverage": 0.2700302343159486,
+       "selective_error": 0.022389764679003884,
+       "benign_dropped": 0.0017231476163124641
+      }
+     }
+    }
+   },
+   "with_iot23_echo": {
+    "coverage": 0.4032501889644747,
+    "selective_error": 0.0021087160262417996,
+    "corpus_benign_dropped": 0.005169442848937392,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.0,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": null,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "with_iot23_hue": {
+    "coverage": 0.4170445956160242,
+    "selective_error": 0.0020389669234254643,
+    "corpus_benign_dropped": 0.005169442848937392,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.04591836734693878,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.0,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      1,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "with_iot23_somfy": {
+    "coverage": 0.4178004535147392,
+    "selective_error": 0.0018091361374943465,
+    "corpus_benign_dropped": 0.004595060310166571,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.04591836734693878,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.0,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      1,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "seed": 51,
+   "corpus": {
+    "coverage": 0.42677785065117585,
+    "selective_error": 0.001756311745334797,
+    "corpus_benign_dropped": 0.004561003420752566,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.04591836734693878,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.9444444444444444,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      17,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "tiered": {
+     "3-action": {
+      "iot23_echo": {
+       "dropped": 0.002551020408163265,
+       "any_action": 0.002551020408163265
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.30759861332333926,
+       "drop_coverage": 0.30759861332333926,
+       "selective_error": 0.010356381358513555,
+       "benign_dropped": 0.0011402508551881414
+      }
+     },
+     "4-action": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.2664667853462007,
+       "drop_coverage": 0.2664667853462007,
+       "selective_error": 0.004219409282700422,
+       "benign_dropped": 0.0005701254275940707
+      }
+     },
+     "spoof-redirect": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.3313969830413192,
+       "drop_coverage": 0.3313969830413192,
+       "selective_error": 0.0031099802092168505,
+       "benign_dropped": 0.0005701254275940707
+      }
+     },
+     "flood-inspect": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.014705882352941176
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.41253630656797524,
+       "drop_coverage": 0.2664667853462007,
+       "selective_error": 0.02271178741766977,
+       "benign_dropped": 0.0005701254275940707
+      }
+     }
+    }
+   },
+   "with_iot23_echo": {
+    "coverage": 0.4168462475405228,
+    "selective_error": 0.0024724657226342997,
+    "corpus_benign_dropped": 0.006271379703534778,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.0,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": null,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "with_iot23_hue": {
+    "coverage": 0.42696523938911274,
+    "selective_error": 0.0017555409260478386,
+    "corpus_benign_dropped": 0.004561003420752566,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.04591836734693878,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.9444444444444444,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      17,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "with_iot23_somfy": {
+    "coverage": 0.42649676754427057,
+    "selective_error": 0.0017574692442882249,
+    "corpus_benign_dropped": 0.004561003420752566,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.04591836734693878,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.9444444444444444,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      17,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "seed": 52,
+   "corpus": {
+    "coverage": 0.4724216093690971,
+    "selective_error": 0.004198320671731308,
+    "corpus_benign_dropped": 0.011087645195353749,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.04591836734693878,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.0,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      1,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "tiered": {
+     "3-action": {
+      "iot23_echo": {
+       "dropped": 0.002551020408163265,
+       "any_action": 0.002551020408163265
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.2999622213826974,
+       "drop_coverage": 0.2999622213826974,
+       "selective_error": 0.0028337531486146094,
+       "benign_dropped": 0.0026399155227032735
+      }
+     },
+     "4-action": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.23857196826596147,
+       "drop_coverage": 0.23857196826596147,
+       "selective_error": 0.0023752969121140144,
+       "benign_dropped": 0.0
+      }
+     },
+     "spoof-redirect": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.3448243294295429,
+       "drop_coverage": 0.3448243294295429,
+       "selective_error": 0.0049301561216105174,
+       "benign_dropped": 0.0021119324181626186
+      }
+     },
+     "flood-inspect": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.05612244897959184
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.014705882352941176
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.4450321118247072,
+       "drop_coverage": 0.23857196826596147,
+       "selective_error": 0.03353140916808149,
+       "benign_dropped": 0.0
+      }
+     }
+    }
+   },
+   "with_iot23_echo": {
+    "coverage": 0.468927087268606,
+    "selective_error": 0.004833836858006042,
+    "corpus_benign_dropped": 0.012671594508975714,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.002551020408163265,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.0,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "with_iot23_hue": {
+    "coverage": 0.44635436343029844,
+    "selective_error": 0.0029623360135421074,
+    "corpus_benign_dropped": 0.007391763463569166,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.04591836734693878,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.0,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      1,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "with_iot23_somfy": {
+    "coverage": 0.47223271628258406,
+    "selective_error": 0.0042,
+    "corpus_benign_dropped": 0.011087645195353749,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.04591836734693878,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.0,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      1,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "seed": 53,
+   "corpus": {
+    "coverage": 0.46411704787480323,
+    "selective_error": 0.003391859537110934,
+    "corpus_benign_dropped": 0.009714285714285713,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.05102040816326531,
+     "iot23_hue": 0.014705882352941176,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.1,
+     "iot23_hue": 1.0,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      1,
+      0,
+      0,
+      2,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "tiered": {
+     "3-action": {
+      "iot23_echo": {
+       "dropped": 0.002551020408163265,
+       "any_action": 0.002551020408163265
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.30141679785165293,
+       "drop_coverage": 0.30141679785165293,
+       "selective_error": 0.005837173579109063,
+       "benign_dropped": 0.0017142857142857142
+      }
+     },
+     "4-action": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.2594684693027132,
+       "drop_coverage": 0.2594684693027132,
+       "selective_error": 0.0046395431834403995,
+       "benign_dropped": 0.002285714285714286
+      }
+     },
+     "spoof-redirect": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.3395684785628299,
+       "drop_coverage": 0.3395684785628299,
+       "selective_error": 0.00545404963185165,
+       "benign_dropped": 0.002857142857142857
+      }
+     },
+     "flood-inspect": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.00510204081632653
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.3955921844615242,
+       "drop_coverage": 0.2594684693027132,
+       "selective_error": 0.025046816479400748,
+       "benign_dropped": 0.002285714285714286
+      }
+     }
+    }
+   },
+   "with_iot23_echo": {
+    "coverage": 0.4604130012038152,
+    "selective_error": 0.0036202735317779565,
+    "corpus_benign_dropped": 0.010285714285714285,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.0,
+     "iot23_hue": 0.014705882352941176,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": null,
+     "iot23_hue": 1.0,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "with_iot23_hue": {
+    "coverage": 0.4775442170571349,
+    "selective_error": 0.0042660461508629045,
+    "corpus_benign_dropped": 0.012571428571428572,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.05102040816326531,
+     "iot23_hue": 0.014705882352941176,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.1,
+     "iot23_hue": 1.0,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      1,
+      0,
+      0,
+      2,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "with_iot23_somfy": {
+    "coverage": 0.46411704787480323,
+    "selective_error": 0.003591380686352753,
+    "corpus_benign_dropped": 0.010285714285714285,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.05102040816326531,
+     "iot23_hue": 0.014705882352941176,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.1,
+     "iot23_hue": 1.0,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      1,
+      0,
+      0,
+      2,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "seed": 54,
+   "corpus": {
+    "coverage": 0.45297006764896675,
+    "selective_error": 0.0032733224222585926,
+    "corpus_benign_dropped": 0.008968609865470852,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.05102040816326531,
+     "iot23_hue": 0.014705882352941176,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.1,
+     "iot23_hue": 1.0,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      1,
+      0,
+      0,
+      2,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "tiered": {
+     "3-action": {
+      "iot23_echo": {
+       "dropped": 0.002551020408163265,
+       "any_action": 0.002551020408163265
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.3056250579186359,
+       "drop_coverage": 0.3056250579186359,
+       "selective_error": 0.002425712553062462,
+       "benign_dropped": 0.002242152466367713
+      }
+     },
+     "4-action": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.26735242331572606,
+       "drop_coverage": 0.26735242331572606,
+       "selective_error": 0.005545927209705373,
+       "benign_dropped": 0.0016816143497757848
+      }
+     },
+     "spoof-redirect": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.3311092577147623,
+       "drop_coverage": 0.3311092577147623,
+       "selective_error": 0.0041981528127623844,
+       "benign_dropped": 0.0016816143497757848
+      }
+     },
+     "flood-inspect": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.3848577518302289,
+       "drop_coverage": 0.26735242331572606,
+       "selective_error": 0.018540813869491933,
+       "benign_dropped": 0.0016816143497757848
+      }
+     }
+    }
+   },
+   "with_iot23_echo": {
+    "coverage": 0.45426744509313316,
+    "selective_error": 0.0036719706242350062,
+    "corpus_benign_dropped": 0.010089686098654708,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.007653061224489796,
+     "iot23_hue": 0.014705882352941176,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.6666666666666666,
+     "iot23_hue": 1.0,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      2,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "with_iot23_hue": {
+    "coverage": 0.45389676582337135,
+    "selective_error": 0.0036749693752552064,
+    "corpus_benign_dropped": 0.010089686098654708,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.05102040816326531,
+     "iot23_hue": 0.014705882352941176,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.1,
+     "iot23_hue": 1.0,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      1,
+      0,
+      0,
+      2,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "with_iot23_somfy": {
+    "coverage": 0.4526920581966454,
+    "selective_error": 0.0032753326509723643,
+    "corpus_benign_dropped": 0.008968609865470852,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.05102040816326531,
+     "iot23_hue": 0.014705882352941176,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.1,
+     "iot23_hue": 1.0,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      1,
+      0,
+      0,
+      2,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "seed": 55,
+   "corpus": {
+    "coverage": 0.4029808239984811,
+    "selective_error": 0.0014134275618374558,
+    "corpus_benign_dropped": 0.003401360544217687,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.04336734693877551,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.0,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "tiered": {
+     "3-action": {
+      "iot23_echo": {
+       "dropped": 0.002551020408163265,
+       "any_action": 0.002551020408163265
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.31061325232580217,
+       "drop_coverage": 0.31061325232580217,
+       "selective_error": 0.004278728606356968,
+       "benign_dropped": 0.0022675736961451248
+      }
+     },
+     "4-action": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.25954053540915134,
+       "drop_coverage": 0.25954053540915134,
+       "selective_error": 0.0043891733723482075,
+       "benign_dropped": 0.0017006802721088435
+      }
+     },
+     "spoof-redirect": {
+      "iot23_echo": {
+       "dropped": 0.00510204081632653,
+       "any_action": 0.00510204081632653
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.33852287829884187,
+       "drop_coverage": 0.33852287829884187,
+       "selective_error": 0.0030846887268648347,
+       "benign_dropped": 0.0022675736961451248
+      }
+     },
+     "flood-inspect": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.00510204081632653
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.6617647058823529
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.2
+      },
+      "corpus": {
+       "coverage": 0.3776343269413328,
+       "drop_coverage": 0.25954053540915134,
+       "selective_error": 0.017345399698340876,
+       "benign_dropped": 0.0017006802721088435
+      }
+     }
+    }
+   },
+   "with_iot23_echo": {
+    "coverage": 0.3975697740649326,
+    "selective_error": 0.0014326647564469914,
+    "corpus_benign_dropped": 0.003401360544217687,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.0,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": null,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "with_iot23_hue": {
+    "coverage": 0.4026960318967154,
+    "selective_error": 0.0014144271570014145,
+    "corpus_benign_dropped": 0.003401360544217687,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.04336734693877551,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.0,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "with_iot23_somfy": {
+    "coverage": 0.40288589329789254,
+    "selective_error": 0.001413760603204524,
+    "corpus_benign_dropped": 0.003401360544217687,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.04336734693877551,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.0,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "seed": 56,
+   "corpus": {
+    "coverage": 0.0,
+    "selective_error": null,
+    "corpus_benign_dropped": 0.0,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.0,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": null,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "tiered": {
+     "3-action": {
+      "iot23_echo": {
+       "dropped": 0.002551020408163265,
+       "any_action": 0.002551020408163265
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.3057426112981669,
+       "drop_coverage": 0.3057426112981669,
+       "selective_error": 0.0039767513000917715,
+       "benign_dropped": 0.0011325028312570782
+      }
+     },
+     "4-action": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.26384212495323606,
+       "drop_coverage": 0.26384212495323606,
+       "selective_error": 0.004962779156327543,
+       "benign_dropped": 0.0005662514156285391
+      }
+     },
+     "spoof-redirect": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.3448372615039282,
+       "drop_coverage": 0.3448372615039282,
+       "selective_error": 0.0067805804176837535,
+       "benign_dropped": 0.003963759909399773
+      }
+     },
+     "flood-inspect": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.3543771043771044,
+       "drop_coverage": 0.26384212495323606,
+       "selective_error": 0.013723937714436528,
+       "benign_dropped": 0.0005662514156285391
+      }
+     }
+    }
+   },
+   "with_iot23_echo": {
+    "coverage": 0.0,
+    "selective_error": null,
+    "corpus_benign_dropped": 0.0,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.0,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": null,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "with_iot23_hue": {
+    "coverage": 0.0,
+    "selective_error": null,
+    "corpus_benign_dropped": 0.0,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.0,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": null,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "with_iot23_somfy": {
+    "coverage": 0.0,
+    "selective_error": null,
+    "corpus_benign_dropped": 0.0,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.0,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": null,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "seed": 57,
+   "corpus": {
+    "coverage": 0.46014089729328883,
+    "selective_error": 0.0032232070910556,
+    "corpus_benign_dropped": 0.009116809116809116,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.04591836734693878,
+     "iot23_hue": 0.014705882352941176,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.0,
+     "iot23_hue": 1.0,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      1,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "tiered": {
+     "3-action": {
+      "iot23_echo": {
+       "dropped": 0.002551020408163265,
+       "any_action": 0.002551020408163265
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.30700778642936594,
+       "drop_coverage": 0.30700778642936594,
+       "selective_error": 0.0024154589371980675,
+       "benign_dropped": 0.0017094017094017094
+      }
+     },
+     "4-action": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.2672413793103448,
+       "drop_coverage": 0.2672413793103448,
+       "selective_error": 0.0065903572667360385,
+       "benign_dropped": 0.0017094017094017094
+      }
+     },
+     "spoof-redirect": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.35159436410826844,
+       "drop_coverage": 0.35159436410826844,
+       "selective_error": 0.00817295017136831,
+       "benign_dropped": 0.004558404558404558
+      }
+     },
+     "flood-inspect": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.3656840934371524,
+       "drop_coverage": 0.2672413793103448,
+       "selective_error": 0.013434727503168568,
+       "benign_dropped": 0.0017094017094017094
+      }
+     }
+    }
+   },
+   "with_iot23_echo": {
+    "coverage": 0.45050055617352613,
+    "selective_error": 0.003703703703703704,
+    "corpus_benign_dropped": 0.010256410256410256,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.0,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": null,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "with_iot23_hue": {
+    "coverage": 0.45800889877641826,
+    "selective_error": 0.0030358227079538553,
+    "corpus_benign_dropped": 0.008547008547008548,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.04591836734693878,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.0,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      1,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "with_iot23_somfy": {
+    "coverage": 0.4599555061179088,
+    "selective_error": 0.0032245062474808546,
+    "corpus_benign_dropped": 0.009116809116809116,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.04591836734693878,
+     "iot23_hue": 0.014705882352941176,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.0,
+     "iot23_hue": 1.0,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      1,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "seed": 58,
+   "corpus": {
+    "coverage": 0.46102598267821454,
+    "selective_error": 0.002890173410404624,
+    "corpus_benign_dropped": 0.007954545454545454,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.05102040816326531,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.1,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      1,
+      0,
+      0,
+      2,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "tiered": {
+     "3-action": {
+      "iot23_echo": {
+       "dropped": 0.002551020408163265,
+       "any_action": 0.002551020408163265
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.3083658513372038,
+       "drop_coverage": 0.3083658513372038,
+       "selective_error": 0.0021604938271604936,
+       "benign_dropped": 0.0017045454545454545
+      }
+     },
+     "4-action": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.2435519177691063,
+       "drop_coverage": 0.2435519177691063,
+       "selective_error": 0.0007815552950371239,
+       "benign_dropped": 0.0005681818181818182
+      }
+     },
+     "spoof-redirect": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.2942800038069858,
+       "drop_coverage": 0.2942800038069858,
+       "selective_error": 0.0003234152652005175,
+       "benign_dropped": 0.0005681818181818182
+      }
+     },
+     "flood-inspect": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.34186732654420865,
+       "drop_coverage": 0.2435519177691063,
+       "selective_error": 0.01475501113585746,
+       "benign_dropped": 0.0005681818181818182
+      }
+     }
+    }
+   },
+   "with_iot23_echo": {
+    "coverage": 0.47425525839916244,
+    "selective_error": 0.0034115994380895043,
+    "corpus_benign_dropped": 0.009659090909090909,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.007653061224489796,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.6666666666666666,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      2,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "with_iot23_hue": {
+    "coverage": 0.4590273151232512,
+    "selective_error": 0.0022807381297947336,
+    "corpus_benign_dropped": 0.00625,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.05102040816326531,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.1,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      1,
+      0,
+      0,
+      2,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "with_iot23_somfy": {
+    "coverage": 0.4580755686685067,
+    "selective_error": 0.00249324745480989,
+    "corpus_benign_dropped": 0.006818181818181818,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.05102040816326531,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": 0.1,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      17,
+      1,
+      0,
+      0,
+      2,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "seed": 59,
+   "corpus": {
+    "coverage": 0.350297176820208,
+    "selective_error": 0.001325556733828208,
+    "corpus_benign_dropped": 0.0027502750275027505,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.0,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": null,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    },
+    "tiered": {
+     "3-action": {
+      "iot23_echo": {
+       "dropped": 0.002551020408163265,
+       "any_action": 0.002551020408163265
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.312407132243685,
+       "drop_coverage": 0.312407132243685,
+       "selective_error": 0.00267538644470868,
+       "benign_dropped": 0.0022002200220022
+      }
+     },
+     "4-action": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.2712667161961367,
+       "drop_coverage": 0.2712667161961367,
+       "selective_error": 0.005135227661759671,
+       "benign_dropped": 0.0011001100110011
+      }
+     },
+     "spoof-redirect": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.3422176820208024,
+       "drop_coverage": 0.3422176820208024,
+       "selective_error": 0.004884667571234735,
+       "benign_dropped": 0.0022002200220022
+      }
+     },
+     "flood-inspect": {
+      "iot23_echo": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "iot23_hue": {
+       "dropped": 0.0,
+       "any_action": 0.029411764705882353
+      },
+      "iot23_somfy": {
+       "dropped": 0.0,
+       "any_action": 0.0
+      },
+      "corpus": {
+       "coverage": 0.3928306092124814,
+       "drop_coverage": 0.2712667161961367,
+       "selective_error": 0.017966903073286054,
+       "benign_dropped": 0.0011001100110011
+      }
+     }
+    }
+   },
+   "with_iot23_echo": {
+    "coverage": 0.3383172362555721,
+    "selective_error": 0.0016469942355201758,
+    "corpus_benign_dropped": 0.0033003300330033004,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.0,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": null,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "with_iot23_hue": {
+    "coverage": 0.3286589895988113,
+    "selective_error": 0.0008476970895733258,
+    "corpus_benign_dropped": 0.0016501650165016502,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.0,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": null,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   },
+   "with_iot23_somfy": {
+    "coverage": 0.350297176820208,
+    "selective_error": 0.001325556733828208,
+    "corpus_benign_dropped": 0.0027502750275027505,
+    "unseen_benign_dropped": {
+     "iot23_echo": 0.0,
+     "iot23_hue": 0.0,
+     "iot23_somfy": 0.0
+    },
+    "dropped_in_application_attack_cells": {
+     "iot23_echo": null,
+     "iot23_hue": null,
+     "iot23_somfy": null
+    },
+    "dropped_by_cell_majority": {
+     "iot23_echo": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_hue": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "iot23_somfy": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  }
+ ]
+}

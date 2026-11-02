@@ -1,0 +1,382 @@
+{
+ "window_us": 1000000,
+ "level_min": 256,
+ "victim_slots": 4096,
+ "flow_slots": 16384,
+ "captures": {
+  "DDoS-SYN_Flood1": {
+   "packets": 787167,
+   "flows": 345329,
+   "slot_claims": 782441,
+   "span_s": 52.169844,
+   "victims": 66,
+   "peak_new_flows_per_window": 21012,
+   "peak_new_flows_per_window_slot": 21012,
+   "top_victims": [
+    {
+     "addr": "192.168.137.161",
+     "peak": 21012
+    },
+    {
+     "addr": "192.168.137.240",
+     "peak": 74
+    },
+    {
+     "addr": "192.168.137.58",
+     "peak": 60
+    },
+    {
+     "addr": "192.168.137.195",
+     "peak": 55
+    },
+    {
+     "addr": "192.168.137.224",
+     "peak": 53
+    }
+   ],
+   "alerts": 323,
+   "alert_levels": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+   ],
+   "first_alert_s": 0.014372,
+   "alert_victims": [
+    "192.168.137.161"
+   ],
+   "alert_sources": 6
+  },
+  "DoS-TCP_Flood1": {
+   "packets": 763499,
+   "flows": 65776,
+   "slot_claims": 379935,
+   "span_s": 26.36612,
+   "victims": 109,
+   "peak_new_flows_per_window": 17023,
+   "peak_new_flows_per_window_slot": 17023,
+   "top_victims": [
+    {
+     "addr": "192.168.137.178",
+     "peak": 17023
+    },
+    {
+     "addr": "255.255.255.255",
+     "peak": 8
+    },
+    {
+     "addr": "52.91.195.103",
+     "peak": 6
+    },
+    {
+     "addr": "192.168.137.1",
+     "peak": 5
+    },
+    {
+     "addr": "224.0.0.251",
+     "peak": 4
+    }
+   ],
+   "alerts": 162,
+   "alert_levels": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+   ],
+   "first_alert_s": 0.015703,
+   "alert_victims": [
+    "192.168.137.178"
+   ],
+   "alert_sources": 1
+  },
+  "Mirai-udpplain1": {
+   "packets": 106163,
+   "flows": 289,
+   "slot_claims": 289,
+   "span_s": 42.85348,
+   "victims": 104,
+   "peak_new_flows_per_window": 12,
+   "peak_new_flows_per_window_slot": 12,
+   "top_victims": [
+    {
+     "addr": "8.8.8.8",
+     "peak": 12
+    },
+    {
+     "addr": "192.168.137.1",
+     "peak": 9
+    },
+    {
+     "addr": "255.255.255.255",
+     "peak": 6
+    },
+    {
+     "addr": "192.168.137.248",
+     "peak": 5
+    },
+    {
+     "addr": "224.0.0.251",
+     "peak": 3
+    }
+   ],
+   "alerts": 0,
+   "alert_levels": [],
+   "first_alert_s": null,
+   "alert_victims": [],
+   "alert_sources": 0
+  },
+  "Recon-PortScan": {
+   "packets": 317282,
+   "flows": 89436,
+   "slot_claims": 93613,
+   "span_s": 8033.566756,
+   "victims": 424,
+   "peak_new_flows_per_window": 1002,
+   "peak_new_flows_per_window_slot": 1002,
+   "top_victims": [
+    {
+     "addr": "192.168.137.163",
+     "peak": 1002
+    },
+    {
+     "addr": "192.168.137.175",
+     "peak": 1001
+    },
+    {
+     "addr": "192.168.137.206",
+     "peak": 1000
+    },
+    {
+     "addr": "192.168.137.180",
+     "peak": 1000
+    },
+    {
+     "addr": "192.168.137.148",
+     "peak": 1000
+    }
+   ],
+   "alerts": 119,
+   "alert_levels": [
+    8,
+    9
+   ],
+   "first_alert_s": 42.993262,
+   "alert_victims": [
+    "192.168.137.100",
+    "192.168.137.109",
+    "192.168.137.116",
+    "192.168.137.128",
+    "192.168.137.133",
+    "192.168.137.148",
+    "192.168.137.163",
+    "192.168.137.169",
+    "192.168.137.174",
+    "192.168.137.175",
+    "192.168.137.180",
+    "192.168.137.181",
+    "192.168.137.196",
+    "192.168.137.206",
+    "192.168.137.224",
+    "192.168.137.234",
+    "192.168.137.52",
+    "192.168.137.59"
+   ],
+   "alert_sources": 1
+  },
+  "VulnerabilityScan": {
+   "packets": 293789,
+   "flows": 84490,
+   "slot_claims": 86562,
+   "span_s": 24906.887456,
+   "victims": 421,
+   "peak_new_flows_per_window": 881,
+   "peak_new_flows_per_window_slot": 881,
+   "top_victims": [
+    {
+     "addr": "192.168.137.100",
+     "peak": 881
+    },
+    {
+     "addr": "192.168.137.178",
+     "peak": 797
+    },
+    {
+     "addr": "192.168.137.4",
+     "peak": 508
+    },
+    {
+     "addr": "192.168.137.86",
+     "peak": 296
+    },
+    {
+     "addr": "192.168.137.217",
+     "peak": 206
+    }
+   ],
+   "alerts": 14,
+   "alert_levels": [
+    8,
+    9
+   ],
+   "first_alert_s": 28.734913,
+   "alert_victims": [
+    "192.168.137.100",
+    "192.168.137.178",
+    "192.168.137.4",
+    "192.168.137.86"
+   ],
+   "alert_sources": 5
+  },
+  "SqlInjection": {
+   "packets": 49995,
+   "flows": 4822,
+   "slot_claims": 5402,
+   "span_s": 3119.744138,
+   "victims": 250,
+   "peak_new_flows_per_window": 32,
+   "peak_new_flows_per_window_slot": 32,
+   "top_victims": [
+    {
+     "addr": "192.168.137.217",
+     "peak": 32
+    },
+    {
+     "addr": "192.168.137.4",
+     "peak": 31
+    },
+    {
+     "addr": "192.168.137.178",
+     "peak": 23
+    },
+    {
+     "addr": "192.168.137.1",
+     "peak": 12
+    },
+    {
+     "addr": "255.255.255.255",
+     "peak": 9
+    }
+   ],
+   "alerts": 0,
+   "alert_levels": [],
+   "first_alert_s": null,
+   "alert_victims": [],
+   "alert_sources": 0
+  },
+  "DNS_Spoofing": {
+   "packets": 125131,
+   "flows": 5983,
+   "slot_claims": 7372,
+   "span_s": 8052.663862,
+   "victims": 482,
+   "peak_new_flows_per_window": 96,
+   "peak_new_flows_per_window_slot": 96,
+   "top_victims": [
+    {
+     "addr": "192.168.137.35",
+     "peak": 96
+    },
+    {
+     "addr": "192.168.137.42",
+     "peak": 39
+    },
+    {
+     "addr": "192.168.137.1",
+     "peak": 17
+    },
+    {
+     "addr": "192.168.137.102",
+     "peak": 15
+    },
+    {
+     "addr": "192.168.137.124",
+     "peak": 11
+    }
+   ],
+   "alerts": 0,
+   "alert_levels": [],
+   "first_alert_s": null,
+   "alert_victims": [],
+   "alert_sources": 0
+  },
+  "MITM-ArpSpoofing1": {
+   "packets": 55532,
+   "flows": 266,
+   "slot_claims": 266,
+   "span_s": 40.575569,
+   "victims": 92,
+   "peak_new_flows_per_window": 8,
+   "peak_new_flows_per_window_slot": 8,
+   "top_victims": [
+    {
+     "addr": "255.255.255.255",
+     "peak": 8
+    },
+    {
+     "addr": "52.91.195.103",
+     "peak": 7
+    },
+    {
+     "addr": "44.235.194.199",
+     "peak": 4
+    },
+    {
+     "addr": "192.168.137.197",
+     "peak": 3
+    },
+    {
+     "addr": "192.168.137.150",
+     "peak": 3
+    }
+   ],
+   "alerts": 0,
+   "alert_levels": [],
+   "first_alert_s": null,
+   "alert_victims": [],
+   "alert_sources": 0
+  },
+  "DictionaryBruteForce": {
+   "packets": 124549,
+   "flows": 5783,
+   "slot_claims": 6899,
+   "span_s": 254640.02124,
+   "victims": 451,
+   "peak_new_flows_per_window": 64,
+   "peak_new_flows_per_window_slot": 64,
+   "top_victims": [
+    {
+     "addr": "192.168.137.11",
+     "peak": 64
+    },
+    {
+     "addr": "192.168.137.140",
+     "peak": 23
+    },
+    {
+     "addr": "192.168.137.67",
+     "peak": 22
+    },
+    {
+     "addr": "239.255.255.250",
+     "peak": 21
+    },
+    {
+     "addr": "192.168.137.1",
+     "peak": 12
+    }
+   ],
+   "alerts": 0,
+   "alert_levels": [],
+   "first_alert_s": null,
+   "alert_victims": [],
+   "alert_sources": 0
+  }
+ }
+}

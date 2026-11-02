@@ -1,0 +1,123 @@
+Table allocation done 1 time(s), state = INITIAL
+Number of stages in table allocation: 14
+  Number of stages for ingress table allocation: 14
+  Number of stages for egress table allocation: 4
+Critical path length through the table dependency graph: 14
+Number of tables allocated: 110
++-------+-----------------+-----------------------------+
+| Stage | Min / Max Stage |         Table Name          |
++-------+-----------------+-----------------------------+
+|   0   |    [ -, - ]     |    tbl_hash_slot_reverse    |
+|   0   |    [ 0, 6 ]     |    tbl_hash_tag_reverse     |
+|   0   |    [ 0, 6 ]     |    tbl_hash_slot_forward    |
+|   0   |    [ 0, 6 ]     |    tbl_hash_tag_forward     |
+|   0   |    [ 0, 6 ]     |      tbl_canonical_key      |
+|   0   |   [ 13, 19 ]    |      Ingress.ipv4_lpm       |
+|   0   |    [ 0, 7 ]     |           cond-33           |
+|   0   |    [ -, - ]     |    tbl_second_pass_slot     |
+|   0   |    [ -, - ]     |         tbl_padding         |
+|   1   |    [ 1, 7 ]     |      tbl_use_forward_0      |
+|   1   |    [ 1, 7 ]     |      tbl_use_reverse_0      |
+|   1   |    [ 1, 7 ]     |       tbl_use_forward       |
+|   1   |    [ 1, 7 ]     |       tbl_use_reverse       |
+|   1   |    [ -, - ]     |     Ingress.mitigation      |
+|   1   |   [ 11, 19 ]    |    tbl_hash_sketch_slots    |
+|   1   |   [ 6, 19 ]     |    tbl_hash_sketch_bits     |
+|   1   |   [ 0, 15 ]     |     tbl_policysplit896      |
+|   1   |   [ 0, 18 ]     |       tbl_key_fields        |
+|   1   |   [ 0, 18 ]     |      tbl_key_fields_0       |
+|   1   |   [ 0, 18 ]     |      tbl_key_fields_1       |
+|   1   |   [ 0, 19 ]     | tbl_key_fields_1$precompute |
+|   1   |   [ 0, 18 ]     |        tbl_redirect         |
+|   1   |   [ 0, 18 ]     |       tbl_drop_packet       |
+|   1   |   [ 0, 19 ]     |           cond-60           |
+|   2   |    [ 2, 8 ]     |     tbl_policysplit894      |
+|   2   |   [ 0, 17 ]     |     tbl_policysplit884      |
+|   2   |   [ 1, 19 ]     |      tbl_tag_forward_0      |
+|   2   |   [ 1, 19 ]     |      tbl_tag_reverse_0      |
+|   3   |    [ 3, 9 ]     |      tbl_probe_bank_b       |
+|   3   |    [ 3, 9 ]     |       tbl_use_bank_a        |
+|   3   |   [ 1, 18 ]     |    tbl_policysplit884_0     |
+|   3   |   [ 1, 19 ]     |       tbl_tag_forward       |
+|   3   |   [ 1, 19 ]     |       tbl_tag_reverse       |
+|   3   |   [ 1, 19 ]     |       tbl_cast_as_udp       |
+|   4   |   [ 4, 10 ]     |     tbl_policysplit908      |
+|   4   |   [ 4, 10 ]     |     tbl_policysplit907      |
+|   4   |   [ 1, 19 ]     |     tbl_policysplit852      |
+|   4   |   [ 4, 10 ]     |     tbl_policysplit905      |
+|   4   |   [ 1, 19 ]     |     tbl_policysplit850      |
+|   4   |   [ 4, 10 ]     |     tbl_policysplit906      |
+|   4   |   [ 1, 19 ]     |     tbl_policysplit851      |
+|   4   |   [ 6, 19 ]     |     tbl_policysplit885      |
+|   5   |   [ 5, 11 ]     |      tbl_prepare_terms      |
+|   5   |   [ 4, 14 ]     |     tbl_policysplit913      |
+|   5   |   [ 0, 14 ]     |     tbl_policysplit950      |
+|   5   |   [ 0, 15 ]     |     tbl_policysplit951      |
+|   5   |   [ 4, 13 ]     |     tbl_policysplit909      |
+|   5   |    [ -, - ]     |     tbl_policysplit855      |
+|   5   |   [ 1, 18 ]     |    tbl_set_report_flood     |
+|   5   |   [ 1, 18 ]     |       tbl_set_report        |
+|   6   |   [ 6, 12 ]     |     tbl_base_terms_new      |
+|   6   |   [ 6, 12 ]     |   tbl_base_terms_seed_iat   |
+|   6   |   [ 6, 12 ]     |       tbl_base_terms        |
+|   6   |   [ 4, 13 ]     |     tbl_policysplit912      |
+|   6   |   [ 1, 16 ]     |     tbl_policysplit858      |
+|   6   |   [ 4, 13 ]     |     tbl_policysplit911      |
+|   6   |   [ 1, 16 ]     |     tbl_policysplit857      |
+|   6   |   [ 4, 13 ]     |     tbl_policysplit910      |
+|   6   |   [ 1, 16 ]     |     tbl_policysplit856      |
+|   6   |   [ 4, 15 ]     |     tbl_policysplit917      |
+|   6   |   [ 5, 15 ]     |     tbl_policysplit918      |
+|   6   |   [ 1, 15 ]     |     tbl_policysplit952      |
+|   6   |   [ 1, 16 ]     |     tbl_policysplit865      |
+|   6   |   [ 5, 14 ]     |   Ingress.decision_phase    |
+|   6   |   [ 5, 16 ]     |     tbl_policysplit916      |
+|   6   |   [ 6, 17 ]     |        tbl_zero_dev         |
+|   7   |   [ 7, 13 ]     |        tbl_sum_means        |
+|   7   |   [ 1, 16 ]     |     tbl_policysplit866      |
+|   7   |   [ 1, 16 ]     |     tbl_policysplit953      |
+|   7   |   [ 1, 16 ]     |     tbl_policysplit862      |
+|   7   |   [ 6, 16 ]     |     tbl_policysplit924      |
+|   7   |   [ 1, 16 ]     |     tbl_policysplit860      |
+|   7   |   [ 4, 16 ]     |     tbl_policysplit915      |
+|   7   |   [ 1, 16 ]     |     tbl_policysplit859      |
+|   7   |   [ 4, 16 ]     |     tbl_policysplit914      |
+|   7   |   [ 5, 14 ]     |    Ingress.bucket_maxlen    |
+|   7   |   [ 5, 14 ]     |    Ingress.bucket_minlen    |
+|   7   |   [ 5, 14 ]     |    Ingress.bucket_bytes     |
+|   7   |   [ 7, 17 ]     |        tbl_seed_dev         |
+|   7   |   [ 7, 17 ]     |        tbl_dev_term         |
+|   7   |   [ 6, 16 ]     |     tbl_policysplit954      |
+|   8   |   [ 8, 14 ]     |     Ingress.bucket_iat      |
+|   8   |   [ 8, 14 ]     |     Ingress.bucket_len      |
+|   8   |   [ 2, 17 ]     |      tbl_report_fields      |
+|   8   |   [ 1, 17 ]     |     tbl_policysplit863      |
+|   8   |   [ 6, 17 ]     |     tbl_policysplit925      |
+|   8   |   [ 7, 17 ]     |     tbl_report_fields_0     |
+|   8   |   [ 4, 15 ]     |     tbl_policysplit898      |
+|   8   |   [ 8, 18 ]     |         tbl_sum_dev         |
+|   8   |   [ 1, 19 ]     |     tbl_policysplit864      |
+|   8   |   [ 6, 19 ]     |     tbl_policysplit926      |
+|   8   |   [ 1, 19 ]     |     tbl_policysplit861      |
+|   8   |   [ 6, 19 ]     |     tbl_policysplit923      |
+|   9   |   [ 9, 15 ]     |   Ingress.flow_classifier   |
+|   9   |   [ 5, 16 ]     |    Ingress.flood_levels     |
+|   9   |   [ 9, 19 ]     |     tbl_resubmit_fields     |
+|  10   |   [ 10, 16 ]    |     tbl_policysplit969      |
+|  10   |   [ 10, 19 ]    |     tbl_policysplit967      |
+|  10   |   [ 2, 19 ]     |     tbl_policysplit872      |
+|  10   |   [ 2, 19 ]     |     tbl_policysplit871      |
+|  10   |   [ 10, 19 ]    |     tbl_policysplit966      |
+|  10   |   [ 2, 19 ]     |     tbl_policysplit870      |
+|  10   |   [ 10, 19 ]    |     tbl_policysplit965      |
+|  10   |    [ -, - ]     |     tbl_policysplit972      |
+|  11   |   [ 11, 17 ]    |           cond-54           |
+|  11   |   [ 11, 17 ]    |       tbl_redirect_0        |
+|  11   |   [ 11, 17 ]    |           cond-56           |
+|  12   |   [ 11, 17 ]    |     tbl_policysplit990      |
+|  12   |   [ 11, 17 ]    |     tbl_policysplit985      |
+|  13   |    [ -, - ]     |       Ingress.outcome       |
++-------+-----------------+-----------------------------+
+
+NOTES:  - A '*' next to the min / max stage column indicates the table is placed outside its allowed scope
+

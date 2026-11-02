@@ -1,0 +1,201 @@
+22:28:47 INFO | Found 34 directories to process with 3 workers
+22:28:47 INFO |   [dpkt] Backdoor_Malware.pcap: 33414 pkts -> 2452 flows (errs=0)
+22:28:47 INFO |   [Backdoor_Malware] 2452 -> 626 flows (filtered min_pkts=10, cap=30000), 30399 global pkts
+22:28:47 INFO |   [Backdoor_Malware] DONE: 626 flows, entropy (626, 6), 0.5s
+22:28:48 INFO |   [dpkt] CommandInjection.pcap: 55741 pkts -> 3949 flows (errs=0)
+22:28:48 INFO |   [CommandInjection] 3949 -> 967 flows (filtered min_pkts=10, cap=30000), 51731 global pkts
+22:28:48 INFO |   [CommandInjection] DONE: 967 flows, entropy (967, 6), 0.9s
+22:29:02 INFO |   [dpkt] DDoS-ICMP_Flood.pcap: 1500001 pkts -> 563 flows (errs=0)
+22:29:02 INFO |   [DDoS-ICMP_Flood] 563 -> 214 flows (filtered min_pkts=10, cap=30000), 1498432 global pkts
+22:29:03 INFO |   [DDoS-ICMP_Flood] DONE: 214 flows, entropy (214, 6), 16.5s
+22:29:05 INFO |   [dpkt] BenignTraffic.pcap: 1500001 pkts -> 81378 flows (errs=0)
+22:29:08 INFO |   [dpkt] DDoS-ACK_Fragmentation.pcap: 1500001 pkts -> 683654 flows (errs=0)
+22:29:21 INFO |   [dpkt] DDoS-ICMP_Fragmentation.pcap: 1500001 pkts -> 9481 flows (errs=0)
+22:29:21 INFO |   [DDoS-ICMP_Fragmentation] 9481 -> 2040 flows (filtered min_pkts=10, cap=30000), 1469900 global pkts
+22:29:23 INFO |   [DDoS-ICMP_Fragmentation] DONE: 2040 flows, entropy (2040, 6), 19.5s
+22:29:24 INFO |   [dpkt] BenignTraffic1.pcap: 1500001 pkts -> 32237 flows (errs=0)
+22:29:24 INFO |   [Benign_Final] Capping global_pkts 2894294 -> 2000000
+22:29:24 INFO |   [Benign_Final] 113615 -> 30000 flows (filtered min_pkts=10, cap=30000), 2000000 global pkts
+22:29:29 INFO |   [dpkt] DDoS-ACK_Fragmentation1.pcap: 1500001 pkts -> 683543 flows (errs=0)
+22:29:29 INFO |   [DDoS-ACK_Fragmentation] Capping global_pkts 2949768 -> 2000000
+22:29:29 INFO |   [DDoS-ACK_Fragmentation] 1367197 -> 2413 flows (filtered min_pkts=10, cap=30000), 2000000 global pkts
+22:29:30 INFO |   [Benign_Final] DONE: 30000 flows, entropy (30000, 6), 42.6s
+22:29:31 INFO |   [dpkt] BrowserHijacking.pcap: 59821 pkts -> 2784 flows (errs=0)
+22:29:31 INFO |   [BrowserHijacking] 2784 -> 733 flows (filtered min_pkts=10, cap=30000), 55957 global pkts
+22:29:31 INFO |   [BrowserHijacking] DONE: 733 flows, entropy (733, 6), 0.9s
+22:29:32 INFO |   [DDoS-ACK_Fragmentation] DONE: 2413 flows, entropy (2413, 6), 44.7s
+22:29:34 INFO |   [dpkt] DDoS-HTTP_Flood-.pcap: 133977 pkts -> 8535 flows (errs=0)
+22:29:34 INFO |   [DDoS-HTTP_Flood] 8535 -> 5282 flows (filtered min_pkts=10, cap=30000), 132694 global pkts
+22:29:39 INFO |   [dpkt] DDoS-PSHACK_Flood.pcap: 1500001 pkts -> 475918 flows (errs=0)
+22:29:39 INFO |   [DDoS-PSHACK_Flood] 475918 -> 152 flows (filtered min_pkts=10, cap=30000), 1498383 global pkts
+22:29:39 INFO |   [DDoS-HTTP_Flood] DONE: 5282 flows, entropy (5282, 6), 6.8s
+22:29:40 INFO |   [DDoS-PSHACK_Flood] DONE: 152 flows, entropy (152, 6), 17.1s
+22:29:46 INFO |   [dpkt] DDoS-RSTFINFlood.pcap: 1500001 pkts -> 459362 flows (errs=0)
+22:29:46 INFO |   [DDoS-RSTFINFlood] 459362 -> 177 flows (filtered min_pkts=10, cap=30000), 1498562 global pkts
+22:29:47 INFO |   [DDoS-RSTFINFlood] DONE: 177 flows, entropy (177, 6), 16.1s
+22:29:54 INFO |   [dpkt] DDoS-SynonymousIP_Flood.pcap: 1500001 pkts -> 65978 flows (errs=0)
+22:29:54 INFO |   [DDoS-SynonymousIP_Flood] 65978 -> 30000 flows (filtered min_pkts=10, cap=30000), 1498887 global pkts
+22:29:56 INFO |   [dpkt] DDoS-UDP_Fragmentation.pcap: 1500001 pkts -> 5645 flows (errs=0)
+22:29:56 INFO |   [DDoS-UDP_Fragmentation] 5645 -> 2104 flows (filtered min_pkts=10, cap=30000), 1479402 global pkts
+22:29:59 INFO |   [DDoS-UDP_Fragmentation] DONE: 2104 flows, entropy (2104, 6), 18.5s
+22:30:03 INFO |   [dpkt] DDoS-SYN_Flood.pcap: 1500001 pkts -> 452834 flows (errs=0)
+22:30:03 INFO |   [DDoS-SYN_Flood] 452834 -> 1093 flows (filtered min_pkts=10, cap=30000), 1497725 global pkts
+22:30:09 INFO |   [DDoS-SYN_Flood] DONE: 1093 flows, entropy (1093, 6), 21.7s
+22:30:14 INFO |   [dpkt] DNS_Spoofing.pcap: 1500001 pkts -> 70798 flows (errs=0)
+22:30:14 INFO |   [DNS_Spoofing] 70798 -> 15022 flows (filtered min_pkts=10, cap=30000), 1433457 global pkts
+22:30:24 INFO |   [dpkt] DDoS-SlowLoris.pcap: 1500001 pkts -> 77442 flows (errs=0)
+22:30:25 INFO |   [DDoS-SlowLoris] 77442 -> 30000 flows (filtered min_pkts=10, cap=30000), 1467491 global pkts
+22:30:27 INFO |   [DNS_Spoofing] DONE: 15022 flows, entropy (15022, 6), 28.0s
+22:30:28 INFO |   [dpkt] DictionaryBruteForce.pcap: 133138 pkts -> 6899 flows (errs=0)
+22:30:28 INFO |   [DictionaryBruteForce] 6899 -> 2061 flows (filtered min_pkts=10, cap=30000), 124549 global pkts
+22:30:29 INFO |   [DictionaryBruteForce] DONE: 2061 flows, entropy (2061, 6), 2.0s
+22:30:46 INFO |   [DDoS-SlowLoris] DONE: 30000 flows, entropy (30000, 6), 36.9s
+22:30:47 INFO |   [dpkt] DoS-HTTP_Flood.pcap: 1500001 pkts -> 48358 flows (errs=0)
+22:30:47 INFO |   [DoS-HTTP_Flood] 48358 -> 30000 flows (filtered min_pkts=10, cap=30000), 1492709 global pkts
+22:31:00 INFO |   [dpkt] DoS-UDP_Flood.pcap: 1500001 pkts -> 66844 flows (errs=0)
+22:31:00 INFO |   [DoS-UDP_Flood] 66844 -> 30000 flows (filtered min_pkts=10, cap=30000), 1498664 global pkts
+22:31:34 INFO |   [DoS-HTTP_Flood] DONE: 30000 flows, entropy (30000, 6), 65.2s
+22:31:47 INFO |   [dpkt] DoS-SYN_Flood.pcap: 466652 pkts -> 65888 flows (errs=1790)
+22:31:47 INFO |   [DoS-SYN_Flood] 65888 -> 6996 flows (filtered min_pkts=10, cap=30000), 464579 global pkts
+22:32:23 INFO |   [DoS-SYN_Flood] DONE: 6996 flows, entropy (6996, 6), 48.8s
+22:32:39 INFO |   [dpkt] DoS-TCP_Flood.pcap: 1500001 pkts -> 124776 flows (errs=0)
+22:32:39 INFO |   [DoS-TCP_Flood] 124776 -> 30000 flows (filtered min_pkts=10, cap=30000), 1497761 global pkts
+22:33:03 INFO |   [DDoS-SynonymousIP_Flood] DONE: 30000 flows, entropy (30000, 6), 203.9s
+22:33:20 INFO |   [dpkt] DDoS-TCP_Flood.pcap: 1500001 pkts -> 459240 flows (errs=0)
+22:33:21 INFO |   [DDoS-TCP_Flood] 459240 -> 176 flows (filtered min_pkts=10, cap=30000), 1498881 global pkts
+22:33:22 INFO |   [DDoS-TCP_Flood] DONE: 176 flows, entropy (176, 6), 18.3s
+22:33:35 INFO |   [dpkt] DDoS-UDP_Flood.pcap: 1500001 pkts -> 2238 flows (errs=0)
+22:33:35 INFO |   [DDoS-UDP_Flood] 2238 -> 1795 flows (filtered min_pkts=10, cap=30000), 1498561 global pkts
+22:33:41 INFO |   [DDoS-UDP_Flood] DONE: 1795 flows, entropy (1795, 6), 19.0s
+22:34:03 INFO |   [dpkt] Mirai-greip_flood.pcap: 1500001 pkts -> 5486 flows (errs=0)
+22:34:03 INFO |   [Mirai-greip_flood] 5486 -> 1595 flows (filtered min_pkts=10, cap=30000), 1484177 global pkts
+22:34:06 INFO |   [Mirai-greip_flood] DONE: 1595 flows, entropy (1595, 6), 24.2s
+22:34:14 INFO |   [DoS-UDP_Flood] DONE: 30000 flows, entropy (30000, 6), 208.0s
+22:34:20 INFO |   [dpkt] Mirai-udpplain.pcap: 1500001 pkts -> 2904 flows (errs=0)
+22:34:20 INFO |   [Mirai-udpplain] 2904 -> 745 flows (filtered min_pkts=10, cap=30000), 1491178 global pkts
+22:34:22 INFO |   [Mirai-udpplain] DONE: 745 flows, entropy (745, 6), 16.7s
+22:34:31 INFO |   [dpkt] MITM-ArpSpoofing.pcap: 1500001 pkts -> 28652 flows (errs=0)
+22:34:31 INFO |   [MITM-ArpSpoofing] 28652 -> 7306 flows (filtered min_pkts=10, cap=30000), 1471746 global pkts
+22:34:36 INFO |   [MITM-ArpSpoofing] DONE: 7306 flows, entropy (7306, 6), 21.8s
+22:34:38 INFO |   [dpkt] Recon-HostDiscovery.pcap: 1371112 pkts -> 419964 flows (errs=0)
+22:34:38 INFO |   [Recon-HostDiscovery] 419964 -> 6074 flows (filtered min_pkts=10, cap=30000), 1269813 global pkts
+22:34:40 INFO |   [Recon-HostDiscovery] DONE: 6074 flows, entropy (6074, 6), 18.0s
+22:34:51 INFO |   [dpkt] Recon-OSScan.pcap: 992241 pkts -> 170622 flows (errs=0)
+22:34:51 INFO |   [Recon-OSScan] 170622 -> 22894 flows (filtered min_pkts=10, cap=30000), 958051 global pkts
+22:34:57 INFO |   [Recon-OSScan] DONE: 22894 flows, entropy (22894, 6), 16.6s
+22:34:57 INFO |   [dpkt] Recon-PingSweep.pcap: 22943 pkts -> 1684 flows (errs=0)
+22:34:58 INFO |   [Recon-PingSweep] 1684 -> 618 flows (filtered min_pkts=10, cap=30000), 19764 global pkts
+22:34:58 INFO |   [Recon-PingSweep] DONE: 618 flows, entropy (618, 6), 0.3s
+22:35:03 INFO |   [dpkt] Mirai-greeth_flood.pcap: 1500001 pkts -> 3255 flows (errs=0)
+22:35:03 INFO |   [Mirai-greeth_flood] 3255 -> 629 flows (filtered min_pkts=10, cap=30000), 1494261 global pkts
+22:35:05 INFO |   [Mirai-greeth_flood] DONE: 629 flows, entropy (629, 6), 28.3s
+22:35:06 INFO |   [dpkt] SqlInjection.pcap: 53462 pkts -> 5402 flows (errs=0)
+22:35:06 INFO |   [SqlInjection] 5402 -> 2082 flows (filtered min_pkts=10, cap=30000), 49995 global pkts
+22:35:06 INFO |   [SqlInjection] DONE: 2082 flows, entropy (2082, 6), 1.0s
+22:35:06 INFO |   [dpkt] Uploading_Attack.pcap: 12939 pkts -> 1335 flows (errs=0)
+22:35:06 INFO |   [Uploading_Attack] 1335 -> 288 flows (filtered min_pkts=10, cap=30000), 11778 global pkts
+22:35:06 INFO |   [Uploading_Attack] DONE: 288 flows, entropy (288, 6), 0.2s
+22:35:07 INFO |   [dpkt] Recon-PortScan.pcap: 831856 pkts -> 192739 flows (errs=0)
+22:35:07 INFO |   [Recon-PortScan] 192739 -> 20281 flows (filtered min_pkts=10, cap=30000), 802300 global pkts
+22:35:12 INFO |   [Recon-PortScan] DONE: 20281 flows, entropy (20281, 6), 13.9s
+22:35:12 INFO |   [dpkt] XSS.pcap: 40183 pkts -> 3386 flows (errs=0)
+22:35:12 INFO |   [XSS] 3386 -> 893 flows (filtered min_pkts=10, cap=30000), 36179 global pkts
+22:35:12 INFO |   [XSS] DONE: 893 flows, entropy (893, 6), 0.6s
+22:35:22 INFO |   [dpkt] VulnerabilityScan.pcap: 1500001 pkts -> 188095 flows (errs=0)
+22:35:22 INFO |   [VulnerabilityScan] 188095 -> 30000 flows (filtered min_pkts=10, cap=30000), 1415025 global pkts
+22:35:28 INFO |   [VulnerabilityScan] DONE: 30000 flows, entropy (30000, 6), 21.6s
+22:35:32 INFO |   [DoS-TCP_Flood] DONE: 30000 flows, entropy (30000, 6), 188.2s
+22:35:32 INFO |   Collected Backdoor_Malware: 626 flows
+22:35:32 INFO |   Collected Benign_Final: 30000 flows
+22:35:32 INFO |   Collected BrowserHijacking: 733 flows
+22:35:32 INFO |   Collected CommandInjection: 967 flows
+22:35:32 INFO |   Collected DDoS-ACK_Fragmentation: 2413 flows
+22:35:32 INFO |   Collected DDoS-HTTP_Flood: 5282 flows
+22:35:32 INFO |   Collected DDoS-ICMP_Flood: 214 flows
+22:35:32 INFO |   Collected DDoS-ICMP_Fragmentation: 2040 flows
+22:35:32 INFO |   Collected DDoS-PSHACK_Flood: 152 flows
+22:35:32 INFO |   Collected DDoS-RSTFINFlood: 177 flows
+22:35:32 INFO |   Collected DDoS-SYN_Flood: 1093 flows
+22:35:32 INFO |   Collected DDoS-SlowLoris: 30000 flows
+22:35:32 INFO |   Collected DDoS-SynonymousIP_Flood: 30000 flows
+22:35:32 INFO |   Collected DDoS-TCP_Flood: 176 flows
+22:35:32 INFO |   Collected DDoS-UDP_Flood: 1795 flows
+22:35:32 INFO |   Collected DDoS-UDP_Fragmentation: 2104 flows
+22:35:32 INFO |   Collected DNS_Spoofing: 15022 flows
+22:35:32 INFO |   Collected DictionaryBruteForce: 2061 flows
+22:35:32 INFO |   Collected DoS-HTTP_Flood: 30000 flows
+22:35:32 INFO |   Collected DoS-SYN_Flood: 6996 flows
+22:35:32 INFO |   Collected DoS-TCP_Flood: 30000 flows
+22:35:32 INFO |   Collected DoS-UDP_Flood: 30000 flows
+22:35:32 INFO |   Collected MITM-ArpSpoofing: 7306 flows
+22:35:32 INFO |   Collected Mirai-greeth_flood: 629 flows
+22:35:32 INFO |   Collected Mirai-greip_flood: 1595 flows
+22:35:32 INFO |   Collected Mirai-udpplain: 745 flows
+22:35:32 INFO |   Collected Recon-HostDiscovery: 6074 flows
+22:35:32 INFO |   Collected Recon-OSScan: 22894 flows
+22:35:32 INFO |   Collected Recon-PingSweep: 618 flows
+22:35:32 INFO |   Collected Recon-PortScan: 20281 flows
+22:35:32 INFO |   Collected SqlInjection: 2082 flows
+22:35:32 INFO |   Collected Uploading_Attack: 288 flows
+22:35:32 INFO |   Collected VulnerabilityScan: 30000 flows
+22:35:32 INFO |   Collected XSS: 893 flows
+22:35:32 INFO | Total: 315256 flows extracted in 405.1s
+22:35:32 INFO |   Sequences: (315256, 100, 3)
+22:35:32 INFO |   Entropy:   (315256, 6)
+22:35:32 INFO |   Class 0 (Benign): 30000 flows
+22:35:32 INFO |     src_ip_H: mean=4.110 std=1.398
+22:35:32 INFO |     dst_ip_H: mean=3.969 std=1.342
+22:35:32 INFO |     src_port_H: mean=4.496 std=1.680
+22:35:32 INFO |     dst_port_H: mean=4.279 std=1.589
+22:35:32 INFO |     log_uniq_src: mean=4.066 std=1.294
+22:35:32 INFO |     log_uniq_dst: mean=3.979 std=1.277
+22:35:32 INFO |   Class 1 (DDoS): 75446 flows
+22:35:32 INFO |     src_ip_H: mean=2.071 std=1.787
+22:35:32 INFO |     dst_ip_H: mean=1.679 std=1.746
+22:35:32 INFO |     src_port_H: mean=10.101 std=4.821
+22:35:32 INFO |     dst_port_H: mean=2.985 std=2.822
+22:35:32 INFO |     log_uniq_src: mean=4.554 std=0.557
+22:35:32 INFO |     log_uniq_dst: mean=4.482 std=0.590
+22:35:32 INFO |   Class 2 (DoS): 96996 flows
+22:35:32 INFO |     src_ip_H: mean=0.826 std=0.606
+22:35:32 INFO |     dst_ip_H: mean=0.822 std=0.602
+22:35:32 INFO |     src_port_H: mean=12.373 std=3.117
+22:35:32 INFO |     dst_port_H: mean=2.750 std=1.944
+22:35:32 INFO |     log_uniq_src: mean=4.948 std=0.166
+22:35:32 INFO |     log_uniq_dst: mean=4.943 std=0.198
+22:35:32 INFO |   Class 3 (Mirai): 2969 flows
+22:35:32 INFO |     src_ip_H: mean=2.953 std=0.908
+22:35:32 INFO |     dst_ip_H: mean=1.089 std=1.512
+22:35:32 INFO |     src_port_H: mean=1.479 std=1.542
+22:35:32 INFO |     dst_port_H: mean=1.461 std=1.485
+22:35:32 INFO |     log_uniq_src: mean=4.872 std=0.292
+22:35:32 INFO |     log_uniq_dst: mean=4.850 std=0.322
+22:35:32 INFO |   Class 4 (Recon): 79867 flows
+22:35:32 INFO |     src_ip_H: mean=4.621 std=0.705
+22:35:32 INFO |     dst_ip_H: mean=4.490 std=0.649
+22:35:32 INFO |     src_port_H: mean=5.594 std=0.899
+22:35:32 INFO |     dst_port_H: mean=5.401 std=0.970
+22:35:32 INFO |     log_uniq_src: mean=4.562 std=0.304
+22:35:32 INFO |     log_uniq_dst: mean=4.501 std=0.362
+22:35:32 INFO |   Class 5 (Web): 5589 flows
+22:35:32 INFO |     src_ip_H: mean=5.312 std=0.742
+22:35:32 INFO |     dst_ip_H: mean=5.080 std=0.708
+22:35:32 INFO |     src_port_H: mean=5.573 std=0.765
+22:35:32 INFO |     dst_port_H: mean=5.295 std=0.695
+22:35:32 INFO |     log_uniq_src: mean=4.715 std=0.347
+22:35:32 INFO |     log_uniq_dst: mean=4.693 std=0.410
+22:35:32 INFO |   Class 6 (Spoofing): 22328 flows
+22:35:32 INFO |     src_ip_H: mean=4.233 std=1.487
+22:35:32 INFO |     dst_ip_H: mean=4.143 std=1.421
+22:35:32 INFO |     src_port_H: mean=4.794 std=1.310
+22:35:32 INFO |     dst_port_H: mean=4.881 std=1.641
+22:35:32 INFO |     log_uniq_src: mean=4.977 std=0.381
+22:35:32 INFO |     log_uniq_dst: mean=4.979 std=0.432
+22:35:32 INFO |   Class 7 (BruteForce): 2061 flows
+22:35:32 INFO |     src_ip_H: mean=4.238 std=1.209
+22:35:32 INFO |     dst_ip_H: mean=4.165 std=1.190
+22:35:32 INFO |     src_port_H: mean=5.518 std=0.754
+22:35:32 INFO |     dst_port_H: mean=5.024 std=0.680
+22:35:32 INFO |     log_uniq_src: mean=4.696 std=0.379
+22:35:32 INFO |     log_uniq_dst: mean=4.672 std=0.426
+22:35:35 INFO | Saved to data/sequences/entropy_flows_v3.h5 (57.1 MB)

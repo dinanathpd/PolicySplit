@@ -1,0 +1,190 @@
+{
+ "trace": {
+  "captures": {
+   "BenignTraffic2": 87167,
+   "BenignTraffic3": 85597
+  },
+  "skipped_duplicates": [],
+  "packets": 172764,
+  "duration_s": 881.672981
+ },
+ "min_gap_us": 0,
+ "oversized_packets": 11311,
+ "ambiguous_flows": 94,
+ "key_levels": 10,
+ "per_capture": {
+  "BenignTraffic2": {
+   "flows": 1954,
+   "flows_reaching_decision": 405,
+   "packets": 78173,
+   "packets_in_decidable_flows": 74607,
+   "emulator_fast": 4,
+   "emulator_deferred": 388,
+   "emulator_fast_packets": 4538,
+   "emulator_controller_blocks": 2,
+   "closed_loop": {
+    "fast": 4,
+    "deferred": 385,
+    "decidable_flows_decided": 389,
+    "decidable_flows_same_ten_packets": 389,
+    "agreement_same_ten_packets": 1.0,
+    "agreement_with_emulator": 0.9984646878198568,
+    "agreement_on_decidable_flows": 0.9925925925925926,
+    "controller_blocked": 2
+   }
+  },
+  "BenignTraffic3": {
+   "flows": 1786,
+   "flows_reaching_decision": 368,
+   "packets": 77163,
+   "packets_in_decidable_flows": 73928,
+   "emulator_fast": 7,
+   "emulator_deferred": 350,
+   "emulator_fast_packets": 73,
+   "emulator_controller_blocks": 6,
+   "closed_loop": {
+    "fast": 7,
+    "deferred": 350,
+    "decidable_flows_decided": 357,
+    "decidable_flows_same_ten_packets": 357,
+    "agreement_same_ten_packets": 1.0,
+    "agreement_with_emulator": 1.0,
+    "agreement_on_decidable_flows": 1.0,
+    "controller_blocked": 4
+   }
+  }
+ },
+ "all": {
+  "all": {
+   "flows": 3740,
+   "flows_reaching_decision": 773,
+   "packets": 155336,
+   "packets_in_decidable_flows": 148535,
+   "emulator_fast": 11,
+   "emulator_deferred": 738,
+   "emulator_fast_packets": 4611,
+   "emulator_controller_blocks": 8,
+   "closed_loop": {
+    "fast": 11,
+    "deferred": 735,
+    "decidable_flows_decided": 746,
+    "decidable_flows_same_ten_packets": 746,
+    "agreement_same_ten_packets": 1.0,
+    "agreement_with_emulator": 0.9991978609625668,
+    "agreement_on_decidable_flows": 0.9961190168175937,
+    "controller_blocked": 6,
+    "fast_benign": 11,
+    "decided_attack_flows": 0,
+    "decided_benign_flows": 746,
+    "decided_attack_stopped": null,
+    "decided_benign_stopped": 0.022788203753351208
+   },
+   "emulator_fast_benign": 11,
+   "emulator_fast_benign_remote": [
+    "109.95.152.66",
+    "52.213.218.83"
+   ],
+   "emulator_decided_benign_flows": 749,
+   "emulator_decided_benign_stopped": 0.025367156208277702,
+   "emulator_decided_attack_flows": 0,
+   "emulator_decided_attack_stopped": null
+  },
+  "not_seen_by_compiler": {
+   "flows": 3721,
+   "flows_reaching_decision": 754,
+   "packets": 154165,
+   "packets_in_decidable_flows": 147364,
+   "emulator_fast": 11,
+   "emulator_deferred": 721,
+   "emulator_fast_packets": 4611,
+   "emulator_controller_blocks": 8,
+   "closed_loop": {
+    "fast": 11,
+    "deferred": 718,
+    "decidable_flows_decided": 729,
+    "decidable_flows_same_ten_packets": 729,
+    "agreement_same_ten_packets": 1.0,
+    "agreement_with_emulator": 0.999193765116904,
+    "agreement_on_decidable_flows": 0.9960212201591512,
+    "controller_blocked": 6,
+    "fast_benign": 11,
+    "decided_attack_flows": 0,
+    "decided_benign_flows": 729,
+    "decided_attack_stopped": null,
+    "decided_benign_stopped": 0.023319615912208505
+   },
+   "emulator_fast_benign": 11,
+   "emulator_fast_benign_remote": [
+    "109.95.152.66",
+    "52.213.218.83"
+   ],
+   "emulator_decided_benign_flows": 732,
+   "emulator_decided_benign_stopped": 0.025956284153005466,
+   "emulator_decided_attack_flows": 0,
+   "emulator_decided_attack_stopped": null
+  },
+  "not_in_corpus": {
+   "flows": 3688,
+   "flows_reaching_decision": 723,
+   "packets": 139635,
+   "packets_in_decidable_flows": 132838,
+   "emulator_fast": 10,
+   "emulator_deferred": 691,
+   "emulator_fast_packets": 4601,
+   "emulator_controller_blocks": 8,
+   "closed_loop": {
+    "fast": 10,
+    "deferred": 688,
+    "decidable_flows_decided": 698,
+    "decidable_flows_same_ten_packets": 698,
+    "agreement_same_ten_packets": 1.0,
+    "agreement_with_emulator": 0.9991865509761388,
+    "agreement_on_decidable_flows": 0.995850622406639,
+    "controller_blocked": 6,
+    "fast_benign": 10,
+    "decided_attack_flows": 0,
+    "decided_benign_flows": 698,
+    "decided_attack_stopped": null,
+    "decided_benign_stopped": 0.022922636103151862
+   },
+   "emulator_fast_benign": 10,
+   "emulator_fast_benign_remote": [
+    "109.95.152.66",
+    "52.213.218.83"
+   ],
+   "emulator_decided_benign_flows": 701,
+   "emulator_decided_benign_stopped": 0.025677603423680456,
+   "emulator_decided_attack_flows": 0,
+   "emulator_decided_attack_stopped": null
+  }
+ },
+ "closed_loop": {
+  "pipeline_events": {
+   "fwd": 160698,
+   "drop": 11224,
+   "esc": 842,
+   "rate_limit_pass": 0,
+   "rate_limit_drop": 0,
+   "redirect": 0
+  },
+  "pipeline_packets": 172764,
+  "replay": {
+   "packets_sent": 172764,
+   "send_lateness_ms": {
+    "p50": 0.0,
+    "p99": 2.906,
+    "max": 238.853
+   }
+  },
+  "reports": 854,
+  "diversity_alerts": 6,
+  "diversity_alert_victims": [
+   "255.255.255.255",
+   "192.168.137.1",
+   "192.168.137.250",
+   "192.168.137.175",
+   "192.168.137.172",
+   "192.168.137.227"
+  ]
+ }
+}

@@ -1,0 +1,794 @@
+{
+  "replays": [
+    {
+      "source": "results/causal/bmv2_causal_features_rr.json",
+      "n_flows": 1900,
+      "estimator_vs_truth_pearson_r": 0.9215163973795751,
+      "auc_truth": 0.7035590389310035,
+      "auc_truth_ci95": [
+        0.6141881343954774,
+        0.7818461711422329
+      ],
+      "auc_switch": 0.7105165103430554,
+      "auc_switch_ci95": [
+        0.6205230952075036,
+        0.7895742323011693
+      ],
+      "by_class": {
+        "0": {
+          "n": 208,
+          "switch_estimate_mean": 8.01923076923077,
+          "switch_estimate_median": 4.0,
+          "true_sources_mean": 16.33653846153846,
+          "true_sources_quartiles": [
+            3.0,
+            4.0,
+            7.0
+          ]
+        },
+        "1": {
+          "n": 905,
+          "switch_estimate_mean": 6.2342541436464085,
+          "switch_estimate_median": 6.0,
+          "true_sources_mean": 8.297237569060773,
+          "true_sources_quartiles": [
+            5.0,
+            7.0,
+            7.0
+          ]
+        },
+        "2": {
+          "n": 86,
+          "switch_estimate_mean": 7.011627906976744,
+          "switch_estimate_median": 2.0,
+          "true_sources_mean": 14.395348837209303,
+          "true_sources_quartiles": [
+            1.0,
+            2.0,
+            6.75
+          ]
+        },
+        "3": {
+          "n": 108,
+          "switch_estimate_mean": 5.388888888888889,
+          "switch_estimate_median": 7.0,
+          "true_sources_mean": 3.7037037037037037,
+          "true_sources_quartiles": [
+            4.0,
+            4.0,
+            4.0
+          ]
+        },
+        "4": {
+          "n": 374,
+          "switch_estimate_mean": 8.371657754010695,
+          "switch_estimate_median": 5.0,
+          "true_sources_mean": 14.748663101604278,
+          "true_sources_quartiles": [
+            2.0,
+            5.0,
+            24.0
+          ]
+        },
+        "7": {
+          "n": 219,
+          "switch_estimate_mean": 8.269406392694064,
+          "switch_estimate_median": 4.0,
+          "true_sources_mean": 15.849315068493151,
+          "true_sources_quartiles": [
+            2.0,
+            4.0,
+            8.0
+          ]
+        }
+      },
+      "diversity_gain_pp": 4.799,
+      "beyond_class_marginal_pp": 1.812,
+      "per_seed": [
+        {
+          "gain": 3.76,
+          "beyond": 1.79
+        },
+        {
+          "gain": 5.64,
+          "beyond": 4.2
+        },
+        {
+          "gain": 4.75,
+          "beyond": 2.39
+        },
+        {
+          "gain": 6.42,
+          "beyond": 2.24
+        },
+        {
+          "gain": 4.44,
+          "beyond": 3.63
+        },
+        {
+          "gain": 7.05,
+          "beyond": 1.4
+        },
+        {
+          "gain": 5.58,
+          "beyond": 2.43
+        },
+        {
+          "gain": 3.15,
+          "beyond": 1.58
+        },
+        {
+          "gain": 0.57,
+          "beyond": -2.2
+        },
+        {
+          "gain": 6.63,
+          "beyond": 0.66
+        }
+      ]
+    },
+    {
+      "source": "results/causal/bmv2_causal_features_1.json",
+      "n_flows": 1911,
+      "estimator_vs_truth_pearson_r": 0.9189759348889349,
+      "auc_truth": 0.7039228213646819,
+      "auc_truth_ci95": [
+        0.6178777472527472,
+        0.7838260286225401
+      ],
+      "auc_switch": 0.710893176590851,
+      "auc_switch_ci95": [
+        0.6201467863531817,
+        0.7940558714541273
+      ],
+      "by_class": {
+        "0": {
+          "n": 209,
+          "switch_estimate_mean": 8.133971291866029,
+          "switch_estimate_median": 4.0,
+          "true_sources_mean": 16.358851674641148,
+          "true_sources_quartiles": [
+            3.0,
+            4.0,
+            7.0
+          ]
+        },
+        "1": {
+          "n": 910,
+          "switch_estimate_mean": 6.282417582417582,
+          "switch_estimate_median": 6.0,
+          "true_sources_mean": 8.467032967032967,
+          "true_sources_quartiles": [
+            5.0,
+            7.0,
+            7.0
+          ]
+        },
+        "2": {
+          "n": 86,
+          "switch_estimate_mean": 7.023255813953488,
+          "switch_estimate_median": 2.0,
+          "true_sources_mean": 14.313953488372093,
+          "true_sources_quartiles": [
+            1.0,
+            2.0,
+            6.75
+          ]
+        },
+        "3": {
+          "n": 111,
+          "switch_estimate_mean": 5.306306306306307,
+          "switch_estimate_median": 7.0,
+          "true_sources_mean": 3.7387387387387387,
+          "true_sources_quartiles": [
+            4.0,
+            4.0,
+            4.0
+          ]
+        },
+        "4": {
+          "n": 376,
+          "switch_estimate_mean": 8.35904255319149,
+          "switch_estimate_median": 5.0,
+          "true_sources_mean": 14.659574468085106,
+          "true_sources_quartiles": [
+            2.0,
+            5.0,
+            24.0
+          ]
+        },
+        "7": {
+          "n": 219,
+          "switch_estimate_mean": 8.146118721461187,
+          "switch_estimate_median": 4.0,
+          "true_sources_mean": 15.789954337899543,
+          "true_sources_quartiles": [
+            2.0,
+            4.0,
+            8.0
+          ]
+        }
+      },
+      "diversity_gain_pp": 4.616999999999999,
+      "beyond_class_marginal_pp": 2.8309999999999995,
+      "per_seed": [
+        {
+          "gain": 3.86,
+          "beyond": -0.06
+        },
+        {
+          "gain": 5.83,
+          "beyond": 2.02
+        },
+        {
+          "gain": 4.32,
+          "beyond": 5.49
+        },
+        {
+          "gain": 4.51,
+          "beyond": 3.55
+        },
+        {
+          "gain": 3.66,
+          "beyond": 3.56
+        },
+        {
+          "gain": 6.39,
+          "beyond": 3.12
+        },
+        {
+          "gain": 4.37,
+          "beyond": 1.93
+        },
+        {
+          "gain": 0.71,
+          "beyond": 1.26
+        },
+        {
+          "gain": 5.23,
+          "beyond": 2.84
+        },
+        {
+          "gain": 7.29,
+          "beyond": 4.6
+        }
+      ]
+    },
+    {
+      "source": "results/causal/bmv2_causal_features_2.json",
+      "n_flows": 1901,
+      "estimator_vs_truth_pearson_r": 0.9214880109227019,
+      "auc_truth": 0.7031101766621368,
+      "auc_truth_ci95": [
+        0.6168268121330222,
+        0.7811858990795106
+      ],
+      "auc_switch": 0.7105458834388861,
+      "auc_switch_ci95": [
+        0.6225066344452707,
+        0.7929811094587318
+      ],
+      "by_class": {
+        "0": {
+          "n": 207,
+          "switch_estimate_mean": 8.06280193236715,
+          "switch_estimate_median": 4.0,
+          "true_sources_mean": 16.44927536231884,
+          "true_sources_quartiles": [
+            3.0,
+            4.0,
+            7.5
+          ]
+        },
+        "1": {
+          "n": 907,
+          "switch_estimate_mean": 6.250275633958104,
+          "switch_estimate_median": 6.0,
+          "true_sources_mean": 8.300992282249172,
+          "true_sources_quartiles": [
+            5.0,
+            7.0,
+            7.0
+          ]
+        },
+        "2": {
+          "n": 86,
+          "switch_estimate_mean": 7.023255813953488,
+          "switch_estimate_median": 2.0,
+          "true_sources_mean": 14.430232558139535,
+          "true_sources_quartiles": [
+            1.0,
+            2.0,
+            6.75
+          ]
+        },
+        "3": {
+          "n": 108,
+          "switch_estimate_mean": 5.388888888888889,
+          "switch_estimate_median": 7.0,
+          "true_sources_mean": 3.7037037037037037,
+          "true_sources_quartiles": [
+            4.0,
+            4.0,
+            4.0
+          ]
+        },
+        "4": {
+          "n": 374,
+          "switch_estimate_mean": 8.401069518716577,
+          "switch_estimate_median": 5.0,
+          "true_sources_mean": 14.724598930481283,
+          "true_sources_quartiles": [
+            2.0,
+            5.0,
+            24.0
+          ]
+        },
+        "7": {
+          "n": 219,
+          "switch_estimate_mean": 8.32876712328767,
+          "switch_estimate_median": 4.0,
+          "true_sources_mean": 15.95890410958904,
+          "true_sources_quartiles": [
+            2.0,
+            4.0,
+            8.0
+          ]
+        }
+      },
+      "diversity_gain_pp": 5.775999999999999,
+      "beyond_class_marginal_pp": 2.237,
+      "per_seed": [
+        {
+          "gain": 7.17,
+          "beyond": 2.58
+        },
+        {
+          "gain": 6.6,
+          "beyond": 0.85
+        },
+        {
+          "gain": 5.72,
+          "beyond": 2.05
+        },
+        {
+          "gain": 3.56,
+          "beyond": -0.95
+        },
+        {
+          "gain": 6.83,
+          "beyond": 5.57
+        },
+        {
+          "gain": 7.04,
+          "beyond": 1.31
+        },
+        {
+          "gain": 3.93,
+          "beyond": 1.14
+        },
+        {
+          "gain": 5.5,
+          "beyond": -0.18
+        },
+        {
+          "gain": 3.12,
+          "beyond": 7.31
+        },
+        {
+          "gain": 8.29,
+          "beyond": 2.69
+        }
+      ]
+    },
+    {
+      "source": "results/causal/bmv2_causal_features_3.json",
+      "n_flows": 1900,
+      "estimator_vs_truth_pearson_r": 0.9202739785457805,
+      "auc_truth": 0.7059757414110625,
+      "auc_truth_ci95": [
+        0.6234755826506636,
+        0.7842797040706166
+      ],
+      "auc_switch": 0.7130437543659109,
+      "auc_switch_ci95": [
+        0.6273012319806948,
+        0.7917836730805867
+      ],
+      "by_class": {
+        "0": {
+          "n": 208,
+          "switch_estimate_mean": 8.048076923076923,
+          "switch_estimate_median": 4.0,
+          "true_sources_mean": 16.384615384615383,
+          "true_sources_quartiles": [
+            3.0,
+            4.0,
+            7.0
+          ]
+        },
+        "1": {
+          "n": 905,
+          "switch_estimate_mean": 6.254143646408839,
+          "switch_estimate_median": 6.0,
+          "true_sources_mean": 8.394475138121546,
+          "true_sources_quartiles": [
+            5.0,
+            7.0,
+            7.0
+          ]
+        },
+        "2": {
+          "n": 87,
+          "switch_estimate_mean": 6.954022988505747,
+          "switch_estimate_median": 2.0,
+          "true_sources_mean": 14.28735632183908,
+          "true_sources_quartiles": [
+            1.0,
+            2.0,
+            6.5
+          ]
+        },
+        "3": {
+          "n": 108,
+          "switch_estimate_mean": 5.351851851851852,
+          "switch_estimate_median": 7.0,
+          "true_sources_mean": 3.6944444444444446,
+          "true_sources_quartiles": [
+            4.0,
+            4.0,
+            4.0
+          ]
+        },
+        "4": {
+          "n": 373,
+          "switch_estimate_mean": 8.268096514745308,
+          "switch_estimate_median": 4.0,
+          "true_sources_mean": 14.495978552278821,
+          "true_sources_quartiles": [
+            2.0,
+            5.0,
+            24.0
+          ]
+        },
+        "7": {
+          "n": 219,
+          "switch_estimate_mean": 8.246575342465754,
+          "switch_estimate_median": 4.0,
+          "true_sources_mean": 15.940639269406393,
+          "true_sources_quartiles": [
+            2.0,
+            4.0,
+            8.0
+          ]
+        }
+      },
+      "diversity_gain_pp": 5.512000000000001,
+      "beyond_class_marginal_pp": 1.864,
+      "per_seed": [
+        {
+          "gain": 6.21,
+          "beyond": 1.95
+        },
+        {
+          "gain": 7.48,
+          "beyond": 2.22
+        },
+        {
+          "gain": 4.15,
+          "beyond": -0.52
+        },
+        {
+          "gain": 5.07,
+          "beyond": 0.21
+        },
+        {
+          "gain": 6.63,
+          "beyond": 1.4
+        },
+        {
+          "gain": 5.05,
+          "beyond": 8.85
+        },
+        {
+          "gain": 3.7,
+          "beyond": 0.62
+        },
+        {
+          "gain": 2.79,
+          "beyond": 1.15
+        },
+        {
+          "gain": 4.41,
+          "beyond": -2.91
+        },
+        {
+          "gain": 9.63,
+          "beyond": 5.67
+        }
+      ]
+    },
+    {
+      "source": "results/causal/bmv2_causal_features_4.json",
+      "n_flows": 1902,
+      "estimator_vs_truth_pearson_r": 0.9188867116922025,
+      "auc_truth": 0.7120824956222842,
+      "auc_truth_ci95": [
+        0.6280971528633504,
+        0.7917468707438873
+      ],
+      "auc_switch": 0.7180945586613918,
+      "auc_switch_ci95": [
+        0.6298255399182826,
+        0.8011213437966144
+      ],
+      "by_class": {
+        "0": {
+          "n": 210,
+          "switch_estimate_mean": 8.147619047619047,
+          "switch_estimate_median": 4.0,
+          "true_sources_mean": 16.247619047619047,
+          "true_sources_quartiles": [
+            3.0,
+            4.0,
+            7.0
+          ]
+        },
+        "1": {
+          "n": 907,
+          "switch_estimate_mean": 6.243660418963616,
+          "switch_estimate_median": 6.0,
+          "true_sources_mean": 8.305402425578832,
+          "true_sources_quartiles": [
+            5.0,
+            7.0,
+            7.0
+          ]
+        },
+        "2": {
+          "n": 85,
+          "switch_estimate_mean": 6.905882352941177,
+          "switch_estimate_median": 2.0,
+          "true_sources_mean": 14.176470588235293,
+          "true_sources_quartiles": [
+            1.0,
+            2.0,
+            6.0
+          ]
+        },
+        "3": {
+          "n": 108,
+          "switch_estimate_mean": 5.425925925925926,
+          "switch_estimate_median": 7.0,
+          "true_sources_mean": 3.7037037037037037,
+          "true_sources_quartiles": [
+            4.0,
+            4.0,
+            4.0
+          ]
+        },
+        "4": {
+          "n": 374,
+          "switch_estimate_mean": 8.355614973262032,
+          "switch_estimate_median": 5.0,
+          "true_sources_mean": 14.542780748663102,
+          "true_sources_quartiles": [
+            2.0,
+            5.0,
+            24.0
+          ]
+        },
+        "7": {
+          "n": 218,
+          "switch_estimate_mean": 8.270642201834862,
+          "switch_estimate_median": 4.0,
+          "true_sources_mean": 15.96788990825688,
+          "true_sources_quartiles": [
+            2.0,
+            4.0,
+            8.0
+          ]
+        }
+      },
+      "diversity_gain_pp": 3.245,
+      "beyond_class_marginal_pp": -0.24900000000000003,
+      "per_seed": [
+        {
+          "gain": 1.83,
+          "beyond": -0.65
+        },
+        {
+          "gain": 3.7,
+          "beyond": 3.34
+        },
+        {
+          "gain": 3.48,
+          "beyond": -0.97
+        },
+        {
+          "gain": 0.77,
+          "beyond": -1.15
+        },
+        {
+          "gain": 4.78,
+          "beyond": 1.08
+        },
+        {
+          "gain": 1.08,
+          "beyond": -2.72
+        },
+        {
+          "gain": 2.54,
+          "beyond": -3.15
+        },
+        {
+          "gain": 4.67,
+          "beyond": 1.66
+        },
+        {
+          "gain": 3.44,
+          "beyond": -1.4
+        },
+        {
+          "gain": 6.16,
+          "beyond": 1.47
+        }
+      ]
+    },
+    {
+      "source": "results/causal/bmv2_causal_features_5.json",
+      "n_flows": 1903,
+      "estimator_vs_truth_pearson_r": 0.9210516047666443,
+      "auc_truth": 0.7029604161837801,
+      "auc_truth_ci95": [
+        0.6156199296917252,
+        0.78299933683587
+      ],
+      "auc_switch": 0.7102230291792218,
+      "auc_switch_ci95": [
+        0.6202181359293312,
+        0.7912529938963145
+      ],
+      "by_class": {
+        "0": {
+          "n": 209,
+          "switch_estimate_mean": 8.004784688995215,
+          "switch_estimate_median": 4.0,
+          "true_sources_mean": 16.330143540669855,
+          "true_sources_quartiles": [
+            3.0,
+            4.0,
+            7.0
+          ]
+        },
+        "1": {
+          "n": 903,
+          "switch_estimate_mean": 6.222591362126246,
+          "switch_estimate_median": 6.0,
+          "true_sources_mean": 8.286821705426357,
+          "true_sources_quartiles": [
+            5.0,
+            7.0,
+            7.0
+          ]
+        },
+        "2": {
+          "n": 86,
+          "switch_estimate_mean": 7.011627906976744,
+          "switch_estimate_median": 2.0,
+          "true_sources_mean": 14.488372093023257,
+          "true_sources_quartiles": [
+            1.0,
+            2.0,
+            6.75
+          ]
+        },
+        "3": {
+          "n": 110,
+          "switch_estimate_mean": 5.3,
+          "switch_estimate_median": 7.0,
+          "true_sources_mean": 3.7454545454545456,
+          "true_sources_quartiles": [
+            4.0,
+            4.0,
+            4.0
+          ]
+        },
+        "4": {
+          "n": 376,
+          "switch_estimate_mean": 8.34308510638298,
+          "switch_estimate_median": 5.0,
+          "true_sources_mean": 14.76063829787234,
+          "true_sources_quartiles": [
+            2.0,
+            5.0,
+            24.0
+          ]
+        },
+        "7": {
+          "n": 219,
+          "switch_estimate_mean": 8.28310502283105,
+          "switch_estimate_median": 4.0,
+          "true_sources_mean": 15.876712328767123,
+          "true_sources_quartiles": [
+            2.0,
+            4.0,
+            8.0
+          ]
+        }
+      },
+      "diversity_gain_pp": 3.739,
+      "beyond_class_marginal_pp": 0.537,
+      "per_seed": [
+        {
+          "gain": 3.53,
+          "beyond": 1.53
+        },
+        {
+          "gain": 2.61,
+          "beyond": -1.65
+        },
+        {
+          "gain": 5.59,
+          "beyond": 1.51
+        },
+        {
+          "gain": 4.93,
+          "beyond": -0.93
+        },
+        {
+          "gain": 1.72,
+          "beyond": -3.47
+        },
+        {
+          "gain": 2.37,
+          "beyond": 1.09
+        },
+        {
+          "gain": 1.46,
+          "beyond": -1.43
+        },
+        {
+          "gain": 5.87,
+          "beyond": 5.91
+        },
+        {
+          "gain": 2.92,
+          "beyond": 1.84
+        },
+        {
+          "gain": 6.39,
+          "beyond": 0.97
+        }
+      ]
+    }
+  ],
+  "split_seeds_per_replay": 10,
+  "summary": {
+    "estimator_vs_truth_pearson_r": {
+      "mean": 0.9203654396993065,
+      "min": 0.9188867116922025,
+      "max": 0.9215163973795751
+    },
+    "auc_truth": {
+      "mean": 0.7052684483624915,
+      "min": 0.7029604161837801,
+      "max": 0.7120824956222842
+    },
+    "auc_switch": {
+      "mean": 0.7122194854298862,
+      "min": 0.7102230291792218,
+      "max": 0.7180945586613918
+    },
+    "diversity_gain_pp": {
+      "mean": 4.614666666666667,
+      "min": 3.245,
+      "max": 5.775999999999999
+    },
+    "beyond_class_marginal_pp": {
+      "mean": 1.5053333333333334,
+      "min": -0.24900000000000003,
+      "max": 2.8309999999999995
+    }
+  }
+}

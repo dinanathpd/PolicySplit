@@ -1,0 +1,599 @@
+{
+ "bmv2_validation": {
+  "flows": 3000,
+  "packets": 61478,
+  "rate_flows_per_s": 20.0,
+  "duration_s": 1999.921509,
+  "action_map": "2-action",
+  "key_levels": 10,
+  "offline": {
+   "coverage": 0.49733333333333335,
+   "fast_flows": 1492,
+   "selective_error": 0.0006702412868632708,
+   "per_action": {
+    "1": {
+     "coverage": 0.49733333333333335,
+     "error": 0.0006702412868632708
+    }
+   }
+  },
+  "emulator": {
+   "coverage": 0.49733333333333335,
+   "fast_flows": 1492,
+   "selective_error": 0.0006702412868632708,
+   "per_action": {
+    "1": {
+     "coverage": 0.49733333333333335,
+     "error": 0.0006702412868632708
+    }
+   }
+  },
+  "bmv2": {
+   "coverage": 0.498,
+   "fast_flows": 1494,
+   "selective_error": 0.0006693440428380187,
+   "per_action": {
+    "1": {
+     "coverage": 0.498,
+     "error": 0.0006693440428380187
+    }
+   }
+  },
+  "verdict_agreement_bmv2_emulator": 0.9993333333333333,
+  "action_agreement_bmv2_offline": 0.9993333333333333,
+  "decided_bmv2": 0.9996666666666667,
+  "decided_emulator": 0.9996666666666667,
+  "policy_registers_identical": 0.019673224408136045,
+  "report_registers_identical": 0.0,
+  "report_cells_identical": 0.9989996665555185,
+  "per_register": {
+   "byte_count": {
+    "identical": 1.0,
+    "abs_diff_p50": 0,
+    "abs_diff_p99": 0,
+    "abs_diff_max": 0
+   },
+   "mean_len": {
+    "identical": 1.0,
+    "abs_diff_p50": 0,
+    "abs_diff_p99": 0,
+    "abs_diff_max": 0
+   },
+   "mean_iat_us": {
+    "identical": 0.019673224408136045,
+    "abs_diff_p50": 15,
+    "abs_diff_p99": 1791,
+    "abs_diff_max": 94083
+   },
+   "min_len": {
+    "identical": 1.0,
+    "abs_diff_p50": 0,
+    "abs_diff_p99": 0,
+    "abs_diff_max": 0
+   },
+   "max_len": {
+    "identical": 1.0,
+    "abs_diff_p50": 0,
+    "abs_diff_p99": 0,
+    "abs_diff_max": 0
+   },
+   "fwd_pkts": {
+    "identical": 1.0,
+    "abs_diff_p50": 0,
+    "abs_diff_p99": 0,
+    "abs_diff_max": 0
+   },
+   "fwd_bytes": {
+    "identical": 1.0,
+    "abs_diff_p50": 0,
+    "abs_diff_p99": 0,
+    "abs_diff_max": 0
+   },
+   "iat_min_us": {
+    "identical": 0.008669556518839614,
+    "abs_diff_p50": 31,
+    "abs_diff_p99": 329,
+    "abs_diff_max": 26048
+   },
+   "iat_max_us": {
+    "identical": 0.0106702234078026,
+    "abs_diff_p50": 45,
+    "abs_diff_p99": 577,
+    "abs_diff_max": 33517
+   },
+   "duration_us": {
+    "identical": 0.006002000666888963,
+    "abs_diff_p50": 50,
+    "abs_diff_p99": 515,
+    "abs_diff_max": 3319
+   },
+   "len_dev": {
+    "identical": 1.0,
+    "abs_diff_p50": 0,
+    "abs_diff_p99": 0,
+    "abs_diff_max": 0
+   },
+   "first_len": {
+    "identical": 1.0,
+    "abs_diff_p50": 0,
+    "abs_diff_p99": 0,
+    "abs_diff_max": 0
+   }
+  },
+  "verdict_differences": [
+   {
+    "flow": 715,
+    "label": 1,
+    "emulator": 1,
+    "bmv2": 2,
+    "cell_emulator": 22132,
+    "cell_bmv2": 22032
+   },
+   {
+    "flow": 737,
+    "label": 1,
+    "emulator": 1,
+    "bmv2": 2,
+    "cell_emulator": 22132,
+    "cell_bmv2": 22032
+   }
+  ],
+  "replay": {
+   "packets_sent": 61478,
+   "send_lateness_ms": {
+    "p50": 0.0,
+    "p99": 0.019,
+    "max": 2.537
+   }
+  },
+  "pipeline_events": {
+   "fwd": 41023,
+   "drop": 18950,
+   "esc": 1505,
+   "rate_limit_pass": 0,
+   "rate_limit_drop": 0,
+   "redirect": 0
+  },
+  "frames_at_inspection_port": 0,
+  "environment": {
+   "switch": "1.15.6",
+   "classifier_entries": 39,
+   "logging": "off",
+   "closed_loop": false,
+   "entries": "p4/generated/classifier_entries.txt",
+   "meter_rates": "0.00005:5 0.0001:10"
+  }
+ },
+ "closed_loop": {
+  "flows": 3000,
+  "benign_block_budget": 0.02,
+  "switch_drop_flows": 1494,
+  "deferred_flows": 1505,
+  "controller_blocked_flows": 80,
+  "attack_stopped": 0.6332528180354268,
+  "attack_stopped_at_switch": 0.6010466988727858,
+  "benign_stopped": 0.001937984496124031,
+  "agreement_with_expected": 0.9933333333333333,
+  "disagreements_on_flows_deferred_in_both": 20,
+  "disagreements": 20,
+  "expected_attack_stopped": 0.6340579710144928,
+  "expected_benign_stopped": 0.001937984496124031,
+  "rule_install_ms": {
+   "p50": 1.8856525421142578,
+   "p95": 8.526802062988281,
+   "max": 17.215251922607422
+  },
+  "post_decision_packets_of_blocked_flows": 2372,
+  "of_which_dropped_by_installed_rules": 2351,
+  "of_which_sent_before_install": 205,
+  "rule_matches_on_other_flows": {
+   "benign_packets": 0,
+   "benign_flows": 0,
+   "attack_packets": 0,
+   "attack_flows": 0
+  },
+  "mitigation_entries": 160,
+  "pipeline_events": {
+   "fwd": 38672,
+   "drop": 21301,
+   "esc": 1505,
+   "rate_limit_pass": 0,
+   "rate_limit_drop": 0,
+   "redirect": 0
+  },
+  "replay": {
+   "packets_sent": 61478,
+   "send_lateness_ms": {
+    "p50": 0.0,
+    "p99": 0.392,
+    "max": 32.427
+   }
+  }
+ },
+ "load_sweep": [
+  {
+   "seed": 30,
+   "rate_flows_per_s": 10,
+   "ways": 2,
+   "flows": 10522,
+   "offline_coverage": 0.4429766204143699,
+   "offline_selective_drop_error": 0.003003647285990131,
+   "online_coverage": 0.44269150351644176,
+   "online_selective_drop_error": 0.0030055817947617003,
+   "verdict_agreement": 0.9997148831020718,
+   "decided": 0.9995248051701198,
+   "never_decided": 0.0004751948298802509,
+   "decided_after_eviction": 0.0008553506937844516,
+   "attack_packets_dropped": 66124,
+   "benign_packets_dropped": 632
+  },
+  {
+   "seed": 30,
+   "rate_flows_per_s": 10,
+   "ways": 1,
+   "flows": 10522,
+   "offline_coverage": 0.4429766204143699,
+   "offline_selective_drop_error": 0.003003647285990131,
+   "online_coverage": 0.42301843755939933,
+   "online_selective_drop_error": 0.0033700292069197934,
+   "verdict_agreement": 0.9796616612811253,
+   "decided": 0.9759551416080593,
+   "never_decided": 0.024044858391940694,
+   "decided_after_eviction": 0.013685611100551226,
+   "attack_packets_dropped": 61721,
+   "benign_packets_dropped": 712
+  },
+  {
+   "seed": 30,
+   "rate_flows_per_s": 100,
+   "ways": 2,
+   "flows": 10522,
+   "offline_coverage": 0.4429766204143699,
+   "offline_selective_drop_error": 0.003003647285990131,
+   "online_coverage": 0.4407907241969207,
+   "online_selective_drop_error": 0.00301854247520483,
+   "verdict_agreement": 0.9974339479186466,
+   "decided": 0.9940125451435088,
+   "never_decided": 0.0059874548564911615,
+   "decided_after_eviction": 0.018152442501425583,
+   "attack_packets_dropped": 65040,
+   "benign_packets_dropped": 632
+  },
+  {
+   "seed": 30,
+   "rate_flows_per_s": 100,
+   "ways": 1,
+   "flows": 10522,
+   "offline_coverage": 0.4429766204143699,
+   "offline_selective_drop_error": 0.003003647285990131,
+   "online_coverage": 0.3978331115757461,
+   "online_selective_drop_error": 0.003822264691829909,
+   "verdict_agreement": 0.9533358677057594,
+   "decided": 0.9403155293670404,
+   "never_decided": 0.059684470632959515,
+   "decided_after_eviction": 0.04466831400874358,
+   "attack_packets_dropped": 57147,
+   "benign_packets_dropped": 726
+  },
+  {
+   "seed": 30,
+   "rate_flows_per_s": 1000,
+   "ways": 2,
+   "flows": 10522,
+   "offline_coverage": 0.4429766204143699,
+   "offline_selective_drop_error": 0.003003647285990131,
+   "online_coverage": 0.4333776848507888,
+   "online_selective_drop_error": 0.003289473684210526,
+   "verdict_agreement": 0.9885002851168979,
+   "decided": 0.9819425964645505,
+   "never_decided": 0.018057403535449535,
+   "decided_after_eviction": 0.05179623645694735,
+   "attack_packets_dropped": 63979,
+   "benign_packets_dropped": 715
+  },
+  {
+   "seed": 30,
+   "rate_flows_per_s": 1000,
+   "ways": 1,
+   "flows": 10522,
+   "offline_coverage": 0.4429766204143699,
+   "offline_selective_drop_error": 0.003003647285990131,
+   "online_coverage": 0.38718874738642844,
+   "online_selective_drop_error": 0.0039273441335297005,
+   "verdict_agreement": 0.9419311917886334,
+   "decided": 0.9000190077931952,
+   "never_decided": 0.09998099220680479,
+   "decided_after_eviction": 0.07327504276753469,
+   "attack_packets_dropped": 55824,
+   "benign_packets_dropped": 745
+  },
+  {
+   "seed": 30,
+   "rate_flows_per_s": 5000,
+   "ways": 2,
+   "flows": 10522,
+   "offline_coverage": 0.4429766204143699,
+   "offline_selective_drop_error": 0.003003647285990131,
+   "online_coverage": 0.4312868275993157,
+   "online_selective_drop_error": 0.003085059497576025,
+   "verdict_agreement": 0.984698726477856,
+   "decided": 0.9744345181524425,
+   "never_decided": 0.025565481847557497,
+   "decided_after_eviction": 0.07489070518912755,
+   "attack_packets_dropped": 63908,
+   "benign_packets_dropped": 668
+  },
+  {
+   "seed": 30,
+   "rate_flows_per_s": 5000,
+   "ways": 1,
+   "flows": 10522,
+   "offline_coverage": 0.4429766204143699,
+   "offline_selective_drop_error": 0.003003647285990131,
+   "online_coverage": 0.37739973389089526,
+   "online_selective_drop_error": 0.003777386048854193,
+   "verdict_agreement": 0.9304314769055313,
+   "decided": 0.8720775517962365,
+   "never_decided": 0.12792244820376356,
+   "decided_after_eviction": 0.09256795286067288,
+   "attack_packets_dropped": 55781,
+   "benign_packets_dropped": 741
+  },
+  {
+   "seed": 31,
+   "rate_flows_per_s": 10,
+   "ways": 2,
+   "flows": 10840,
+   "offline_coverage": 0.4348708487084871,
+   "offline_selective_drop_error": 0.00487908358082308,
+   "online_coverage": 0.4342250922509225,
+   "online_selective_drop_error": 0.004886339494370087,
+   "verdict_agreement": 0.9993542435424354,
+   "decided": 0.9998154981549815,
+   "never_decided": 0.00018450184501845018,
+   "decided_after_eviction": 0.001014760147601476,
+   "attack_packets_dropped": 70613,
+   "benign_packets_dropped": 1126
+  },
+  {
+   "seed": 31,
+   "rate_flows_per_s": 10,
+   "ways": 1,
+   "flows": 10840,
+   "offline_coverage": 0.4348708487084871,
+   "offline_selective_drop_error": 0.00487908358082308,
+   "online_coverage": 0.4124538745387454,
+   "online_selective_drop_error": 0.004920599418474614,
+   "verdict_agreement": 0.9773985239852399,
+   "decided": 0.9796125461254612,
+   "never_decided": 0.020387453874538747,
+   "decided_after_eviction": 0.010793357933579335,
+   "attack_packets_dropped": 66056,
+   "benign_packets_dropped": 973
+  },
+  {
+   "seed": 31,
+   "rate_flows_per_s": 100,
+   "ways": 2,
+   "flows": 10840,
+   "offline_coverage": 0.4348708487084871,
+   "offline_selective_drop_error": 0.00487908358082308,
+   "online_coverage": 0.4300738007380074,
+   "online_selective_drop_error": 0.005148005148005148,
+   "verdict_agreement": 0.9942804428044281,
+   "decided": 0.9941881918819189,
+   "never_decided": 0.005811808118081181,
+   "decided_after_eviction": 0.01392988929889299,
+   "attack_packets_dropped": 69546,
+   "benign_packets_dropped": 1213
+  },
+  {
+   "seed": 31,
+   "rate_flows_per_s": 100,
+   "ways": 1,
+   "flows": 10840,
+   "offline_coverage": 0.4348708487084871,
+   "offline_selective_drop_error": 0.00487908358082308,
+   "online_coverage": 0.3858856088560886,
+   "online_selective_drop_error": 0.005737508964857758,
+   "verdict_agreement": 0.9486162361623616,
+   "decided": 0.9317343173431735,
+   "never_decided": 0.06826568265682657,
+   "decided_after_eviction": 0.028690036900369004,
+   "attack_packets_dropped": 62381,
+   "benign_packets_dropped": 1071
+  },
+  {
+   "seed": 31,
+   "rate_flows_per_s": 1000,
+   "ways": 2,
+   "flows": 10840,
+   "offline_coverage": 0.4348708487084871,
+   "offline_selective_drop_error": 0.00487908358082308,
+   "online_coverage": 0.41863468634686346,
+   "online_selective_drop_error": 0.005288673424416042,
+   "verdict_agreement": 0.9802583025830258,
+   "decided": 0.9808118081180812,
+   "never_decided": 0.01918819188191882,
+   "decided_after_eviction": 0.0529520295202952,
+   "attack_packets_dropped": 68163,
+   "benign_packets_dropped": 1205
+  },
+  {
+   "seed": 31,
+   "rate_flows_per_s": 1000,
+   "ways": 1,
+   "flows": 10840,
+   "offline_coverage": 0.4348708487084871,
+   "offline_selective_drop_error": 0.00487908358082308,
+   "online_coverage": 0.37103321033210335,
+   "online_selective_drop_error": 0.005718547986076579,
+   "verdict_agreement": 0.9308118081180812,
+   "decided": 0.8845940959409594,
+   "never_decided": 0.1154059040590406,
+   "decided_after_eviction": 0.06900369003690036,
+   "attack_packets_dropped": 60314,
+   "benign_packets_dropped": 1239
+  },
+  {
+   "seed": 31,
+   "rate_flows_per_s": 5000,
+   "ways": 2,
+   "flows": 10840,
+   "offline_coverage": 0.4348708487084871,
+   "offline_selective_drop_error": 0.00487908358082308,
+   "online_coverage": 0.4146678966789668,
+   "online_selective_drop_error": 0.005339265850945495,
+   "verdict_agreement": 0.9757380073800738,
+   "decided": 0.9720479704797048,
+   "never_decided": 0.027952029520295203,
+   "decided_after_eviction": 0.07518450184501844,
+   "attack_packets_dropped": 67352,
+   "benign_packets_dropped": 1203
+  },
+  {
+   "seed": 31,
+   "rate_flows_per_s": 5000,
+   "ways": 1,
+   "flows": 10840,
+   "offline_coverage": 0.4348708487084871,
+   "offline_selective_drop_error": 0.00487908358082308,
+   "online_coverage": 0.36605166051660515,
+   "online_selective_drop_error": 0.006300403225806451,
+   "verdict_agreement": 0.9226937269372694,
+   "decided": 0.8585793357933579,
+   "never_decided": 0.14142066420664207,
+   "decided_after_eviction": 0.09455719557195572,
+   "attack_packets_dropped": 60011,
+   "benign_packets_dropped": 1193
+  },
+  {
+   "seed": 32,
+   "rate_flows_per_s": 10,
+   "ways": 2,
+   "flows": 10561,
+   "offline_coverage": 0.46681185493797933,
+   "offline_selective_drop_error": 0.005070993914807302,
+   "online_coverage": 0.4665277909288893,
+   "online_selective_drop_error": 0.005074081591231987,
+   "verdict_agreement": 0.99952655998485,
+   "decided": 0.99962124798788,
+   "never_decided": 0.0003787520121200644,
+   "decided_after_eviction": 0.001041568033330177,
+   "attack_packets_dropped": 71421,
+   "benign_packets_dropped": 1504
+  },
+  {
+   "seed": 32,
+   "rate_flows_per_s": 10,
+   "ways": 1,
+   "flows": 10561,
+   "offline_coverage": 0.46681185493797933,
+   "offline_selective_drop_error": 0.005070993914807302,
+   "online_coverage": 0.44967332638954643,
+   "online_selective_drop_error": 0.00505369551484523,
+   "verdict_agreement": 0.982482719439447,
+   "decided": 0.9795473913455165,
+   "never_decided": 0.02045260865448348,
+   "decided_after_eviction": 0.013066944418142221,
+   "attack_packets_dropped": 68034,
+   "benign_packets_dropped": 1453
+  },
+  {
+   "seed": 32,
+   "rate_flows_per_s": 100,
+   "ways": 2,
+   "flows": 10561,
+   "offline_coverage": 0.46681185493797933,
+   "offline_selective_drop_error": 0.005070993914807302,
+   "online_coverage": 0.464539342865259,
+   "online_selective_drop_error": 0.005299633102323685,
+   "verdict_agreement": 0.9969699839030395,
+   "decided": 0.9950762238424392,
+   "never_decided": 0.004923776157560837,
+   "decided_after_eviction": 0.016286336521162768,
+   "attack_packets_dropped": 70455,
+   "benign_packets_dropped": 1571
+  },
+  {
+   "seed": 32,
+   "rate_flows_per_s": 100,
+   "ways": 1,
+   "flows": 10561,
+   "offline_coverage": 0.46681185493797933,
+   "offline_selective_drop_error": 0.005070993914807302,
+   "online_coverage": 0.42798977369567276,
+   "online_selective_drop_error": 0.0055309734513274336,
+   "verdict_agreement": 0.958337278666793,
+   "decided": 0.9479215983334911,
+   "never_decided": 0.05207840166650885,
+   "decided_after_eviction": 0.05217308966953887,
+   "attack_packets_dropped": 62926,
+   "benign_packets_dropped": 1482
+  },
+  {
+   "seed": 32,
+   "rate_flows_per_s": 1000,
+   "ways": 2,
+   "flows": 10561,
+   "offline_coverage": 0.46681185493797933,
+   "offline_selective_drop_error": 0.005070993914807302,
+   "online_coverage": 0.45753243064103777,
+   "online_selective_drop_error": 0.004966887417218543,
+   "verdict_agreement": 0.9892055676545781,
+   "decided": 0.9837136634788373,
+   "never_decided": 0.016286336521162768,
+   "decided_after_eviction": 0.05406684973013919,
+   "attack_packets_dropped": 69313,
+   "benign_packets_dropped": 1492
+  },
+  {
+   "seed": 32,
+   "rate_flows_per_s": 1000,
+   "ways": 1,
+   "flows": 10561,
+   "offline_coverage": 0.46681185493797933,
+   "offline_selective_drop_error": 0.005070993914807302,
+   "online_coverage": 0.41681658933813087,
+   "online_selective_drop_error": 0.005679236710586098,
+   "verdict_agreement": 0.9465959662910709,
+   "decided": 0.9111826531578449,
+   "never_decided": 0.0888173468421551,
+   "decided_after_eviction": 0.07556102641795284,
+   "attack_packets_dropped": 61744,
+   "benign_packets_dropped": 1507
+  },
+  {
+   "seed": 32,
+   "rate_flows_per_s": 5000,
+   "ways": 2,
+   "flows": 10561,
+   "offline_coverage": 0.46681185493797933,
+   "offline_selective_drop_error": 0.005070993914807302,
+   "online_coverage": 0.4550705425622574,
+   "online_selective_drop_error": 0.00478568456096546,
+   "verdict_agreement": 0.9856074235394375,
+   "decided": 0.9764226872455259,
+   "never_decided": 0.023577312754474007,
+   "decided_after_eviction": 0.07754947448158318,
+   "attack_packets_dropped": 69353,
+   "benign_packets_dropped": 1396
+  },
+  {
+   "seed": 32,
+   "rate_flows_per_s": 5000,
+   "ways": 1,
+   "flows": 10561,
+   "offline_coverage": 0.46681185493797933,
+   "offline_selective_drop_error": 0.005070993914807302,
+   "online_coverage": 0.4090521730896695,
+   "online_selective_drop_error": 0.00625,
+   "verdict_agreement": 0.9367484139759492,
+   "decided": 0.887794716409431,
+   "never_decided": 0.11220528359056907,
+   "decided_after_eviction": 0.09724457911182653,
+   "attack_packets_dropped": 61682,
+   "benign_packets_dropped": 1437
+  }
+ ]
+}

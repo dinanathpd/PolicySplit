@@ -1,0 +1,404 @@
+{
+ "window_us": 1000000,
+ "level_min": 256,
+ "victim_slots": 4096,
+ "flow_slots": 16384,
+ "captures": {
+  "benign": {
+   "packets": 4845,
+   "flows": 211,
+   "slot_claims": 211,
+   "span_s": 36.533025,
+   "victims": 91,
+   "peak_new_flows_per_window": 7,
+   "peak_new_flows_per_window_slot": 7,
+   "top_victims": [
+    {
+     "addr": "255.255.255.255",
+     "peak": 7
+    },
+    {
+     "addr": "192.168.137.1",
+     "peak": 5
+    },
+    {
+     "addr": "192.168.137.58",
+     "peak": 3
+    },
+    {
+     "addr": "44.199.52.214",
+     "peak": 3
+    },
+    {
+     "addr": "224.0.0.251",
+     "peak": 2
+    }
+   ],
+   "alerts": 0,
+   "alert_levels": [],
+   "first_alert_s": null,
+   "alert_victims": [],
+   "alert_sources": 0
+  },
+  "BenignTraffic2": {
+   "packets": 87167,
+   "flows": 2048,
+   "slot_claims": 2431,
+   "span_s": 881.672981,
+   "victims": 189,
+   "peak_new_flows_per_window": 19,
+   "peak_new_flows_per_window_slot": 19,
+   "top_victims": [
+    {
+     "addr": "192.168.137.58",
+     "peak": 19
+    },
+    {
+     "addr": "192.168.137.1",
+     "peak": 8
+    },
+    {
+     "addr": "255.255.255.255",
+     "peak": 7
+    },
+    {
+     "addr": "52.91.195.103",
+     "peak": 6
+    },
+    {
+     "addr": "8.8.8.8",
+     "peak": 6
+    }
+   ],
+   "alerts": 0,
+   "alert_levels": [],
+   "first_alert_s": null,
+   "alert_victims": [],
+   "alert_sources": 0
+  },
+  "BenignTraffic3": {
+   "packets": 85597,
+   "flows": 1880,
+   "slot_claims": 2232,
+   "span_s": 820.52515,
+   "victims": 202,
+   "peak_new_flows_per_window": 16,
+   "peak_new_flows_per_window_slot": 16,
+   "top_victims": [
+    {
+     "addr": "192.168.137.58",
+     "peak": 16
+    },
+    {
+     "addr": "255.255.255.255",
+     "peak": 7
+    },
+    {
+     "addr": "52.91.195.103",
+     "peak": 6
+    },
+    {
+     "addr": "8.8.4.4",
+     "peak": 6
+    },
+    {
+     "addr": "192.168.137.47",
+     "peak": 5
+    }
+   ],
+   "alerts": 0,
+   "alert_levels": [],
+   "first_alert_s": null,
+   "alert_victims": [],
+   "alert_sources": 0
+  },
+  "honeypot-5-1-amazon-echo": {
+   "packets": 396648,
+   "flows": 799,
+   "slot_claims": 1227,
+   "span_s": 19751.634689,
+   "victims": 129,
+   "peak_new_flows_per_window": 11,
+   "peak_new_flows_per_window_slot": 11,
+   "top_victims": [
+    {
+     "addr": "192.168.2.1",
+     "peak": 11
+    },
+    {
+     "addr": "93.184.216.34",
+     "peak": 3
+    },
+    {
+     "addr": "52.119.168.148",
+     "peak": 3
+    },
+    {
+     "addr": "52.119.164.214",
+     "peak": 3
+    },
+    {
+     "addr": "224.0.0.251",
+     "peak": 2
+    }
+   ],
+   "alerts": 0,
+   "alert_levels": [],
+   "first_alert_s": null,
+   "alert_victims": [],
+   "alert_sources": 0
+  },
+  "honeypot-4-1-philips-hue": {
+   "packets": 16921,
+   "flows": 438,
+   "slot_claims": 453,
+   "span_s": 78841.406694,
+   "victims": 15,
+   "peak_new_flows_per_window": 10,
+   "peak_new_flows_per_window_slot": 10,
+   "top_victims": [
+    {
+     "addr": "192.168.1.1",
+     "peak": 10
+    },
+    {
+     "addr": "130.211.67.12",
+     "peak": 3
+    },
+    {
+     "addr": "52.51.133.171",
+     "peak": 2
+    },
+    {
+     "addr": "239.255.255.250",
+     "peak": 1
+    },
+    {
+     "addr": "216.239.35.12",
+     "peak": 1
+    }
+   ],
+   "alerts": 0,
+   "alert_levels": [],
+   "first_alert_s": null,
+   "alert_victims": [],
+   "alert_sources": 0
+  },
+  "honeypot-7-1-somfy-01": {
+   "packets": 6179,
+   "flows": 10,
+   "slot_claims": 28,
+   "span_s": 5023.011313,
+   "victims": 8,
+   "peak_new_flows_per_window": 1,
+   "peak_new_flows_per_window_slot": 1,
+   "top_victims": [
+    {
+     "addr": "255.255.255.255",
+     "peak": 1
+    },
+    {
+     "addr": "224.0.0.1",
+     "peak": 1
+    },
+    {
+     "addr": "192.168.4.2",
+     "peak": 1
+    },
+    {
+     "addr": "192.168.1.158",
+     "peak": 1
+    },
+    {
+     "addr": "192.168.1.1",
+     "peak": 1
+    }
+   ],
+   "alerts": 0,
+   "alert_levels": [],
+   "first_alert_s": null,
+   "alert_victims": [],
+   "alert_sources": 0
+  },
+  "honeypot-7-1-somfy-02": {
+   "packets": 110624,
+   "flows": 28,
+   "slot_claims": 51,
+   "span_s": 86391.046805,
+   "victims": 27,
+   "peak_new_flows_per_window": 1,
+   "peak_new_flows_per_window_slot": 1,
+   "top_victims": [
+    {
+     "addr": "217.91.44.17",
+     "peak": 1
+    },
+    {
+     "addr": "213.5.39.34",
+     "peak": 1
+    },
+    {
+     "addr": "212.25.15.128",
+     "peak": 1
+    },
+    {
+     "addr": "194.158.196.172",
+     "peak": 1
+    },
+    {
+     "addr": "194.158.196.171",
+     "peak": 1
+    }
+   ],
+   "alerts": 0,
+   "alert_levels": [],
+   "first_alert_s": null,
+   "alert_victims": [],
+   "alert_sources": 0
+  },
+  "honeypot-7-1-somfy-03": {
+   "packets": 58007,
+   "flows": 15,
+   "slot_claims": 26,
+   "span_s": 44326.704554,
+   "victims": 14,
+   "peak_new_flows_per_window": 1,
+   "peak_new_flows_per_window_slot": 1,
+   "top_victims": [
+    {
+     "addr": "213.251.53.234",
+     "peak": 1
+    },
+    {
+     "addr": "193.219.61.120",
+     "peak": 1
+    },
+    {
+     "addr": "192.168.1.1",
+     "peak": 1
+    },
+    {
+     "addr": "178.79.152.182",
+     "peak": 1
+    },
+    {
+     "addr": "151.80.124.104",
+     "peak": 1
+    }
+   ],
+   "alerts": 0,
+   "alert_levels": [],
+   "first_alert_s": null,
+   "alert_victims": [],
+   "alert_sources": 0
+  },
+  "honeypot-7-1-somfy-04": {
+   "packets": 112624,
+   "flows": 26,
+   "slot_claims": 49,
+   "span_s": 86393.078634,
+   "victims": 25,
+   "peak_new_flows_per_window": 1,
+   "peak_new_flows_per_window_slot": 1,
+   "top_victims": [
+    {
+     "addr": "213.251.52.234",
+     "peak": 1
+    },
+    {
+     "addr": "195.186.4.100",
+     "peak": 1
+    },
+    {
+     "addr": "195.154.223.198",
+     "peak": 1
+    },
+    {
+     "addr": "194.177.34.116",
+     "peak": 1
+    },
+    {
+     "addr": "192.168.1.1",
+     "peak": 1
+    }
+   ],
+   "alerts": 0,
+   "alert_levels": [],
+   "first_alert_s": null,
+   "alert_victims": [],
+   "alert_sources": 0
+  },
+  "honeypot-7-1-somfy-05": {
+   "packets": 112580,
+   "flows": 29,
+   "slot_claims": 53,
+   "span_s": 86391.850799,
+   "victims": 27,
+   "peak_new_flows_per_window": 1,
+   "peak_new_flows_per_window_slot": 1,
+   "top_victims": [
+    {
+     "addr": "195.201.19.162",
+     "peak": 1
+    },
+    {
+     "addr": "195.186.4.101",
+     "peak": 1
+    },
+    {
+     "addr": "194.177.210.54",
+     "peak": 1
+    },
+    {
+     "addr": "194.58.203.148",
+     "peak": 1
+    },
+    {
+     "addr": "193.228.143.24",
+     "peak": 1
+    }
+   ],
+   "alerts": 0,
+   "alert_levels": [],
+   "first_alert_s": null,
+   "alert_victims": [],
+   "alert_sources": 0
+  },
+  "honeypot-7-1-somfy-06": {
+   "packets": 110000,
+   "flows": 27,
+   "slot_claims": 52,
+   "span_s": 86394.726885,
+   "victims": 26,
+   "peak_new_flows_per_window": 1,
+   "peak_new_flows_per_window_slot": 1,
+   "top_victims": [
+    {
+     "addr": "217.147.208.1",
+     "peak": 1
+    },
+    {
+     "addr": "213.209.109.44",
+     "peak": 1
+    },
+    {
+     "addr": "212.83.145.32",
+     "peak": 1
+    },
+    {
+     "addr": "212.51.144.44",
+     "peak": 1
+    },
+    {
+     "addr": "195.171.43.10",
+     "peak": 1
+    }
+   ],
+   "alerts": 0,
+   "alert_levels": [],
+   "first_alert_s": null,
+   "alert_victims": [],
+   "alert_sources": 0
+  }
+ }
+}

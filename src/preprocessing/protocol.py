@@ -27,7 +27,7 @@ import numpy as np
 CONTEXT_SIGNATURE_DECIMALS = 1
 
 ENTROPY_MODES = ("real", "none", "class-marginal", "shuffle")
-SPLIT_MODES = ("flow-isolated", "context-disjoint", "random")
+SPLIT_MODES = ("flow-isolated", "context-disjoint", "blocked", "random")
 
 
 # ── Corpus loading ────────────────────────────────────────────────────
@@ -55,6 +55,36 @@ def load_corpus(h5_path: str, seq_len: Optional[int] = None):
 def packet_counts(X_seq: np.ndarray) -> np.ndarray:
     """Number of observed (non-padded) packets per flow."""
     return (X_seq[:, :, 0] != 0).sum(axis=1).astype(np.int64)
+
+
+def scenario_ids(y: np.ndarray, log_path: str = "results/log_extraction_v3.txt"
+                 ) -> Optional[Tuple[np.ndarray, list]]:
+    """
+    Capture scenario (CICIoT2023 directory) of every corpus flow.
+
+    The extractor wrote the scenarios in sorted directory order and logged
+    each one's flow count, so the corpus is a concatenation of scenario runs.
+    Returns (scenario index per flow, scenario names), or None when the log
+    is missing or its counts do not reproduce ``y`` exactly. Scenarios with
+    more than 30,000 qualifying flows were sampled to 30,000 in random order
+    by the extractor; the others keep the order in which flows completed.
+    """
+    import re
+    from pathlib import Path
+    p = Path(log_path)
+    if not p.exists():
+        return None
+    done = dict((n, int(k)) for n, k in re.findall(
+        r"\[([^\]]+)\] DONE: (\d+) flows", p.read_text()))
+    names = sorted(done)
+    if sum(done.values()) != len(y):
+        return None
+    sid = np.concatenate([np.full(done[n], i) for i, n in enumerate(names)])
+    # Every scenario must carry a single label that matches the corpus.
+    for i in range(len(names)):
+        if len(np.unique(y[sid == i])) != 1:
+            return None
+    return sid, names
 
 
 # ── Subsampling ───────────────────────────────────────────────────────
@@ -95,7 +125,8 @@ def context_signature(X_ent: np.ndarray,
     grouped together.
     """
     q = np.round(X_ent, decimals)
-    return np.array([hash(row.tobytes()) for row in q], dtype=np.int64)
+    # Python's hash() of bytes is salted per process, which made the split irreproducible.
+    return np.unique(q, axis=0, return_inverse=True)[1].astype(np.int64).ravel()
 
 
 def _group_keys(mode: str, y: np.ndarray, flow_ids: np.ndarray,
@@ -155,6 +186,8 @@ def split_indices(y: np.ndarray, flow_ids: np.ndarray, X_ent: np.ndarray,
     no group contributes to more than one partition.
     """
     rng = np.random.RandomState(seed)
+    if mode == "blocked":
+        return _blocked_split(y, train_ratio, val_ratio)
     groups = _group_keys(mode, y, flow_ids, X_ent)
 
     if groups is None:
@@ -194,6 +227,23 @@ def split_indices(y: np.ndarray, flow_ids: np.ndarray, X_ent: np.ndarray,
     return tuple(
         np.sort(np.concatenate(p)) if p else np.array([], dtype=np.int64)
         for p in parts)
+
+
+def _blocked_split(y: np.ndarray, train_ratio: float, val_ratio: float
+                   ) -> Tuple[np.ndarray, np.ndarray, np.ndarray]:
+    """
+    Extraction-order blocks: inside each contiguous label run of the corpus,
+    the earliest flows train, the next validate and the latest test. Rows
+    must be in corpus order, which ``stratified_subsample`` preserves.
+    """
+    parts = ([], [], [])
+    for run in np.split(np.arange(len(y)), np.flatnonzero(np.diff(y)) + 1):
+        n_tr = int(len(run) * train_ratio)
+        n_va = int(len(run) * val_ratio)
+        parts[0].append(run[:n_tr])
+        parts[1].append(run[n_tr:n_tr + n_va])
+        parts[2].append(run[n_tr + n_va:])
+    return tuple(np.concatenate(p) for p in parts)
 
 
 # ── Normalisation (estimated on train only) ───────────────────────────

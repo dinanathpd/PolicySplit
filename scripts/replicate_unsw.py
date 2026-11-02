@@ -11,7 +11,7 @@ corpus, the same controls should behave the same way here.
 
 Everything except the corpus is held fixed: the same four conditions, the
 same substitution routine, statistics estimated after partitioning, and
-three seeds per cell.
+ten seeds per cell.
 
     python scripts/replicate_unsw.py
 """
@@ -86,14 +86,196 @@ def build_estimators(seed, n_jobs):
     return est
 
 
+def _policy_corpus(args):
+    """Classes (Normal first), labels and the five switch counters."""
+    df = pd.concat([pd.read_csv(p) for p in
+                    sorted(Path(args.data).glob("UNSW_NB15_*-set.csv"))],
+                   ignore_index=True)
+    # Normal first, so index 0 is the allow class as in the main corpus.
+    classes = ["Normal"] + sorted(c for c in df["attack_cat"].unique()
+                                  if c != "Normal")
+    y_all = df["attack_cat"].map(
+        {c: i for i, c in enumerate(classes)}).to_numpy()
+    raw_all = np.stack([df.sbytes + df.dbytes, df.spkts + df.dpkts, df.smean,
+                        df.dmean, np.rint(df.sinpkt * 1000)],
+                       axis=1).astype(np.float64)
+    return classes, y_all, raw_all
+
+
+def _policy_seed(T, P, y_all, raw_all, n_classes, seed):
+    """Subsample, random partition, fitted table and calibration units."""
+    keep = P.stratified_subsample(y_all, 12000, seed)
+    y, raw = y_all[keep], raw_all[keep]
+    tr, va, te = P.split_indices(y, np.arange(len(y)).astype(str),
+                                 np.zeros((len(y), 1)), "random", seed)
+    order = np.argsort(va, kind="stable")    # file row order
+    # A random partition assigns single rows, so rows are the units.
+    clusters = T.cluster_weights(np.arange(len(va)))
+    F = T.apply_edges(raw, T.fit_edges(raw[tr]))
+    c_tr, c_va, c_te = (T.cell_index(F[i]) for i in (tr, va, te))
+    weights = {c: len(tr) / (n_classes * n) for c, n in
+               zip(*np.unique(y[tr], return_counts=True))}
+    leaf, leaf_conf, _ = T.empirical_table(F[tr], y[tr], n_classes, 0,
+                                           weights)
+    counts = np.zeros((T.KEY_SPACE, n_classes))
+    np.add.at(counts, (c_tr, y[tr]), 1.0)
+    return (y, va, te, order, clusters, c_va, c_te, leaf, leaf_conf, counts)
+
+
+def map_replication(args):
+    """The random action-map study of train_rf.py --map-study on UNSW-NB15."""
+    sys.path.insert(0, os.path.dirname(__file__))
+    import train_rf as T
+    from src.preprocessing import protocol as P
+    T.set_key_levels(T.KEY_RADIX)
+    classes, y_all, raw_all = _policy_corpus(args)
+    n = len(classes)
+    act4 = {"Normal": 0, "Backdoor": 1, "DoS": 1, "Exploits": 1,
+            "Shellcode": 1, "Worms": 1, "Fuzzers": 2, "Generic": 2,
+            "Analysis": 3, "Reconnaissance": 3}
+    maps = ([np.array([0] + [1] * (n - 1)), np.array([act4[c] for c in classes])]
+            + T.random_action_maps(n, 2, args.map_count, 1)
+            + T.random_action_maps(n, 3, args.map_count, 2) + [np.arange(n)])
+    uniq, seen = [], set()
+    for m in maps:
+        names = {}
+        key = tuple(names.setdefault(v, len(names)) for v in m.tolist())
+        if key not in seen:
+            seen.add(key)
+            uniq.append(m)
+    seeds = range(args.policy_first_seed,
+                  args.policy_first_seed + args.policy_seeds)
+    per_seed = []
+    for seed in seeds:
+        (y, va, te, order, clusters, c_va, c_te, leaf, leaf_conf,
+         counts) = _policy_seed(T, P, y_all, raw_all, n, seed)
+        per_seed.append({"seed": seed, "maps": T.map_gains(
+            counts, leaf, leaf_conf, c_va, c_te, y[va], y[te], uniq,
+            args.map_target, 0.05, order, clusters)})
+        logger.info("UNSW map study seed %d done (%d maps)", seed, len(uniq))
+    out = {"config": {"corpus": "UNSW-NB15, stratified random partitions",
+                      "classes": classes, "target": args.map_target,
+                      "seeds": list(seeds), "key_levels": T.KEY_RADIX,
+                      "random_maps_per_size": args.map_count,
+                      "calibration": "dependence rule, rows as units"},
+           "summary": T.summarise_maps(per_seed, args.map_target),
+           "per_seed": per_seed}
+    Path(args.map_out).parent.mkdir(parents=True, exist_ok=True)
+    Path(args.map_out).write_text(json.dumps(out))
+    logger.info("written to %s: rho %.2f (aggregation), %.2f (crossing)",
+                args.map_out, out["summary"]["spearman_rho"],
+                out["summary"]["crossing_rho"])
+
+
+def policy_replication(args):
+    """
+    Label against action admission on counters a switch can keep per flow.
+    UNSW-NB15 has no flow identifier, so partitions are stratified random.
+    """
+    sys.path.insert(0, os.path.dirname(__file__))
+    import train_rf as T
+    from src.preprocessing import protocol as P
+
+    classes, y_all, raw_all = _policy_corpus(args)
+    # Two-action policy, and a four-action one in the spirit of the main
+    # corpus: drop intrusions, rate-limit noisy probing and fuzzing, and
+    # redirect reconnaissance and analysis traffic for inspection.
+    act4 = {"Normal": 0, "Backdoor": 1, "DoS": 1, "Exploits": 1,
+            "Shellcode": 1, "Worms": 1, "Fuzzers": 2, "Generic": 2,
+            "Analysis": 3, "Reconnaissance": 3}
+    maps = {"2-action": np.array([0] + [1] * (len(classes) - 1)),
+            "4-action": np.array([act4[c] for c in classes])}
+    budgets = (0.005, 0.01, 0.02, 0.05, 0.10)
+    rows = []
+    seeds = range(args.policy_first_seed,
+                  args.policy_first_seed + args.policy_seeds)
+    for seed in seeds:
+        keep = P.stratified_subsample(y_all, 12000, seed)
+        y, raw = y_all[keep], raw_all[keep]
+        tr, va, te = P.split_indices(y, np.arange(len(y)).astype(str),
+                                     np.zeros((len(y), 1)), "random", seed)
+        order = np.argsort(va, kind="stable")    # file row order
+        # A random partition assigns single rows, so rows are the units.
+        clusters = T.cluster_weights(np.arange(len(va)))
+        F = T.apply_edges(raw, T.fit_edges(raw[tr]))
+        c_tr, c_va, c_te = (T.cell_index(F[i]) for i in (tr, va, te))
+        weights = {c: len(tr) / (len(classes) * n) for c, n in
+                   zip(*np.unique(y[tr], return_counts=True))}
+        leaf, leaf_conf, _ = T.empirical_table(F[tr], y[tr], len(classes), 0,
+                                               weights)
+        counts = np.zeros((T.KEY_SPACE, len(classes)))
+        np.add.at(counts, (c_tr, y[tr]), 1.0)
+        row = {"split": "random", "seed": seed, "gates": {}, "tiered": {},
+               "tiered_blk": {}, "tiered_dep": {},
+               "aggregation_mass": {m: T.aggregation_mass(counts, a)
+                                    for m, a in maps.items()},
+               "confusion": {m: T.confusion_structure(counts, a, classes)
+                             for m, a in maps.items()}}
+        for mname, amap in maps.items():
+            row["gates"][mname] = {}
+            for g, (score, act) in T.cell_gates(counts, leaf, leaf_conf,
+                                                amap).items():
+                res, _ = T.gate_outcomes(score[c_va], act[c_va], amap[y[va]],
+                                         score[c_te], act[c_te], amap[y[te]],
+                                         budgets, 0.05, order=order,
+                                         groups=clusters)
+                row["gates"][mname][g] = {str(k): v for k, v in res.items()}
+                if mname != "2-action" and g in ("label", "action"):
+                    for tk, o, c, rule in (
+                            ("tiered", None, None, "dependence"),
+                            ("tiered_blk", order, None, "block"),
+                            ("tiered_dep", order, clusters, "dependence")):
+                        row[tk].setdefault(mname, {})[g] = T.tiered_outcomes(
+                            score[c_va], act[c_va], amap[y[va]], score[c_te],
+                            act[c_te], amap[y[te]], 0.05, o, c, rule)
+        rows.append(row)
+        g2 = row["gates"]["2-action"]
+        logger.info("UNSW policy seed %d: 1%% coverage label %.1f%% action %.1f%%"
+                    " (dependence rule %.1f%% vs %.1f%%)", seed,
+                    100 * g2["label"]["0.01"]["cal_cov"],
+                    100 * g2["action"]["0.01"]["cal_cov"],
+                    100 * g2["label"]["0.01"]["dep_cov"],
+                    100 * g2["action"]["0.01"]["dep_cov"])
+    out = {"corpus": "UNSW-NB15, pooled partitions", "classes": classes,
+           "features": ["sbytes+dbytes", "spkts+dpkts", "smean", "dmean",
+                        "sinpkt_us"],
+           "key_levels": T.KEY_RADIX, "seeds": list(seeds),
+           "action_maps": {k: v.tolist() for k, v in maps.items()},
+           "note": "end-of-flow counters, stratified random partitions; block "
+                   "calibration uses file row order; the dependence rule "
+                   "resamples rows, the units a random partition assigns",
+           "summary": T.summarise_study(rows, budgets),
+           "per_seed": rows}
+    Path(args.policy_out).parent.mkdir(parents=True, exist_ok=True)
+    Path(args.policy_out).write_text(json.dumps(out))
+    logger.info("written to %s", args.policy_out)
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--data", default="dataset_unsw_nb15")
     ap.add_argument("--out", default="results/unsw_nb15/decomposition.json")
-    ap.add_argument("--seeds", type=int, nargs="+", default=[0, 1, 2])
+    ap.add_argument("--seeds", type=int, nargs="+", default=list(range(10)))
     ap.add_argument("--test-size", type=float, default=0.3)
     ap.add_argument("--n-jobs", type=int, default=6)
+    ap.add_argument("--policy", action="store_true",
+                    help="Replicate the admission-rule study instead")
+    ap.add_argument("--policy-seeds", type=int, default=30)
+    ap.add_argument("--policy-first-seed", type=int, default=30)
+    ap.add_argument("--policy-out", default="results/unsw_nb15/policy.json")
+    ap.add_argument("--map-study", action="store_true",
+                    help="Gain of the action gate over random action maps")
+    ap.add_argument("--map-out", default="results/unsw_nb15/map_study.json")
+    ap.add_argument("--map-count", type=int, default=30)
+    ap.add_argument("--map-target", type=float, default=0.01)
     args = ap.parse_args()
+
+    if args.policy:
+        policy_replication(args)
+        return
+    if args.map_study:
+        map_replication(args)
+        return
 
     # sklearn and the boosters both parallelise; letting BLAS do so as well
     # oversubscribes the cores and costs an order of magnitude.
@@ -166,6 +348,9 @@ def main():
                     "macro_f1_std": float(np.std(vals)),
                     "accuracy_mean": float(np.mean(acc)),
                     "n_seeds": len(vals),
+                    "by_seed": {k.split("|")[2]: v["macro_f1"]
+                                for k, v in done.items()
+                                if k.startswith(f"{name}|{condition}|")},
                 }
         if {"none", "real", "class-marginal", "shuffle"} <= set(entry):
             gain = 100 * (entry["real"]["macro_f1_mean"]

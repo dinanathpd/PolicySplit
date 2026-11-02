@@ -4988,7 +4988,7 @@
                       },
                       "right" : {
                         "type" : "hexstr",
-                        "value" : "0x000132ae"
+                        "value" : "0x000132b1"
                       }
                     }
                   }
@@ -5061,7 +5061,7 @@
                       },
                       "right" : {
                         "type" : "hexstr",
-                        "value" : "0x0000bd37"
+                        "value" : "0x0000bd79"
                       }
                     }
                   }

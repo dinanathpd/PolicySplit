@@ -2,20 +2,20 @@ cff-version: 1.2.0
 message: If you use this software, please cite both the software and the paper.
 title: PolicySplit
 abstract: >-
-  Policy-aligned fast-path admission for P4-SDN IoT intrusion detection.
-  Reference implementation covering PCAP feature extraction, controlled
-  context audits, action-aware policy compilation, matched estimators, a P4
-  register pipeline, BMv2 replay, and an SDN controller.
+  Policy-aligned fast-path admission for hybrid P4-SDN intrusion prevention
+  in IoT networks. The P4 pipeline, the compiler that pools training
+  evidence by action and calibrates each action's threshold on held-out
+  flows, the report adjudicator, the BMv2 and Tofino-model test beds, the
+  PCAP extraction, and the result records behind every number in the paper.
 type: software
 license: MIT
 repository-code: https://github.com/dinanathpd/PolicySplit
 keywords:
-  - intrusion detection
+  - intrusion prevention
   - Internet of Things
   - programmable data planes
-  - state space models
-  - Mamba
   - software-defined networking
+  - selective classification
   - CICIoT2023
 authors:
   - family-names: Padhya
@@ -36,8 +36,8 @@ authors:
 preferred-citation:
   type: article
   title: >-
-    PolicySplit: Policy-Aligned Fast-Path Admission for P4-SDN IoT Intrusion
-    Detection
+    Policy-aligned fast-path admission for hybrid P4-SDN intrusion prevention
+    in IoT networks
   year: 2026
   authors:
     - family-names: Padhya

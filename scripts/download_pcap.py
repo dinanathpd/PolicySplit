@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-download_pcap.py — Download CIC-IoT-2023 PCAPs (1 per missing group) + supplementary.
+download_pcap.py: download CIC-IoT-2023 PCAPs (1 per missing group) + supplementary.
 
 The CIC research portal requires a free registration. Log in with a browser,
 copy your own session cookie from the request headers, and pass it here.
@@ -89,7 +89,24 @@ def list_files(session, path):
     return files, folders
 
 
-def download_file(session, dl_path, output_path):
+def trim_pcap(path):
+    """Cut a partial download back to its last whole pcap record."""
+    import struct
+    with open(path, "r+b") as f:
+        data = f.read()
+        if data[:4] not in (b"\xd4\xc3\xb2\xa1", b"\xa1\xb2\xc3\xd4"):
+            return
+        order = "<" if data[:4] == b"\xd4\xc3\xb2\xa1" else ">"
+        off = 24
+        while off + 16 <= len(data):
+            incl = struct.unpack_from(order + "I", data, off + 8)[0]
+            if off + 16 + incl > len(data):
+                break
+            off += 16 + incl
+        f.truncate(off)
+
+
+def download_file(session, dl_path, output_path, head_bytes=None):
     if os.path.exists(output_path) and os.path.getsize(output_path) > 500_000:
         mb = os.path.getsize(output_path) / 1e6
         print(f"  [SKIP] {output_path} ({mb:.1f} MB)")
@@ -103,7 +120,7 @@ def download_file(session, dl_path, output_path):
         resp = session.get(url, stream=True, timeout=60)
         ct = resp.headers.get("Content-Type", "")
         if "text/html" in ct:
-            print(f"  [FAIL] Got HTML — cookie may have expired")
+            print(f"  [FAIL] Got HTML: cookie may have expired")
             return False
 
         total = int(resp.headers.get("Content-Length", 0))
@@ -114,6 +131,8 @@ def download_file(session, dl_path, output_path):
             for chunk in resp.iter_content(chunk_size=128 * 1024):
                 f.write(chunk)
                 downloaded += len(chunk)
+                if head_bytes and downloaded >= head_bytes:
+                    break
                 if total > 0:
                     pct = downloaded / total * 100
                     speed = downloaded / (time.time() - t0 + 0.01) / 1e6
@@ -123,6 +142,7 @@ def download_file(session, dl_path, output_path):
                         end="", flush=True,
                     )
         print()
+        resp.close()
 
         with open(output_path, "rb") as f:
             hdr = f.read(15)
@@ -130,6 +150,8 @@ def download_file(session, dl_path, output_path):
             print(f"  [FAIL] File is HTML, removing")
             os.remove(output_path)
             return False
+        if head_bytes:
+            trim_pcap(output_path)
 
         mb = os.path.getsize(output_path) / 1e6
         print(f"  [OK]   {mb:.1f} MB → {output_path}")
@@ -152,9 +174,23 @@ def main():
     ap.add_argument("--all-categories", action="store_true",
                     help="Download from ALL categories, not just missing groups")
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--file", action="append", default=[],
+                    help="Portal path of one file to fetch, e.g. "
+                         "PCAP/Benign_Final/BenignTraffic2.pcap")
+    ap.add_argument("--head-mb", type=float, default=None,
+                    help="Keep only the first MB of each --file, cut back to "
+                         "whole pcap records")
     args = ap.parse_args()
 
     session = get_session(args.cookie)
+
+    if args.file:
+        head = int(args.head_mb * 1e6) if args.head_mb else None
+        for dl_path in args.file:
+            out = os.path.join(args.pcap_dir, dl_path.split("/")[-1])
+            if not download_file(session, dl_path, out, head):
+                sys.exit(1)
+        return
 
     # --- Check local PCAPs ---
     existing_groups = set()

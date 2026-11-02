@@ -1,0 +1,150 @@
+{
+ "time_scale": 10.0,
+ "max_packets": 25000,
+ "frames_sent": 25000,
+ "flows_decided_in_trace": 1393,
+ "model_reports": 1393,
+ "bmv2_reports_in_scope": 1392,
+ "model_decisions": 1393,
+ "model_verdicts": {
+  "defer": 785,
+  "drop": 608,
+  "rate_limit": 0,
+  "redirect": 0
+ },
+ "model_alerts": 0,
+ "bmv2_alerts": 0,
+ "decisions_in_both": 1392,
+ "only_model": [
+  3206218951
+ ],
+ "only_bmv2": [],
+ "same_verdict": 1391,
+ "same_all_exact_fields": 1391,
+ "field_disagreements": {
+  "dp_class": 1,
+  "dp_confidence": 1,
+  "reason": 1,
+  "dp_action": 1
+ },
+ "verdict_disagreements": [
+  {
+   "flow_id": 3227777882,
+   "model": [
+    2,
+    4,
+    252,
+    1
+   ],
+   "bmv2": [
+    1,
+    255,
+    0,
+    0
+   ],
+   "buckets_model": [
+    6,
+    5,
+    2,
+    3,
+    7
+   ],
+   "buckets_bmv2": [
+    6,
+    5,
+    3,
+    3,
+    7
+   ],
+   "differing_buckets": [
+    2
+   ]
+  }
+ ],
+ "time_field_rel_error_pct": {
+  "mean_iat_us": {
+   "p50": 0.03,
+   "p95": 10.16,
+   "max": 3971.98
+  },
+  "iat_min_us": {
+   "p50": 1718.22,
+   "p95": 4247.77,
+   "max": 8160.9
+  },
+  "iat_max_us": {
+   "p50": 0.02,
+   "p95": 5.63,
+   "max": 5614.29
+  },
+  "duration_us": {
+   "p50": 0.02,
+   "p95": 3.44,
+   "max": 3957.15
+  }
+ },
+ "model_packet_ms": 7.0,
+ "time_floor_trace_us": 700.0,
+ "time_fields_above_floor": {
+  "mean_iat_us": {
+   "flows": 1380,
+   "within_3pct": 1287,
+   "p50": 0.03,
+   "p95": 6.26
+  },
+  "iat_min_us": {
+   "flows": 524,
+   "within_3pct": 433,
+   "p50": 0.18,
+   "p95": 25.32
+  },
+  "iat_max_us": {
+   "flows": 1384,
+   "within_3pct": 1295,
+   "p50": 0.02,
+   "p95": 4.98
+  },
+  "duration_us": {
+   "flows": 1386,
+   "within_3pct": 1315,
+   "p50": 0.02,
+   "p95": 3.08
+  }
+ },
+ "enforcement": {
+  "forwarded": 19445,
+  "inspected": 0,
+  "expected_dropped": 5555,
+  "expected_redirected": 0,
+  "expected_forwarded": 19445
+ },
+ "exact_fields": [
+  "flow_id",
+  "src",
+  "dst",
+  "src_port",
+  "dst_port",
+  "protocol",
+  "dp_class",
+  "dp_confidence",
+  "reason",
+  "pkt_count",
+  "byte_count",
+  "src_diversity",
+  "dstport_fanout",
+  "mean_len",
+  "min_len",
+  "max_len",
+  "fwd_pkts",
+  "fwd_bytes",
+  "len_dev",
+  "first_len",
+  "dp_action"
+ ],
+ "time_fields": [
+  "mean_iat_us",
+  "iat_min_us",
+  "iat_max_us",
+  "duration_us"
+ ]
+}

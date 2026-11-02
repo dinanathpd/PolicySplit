@@ -1,0 +1,13 @@
+policysplit.p4(240): [--Wwarn=uninitialized-out-param] warning: out parameter 'meta' may be uninitialized when 'IgParser' terminates
+parser IgParser(packet_in pkt, out headers_t hdr, out ig_metadata_t meta,
+                                                                    ^^^^
+policysplit.p4(240)
+parser IgParser(packet_in pkt, out headers_t hdr, out ig_metadata_t meta,
+       ^^^^^^^^
+warning: Parser state min_parse_depth_accept_loop will be unrolled up to 3 times due to @pragma max_loop_depth.
+policysplit.p4(173): [--Werror=legacy] error: resub_h digest limited to 64 bits
+header resub_h {
+       ^^^^^^^
+
+1 error, 2 warnings generated.
+

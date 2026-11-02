@@ -1,18 +1,139 @@
-# Python
+# ---------------------------------------------------------------
+# PolicySplit
+# ---------------------------------------------------------------
+
+# --- Python ----------------------------------------------------
 __pycache__/
 *.py[cod]
 *.egg-info/
+.eggs/
+build/
+dist/
 .venv/
 venv/
+env/
 .ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
 
-# Local experiment output
-*.log
-*.pt
-*.onnx
+# --- Editor / OS / tooling -------------------------------------
+.vscode/
+.idea/
+.DS_Store
+*.swp
+.playwright-mcp/
+.github/
+# Scratch and the Tofino model's runtime directory (topology/tofino_model.sh).
+tmp/
+
+# --- Documentation and manuscripts -----------------------------
+# Only the top-level README is published; drafts, agent notes and
+# submission sources stay local.
+*.md
+!README.md
+prompts.tx
+reports/
+deliverables/
+notebooks/
+
+# --- Datasets --------------------------------------------------
+# CICIoT2023 and every artifact derived from it must be obtained
+# from the CIC portal and regenerated with scripts/download_pcap.py
+# and scripts/pcap_to_entropy_fast.py.
+data/
+data_full/
+dataset/
+dataset_cic_iot_2023/
+dataset_unsw_nb15/
+*.pcap
+*.pcapng
 *.h5
+*.hdf5
 *.npz
 *.npy
-data/
-dataset/
-models/checkpoints/
+*.csv
+*.parquet
+
+# --- Trained artifacts -----------------------------------------
+# Checkpoints are too large for the repository; they ship in the
+# reviewer artifact. The deployed adjudicator is small and tracked
+# (p4/generated/controller_model.json).
+models/
+p4/weights/
+
+# --- Compiled / generated --------------------------------------
+*.log
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.out
+*.synctex.gz
+*.toc
+nohup.out
+
+# --- Archives --------------------------------------------------
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+
+# --- Results ---------------------------------------------------
+# Only the JSON records that generate the paper's tables and figures.
+results/*
+!results/*.json
+!results/log_extraction_v3.txt
+!results/controlled/
+results/controlled/*
+!results/controlled/*.json
+!results/scale_check_2500/
+results/scale_check_2500/*
+!results/scale_check_2500/*.json
+!results/unsw_nb15/
+results/unsw_nb15/*
+!results/unsw_nb15/*.json
+!results/controlled/tune/
+results/controlled/tune/*
+!results/controlled/tune/*.json
+!results/causal/
+results/causal/*
+!results/causal/*.json
+!results/throughput/
+results/throughput/*
+!results/throughput/*.json
+!results/capture/
+results/capture/*
+!results/capture/*.json
+!results/capture/heads/
+results/capture/heads/*
+!results/capture/heads/*.json
+!results/flood/
+results/flood/*
+!results/flood/*.json
+!results/bmv2/
+results/bmv2/*
+!results/bmv2/heads/
+results/bmv2/heads/*
+!results/bmv2/heads/*.json
+!results/bmv2/saturation/
+results/bmv2/saturation/*
+!results/bmv2/saturation/*.json
+!results/trace/
+results/trace/*
+!results/trace/*.json
+!results/trace/gen_s3[0-9]/
+!results/confirm/
+results/confirm/*
+!results/confirm/*.json
+!results/confirm/commit.txt
+!results/dev/
+results/dev/*
+!results/dev/policy_study_dev_seeds0-29.json
+
+# --- Scratch ---------------------------------------------------
+scripts/_*.py
+results/deployment_compiled.json
+results/mininet_*.json
+results/*.partial.json
+results/*/*.partial.json
